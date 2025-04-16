@@ -1,11 +1,27 @@
+<style>
+.bg-gradient-primary {
+  background-color: white !important;
+  
+}
+span {
+  color: black !important;
+}
+.sidebar-dark .nav-item .nav-link i {
+    color: black !important;
+}
+.sidebar-dark hr .sidebar-divider {
+    border-top: black !important;
+}
+.sidebar-dark .sidebar-heading {
+    color: black !important;
+}
+</style>
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-    <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('admin')}}">
-      <div class="sidebar-brand-icon rotate-n-15">
+      <div class="sidebar-brand-icon rotate-n-15" style="color:black">
         <i class="fas fa-laugh-wink"></i>
       </div>
-      <div class="sidebar-brand-text mx-3">Admin</div>
+      <div class="sidebar-brand-text mx-3" style="color:black">Admin</div>
     </a>
 
     <!-- Divider -->
@@ -49,7 +65,7 @@
         </div>
 
     <!-- Categories -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#categoryCollapse" aria-expanded="true" aria-controls="categoryCollapse">
           <i class="fas fa-sitemap"></i>
           <span>Category</span>
@@ -61,12 +77,12 @@
             <a class="collapse-item" href="{{route('category.create')}}">Add Category</a>
           </div>
         </div>
-    </li>
+    </li> -->
     {{-- Products --}}
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#productCollapse" aria-expanded="true" aria-controls="productCollapse">
           <i class="fas fa-cubes"></i>
-          <span>Products</span>
+          <span>Products Management</span>
         </a>
         <div id="productCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -78,7 +94,7 @@
     </li>
 
     {{-- Brands --}}
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#brandCollapse" aria-expanded="true" aria-controls="brandCollapse">
           <i class="fas fa-table"></i>
           <span>Brands</span>
@@ -90,7 +106,7 @@
             <a class="collapse-item" href="{{route('brand.create')}}">Add Brand</a>
           </div>
         </div>
-    </li>
+    </li> -->
 
     {{-- Shipping --}}
     <li class="nav-item">
