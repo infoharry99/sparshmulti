@@ -41,7 +41,6 @@ class BannerController extends Controller
             'title'=>'required|max:50',
             'description'=>'nullable',
             'photo'=>'required',
-            'category'=>'required',
             'status'=>'required|in:active,inactive',
         ]);
         $data=$request->all();
@@ -52,21 +51,12 @@ class BannerController extends Controller
             $file->move(public_path('frontend/banner'), $fileName);
             $data['photo'] = 'frontend/banner/' . $fileName;
         }
-
-        if ($request->hasFile('mobile_banner')) {
-            $mobile_banner = $request->file('mobile_banner');
-            $mobile_banner_file = time() . '.' . $mobile_banner->getClientOriginalExtension();
-            $mobile_banner->move(public_path('frontend/mobile_banner'), $mobile_banner_file);
-            $data['mobile_banner'] = 'frontend/mobile_banner/' . $mobile_banner_file;
-        }
-        
         $slug=Str::slug($request->title);
         $count=Banner::where('slug',$slug)->count();
         if($count>0){
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
         }
         $data['slug'] = $slug;
-        $data['category'] = $request->category;
         $status=Banner::create($data);
         if($status){
             request()->session()->flash('success','Banner successfully added');
