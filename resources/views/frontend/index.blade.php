@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','E-SHOP || HOME PAGE')
+@section('title','E-Paninting || HOME PAGE')
 @section('main-content')
 <!-- Slider Area -->
 @if(count($banners)>0)
@@ -36,144 +36,21 @@
 <!--/ End Slider Area -->
 
 <!-- Start Small Banner  -->
-<section class="small-banner section">
-    <div class="container-fluid">
-        <div class="row">
-            @php
-            $category_lists=DB::table('categories')->where('status','active')->limit(3)->get();
-            @endphp
-            @if($category_lists)
-                @foreach($category_lists as $cat)
-                    @if($cat->is_parent==1)
-                        <!-- Single Banner  -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="single-banner">
-                                @if($cat->photo)
-                                    <img src="{{$cat->photo}}" alt="{{$cat->photo}}">
-                                @else
-                                    <img src="https://via.placeholder.com/600x370" alt="#">
-                                @endif
-                                <div class="content">
-                                    <h3>{{$cat->title}}</h3>
-                                        <a href="{{route('product-cat',$cat->slug)}}">Discover Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                    <!-- /End Single Banner  -->
-                @endforeach
-            @endif
-        </div>
-    </div>
-</section>
+
 <!-- End Small Banner -->
 
 <!-- Start Product Area -->
-<div class="product-area section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h2>Trending Item</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="product-info">
-                        <div class="nav-main">
-                            <!-- Tab Nav -->
-                            <ul class="nav nav-tabs filter-tope-group" id="myTab" role="tablist">
-                                @php
-                                    $categories=DB::table('categories')->where('status','active')->where('is_parent',1)->get();
-                                    // dd($categories);
-                                @endphp
-                                @if($categories)
-                                <button class="btn" style="background:black"data-filter="*">
-                                    All Products
-                                </button>
-                                    @foreach($categories as $key=>$cat)
 
-                                    <button class="btn" style="background:none;color:black;"data-filter=".{{$cat->id}}">
-                                        {{$cat->title}}
-                                    </button>
-                                    @endforeach
-                                @endif
-                            </ul>
-                            <!--/ End Tab Nav -->
-                        </div>
-                        <div class="tab-content isotope-grid" id="myTabContent">
-                             <!-- Start Single Tab -->
-                            @if($product_lists)
-                                @foreach($product_lists as $key=>$product)
-                                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{$product->cat_id}}">
-                                    <div class="single-product">
-                                        <div class="product-img">
-                                            <a href="{{route('product-detail',$product->slug)}}">
-                                                @php
-                                                    $photo=explode(',',$product->photo);
-                                                // dd($photo);
-                                                @endphp
-                                                <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                                <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                                @if($product->stock<=0)
-                                                    <span class="out-of-stock">Sale out</span>
-                                                @elseif($product->condition=='new')
-                                                    <span class="new">New</span
-                                                @elseif($product->condition=='hot')
-                                                    <span class="hot">Hot</span>
-                                                @else
-                                                    <span class="price-dec">{{$product->discount}}% Off</span>
-                                                @endif
-
-
-                                            </a>
-                                            <div class="button-head">
-                                                <div class="product-action">
-                                                    <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-                                                    <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}" ><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
-                                                </div>
-                                                <div class="product-action-2">
-                                                    <a title="Add to cart" href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
-                                            <div class="product-price">
-                                                @php
-                                                    $after_discount=($product->price-($product->price*$product->discount)/100);
-                                                @endphp
-                                                <span>${{number_format($after_discount,2)}}</span>
-                                                <del style="padding-left:4%;">${{number_format($product->price,2)}}</del>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
-
-                             <!--/ End Single Tab -->
-                            @endif
-
-                        <!--/ End Single Tab -->
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
 <!-- End Product Area -->
 {{-- @php
     $featured=DB::table('products')->where('is_featured',1)->where('status','active')->orderBy('id','DESC')->limit(1)->get();
-@endphp --}}
+@endphp --}} 
 <!-- Start Midium Banner  -->
-<section class="midium-banner">
+<!-- <section class="midium-banner">
     <div class="container">
         <div class="row">
             @if($featured)
                 @foreach($featured as $data)
-                    <!-- Single Banner  -->
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="single-banner">
                             @php
@@ -187,74 +64,230 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /End Single Banner  -->
                 @endforeach
             @endif
         </div>
     </div>
-</section>
+</section> -->
 <!-- End Midium Banner -->
 
-<!-- Start Most Popular -->
-<div class="product-area most-popular section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-title">
-                    <h2>Hot Item</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="owl-carousel popular-slider">
-                    @foreach($product_lists as $product)
-                        @if($product->condition=='hot')
-                            <!-- Start Single Product -->
-                        <div class="single-product">
-                            <div class="product-img">
-                                <a href="{{route('product-detail',$product->slug)}}">
-                                    @php
-                                        $photo=explode(',',$product->photo);
-                                    // dd($photo);
-                                    @endphp
-                                    <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                    <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                    {{-- <span class="out-of-stock">Hot</span> --}}
-                                </a>
-                                <div class="button-head">
-                                    <div class="product-action">
-                                        <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-                                        <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}" ><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
-                                    </div>
-                                    <div class="product-action-2">
-                                        <a href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
-                                <div class="product-price">
-                                    <span class="old">${{number_format($product->price,2)}}</span>
-                                    @php
-                                    $after_discount=($product->price-($product->price*$product->discount)/100)
-                                    @endphp
-                                    <span>${{number_format($after_discount,2)}}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Product -->
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Most Popular Area -->
+<!-- why sec start -->
+<section class="why-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-12">
+                   <div class="section-heading">
+                       <h3 class="text-center mb-5">Why Melody Brush</h3>
+                   </div>
+                   <div class="why-body text-center">
+                       <p> dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                       <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
+                       <a href="#" class="theme-btn"><span><i class="fas fa-angle-right"></i></span> Read More</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <!-- why sec end -->
+         <!-- featured sec start -->
+   <section class="feature-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h3 class="text-center mb-5">Feature Collections</h3>
+                </div>
+            </div>
+               <div class="featured-slider owl-carousel">
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>                                                                
+               </div>
+           </div>
+       </div>
+   </section>
+   <!-- featured sec end -->
+
+   <!-- popular sec start -->
+   <section class="feature-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h3 class="text-center mb-5">Popular Painting</h3>
+                </div>
+            </div>
+               <div class="featured-slider owl-carousel">
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>                                                                                
+               </div>
+           </div>
+       </div>
+   </section>
+   <!-- popular sec end -->
 <!-- Start Shop Home List  -->
-<section class="shop-home-list section">
+<!-- <section class="shop-home-list section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
@@ -271,7 +304,6 @@
                     @endphp
                     @foreach($product_lists as $product)
                         <div class="col-md-4">
-                            <!-- Start Single List  -->
                             <div class="single-list">
                                 <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -292,7 +324,6 @@
                                 </div>
                                 </div>
                             </div>
-                            <!-- End Single List  -->
                         </div>
                     @endforeach
 
@@ -300,11 +331,198 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- End Shop Home List  -->
 
+
+   <!-- testimonial sec start -->
+   <section class="testimonial-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+            <div class="col-lg-2"></div>
+               <div class="col-lg-10">
+                   <div class="section-heading position-relative">
+                       <h3 class="mb-5">Testimonial</h3>
+                   </div>
+                   </div>
+                   <div class="testimonial-area owl-carousel">
+                       <div class="testi-item">
+                           <div class="row">
+                               <div class="col-lg-2">
+                                   <div class="testi-img">
+                                       <img src="images/image 10.png" class="img-fluid">
+                                   </div>
+                               </div>
+                               <div class="col-lg-9">
+                               <div class="tesimonial-content">
+                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                               </div>                                   
+                               </div>
+                               <div class="col-lg-9">
+                               </div>
+                               <div class="col-lg-3">
+                                 <div class="test-hed mt-4">
+                                    <h6><strong>Rakesh Kumer</strong></h6>
+                                    <p>Desinassion</p>
+                                </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="testi-item">
+                           <div class="row">
+                               <div class="col-lg-2">
+                                   <div class="testi-img">
+                                       <img src="images/image 10.png" class="img-fluid">
+                                   </div>
+                               </div>
+                               <div class="col-lg-9">
+                               <div class="tesimonial-content">
+                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                               </div>                                   
+                               </div>
+                               <div class="col-lg-9">
+                               </div>
+                               <div class="col-lg-3">
+                                 <div class="test-hed mt-4">
+                                    <h6><strong>Rakesh Kumer</strong></h6>
+                                    <p>Desinassion</p>
+                                </div>
+                               </div>
+                           </div>
+
+                       </div>
+                       <div class="testi-item">
+                           <div class="row">
+                               <div class="col-lg-2">
+                                   <div class="testi-img">
+                                       <img src="images/image 10.png" class="img-fluid">
+                                   </div>
+                               </div>
+                               <div class="col-lg-9">
+                               <div class="tesimonial-content">
+                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                               </div>                                   
+                               </div>
+                               <div class="col-lg-9">
+                               </div>
+                               <div class="col-lg-3">
+                                 <div class="test-hed mt-4">
+                                    <h6><strong>Rakesh Kumer</strong></h6>
+                                    <p>Desinassion</p>
+                                </div>
+                               </div>
+                           </div>
+
+                       </div>
+                       <div class="testi-item">
+                           <div class="row">
+                               <div class="col-lg-2">
+                                   <div class="testi-img">
+                                       <img src="images/image 10.png" class="img-fluid">
+                                   </div>
+                               </div>
+                               <div class="col-lg-9">
+                               <div class="tesimonial-content">
+                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                               </div>                                   
+                               </div>
+                               <div class="col-lg-9">
+                               </div>
+                               <div class="col-lg-3">
+                                 <div class="test-hed mt-4">
+                                    <h6><strong>Rakesh Kumer</strong></h6>
+                                    <p>Desinassion</p>
+                                </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="testi-item">
+                           <div class="row">
+                               <div class="col-lg-2">
+                                   <div class="testi-img">
+                                       <img src="images/image 10.png" class="img-fluid">
+                                   </div>
+                               </div>
+                               <div class="col-lg-9">
+                               <div class="tesimonial-content">
+                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                               </div>                                   
+                               </div>
+                               <div class="col-lg-9">
+                               </div>
+                               <div class="col-lg-3">
+                                 <div class="test-hed mt-4">
+                                    <h6><strong>Rakesh Kumer</strong></h6>
+                                    <p>Desinassion</p>
+                                </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="testi-item">
+                           <div class="row">
+                               <div class="col-lg-2">
+                                   <div class="testi-img">
+                                       <img src="images/image 10.png" class="img-fluid">
+                                   </div>
+                               </div>
+                               <div class="col-lg-9">
+                               <div class="tesimonial-content">
+                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                               </div>                                   
+                               </div>
+                               <div class="col-lg-9">
+                               </div>
+                               <div class="col-lg-3">
+                                 <div class="test-hed mt-4">
+                                    <h6><strong>Rakesh Kumer</strong></h6>
+                                    <p>Desinassion</p>
+                                </div>
+                               </div>
+                           </div>
+
+                       </div>                                                                                                                   
+                   </div>
+              </div>
+       </div>
+   </section>
+   <!-- testimonial sec end -->
+
+     <!-- blog sec start -->
+     <section class="blog-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading position-relative">
+                    <h3 class="text-center mb-5">Latest Blog</h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+            </div>
+               <div class="col-lg-6">
+                   <div class="blog-list">
+                       <h5 class="mb-3">Lorem Ipsum is simply </h5>
+                       <span>Megha Biswas, Mumbai, Indian 20th Oct’24</span>
+                       <p>of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a</p>
+                       <a href="#">
+                           <img src="images/image 12.png" class="img-fluid">
+                       </a>
+                   </div>
+               </div>
+               <div class="col-lg-6">
+                   <div class="blog-list">
+                       <h5 class="mb-3">Lorem Ipsum is simply </h5>
+                       <span>Megha Biswas, Mumbai, Indian 20th Oct’24</span>
+                       <p>of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a</p>
+                       <a href="#">
+                           <img src="images/image 12.png" class="img-fluid">
+                       </a>
+                   </div>
+               </div>               
+           </div>
+       </div>
+   </section>
+   <!-- blog sec end -->
 <!-- Start Shop Blog  -->
-<section class="shop-blog section">
+<!-- <section class="shop-blog section">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -317,7 +535,6 @@
             @if($posts)
                 @foreach($posts as $post)
                     <div class="col-lg-4 col-md-6 col-12">
-                        <!-- Start Single Blog  -->
                         <div class="shop-single-blog">
                             <img src="{{$post->photo}}" alt="{{$post->photo}}">
                             <div class="content">
@@ -326,59 +543,120 @@
                                 <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">Continue Reading</a>
                             </div>
                         </div>
-                        <!-- End Single Blog  -->
                     </div>
                 @endforeach
             @endif
 
         </div>
     </div>
-</section>
+</section> -->
 <!-- End Shop Blog  -->
+<section class="instagram-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-12">
+                   <div class="section-heading">
+                       <h3 class="text-center mb-5"><i class="fab fa-instagram"></i> Instagram</h3>
+                   </div>
 
+                   <div class="instrgram-slider owl-carousel">
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
 <!-- Start Shop Services Area -->
-<section class="shop-services section home">
+
+ <!-- follow sec start -->
+ <section class="follow-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-12">
+                   <div class="section-heading">
+                       <h3 class="text-center mb-5">Follow Us</h3>
+                   </div>
+                   <div class="social-links">
+                       <ul>
+                           <li><a href=""><img src="images/facebook.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/instra.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/pin.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/you.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/in.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/twi.png" class="img-fluid"></a></li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <!-- follow sec end -->
+
+<!-- <section class="shop-services section home">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-rocket"></i>
                     <h4>Free shiping</h4>
                     <p>Orders over $100</p>
                 </div>
-                <!-- End Single Service -->
             </div>
             <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-reload"></i>
                     <h4>Free Return</h4>
                     <p>Within 30 days returns</p>
                 </div>
-                <!-- End Single Service -->
             </div>
             <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-lock"></i>
                     <h4>Sucure Payment</h4>
                     <p>100% secure payment</p>
                 </div>
-                <!-- End Single Service -->
             </div>
             <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-tag"></i>
                     <h4>Best Peice</h4>
                     <p>Guaranteed price</p>
                 </div>
-                <!-- End Single Service -->
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- End Shop Services Area -->
 
 @include('frontend.layouts.newsletter')

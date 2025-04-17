@@ -15,6 +15,7 @@ span {
 .sidebar-dark .sidebar-heading {
     color: black !important;
 }
+
 </style>
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('admin')}}">
