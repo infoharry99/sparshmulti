@@ -20,7 +20,7 @@
             <tr>
               <th>S.N.</th>
               <th>Title</th>
-              <th>Category</th>
+              <!-- <th>Category</th> -->
               <th>Is Featured</th>
               <th>Price</th>
               <th>Discount</th>
@@ -37,7 +37,7 @@
             <tr>
               <th>S.N.</th>
               <th>Title</th>
-              <th>Category</th>
+              <!-- <th>Category</th> -->
               <th>Is Featured</th>
               <th>Price</th>
               <th>Discount</th>
@@ -61,11 +61,11 @@
                 <tr>
                     <td>{{$product->id}}</td>
                     <td>{{$product->title}}</td>
-                    <td>{{$product->cat_info['title']}}
+                    {{-- <td>{{$product->cat_info['title']}}
                       <sub>
                           {{$product->sub_cat_info->title ?? ''}}
-                      </sub>
-                    </td>
+                      </sub> 
+                      </td> --}}
                     <td>{{(($product->is_featured==1)? 'Yes': 'No')}}</td>
                     <td>Rs. {{$product->price}} /-</td>
                     <td>  {{$product->discount}}% OFF</td>
@@ -74,9 +74,9 @@
                     <td> {{ ucfirst(optional($product->brand)->title) ?? null }}</td>
                     <td>
                       @if($product->stock>0)
-                      <span class="badge badge-primary">{{$product->stock}}</span>
+                      <p class="badge badge-primary">{{$product->stock}}</p>
                       @else
-                      <span class="badge badge-danger">{{$product->stock}}</span>
+                      <p class="badge badge-danger">{{$product->stock}}</p>
                       @endif
                     </td>
                     <td>

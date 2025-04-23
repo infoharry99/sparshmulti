@@ -1,7 +1,5 @@
 @extends('backend.layouts.master')
-
 @section('main-content')
-
 <div class="card">
     <h5 class="card-header">Add Product</h5>
     <div class="card-body">
@@ -11,6 +9,13 @@
           <label for="inputTitle" class="col-form-label">Title <span class="text-danger">*</span></label>
           <input id="inputTitle" type="text" name="title" placeholder="Enter title"  value="{{old('title')}}" class="form-control">
           @error('title')
+          <span class="text-danger">{{$message}}</span>
+          @enderror
+        </div>
+        <div class="form-group">
+          <label for="inputTitle" class="col-form-label">Song Url <span class="text-danger">*</span></label>
+          <input id="inputTitle" type="text" name="url" placeholder="Enter Song Url"  value="{{old('url')}}" class="form-control">
+          @error('url')
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
@@ -31,14 +36,12 @@
           @enderror
         </div>
 
-
         <div class="form-group">
           <label for="is_featured">Is Featured</label><br>
           <input type="checkbox" name='is_featured' id='is_featured' value='1' checked> Yes                        
         </div>
               {{-- {{$categories}} --}}
-
-        <div class="form-group">
+<!--  <div class="form-group">
           <label for="cat_id">Category <span class="text-danger">*</span></label>
           <select name="cat_id" id="cat_id" class="form-control">
               <option value="">--Select any category--</option>
@@ -55,8 +58,8 @@
               {{-- @foreach($parent_cats as $key=>$parent_cat)
                   <option value='{{$parent_cat->id}}'>{{$parent_cat->title}}</option>
               @endforeach --}}
-          </select>
-        </div>
+        </select>
+        </div> -->
 
         <div class="form-group">
           <label for="price" class="col-form-label">Price(NRS) <span class="text-danger">*</span></label>
@@ -74,17 +77,15 @@
           @enderror
         </div>
         <div class="form-group">
-          <label for="size">Size</label>
-          <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
-              <option value="">--Select any size--</option>
-              <option value="S">Small (S)</option>
-              <option value="M">Medium (M)</option>
-              <option value="L">Large (L)</option>
-              <option value="XL">Extra Large (XL)</option>
-          </select>
+            <label for="size">Size</label>
+            <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
+                <option value="">--Select any size--</option>
+                <option value="S">25X16in</option>
+                <option value="M">36X36in</option>
+            </select>
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="brand_id">Brand</label>
           {{-- {{$brands}} --}}
 
@@ -94,18 +95,15 @@
               <option value="{{$brand->id}}">{{$brand->title}}</option>
              @endforeach
           </select>
-        </div>
+        </div> -->
 
         <div class="form-group">
           <label for="condition">Condition</label>
           <select name="condition" class="form-control">
-              <!-- <option value="">--Select Condition--</option> -->
               <option value="default">Default</option>
               <option value="new">New</option>
               <option value="hot">HOT</option>
               <option value="best_seller">Best Seller</option>
-              <option value="shop_the_look">SHOP THE LOOK</option>
-              <option value="litclub">LITCLUB</option>
           </select>
         </div>
 
@@ -150,14 +148,14 @@
         </div>
 
         <div class="form-group">
-          <label for="name_of_manufacture" class="col-form-label">Name of Manufacture <span class="text-danger">*</span></label>
+          <label for="name_of_manufacture" class="col-form-label">Name of Seller <span class="text-danger">*</span></label>
           <input id="name_of_manufacture" type="text" name="name_of_manufacture" placeholder="Enter Name of Manufacture"  value="{{old('name_of_manufacture')}}" class="form-control">
           @error('price')
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
         <div class="form-group">
-          <label for="name_of_address" class="col-form-label">Name of Address <span class="text-danger">*</span></label>
+          <label for="name_of_address" class="col-form-label"> Address of Seller <span class="text-danger">*</span></label>
           <input id="address_of_manufacture" type="text" name="address_of_manufacture" placeholder="Enter Name of address"  value="{{old('address_of_manufacture')}}" class="form-control">
           @error('price')
           <span class="text-danger">{{$message}}</span>

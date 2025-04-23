@@ -1,8 +1,8 @@
-<header class="header-sec">
+{{-- <header class="header-sec">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg navbar-light">
+                <nav class="navbar  navbar-expand-lg navbar-light header-nav ">
                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="img-fluid"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="bar-icon"><div id="toggle">
@@ -11,7 +11,7 @@
                             <div class="three"></div>
                         </div></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
                         <ul class="navbar-nav mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
@@ -53,7 +53,105 @@
             </div>
         </div>
     </div>
+</header> --}}
+
+<header class="main-header">
+    
+    {{-- <div class="topbar">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Contact Info -->
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="top-left">
+                        <ul class="list-inline mb-0">
+                            @php $settings = DB::table('settings')->get(); @endphp
+                            <li class="list-inline-item"><i class="ti-headphone-alt"></i> @foreach($settings as $data) {{$data->phone}} @endforeach</li>
+                            <li class="list-inline-item"><i class="ti-email"></i> @foreach($settings as $data) {{$data->email}} @endforeach</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-12 text-end">
+                    <div class="right-content">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item"><i class="ti-location-pin"></i> <a href="{{ route('order.track') }}">Track Order</a></li>
+                            @auth
+                                @if(Auth::user()->role === 'admin')
+                                    <li class="list-inline-item"><i class="ti-user"></i> <a href="{{ route('admin') }}" target="_blank">Dashboard</a></li>
+                                @else
+                                    <li class="list-inline-item"><i class="ti-user"></i> <a href="{{ route('user') }}" target="_blank">Dashboard</a></li>
+                                @endif
+                                <li class="list-inline-item"><i class="ti-power-off"></i> <a href="{{ route('user.logout') }}">Logout</a></li>
+                            @else
+                                <li class="list-inline-item"><i class="ti-power-off"></i> 
+                                    <a href="{{ route('login.form') }}">Login</a> / 
+                                    <a href="{{ route('register.form') }}">Register</a>
+                                </li>
+                            @endauth
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+
+    <!-- Header / Nav -->
+    <div class="header-inner">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid me-2 logo-img">
+                    
+                </a>
+
+                <div class="collapse navbar-collapse justify-content-between">
+                    <ul class="navbar-nav main-menu mx-auto">
+                        <li class="nav-item {{ Request::path() == 'home' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item @if(Request::path() == 'product-grids' || Request::path() == 'product-lists') active @endif">
+                            <a class="nav-link" href="{{ route('product-grids') }}">Gallary 
+                                {{-- <span class="new">New</span> --}}
+                            </a>
+                        </li>
+                        <li class="nav-item {{ Request::path() == 'about-us' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('about-us') }}">About Us</a>
+                        </li>
+                        
+                        {{-- {!! Helper::getHeaderCategory() !!} --}}
+                        <li class="nav-item {{ Request::path() == 'blog' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('blog') }}">Blog</a>
+                        </li>
+                        <li class="nav-item {{ Request::path() == 'contact' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tools -->
+                    <div class="d-flex align-items-center">
+                        <select class="form-select-sm me-2 lang-select">
+                            <option>Language</option>
+                            <option>Hindi</option>
+                            <option>English</option>
+                        </select>
+                        <a href="#" class="lang-code me-2">অস</a>
+                        <a href="#" class="lang-code me-3">EN</a>
+                        <a href="#"><img src="{{ asset('images/search.png') }}" class="icon-img me-3" alt="Search"></a>
+                        <a href="{{ route('cart') }}"><img src="{{ asset('images/cart.png') }}" class="icon-img me-3" alt="Cart"></a>
+                        <a href="{{ route('user') }}"><img src="{{ asset('images/profile.png') }}" class="icon-img" alt="Profile"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
 </header>
+
+
+
+
+
+
+
 <!-- <header class="header shop">
     <div class="topbar">
         <div class="container">
@@ -124,3 +222,5 @@
         </div>
     </div>
 </header> -->
+
+

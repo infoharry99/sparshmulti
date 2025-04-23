@@ -1,452 +1,433 @@
+
 @extends('frontend.layouts.master')
-
-@section('title','E-SHOP || PRODUCT PAGE')
-
+@section('title','E-Paninting || HOME PAGE')
 @section('main-content')
-	<!-- Breadcrumbs -->
-    <div class="breadcrumbs">
+    <!-- subbanner sec start -->
+    <section class="subbanner-sec sectionpadding">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="bread-inner">
-                        <ul class="bread-list">
-                            <li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-                            <li class="active"><a href="blog-single.html">Shop Grid</a></li>
-                        </ul>
+                <div class="col-lg-12">
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                      </ol>
+                    </nav>
+                    <div class="section-heading">
+                        <h3 class="mt-3">About The Paintings</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Breadcrumbs -->
+    </section>
+    <!-- subbanner sec end -->
 
-    <!-- Product Style -->
-    <form action="{{route('shop.filter')}}" method="POST">
-        @csrf
-        <section class="product-area shop-sidebar shop section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-12">
-                        <div class="shop-sidebar">
-                                <!-- Single Widget -->
-                                <div class="single-widget category">
-                                    <h3 class="title">Categories</h3>
-                                    <ul class="categor-list">
-										@php
-											// $category = new Category();
-											$menu=App\Models\Category::getAllParentWithChild();
-										@endphp
-										@if($menu)
-										<li>
-											@foreach($menu as $cat_info)
-													@if($cat_info->child_cat->count()>0)
-														<li><a href="{{route('product-cat',$cat_info->slug)}}">{{$cat_info->title}}</a>
-															<ul>
-																@foreach($cat_info->child_cat as $sub_menu)
-																	<li><a href="{{route('product-sub-cat',[$cat_info->slug,$sub_menu->slug])}}">{{$sub_menu->title}}</a></li>
-																@endforeach
-															</ul>
-														</li>
-													@else
-														<li><a href="{{route('product-cat',$cat_info->slug)}}">{{$cat_info->title}}</a></li>
-													@endif
-											@endforeach
-										</li>
-										@endif
-                                        {{-- @foreach(Helper::productCategoryList('products') as $cat)
-                                            @if($cat->is_parent==1)
-												<li><a href="{{route('product-cat',$cat->slug)}}">{{$cat->title}}</a></li>
-											@endif
-                                        @endforeach --}}
-                                    </ul>
-                                </div>
-                                <!--/ End Single Widget -->
-                                <!-- Shop By Price -->
-                                    <div class="single-widget range">
-                                        <h3 class="title">Shop by Price</h3>
-                                        <div class="price-filter">
-                                            <div class="price-filter-inner">
-                                                @php
-                                                    $max=DB::table('products')->max('price');
-                                                    // dd($max);
-                                                @endphp
-                                                <div id="slider-range" data-min="0" data-max="{{$max}}"></div>
-                                                <div class="product_filter">
-                                                <button type="submit" class="filter_button">Filter</button>
-                                                <div class="label-input">
-                                                    <span>Range:</span>
-                                                    <input style="" type="text" id="amount" readonly/>
-                                                    <input type="hidden" name="price_range" id="price_range" value="@if(!empty($_GET['price'])){{$_GET['price']}}@endif"/>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                    <!--/ End Shop By Price -->
-                                <!-- Single Widget -->
-                                <div class="single-widget recent-post">
-                                    <h3 class="title">Recent post</h3>
-                                    {{-- {{dd($recent_products)}} --}}
-                                    @foreach($recent_products as $product)
-                                        <!-- Single Post -->
-                                        @php
-                                            $photo=explode(',',$product->photo);
-                                        @endphp
-                                        <div class="single-post first">
-                                            <div class="image">
-                                                <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                            </div>
-                                            <div class="content">
-                                                <h5><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h5>
-                                                @php
-                                                    $org=($product->price-($product->price*$product->discount)/100);
-                                                @endphp
-                                                <p class="price"><del class="text-muted">${{number_format($product->price,2)}}</del>   ${{number_format($org,2)}}  </p>
-
-                                            </div>
-                                        </div>
-                                        <!-- End Single Post -->
-                                    @endforeach
-                                </div>
-                                <!--/ End Single Widget -->
-                                <!-- Single Widget -->
-                                <div class="single-widget category">
-                                    <h3 class="title">Brands</h3>
-                                    <ul class="categor-list">
-                                        @php
-                                            $brands=DB::table('brands')->orderBy('title','ASC')->where('status','active')->get();
-                                        @endphp
-                                        @foreach($brands as $brand)
-                                            <li><a href="{{route('product-brand',$brand->slug)}}">{{$brand->title}}</a></li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                <!--/ End Single Widget -->
+    <!-- gallery listing sec start -->
+    <section class="gallery-sec sectionpadding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                <div class="featured-item">
+                    <a href="{{route('product-play','test')}}">
+                        <div class="featured-img"><img src="images/frame 1.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
                         </div>
-                    </div>
-                    <div class="col-lg-9 col-md-8 col-12">
-                        <div class="row">
-                            <div class="col-12">
-                                <!-- Shop Top -->
-                                <div class="shop-top">
-                                    <div class="shop-shorter">
-                                        <div class="single-shorter">
-                                            <label>Show :</label>
-                                            <select class="show" name="show" onchange="this.form.submit();">
-                                                <option value="">Default</option>
-                                                <option value="9" @if(!empty($_GET['show']) && $_GET['show']=='9') selected @endif>09</option>
-                                                <option value="15" @if(!empty($_GET['show']) && $_GET['show']=='15') selected @endif>15</option>
-                                                <option value="21" @if(!empty($_GET['show']) && $_GET['show']=='21') selected @endif>21</option>
-                                                <option value="30" @if(!empty($_GET['show']) && $_GET['show']=='30') selected @endif>30</option>
-                                            </select>
-                                        </div>
-                                        <div class="single-shorter">
-                                            <label>Sort By :</label>
-                                            <select class='sortBy' name='sortBy' onchange="this.form.submit();">
-                                                <option value="">Default</option>
-                                                <option value="title" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='title') selected @endif>Name</option>
-                                                <option value="price" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='price') selected @endif>Price</option>
-                                                <option value="category" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='category') selected @endif>Category</option>
-                                                <option value="brand" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='brand') selected @endif>Brand</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <ul class="view-mode">
-                                        <li class="active"><a href="javascript:void(0)"><i class="fa fa-th-large"></i></a></li>
-                                        <li><a href="{{route('product-lists')}}"><i class="fa fa-th-list"></i></a></li>
-                                    </ul>
-                                </div>
-                                <!--/ End Shop Top -->
-                            </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="product-play.html">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
                         </div>
-                        <div class="row">
-                            {{-- {{$products}} --}}
-                            @if(count($products)>0)
-                                @foreach($products as $product)
-                                    <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="single-product">
-                                            <div class="product-img">
-                                                <a href="{{route('product-detail',$product->slug)}}">
-                                                    @php
-                                                        $photo=explode(',',$product->photo);
-                                                    @endphp
-                                                    <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                                    <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                                    @if($product->discount)
-                                                                <span class="price-dec">{{$product->discount}} % Off</span>
-                                                    @endif
-                                                </a>
-                                                <div class="button-head">
-                                                    <div class="product-action">
-                                                        <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
-                                                        <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}" class="wishlist" data-id="{{$product->id}}"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
-                                                    </div>
-                                                    <div class="product-action-2">
-                                                        <a title="Add to cart" href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-content">
-                                                <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
-                                                @php
-                                                    $after_discount=($product->price-($product->price*$product->discount)/100);
-                                                @endphp
-                                                <span>${{number_format($after_discount,2)}}</span>
-                                                <del style="padding-left:4%;">${{number_format($product->price,2)}}</del>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            @else
-                                    <h4 class="text-warning" style="margin:100px auto;">There are no products.</h4>
-                            @endif
-
-
-
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>  
+                <div class="featured-item">
+                    <a href="product-play.html">
+                        <div class="featured-img"><img src="images/frame 1.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12 justify-content-center d-flex">
-                                {{$products->appends($_GET)->links()}}
-                            </div>
-                          </div>
-
-                    </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>                  
+                </div>
+                <div class="col-lg-3">
+                <div class="featured-item">
+                    <a href="product-details.html">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div> 
+                <div class="featured-item">
+                    <a href="product-details.html">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div> 
+                <div class="featured-item">
+                    <a href="product-details.html">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="product-details.html">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>                     
+                </div>
+                <div class="col-lg-3">
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/frame 1.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div> 
+                 <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/frame 1.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>                   
+                </div>
+                <div class="col-lg-3">
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                 <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/frame 1.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>
+                <div class="featured-item">
+                    <a href="#">
+                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
+                        <div class="featured-content">
+                            <h5>Title Title Title Title</h5>
+                            <span><strong>Code: HF4328754</strong></span>
+                            <p>Size: 36 X 36 in </p>
+                            <p>Medium: Water Colour</p>
+                        </div>
+                    </a>
+                      <div class="featured-attribute mt-3">
+                        <button class="hearts"><i class="far fa-heart"></i>120</button>
+                        <button class="comment"><i class="far fa-comment"></i>89</button>
+                      </div>
+                </div>                    
+                </div>
+                <div class="col-lg-12">
+                    <ul class="pagination mt-3">
+                        <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="" class="active">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href="">6</a></li>
+                        <li><a href="">7</a></li>
+                        <li><a href="">8</a></li>
+                        <li><a href="">9</a></li>
+                        <li><a href="">10</a></li>
+                        <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </form>
-
-    <!--/ End Product Style 1  -->
-
+        </div>
+    </section>
+    <!-- gallery listing sec end -->
 
 
-    <!-- Modal -->
-    @if($products)
-        @foreach($products as $key=>$product)
-            <div class="modal fade" id="{{$product->id}}" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                        <!-- Product Slider -->
-                                            <div class="product-gallery">
-                                                <div class="quickview-slider-active">
-                                                    @php
-                                                        $photo=explode(',',$product->photo);
-                                                    // dd($photo);
-                                                    @endphp
-                                                    @foreach($photo as $data)
-                                                        <div class="single-slider">
-                                                            <img src="{{$data}}" alt="{{$data}}">
-                                                        </div>
-                                                    @endforeach
-                                                </div>
-                                            </div>
-                                        <!-- End Product slider -->
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="quickview-content">
-                                            <h2>{{$product->title}}</h2>
-                                            <div class="quickview-ratting-review">
-                                                <div class="quickview-ratting-wrap">
-                                                    <div class="quickview-ratting">
-                                                        {{-- <i class="yellow fa fa-star"></i>
-                                                        <i class="yellow fa fa-star"></i>
-                                                        <i class="yellow fa fa-star"></i>
-                                                        <i class="yellow fa fa-star"></i>
-                                                        <i class="fa fa-star"></i> --}}
-                                                        @php
-                                                            $rate=DB::table('product_reviews')->where('product_id',$product->id)->avg('rate');
-                                                            $rate_count=DB::table('product_reviews')->where('product_id',$product->id)->count();
-                                                        @endphp
-                                                        @for($i=1; $i<=5; $i++)
-                                                            @if($rate>=$i)
-                                                                <i class="yellow fa fa-star"></i>
-                                                            @else
-                                                            <i class="fa fa-star"></i>
-                                                            @endif
-                                                        @endfor
-                                                    </div>
-                                                    <a href="#"> ({{$rate_count}} customer review)</a>
-                                                </div>
-                                                <div class="quickview-stock">
-                                                    @if($product->stock >0)
-                                                    <span><i class="fa fa-check-circle-o"></i> {{$product->stock}} in stock</span>
-                                                    @else
-                                                    <span><i class="fa fa-times-circle-o text-danger"></i> {{$product->stock}} out stock</span>
-                                                    @endif
-                                                </div>
-                                            </div>
-                                            @php
-                                                $after_discount=($product->price-($product->price*$product->discount)/100);
-                                            @endphp
-                                            <h3><small><del class="text-muted">${{number_format($product->price,2)}}</del></small>    ${{number_format($after_discount,2)}}  </h3>
-                                            <div class="quickview-peragraph">
-                                                <p>{!! html_entity_decode($product->summary) !!}</p>
-                                            </div>
-                                            @if($product->size)
-                                                <div class="size">
-                                                    <h4>Size</h4>
-                                                    <ul>
-                                                        @php
-                                                            $sizes=explode(',',$product->size);
-                                                            // dd($sizes);
-                                                        @endphp
-                                                        @foreach($sizes as $size)
-                                                        <li><a href="#" class="one">{{$size}}</a></li>
-                                                        @endforeach
-                                                    </ul>
-                                                </div>
-                                            @endif
-                                            <div class="size">
-                                                <div class="row">
-                                                    <div class="col-lg-6 col-12">
-                                                        <h5 class="title">Size</h5>
-                                                        <select>
-                                                            @php
-                                                            $sizes=explode(',',$product->size);
-                                                            // dd($sizes);
-                                                            @endphp
-                                                            @foreach($sizes as $size)
-                                                                <option>{{$size}}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                    {{-- <div class="col-lg-6 col-12">
-                                                        <h5 class="title">Color</h5>
-                                                        <select>
-                                                            <option selected="selected">orange</option>
-                                                            <option>purple</option>
-                                                            <option>black</option>
-                                                            <option>pink</option>
-                                                        </select>
-                                                    </div> --}}
-                                                </div>
-                                            </div>
-                                            <form action="{{route('single-add-to-cart')}}" method="POST">
-                                                @csrf
-                                                <div class="quantity">
-                                                    <!-- Input Order -->
-                                                    <div class="input-group">
-                                                        <div class="button minus">
-                                                            <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                                                <i class="ti-minus"></i>
-                                                            </button>
-                                                        </div>
-                                                        <input type="hidden" name="slug" value="{{$product->slug}}">
-                                                        <input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
-                                                        <div class="button plus">
-                                                            <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
-                                                                <i class="ti-plus"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <!--/ End Input Order -->
-                                                </div>
-                                                <div class="add-to-cart">
-                                                    <button type="submit" class="btn">Add to cart</button>
-                                                    <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
-                                                </div>
-                                            </form>
-                                            <div class="default-social">
-                                            <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        @endforeach
-    @endif
-    <!-- Modal end -->
+
+   <!-- footer sec start -->
+
+    <footer>
+
+   <!-- instagram sec start -->
+   <section class="instagram-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-12">
+                   <div class="section-heading">
+                       <h3 class="text-center mb-5"><i class="fab fa-instagram"></i> Instagram</h3>
+                   </div>
+
+                   <div class="instrgram-slider owl-carousel">
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <!-- instagram sec end -->
+
+   <!-- follow sec start -->
+   <section class="follow-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-12">
+                   <div class="section-heading">
+                       <h3 class="text-center mb-5">Follow Us</h3>
+                   </div>
+                   <div class="social-links">
+                       <ul>
+                           <li><a href=""><img src="images/facebook.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/instra.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/pin.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/you.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/in.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/twi.png" class="img-fluid"></a></li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <!-- follow sec end -->
+
+   <!-- footer links sec start  -->
+   <section class="footerlinks-sec sectionhalf">
+       <div class="container">
+           <div class="row justify-content-center">
+               <div class="col-lg-12">
+                   <div class="section-heading">
+                       <h3 class="text-center mb-5">
+                           <ul class="footer-links">
+                               <li><a href="" class="active">Home</a></li>
+                               <li><a href="">Gallery</a></li>
+                               <li><a href="">About</a></li>
+                               <li><a href="">Event</a></li>
+                               <li><a href="">Blog</a></li>
+                               <li><a href="">Contact</a></li>
+                           </ul>
+                       </h3>
+                   </div>
+               </div>
+               <div class="col-lg-5">
+                   <div class="newsletter text-center">
+                       <h5>Newsletter</h5>
+                       <p>Receive our newsletter for art lovers and collectors</p>
+                       <form>
+                        <input type="text" placeholder="Your E-mail ID" name="" class="form-control">
+                        <button class="sign-up">Sign Up</button>
+                       </form>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <!-- footer links sec end  -->
+
+   <!-- copyright sec start -->
+   <section class="copyright-sec sectionhalf">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-12">
+                   <ul class="copyright-list">
+                       <li><a href="#">Terms Of Use</a></li>
+                       <li><a href="">Privacy Policy</a></li>
+                       <li>© 2024 Melody Brush. All rights reserved.</li>
+                       <li>Powered by <a href="" class="creat-a">www.digibrandx.com</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+   </section>
+   <!-- copyright sec end -->
+   
+   </footer>
+   <!-- footer sec start -->
+
+   <div class="mobile-cart-sec">
+       <ul class="e-com-list">
+           <li><a href="javascript:void(0)" class="search-btn"><img src="images/search.png" class="img-fluid"></a></li>
+           <li><a href="cart.html"><img src="images/cart.png" class="img-fluid"></a></li>
+           <li><a href="dashbord.html"><img src="images/profile.png" class="img-fluid"></a></li>
+        </ul>
+   </div>
+
+
+   <div class="main-search-area">
+       <button class="srh-close"><img src="images/x.png" class="img-fluid"></button>
+       <div class="container">
+           <div class="row justify-content-center text-center">
+               <div class="col-lg-7">
+                <div class="searh-cotnent">
+                   <h3>What You Search Today</h3>
+                   <form class="srh-form">
+                       <input type="text" placeholder="Search" name="">
+                       <button class="searh-btn"><img src="images/srh-img.png" class="img-fluid"></button>
+                   </form>
+               </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/jquery.ripples.js"></script>
+    <script src="js/custom.js"></script>  
+    <script>
+        // Fancybox Config
+Fancybox.bind('[data-fancybox]', {
+  //
+}); 
+    </script>
+    <script>
+        AOS.init();
+      </script>
 
 @endsection
-@push('styles')
-<style>
-    .pagination{
-        display:inline-flex;
-    }
-    .filter_button{
-        /* height:20px; */
-        text-align: center;
-        background:#F7941D;
-        padding:8px 16px;
-        margin-top:10px;
-        color: white;
-    }
-</style>
-@endpush
-@push('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-    {{-- <script>
-        $('.cart').click(function(){
-            var quantity=1;
-            var pro_id=$(this).data('id');
-            $.ajax({
-                url:"{{route('add-to-cart')}}",
-                type:"POST",
-                data:{
-                    _token:"{{csrf_token()}}",
-                    quantity:quantity,
-                    pro_id:pro_id
-                },
-                success:function(response){
-                    console.log(response);
-					if(typeof(response)!='object'){
-						response=$.parseJSON(response);
-					}
-					if(response.status){
-						swal('success',response.msg,'success').then(function(){
-							document.location.href=document.location.href;
-						});
-					}
-                    else{
-                        swal('error',response.msg,'error').then(function(){
-							// document.location.href=document.location.href;
-						});
-                    }
-                }
-            })
-        });
-    </script> --}}
-    <script>
-        $(document).ready(function(){
-        /*----------------------------------------------------*/
-        /*  Jquery Ui slider js
-        /*----------------------------------------------------*/
-        if ($("#slider-range").length > 0) {
-            const max_value = parseInt( $("#slider-range").data('max') ) || 500;
-            const min_value = parseInt($("#slider-range").data('min')) || 0;
-            const currency = $("#slider-range").data('currency') || '';
-            let price_range = min_value+'-'+max_value;
-            if($("#price_range").length > 0 && $("#price_range").val()){
-                price_range = $("#price_range").val().trim();
-            }
-
-            let price = price_range.split('-');
-            $("#slider-range").slider({
-                range: true,
-                min: min_value,
-                max: max_value,
-                values: price,
-                slide: function (event, ui) {
-                    $("#amount").val(currency + ui.values[0] + " -  "+currency+ ui.values[1]);
-                    $("#price_range").val(ui.values[0] + "-" + ui.values[1]);
-                }
-            });
-            }
-        if ($("#amount").length > 0) {
-            const m_currency = $("#slider-range").data('currency') || '';
-            $("#amount").val(m_currency + $("#slider-range").slider("values", 0) +
-                "  -  "+m_currency + $("#slider-range").slider("values", 1));
-            }
-        })
-    </script>
-@endpush

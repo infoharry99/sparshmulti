@@ -35,17 +35,11 @@ span {
 
     <hr class="sidebar-divider">
 
-    <div class="sidebar-heading">
+    <!-- <div class="sidebar-heading">
         Banner
-    </div>
+    </div> -->
 
-    <!-- <li class="nav-item">
-        <a class="nav-link" href="{{route('file-manager')}}">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Media Manager</span></a>
-    </li> -->
-
-    <li class="nav-item">
+    <li class="nav-item"> 
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-image"></i>
         <span>Banners</span>
@@ -61,9 +55,9 @@ span {
     <!-- Divider -->
     <hr class="sidebar-divider">
         <!-- Heading -->
-        <div class="sidebar-heading">
-            Shop
-        </div>
+        <!-- <div class="sidebar-heading">
+            PaintingStudio
+        </div> -->
 
     <!-- Categories -->
     <!-- <li class="nav-item">
@@ -78,7 +72,7 @@ span {
             <a class="collapse-item" href="{{route('category.create')}}">Add Category</a>
           </div>
         </div>
-    </li> -->
+      </li> -->
     {{-- Products --}}
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#productCollapse" aria-expanded="true" aria-controls="productCollapse">
@@ -131,7 +125,32 @@ span {
             <span>Orders</span>
         </a>
     </li>
-
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('order.index')}}">
+            <i class="fas fa-hammer fa-chart-area"></i>
+            <span>Transaction History</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('order.index')}}">
+            <i class="fas fa-hammer fa-chart-area"></i>
+            <span>My Payment Details</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('order.index')}}">
+            <i class="fas fa-hammer fa-chart-area"></i>
+            <span> Logistics Details</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('order.index')}}">
+            <i class="fas fa-hammer fa-chart-area"></i>
+            <span> Shipping Tracking</span>
+        </a>
+    </li>
+   
+   
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#termsCollapse" aria-expanded="true" aria-controls="categoryCollapse">
           <i class="fas fa-sitemap"></i>
@@ -191,7 +210,7 @@ span {
     </li>
 
      <!-- Category -->
-     <li class="nav-item">
+     <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#postCategoryCollapse" aria-expanded="true" aria-controls="postCategoryCollapse">
           <i class="fas fa-sitemap fa-folder"></i>
           <span>Category</span>
@@ -203,10 +222,10 @@ span {
             <a class="collapse-item" href="{{route('post-category.create')}}">Add Category</a>
           </div>
         </div>
-      </li>
+      </li> -->
 
       <!-- Tags -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#tagCollapse" aria-expanded="true" aria-controls="tagCollapse">
             <i class="fas fa-tags fa-folder"></i>
             <span>Tags</span>
@@ -218,7 +237,7 @@ span {
             <a class="collapse-item" href="{{route('post-tag.create')}}">Add Tag</a>
             </div>
         </div>
-    </li>
+    </li> -->
 
       <!-- Comments -->
       <li class="nav-item">
@@ -238,7 +257,7 @@ span {
     <li class="nav-item">
       <a class="nav-link" href="{{route('coupon.index')}}">
           <i class="fas fa-table"></i>
-          <span>Coupon</span></a>
+          <span> Gift Coupon</span></a>
     </li>
      <!-- Users -->
      <li class="nav-item">

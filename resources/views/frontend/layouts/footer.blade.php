@@ -1,7 +1,7 @@
 
 	<!-- Start Footer Area -->
 	<!-- <footer class="footer">
-		<!-- Footer Top 
+		Footer Top 
 		<div class="footer-top section">
 			<div class="container">
 				<div class="row">
@@ -78,71 +78,199 @@
 	</footer> -->
 	<!-- /End Footer Area -->
    <!-- footer links sec start  -->
-   <section class="footerlinks-sec sectionhalf">
-       <div class="container">
-           <div class="row justify-content-center">
-               <div class="col-lg-12">
-                   <div class="section-heading">
-                       <h3 class="text-center mb-5">
-                           <ul class="footer-links">
-                               <li><a href="" class="active">Home</a></li>
-                               <li><a href="">Gallery</a></li>
-                               <li><a href="">About</a></li>
-                               <li><a href="">Event</a></li>
-                               <li><a href="">Blog</a></li>
-                               <li><a href="">Contact</a></li>
-                           </ul>
-                       </h3>
-                   </div>
-               </div>
-               <div class="col-lg-5">
-                   <div class="newsletter text-center">
-                       <h5>Newsletter</h5>
-                       <p>Receive our newsletter for art lovers and collectors</p>
-                       <form>
-                        <input type="text" placeholder="Your E-mail ID" name="" class="form-control">
-                        <button class="sign-up">Sign Up</button>
-                       </form>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
-   <!-- footer links sec end  -->
+  <!-- follow sec start -->
+  
+  <footer>
+      <!-- instagram sec start -->
+      <section class="instagram-sec sectionpadding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading">
+                <h3 class="text-center mb-5">
+                  <i class="fab fa-instagram"></i> Instagram
+                </h3>
+              </div>
 
-   <!-- copyright sec start -->
-   <section class="copyright-sec sectionhalf">
-       <div class="container">
-           <div class="row">
-               <div class="col-lg-12">
-                   <ul class="copyright-list">
-                       <li><a href="#">Terms Of Use</a></li>
-                       <li><a href="">Privacy Policy</a></li>
-                       <li>© 2024 Melody Brush. All rights reserved.</li>
-                       <li>Powered by <a href="" class="creat-a">www.digibrandx.com</a></li>
-                   </ul>
-               </div>
-           </div>
-       </div>
-   </section>
-   <!-- copyright sec end -->
-   
-   </footer>
+              <div class="instrgram-slider owl-carousel">
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- instagram sec end -->
+
+      <!-- follow sec start -->
+      <section class="follow-sec sectionpadding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading">
+                <h3 class="text-center mb-5">Follow Us</h3>
+              </div>
+              <div class="social-links">
+                <ul>
+                  <li>
+                    <a href=""
+                      ><img src="{{asset('images/facebook.png')}}" class="img-fluid"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="{{asset('images/instra.png')}}" class="img-fluid"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="{{asset('images/pin.png')}}" class="img-fluid"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="{{asset('images/you.png')}}" class="img-fluid"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href=""><img src="{{asset('images/in.png')}}" class="img-fluid" /></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img src="{{asset('images/twi.png')}}" class="img-fluid"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- follow sec end -->
+
+      <!-- footer links sec start  -->
+      <section class="footerlinks-sec sectionhalf">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <div class="section-heading">
+                <h3 class="text-center mb-5">
+                  <ul class="footer-links">
+                    <li><a href="" class="active">Home</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Event</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact</a></li>
+                  </ul>
+                </h3>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="newsletter text-center">
+                <h5>Newsletter</h5>
+                <p>Receive our newsletter for art lovers and collectors</p>
+                <form action="{{route('subscribe')}}" method="post" class="newsletter-inner">
+                            @csrf
+                  <input
+                 
+                    type="text"
+                    placeholder="Your E-mail ID"
+                    name="email"
+                    class="form-control"
+                  />
+                  <button 
+                    type="submit"
+                  class="sign-up"
+                  >Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- footer links sec end  -->
+
+      <!-- copyright sec start -->
+      <section class="copyright-sec sectionhalf">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="copyright-list">
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li>© 2024 Melody Brush. All rights reserved.</li>
+                <li>
+                  Powered by <a href="" class="creat-a">www.digibrandx.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- copyright sec end -->
+    </footer>
    <!-- footer sec start -->
    
 
 
    <div class="mobile-cart-sec">
        <ul class="e-com-list">
-           <li><a href="javascript:void(0)" class="search-btn"><img src="images/search.png" class="img-fluid"></a></li>
-           <li><a href="cart.html"><img src="images/cart.png" class="img-fluid"></a></li>
-           <li><a href="dashbord.html"><img src="images/profile.png" class="img-fluid"></a></li>
+           <li><a href="javascript:void(0)" class="search-btn"><img src="{{asset('images/search.png')}}" class="img-fluid"></a></li>
+           <li><a href="cart.html"><img src="{{asset('images/cart.png')}}" class="img-fluid"></a></li>
+           <li><a href="dashbord.html"><img src="{{asset('images/profile.png')}}" class="img-fluid"></a></li>
         </ul>
    </div>
 
 
    <div class="main-search-area">
-       <button class="srh-close"><img src="images/x.png" class="img-fluid"></button>
+       <button class="srh-close"><img src="{{asset('images/x.png')}}" class="img-fluid"></button>
        <div class="container">
            <div class="row justify-content-center text-center">
                <div class="col-lg-7">
@@ -150,7 +278,7 @@
                    <h3>What You Search Today</h3>
                    <form class="srh-form">
                        <input type="text" placeholder="Search" name="">
-                       <button class="searh-btn"><img src="images/srh-img.png" class="img-fluid"></button>
+                       <button class="searh-btn"><img src="{{asset('images/srh-img.png')}}" class="img-fluid"></button>
                    </form>
                </div>
                </div>
@@ -167,8 +295,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/jquery.ripples.js"></script>
-    <script src="js/custom.js"></script>  
+    <script src="{{asset('js/jquery.ripples.js')}}"></script>
+    <script src="{{asset('js/custom.js')}}"></script>  
     <script>
 			// Fancybox Config
 	Fancybox.bind('[data-fancybox]', {
@@ -179,7 +307,7 @@
         AOS.init();
       </script>
 
-	Jquery
+	{{-- Jquery --}}
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
     <script src="{{asset('frontend/js/jquery-migrate-3.0.0.js')}}"></script>
 	<script src="{{asset('frontend/js/jquery-ui.min.js')}}"></script>

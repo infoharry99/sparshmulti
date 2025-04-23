@@ -8,6 +8,7 @@
     font-family: "Roboto", serif;
     font-size: 16px;
 }
+
 body{
     overflow-x: hidden;
 }
@@ -33,6 +34,8 @@ p{
 :root{
     --ftcolor: #3195B7;
     --sdcolor: #D04938;
+    --primary-color: #D04938 !important;
+    --secondary-color: #3195B7 !important;
 }
 
 /*==== header sec start ====*/
@@ -67,7 +70,7 @@ p{
     gap: 35px;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: #000;
+    color: #D04938;
     font-size: 14px;
     text-transform: uppercase;
     padding: 0;
@@ -131,20 +134,20 @@ p{
 .banner-overlay h1 {
     color: #fff;
     text-transform: capitalize;
-    text-shadow: 1px 0px 11px #000;
+    text-shadow: 1px 0px 11px #D04938;
     font-size: 55px;
 }
 .banner-overlay h4 {
     color: #fff;
     text-transform: capitalize;
-    text-shadow: 1px 0px 11px #000;
+    text-shadow: 1px 0px 11px #D04938;
     font-size: 30px;
     font-weight: 300;
 }
 .banner-overlay p {
     color: #fff;
     text-transform: capitalize;
-    text-shadow: 1px 0px 11px #000;
+    text-shadow: 1px 0px 11px #D04938;
 }
 .owl-dots {
     position: absolute;
@@ -158,7 +161,7 @@ p{
 .owl-dot span {
     width: 10px;
     height: 10px;
-    background: #000;
+    background: #D04938;
     display: block;
     border-radius: 50%;
 }
@@ -173,7 +176,7 @@ p{
 }
 .section-heading h3 {
     font-weight: 400;
-    color: #000;
+    color: #D04938;
 }
 /*===== why sec end =====*/
 
@@ -189,10 +192,10 @@ p{
 }
 .featured-item a{
     text-decoration: none;
-    color: #000;
+    color: #D04938;
 }
 .featured-content h5 {
-    color: #000;
+    color: #D04938;
     text-transform: uppercase;
     margin: 0;
     font-weight: 400;
@@ -256,7 +259,7 @@ p{
 
 /*===== blog sec start ========*/
 .view-all {
-    color: #000;
+    color: #D04938;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -374,7 +377,7 @@ p{
 }
 .footer-links li a{
    font-size: 16px;
-   color: #000;
+   color: #D04938;
    text-transform:uppercase;
    text-decoration: none;
    font-weight: 400;
@@ -383,10 +386,10 @@ p{
     color: var(--ftcolor);
 }
 .newsletter h5{
-    color: #000;
+    color: #D04938;
 }
 .newsletter p{
-    color: #000;
+    color: #D04938;
 }
 .newsletter input {
     padding: 20px 20px 20px 120px;
@@ -440,10 +443,10 @@ p{
     border-color: #ddd !important;
 }
 .breadcrumb-item.active {
-    color: #000;
+    color: #D04938;
 }
 .breadcrumb-item a{
-    color: #000;
+    color: #D04938;
 }
 /*===== subbanner sec end =====*/
 
@@ -474,7 +477,7 @@ p{
     text-align: center;
 }
 .pagination li a.active{
-    color: #000;
+    color: #D04938;
     font-weight: 500;
     border-color:#898989 ;
 }
@@ -546,7 +549,7 @@ p{
 }
 .lyrics-area p{
     margin-bottom: 0;
-    color: #000;
+    color: #D04938;
 }
 .lyrics-area .form-select {
     padding-right: 0;
@@ -633,7 +636,7 @@ p{
 }
 .country .form-select {
     border: 0px;
-    color: #000;
+    color: #D04938;
     padding-left: 0;
 }
 .currency-area {
@@ -652,10 +655,10 @@ p{
     color: #898989;
 }
 .cost-area p strong {
-    color: #000;
+    color: #D04938;
 }
 .check-text a {
-    color: #000;
+    color: #D04938;
     font-size: 15px;
     text-decoration: underline;
 }
@@ -688,7 +691,7 @@ p{
     width: 320px;
 }
 .wistlist-btn a{
-    color: #000;
+    color: #D04938;
     text-decoration: underline;
     font-size: 15px;
 }
@@ -708,14 +711,14 @@ p{
 }
 .pd-lern-more p {
     font-size: 12px;
-    color: #000;
+    color: #D04938;
     margin: 0;
     padding-top: 30px;
 }
 .pd-lern-more p a {
         font-weight: bold;
         text-decoration: underline;
-        color: #000;
+        color: #D04938;
         font-size: 12px;
 }
 .tabcontent {
@@ -739,7 +742,7 @@ p{
     color: #898989;
 }
 .tablinks.active{
-    color: #000;
+    color: #D04938;
 }
 .tablinks::after{
     content: "";
@@ -748,7 +751,7 @@ p{
     left: 0;
     width:0%;
     height: 1px;
-    background: #000;
+    background: #D04938;
     transition: 0.5s;
 }
 .tablinks.active::after{
@@ -767,7 +770,7 @@ p{
 }
 .print-area p {
     line-height: 30px;
-    color: #000;
+    color: #D04938;
     margin-bottom: 2rem;
 }
 .fst-pt p {
@@ -868,12 +871,12 @@ p{
 }
 .blog-area h4{
     font-family: "Montserrat", serif;
-    color: #000;
+    color: #D04938;
     font-weight: 500;
 }
 .blog-area p{
     font-family: "Montserrat", serif;
-    color: #000;
+    color: #D04938;
     font-size: 14px;
 }
 .blog-area span{
@@ -978,7 +981,7 @@ p{
 
 /*====== signup sec start =======*/
 .signup-area h3 {
-    color: #000;
+    color: #D04938;
     font-family: poppins;
     font-size: 37px;
     font-weight: 600;
@@ -986,7 +989,7 @@ p{
 .signup-area p {
     font-size: 18px;
     font-family: poppins;
-    color: #000;
+    color: #D04938;
 }
 .login-battns{
     display: flex;
@@ -998,7 +1001,7 @@ p{
     padding: 0;
 }
 .login-battns li a{
-    color: #000;
+    color: #D04938;
     font-family: poppins;
     font-size: 18px;
     width: 100%;
@@ -1072,10 +1075,10 @@ p{
 .signup-form p{
     margin-bottom: 0;
     margin-top: 15px;
-    color: #000;
+    color: #D04938;
     font-family: poppins;
     font-size: 18px;
-    color: #000;
+    color: #D04938;
 }
 .signup-form p a{
     color: var(--sdcolor);
@@ -1100,7 +1103,7 @@ p{
     border-bottom: 1px solid #ddd;
 }
 .c-head-text h6{
-    color: #000;
+    color: #D04938;
     font-family: poppins;
     font-weight: 600;
 }
@@ -1127,7 +1130,7 @@ p{
 .cart-pd-heading {
     text-transform: uppercase;
     font-weight: 400;
-    color: #000;
+    color: #D04938;
 }
 .cart-item-content h6{
     font-weight: 400;
@@ -1154,7 +1157,7 @@ p{
 .qty-container button {
     width: 36px;
     height: 36px;
-    border: 1px solid #000;
+    border: 1px solid #D04938;
     border-radius: 50%;
     line-height: 30px;
     text-align: center;
@@ -1166,7 +1169,7 @@ p{
 .qty-container input {
     width: 40px;
     border: none;
-    color: #000;
+    color: #D04938;
     text-align: center;
 }
 .cart-qty p{
@@ -1212,7 +1215,7 @@ p{
     display: block;
     border-radius: 50%;
     text-align: center;
-    color: #000;
+    color: #D04938;
     font-size: 14px;
     line-height: 25px;
     margin: 0 auto;
@@ -1238,7 +1241,7 @@ p{
 .daslinks{
     position: relative;
     font-family: poppins;
-    color: #000;
+    color: #D04938;
     width: 100%;
     background: transparent;
     border: none;
@@ -1347,10 +1350,10 @@ p{
     justify-content: space-between;
 }
 .order-attrubute ul li p,strong,a{
-    color: #000;
+    color: #D04938;
 }
 .order-attrubute ul li p a{
-    color: #000 !important;
+    color: #D04938 !important;
     text-decoration: underline;
 }
 .td-od-img img{
@@ -1360,7 +1363,7 @@ p{
     border-radius: 8px;
 }
 .td-od-title p {
-    color: #000;
+    color: #D04938;
     font-family: poppins;
     font-weight: 600;
     line-height: 160px;
@@ -1371,12 +1374,12 @@ p{
     line-height: 160px;
 }
 .td-od-size p{
-    color: #000;
+    color: #D04938;
     font-family: poppins;
     line-height: 160px;
 }
 .td-od-color p{
-    color: #000;
+    color: #D04938;
     font-family: poppins;
     line-height: 160px;
 }

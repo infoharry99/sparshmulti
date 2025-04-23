@@ -12,8 +12,8 @@
         </ol>
         <div class="carousel-inner" role="listbox">
                 @foreach($banners as $key=>$banner)
-                <div class="carousel-item {{(($key==0)? 'active' : '')}}">
-                    <img class="first-slide" src="{{$banner->photo}}" alt="First slide">
+                <div class="carousel-item  {{(($key==0)? 'active' : '')}}" >
+                    <img class="first-slide" src="{{$banner->photo}}" alt="First slide " >
                     <div class="carousel-caption d-none d-md-block text-left">
                         <h1 class="wow fadeInDown">{{$banner->title}}</h1>
                         <p>{!! html_entity_decode($banner->description) !!}</p>
@@ -32,6 +32,9 @@
         </a>
     </section>
 @endif
+
+
+
 
 <!--/ End Slider Area -->
 
@@ -100,81 +103,32 @@
                 </div>
             </div>
                <div class="featured-slider owl-carousel">
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
+                 @if($featured)
+                    @foreach($featured as $data)
+                        <div class="featured-item">
+                            <a href="#">
+                                <div class="featured-img">
+                                    @php
+                                        $photos = json_decode($data->photo); // Properly decode JSON array
+                                    @endphp
+                                    @if(!empty($photos) && isset($photos[0]))
+                                        <img src="{{ asset($photos[0]) }}" alt="Featured Image" class="img-fluid">
+                                    @endif
+                                    {{-- <img src="{{$photo[0]}}" alt="{{$photo[0]}}" class="img-fluid"> --}}
+                                </div>
+                                <div class="featured-content">
+                                    <p>{{$data->cat_info['title']}}</p>
+                                    <h3>{{$data->title}} <br>Up to<span> {{$data->discount}}%</span></h3>
+                                    <a href="{{route('product-detail',$data->slug)}}">Shop Now</a>
+                                </div>
+                            </a>
+                            <div class="featured-attribute mt-3">
+                                <button class="hearts"><i class="far fa-heart"></i>120</button>
+                                <button class="comment"><i class="far fa-comment"></i>89</button>
+                            </div>
                         </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
-                        </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
-                        </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
-                        </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
-                        </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>                                                                
+                    @endforeach
+                @endif
                </div>
            </div>
        </div>
@@ -191,96 +145,32 @@
                 </div>
             </div>
                <div class="featured-slider owl-carousel">
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
+                    @php
+                        $product_listss=DB::table('products')->where('status','active')->orderBy('id','DESC')->limit(6)->get();
+                    @endphp
+                    @foreach($product_listss as $product)
+                        <div class="featured-item">
+                            <a href="#">
+                                <div class="featured-img">
+                                    @php
+                                        $photos = json_decode($data->photo); // Properly decode JSON array
+                                    @endphp
+                                    @if(!empty($photos) && isset($photos[0]))
+                                        <img src="{{ asset($photos[0]) }}" alt="Featured Image" class="img-fluid">
+                                    @endif
+                                <div class="featured-content">
+                                    <h4 class="title">
+                                        <a href="#">{{$product->title}}</a>
+                                    </h4>
+                                <p class="price with-discount">${{number_format($product->discount,2)}}</p>
+                                </div>
+                            </a>
+                            <div class="featured-attribute mt-3">
+                                <button class="hearts"><i class="far fa-heart"></i>120</button>
+                                <button class="comment"><i class="far fa-comment"></i>89</button>
+                            </div>
                         </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
-                        </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
-                        </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
-                        </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
-                        </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>
-                <div class="featured-item">
-                    <a href="#">
-                        <div class="featured-img"><img src="images/image 12.png" class="img-fluid"></div>
-                        <div class="featured-content">
-                            <h5>Title Title Title Title</h5>
-                            <span><strong>Code: HF4328754</strong></span>
-                            <p>Size: 36 X 36 in </p>
-                            <p>Medium: Water Colour</p>
-                        </div>
-                    </a>
-                      <div class="featured-attribute mt-3">
-                        <button class="hearts"><i class="far fa-heart"></i>120</button>
-                        <button class="comment"><i class="far fa-comment"></i>89</button>
-                      </div>
-                </div>                                                                                
+                    @endforeach                                                                              
                </div>
            </div>
        </div>
@@ -336,7 +226,7 @@
 
 
    <!-- testimonial sec start -->
-   <section class="testimonial-sec sectionpadding">
+  <section class="testimonial-sec sectionpadding">
        <div class="container">
            <div class="row">
             <div class="col-lg-2"></div>
@@ -497,7 +387,22 @@
                     <a href="#" class="view-all">View All</a>
                 </div>
             </div>
-               <div class="col-lg-6">
+            @if($posts)
+                @foreach($posts as $post)
+                    <div class="col-lg-6">
+                        <div class="blog-list">
+                                <h5 class="mb-3">{{$post->title}}</h5>
+                            <span>{{$post->created_at->format('d M , Y. D')}}</span>
+                            <p>{!! $post->summary!!}</p>
+                            <a href="{{route('blog.detail',$post->slug)}}">
+                                <img src="{{$post->photo}}" alt="{{$post->photo}}" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
+               
+               {{-- <div class="col-lg-6">
                    <div class="blog-list">
                        <h5 class="mb-3">Lorem Ipsum is simply </h5>
                        <span>Megha Biswas, Mumbai, Indian 20th Oct’24</span>
@@ -506,17 +411,7 @@
                            <img src="images/image 12.png" class="img-fluid">
                        </a>
                    </div>
-               </div>
-               <div class="col-lg-6">
-                   <div class="blog-list">
-                       <h5 class="mb-3">Lorem Ipsum is simply </h5>
-                       <span>Megha Biswas, Mumbai, Indian 20th Oct’24</span>
-                       <p>of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a</p>
-                       <a href="#">
-                           <img src="images/image 12.png" class="img-fluid">
-                       </a>
-                   </div>
-               </div>               
+               </div>                --}}
            </div>
        </div>
    </section>
@@ -550,8 +445,10 @@
         </div>
     </div>
 </section> -->
+
+
 <!-- End Shop Blog  -->
-<section class="instagram-sec sectionpadding">
+ {{-- <section class="instagram-sec sectionpadding">
        <div class="container">
            <div class="row">
                <div class="col-lg-12">
@@ -596,11 +493,11 @@
                </div>
            </div>
        </div>
-   </section>
+   </section> --}}
 <!-- Start Shop Services Area -->
 
  <!-- follow sec start -->
- <section class="follow-sec sectionpadding">
+ {{-- <section class="follow-sec sectionpadding">
        <div class="container">
            <div class="row">
                <div class="col-lg-12">
@@ -620,7 +517,7 @@
                </div>
            </div>
        </div>
-   </section>
+   </section> --}}
    <!-- follow sec end -->
 
 <!-- <section class="shop-services section home">

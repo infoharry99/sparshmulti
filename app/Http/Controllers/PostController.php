@@ -11,23 +11,12 @@ use App\User;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $posts=Post::getAllPost();
-        // return $posts;
         return view('backend.post.index')->with('posts',$posts);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $categories=PostCategory::get();
@@ -35,13 +24,7 @@ class PostController extends Controller
         $users=User::get();
         return view('backend.post.create')->with('users',$users)->with('categories',$categories)->with('tags',$tags);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
         // return $request->all();
@@ -53,7 +36,7 @@ class PostController extends Controller
             'photo'=>'string|nullable',
             'tags'=>'nullable',
             'added_by'=>'nullable',
-            'post_cat_id'=>'required',
+            // 'post_cat_id'=>'required',
             'status'=>'required|in:active,inactive'
         ]);
 
@@ -66,6 +49,14 @@ class PostController extends Controller
         }
         $data['slug']=$slug;
 
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo'); // Get the uploaded file
+            $fileName = time() . '-' . $file->getClientOriginalName(); // Generate a unique filename
+            $file->move(public_path('frontend/post'), $fileName); // Move to the destination folder
+            $data['photo'] = 'frontend/post/' . $fileName; // Store path as a string (not JSON or array)
+        }
+
+    //    $data['photo'] = json_encode($photos); 
         $tags=$request->input('tags');
         if($tags){
             $data['tags']=implode(',',$tags);
@@ -73,7 +64,7 @@ class PostController extends Controller
         else{
             $data['tags']='';
         }
-        // return $data;
+        dd($data);
 
         $status=Post::create($data);
         if($status){
@@ -127,10 +118,10 @@ class PostController extends Controller
             'quote'=>'string|nullable',
             'summary'=>'string|required',
             'description'=>'string|nullable',
-            'photo'=>'string|nullable',
+            // 'photo'=>'string|nullable',
             'tags'=>'nullable',
             'added_by'=>'nullable',
-            'post_cat_id'=>'required',
+            // 'post_cat_id'=>'required',
             'status'=>'required|in:active,inactive'
         ]);
 
@@ -144,7 +135,14 @@ class PostController extends Controller
             $data['tags']='';
         }
         // return $data;
-
+        // dd($data);
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo'); // Get the uploaded file
+            $fileName = time() . '-' . $file->getClientOriginalName(); // Generate a unique filename
+            $file->move(public_path('frontend/post'), $fileName); // Move to the destination folder
+            $data['photo'] = 'frontend/post/' . $fileName; // Store path as a string (not JSON or array)
+        }    
+        // dd($data);       
         $status=$post->fill($data)->save();
         if($status){
             request()->session()->flash('success','Post Successfully updated');
