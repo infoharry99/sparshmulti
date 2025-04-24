@@ -56,3 +56,5 @@ storage/telescope
 
 # Jetstream / Livewire specific
 /livewire-tmp
+/vendor
+

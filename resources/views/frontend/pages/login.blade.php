@@ -61,7 +61,8 @@
 
                                     </div>
                                     <div class="checkbox">
-                                        <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Remember me</label>
+                                        <label class="checkbox-inline" for="2">
+                                            <input name="news" id="2" type="checkbox">Remember me</label>
                                     </div>
                                     @if (Route::has('password.request'))
                                         <a class="lost-pass" href="{{ route('password.reset') }}">
@@ -108,115 +109,114 @@
 @endpush --}}
 
 
-
 <style>
     /*====== signup sec start =======*/
-.signup-area h3 {
-    color: #000;
-    font-family: poppins;
-    font-size: 37px;
-    font-weight: 600;
-}
-.signup-area p {
-    font-size: 18px;
-    font-family: poppins;
-    color: #000;
-}
-.login-battns{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 25px;
-    margin: 0;
-    margin-top: 30px;
-    padding: 0;
-}
-.login-battns li a{
-    color: #000;
-    font-family: poppins;
-    font-size: 18px;
-    width: 100%;
-    display: inline-block;
-    padding: 8px;
-    border: 2px solid #ddd;
-    text-align: center;
-    border-radius: 44px;
-}
-.login-battns li a img{
-    margin-right: 6px;
-}
-.divider{
-    position: relative;
-    width: 100%;
-    color: #ddd;
-    font-family: poppins;
-    font-size: 18px;
-    margin:30px 0;
-}
-.divider::before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 40%;
-    height: 1px;
-    transform: translateY(-50%);
-    background: #ddd;
+    .signup-area h3 {
+        color: #000;
+        font-family: poppins;
+        font-size: 37px;
+        font-weight: 600;
+    }
+    .signup-area p {
+        font-size: 18px;
+        font-family: poppins;
+        color: #000;
+    }
+    .login-battns{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 25px;
+        margin: 0;
+        margin-top: 30px;
+        padding: 0;
+    }
+    .login-battns li a{
+        color: #000;
+        font-family: poppins;
+        font-size: 18px;
+        width: 100%;
+        display: inline-block;
+        padding: 8px;
+        border: 2px solid #ddd;
+        text-align: center;
+        border-radius: 44px;
+    }
+    .login-battns li a img{
+        margin-right: 6px;
+    }
+    .divider{
+        position: relative;
+        width: 100%;
+        color: #ddd;
+        font-family: poppins;
+        font-size: 18px;
+        margin:30px 0;
+    }
+    .divider::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 40%;
+        height: 1px;
+        transform: translateY(-50%);
+        background: #ddd;
 
-}
-.divider::after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 40%;
-    height: 1px;
-    transform: translateY(-50%);
-    background: #ddd;
-}
-.signup-form{
-    width: 100%;
-}
-.signup-form input {
-    padding: 13px;
-    background: transparent;
-    outline: none;
-    font-family: poppins;
-    color: #ddd;
-    font-size: 18px;
-    border: 2px solid #ddd;
-    border-radius: 44px;
-    margin-bottom: 25px;
-    text-align: center;
-    width: 100%;
-}
-.signup-form input::placeholder{
-    color: #ddd;
-}
-.signup-btn {
-    background: var(--sdcolor) ;
-    font-size: 18px;
-    color: #fff;
-    font-family: poppins;
-    padding: 14px;
-    border-radius: 44px;
-    width: 100%;
-    border: none;
-}
-.signup-form p{
-    margin-bottom: 0;
-    margin-top: 15px;
-    color: #000;
-    font-family: poppins;
-    font-size: 18px;
-    color: #000;
-}
-.signup-form p a{
-    color: var(--sdcolor);
-    font-size: 18px;
-    font-weight: 600;
-    font-family: poppins;
-}
+    }
+    .divider::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 40%;
+        height: 1px;
+        transform: translateY(-50%);
+        background: #ddd;
+    }
+    .signup-form{
+        width: 100%;
+    }
+    .signup-form input {
+        padding: 13px;
+        background: transparent;
+        outline: none;
+        font-family: poppins;
+        color: #ddd;
+        font-size: 18px;
+        border: 2px solid #ddd;
+        border-radius: 44px;
+        margin-bottom: 25px;
+        text-align: center;
+        width: 100%;
+    }
+    .signup-form input::placeholder{
+        color: #ddd;
+    }
+    .signup-btn {
+        background: var(--sdcolor) ;
+        font-size: 18px;
+        color: #fff;
+        font-family: poppins;
+        padding: 14px;
+        border-radius: 44px;
+        width: 100%;
+        border: none;
+    }
+    .signup-form p{
+        margin-bottom: 0;
+        margin-top: 15px;
+        color: #000;
+        font-family: poppins;
+        font-size: 18px;
+        color: #000;
+    }
+    .signup-form p a{
+        color: var(--sdcolor);
+        font-size: 18px;
+        font-weight: 600;
+        font-family: poppins;
+    }
 </style>
 
 
@@ -239,16 +239,9 @@
     <title>Melody Brush</title>
 </head>
 <body id="inner-page">
-
-<!-- header sec start -->
 <div class="blog-header">
     <a href="#"><img src="{{asset('images/x.png')}}" class="img-fluid"></a>
 </div>
-<!-- header sec end -->
-   
-
-
-
     <!-- signup sec start -->
     <section class="signup-sec padding-bottom sectionhalftop">
     	<div class="container">
@@ -263,11 +256,28 @@
     				    	<li><a href=""><img src="{{asset('images/Masked Icon.png')}}" class="img-fluid">Sign in with Apple</a></li>
     				    </ul>
     				    <div class="divider">or</div>
-    				    <form class="signup-form">
-    				    	<input type="text" placeholder="Email Address" name="">
-    				    	<input type="text" placeholder="Password" name="">
-    				    	<button class="signup-btn">Sign Up</button>
-    				    	<p>Already Have an Account? <a href="#">Sign Up</a></p>
+    				    <!-- <form class=""> -->
+                        <form class="form signup-form" method="post" action="{{route('login.submit')}}">
+                            @csrf
+    				    	<!-- <input type="text" placeholder="Email Address" name=""> -->
+                            <label>Your Email<span>*</span></label>
+                            <input type="email" name="email" placeholder="" required="required" value="{{old('email')}}">
+                            @error('email')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+    				    	<label>Your Password<span>*</span></label>
+                            <input type="password" name="password" placeholder="" required="required" value="{{old('password')}}">
+                            @error('password')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+                          
+                            <button class="btn signup-btn" type="submit">Sign in</button>
+    				    	<p>Already Have an Account? <a href="{{ route('register.form') }}">Sign Up</a></p>
+                            @if (Route::has('password.request'))
+                                <a class="lost-pass" href="{{ route('password.reset') }}">
+                                    Forgot your password?
+                                </a>
+                            @endif
     				    </form>
     				</div>
     			</div>

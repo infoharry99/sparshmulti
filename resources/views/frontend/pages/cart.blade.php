@@ -17,9 +17,186 @@
 		</div>
 	</div>
 	<!-- End Breadcrumbs -->
+	<style>
+		.payment-card {
+			/* width: 300px; */
+			padding: 24px;
+			margin-top: 20px;
+			border: 1px solid #eee;
+			border-radius: 12px;
+			font-family: Arial, sans-serif;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0,0,0,0.05);
+			}
 
-	<!-- Shopping Cart -->
-	<div class="shopping-cart section">
+			.payment-card h4 {
+			font-size: 18px;
+			margin-bottom: 20px;
+			font-weight: 600;
+			}
+
+			.payment-row {
+			display: flex;
+			justify-content: space-between;
+			margin: 10px 0;
+			font-size: 15px;
+			}
+
+			.payment-row.total {
+			font-weight: bold;
+			border-top: 1px solid #ddd;
+			padding-top: 10px;
+			margin-top: 15px;
+			}
+
+			.discount {
+			color: green;
+			}
+
+			.savings-text {
+			color: green;
+			font-size: 14px;
+			margin-top: 10px;
+			font-weight: 500;
+			text-align: right;
+			}
+
+			.place-order-btn {
+			width: 100%;
+			margin-top: 20px;
+			padding: 14px 0;
+			background-color: #D64933;
+			color: white;
+			border: none;
+			border-radius: 30px;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			}
+
+			.place-order-btn:hover {
+			background-color: #bf3e2b;
+			}
+
+	</style>
+	<section class="cart-sec sectionpadding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-heading">
+						<h3 class="mb-4">My Cart</h3>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<div class="cart-areas">
+						<div class="cart-heading">
+							<div class="c-head-text">
+								<h6>Hyperlocal Basket (2)</h6>
+								<span>Free delivery on order above $500</span>
+							</div>
+							<div class="c-head-text">
+								<h6 class="ct-price">{{number_format(Helper::totalCartPrice(),2)}}</h6>
+							</div>
+						</div>
+						@php
+							$cart_items = Helper::getAllProductFromCart();
+						@endphp
+						<div class="cart-item">
+							<form action="{{route('cart.update')}}" method="POST">
+								@csrf
+									@if(count($cart_items) > 0)
+											@foreach(Helper::getAllProductFromCart() as $key=>$cart)
+													@php
+													$photos = json_decode($cart->product['photo']);
+													@endphp
+											<div class="cart-img-ct">
+												<div class="cart-img">
+													<img src="{{$photos[0]}}" class="img-fluid">
+												</div>
+												<div class="cart-item-content">
+													<h6 class="cart-pd-heading">{{$cart->product['title']}}</h6>
+													<h6>Code: HF4328754</h6>
+													<p>Size: 36 X 36 in <br>{!!($cart['summary']) !!}</p>
+													<h4>${{number_format($cart['price'],2)}}</h4>
+													<p class="save-price" data-title="Price">You Save $20.00</p>
+												</div>
+												<div class="cart-qty">
+													<div class="qty-container">
+														<button class="qty-btn-minus" type="button" data-type="minus" data-field="quant[{{$key}}]" >
+															<i class="fa fa-minus"></i></button>
+														<!-- <input type="text" name="qty" value="1" class="input-qty"/> -->
+														<input type="text" name="quant[{{$key}}]" class="input-number input-qty"  data-min="1" data-max="100" value="{{$cart->quantity}}">
+														<button class="qty-btn-plus" type="button"  data-type="plus" data-field="quant[{{$key}}]"><i class="fa fa-plus"></i></button>
+													</div>
+													<p>Save for Later</p>
+												</div>
+											</div>
+											@endforeach
+									@else
+										<tr>
+											<td class="text-center">
+												There are no any carts available. <a href="{{route('product-grids')}}" style="color:blue;">Continue shopping</a>
+											</td>
+										</tr>
+									@endif
+
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="cart-progress">
+						<ul>
+							<li><span class="active"><i class="fas fa-check"></i></span><p>Login</p></li>
+							<li><span>2</span><p>Submit</p></li>
+							<li><span>3</span><p>Submit</p></li>
+						</ul>
+					</div>
+					<div class="payment-card">
+						<h4>Payment Details</h4>
+						<div class="payment-row">
+							<span>MRP Total</span>
+							<span>{{number_format(Helper::totalCartPrice(),2)}}</span>
+						</div>
+						<div class="payment-row">
+							<span>Product Discount</span>
+							<span class="discount">-$20.00</span>
+						</div>
+						<div class="payment-row">
+							<span>Delivery Fee</span>
+							<span>$20.00</span>
+						</div>
+						@php
+							$total_amount=Helper::totalCartPrice();
+							if(session()->has('coupon')){
+								$total_amount=$total_amount-Session::get('coupon')['value'];
+							}
+						@endphp
+					
+						<div class="payment-row total">
+							<span>Total</span>
+							@if(session()->has('coupon'))
+								<span>${{number_format($total_amount,2)}}</span>
+							@else
+								<span>${{number_format($total_amount,2)}}</span>
+							@endif
+						</div>
+						@if(session()->has('coupon'))
+							<div class="savings-text" data-price="{{Session::get('coupon')['value']}}">You Save<<strong>
+								${{number_format(Session::get('coupon')['value'],2)}}</strong>
+							</div>
+						@endif
+						<form action="{{ route('checkout') }}" method="GET">
+							<button type="submit" class="place-order-btn">Place Order</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{{-- 
+		<div class="shopping-cart section">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -46,7 +223,8 @@
 											@endphp
 											<td class="image" data-title="No"><img src="{{$photo[0]}}" alt="{{$photo[0]}}"></td>
 											<td class="product-des" data-title="Description">
-												<p class="product-name"><a href="{{route('product-detail',$cart->product['slug'])}}" target="_blank">{{$cart->product['title']}}</a></p>
+												<p class="product-name">
+													<a href="{{route('product-detail',$cart->product['slug'])}}" target="_blank">{{$cart->product['title']}}</a></p>
 												<p class="product-des">{!!($cart['summary']) !!}</p>
 											</td>
 											<td class="price" data-title="Price"><span>${{number_format($cart['price'],2)}}</span></td>
@@ -108,12 +286,12 @@
 											<button class="btn">Apply</button>
 										</form>
 									</div>
-									{{-- <div class="checkbox">`
+									<div class="checkbox">`
 										@php
 											$shipping=DB::table('shippings')->where('status','active')->limit(1)->get();
 										@endphp
 										<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox" onchange="showMe('shipping');"> Shipping</label>
-									</div> --}}
+									</div> 
 								</div>
 							</div>
 							<div class="col-lg-4 col-md-7 col-12">
@@ -147,7 +325,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> 
 	<section class="shop-services section">
 		<div class="container">
 			<div class="row">
@@ -182,6 +360,7 @@
 			</div>
 		</div>
 	</section>
+	--}}
 	<!-- End Shop Newsletter -->
 
 	<!-- Start Shop Newsletter  -->

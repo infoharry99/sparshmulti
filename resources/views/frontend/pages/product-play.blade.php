@@ -7,10 +7,8 @@
         display:none !important;
     }
 </style>
-
-
-
-    <!-- subbanner sec start -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8z4+2e5c7e5a5b5e5a5b5e5a5b5e5a5b5e5" crossorigin="anonymous" />
+    <script src="https://w.soundcloud.com/player/api.js"></script>
     <section class="subbanner-sec sectionpadding">
         <div class="container">
             <div class="row">
@@ -36,34 +34,40 @@
    <section class="product-play padding-top">
        <div class="container">
            <div class="row">
-               <!-- <div class="product-play-slider owl-carousel">
-                   <div class="product-play-item">
-                       <a href="images/banner.png" data-fancybox="product-pay"><img src="images/banner.png"><button class="pd-play-zoom"><i class="fas fa-search-plus"></i></button></a>
-                       
-                   </div>
-                   <div class="product-play-item">
-                       <a href="images/banner.png" data-fancybox="product-pay"><img src="images/banner.png"><button class="pd-play-zoom"><i class="fas fa-search-plus"></i></button></a>
-                       
-                   </div>
-                   <div class="product-play-item">
-                       <a href="images/banner.png" data-fancybox="product-pay"><img src="images/banner.png"><button class="pd-play-zoom"><i class="fas fa-search-plus"></i></button></a>
-
-                   </div>
-               </div> -->
-
                <div class="col-lg-12">
-                   <div class="product-play-item">
-                       <a href="images/banner.png" data-fancybox="product-pay"><img src="{{asset('images/banner.png')}}"><button class="pd-play-zoom"><i class="fas fa-search-plus"></i></button></a>
+                    <div style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+                        @php
+                            $photos = json_decode($product_play->photo);
+                        @endphp
+                        <a  href="{{ route('product-detail', $product_play->slug) }}">
+                            <img src="{{asset($photos[0]) }}" id="coverImage"
+                            alt="Play Song"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; cursor: pointer; z-index: 2;">
+                        <a>
+                            <iframe
+                            id="sc-player"
+                            width="100%"
+                            height="80"
+                            scrolling="no"
+                            frameborder="no"
+                            allow="autoplay"
+                            src="{{$product_play->url}}"
+                            style="z-index: 1; position: relative;">
+                        </iframe>
+                    </div>
+                   <div style="margin-top: 10px;">
+                        <button id="playBtn" style="padding: 8px 16px; margin-right: 5px; color: black; border: none;">
+                            <img id="playIcon" src="{{ asset('images/Prplay.png') }}" alt="" style="width: 20px; vertical-align: middle;"> Play
+                        </button>
 
-                   </div>
+                        <button id="pauseBtn" style="padding: 8px 16px; margin-right: 5px; color: black; border: none;">
+                            <img id="pauseIcon" src="{{ asset('images/play.png') }}" alt="" style="width: 20px; vertical-align: middle;"> Pause
+                        </button>
+                    </div>
                </div>
 
 
-               <iframe width="100%" height="80" scrolling="no" frameborder="no" allow="autoplay"
-
-                src="https://w.soundcloud.com/player/?url=https://soundcloud.com/farazhbk/kaise-kasie-log?si=8b44a63291bf4605b6ae6549d7af5995&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
-
-               </iframe>
+              
 
                <div class="lyrics-area mt-5">
                    <div class="row">
@@ -104,7 +108,7 @@
                </div>
                <div class="about-product mt-5">
                    <h3 class="mb-3">About The Paintings</h3>
-                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                   <p>{!! $product_play->summary !!}</p>
                </div>
 
                <div class="related-product mt-5">
@@ -200,3 +204,32 @@
 
 
   @endsection
+  
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const iframeElement = document.getElementById('sc-player');
+        const widget = SC.Widget(iframeElement);
+
+        document.getElementById('playBtn').addEventListener('click', function () {
+            widget.play();
+        });
+
+        document.getElementById('pauseBtn').addEventListener('click', function () {
+            widget.pause();
+        });
+
+        document.getElementById('stopBtn').addEventListener('click', function () {
+            widget.seekTo(0); 
+            widget.pause();   
+        });
+        playBtn.addEventListener('click', function () {
+            widget.play();
+            pauseIcon.src = "{{ asset('images/Vector.png') }}"; 
+        });
+
+        pauseBtn.addEventListener('click', function () {
+            widget.pause();
+            pauseIcon.src = "{{ asset('images/Prplay.png') }}"; 
+        });
+    });
+</script>

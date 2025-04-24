@@ -1,7 +1,5 @@
 {{-- @extends('frontend.layouts.master')
-
 @section('title','E-SHOP || Register Page')
-
 @section('main-content')
 	<!-- Breadcrumbs -->
     <div class="breadcrumbs">
@@ -161,12 +159,29 @@
     				    	<li><a href=""><img src="{{asset('images/Masked Icon.png')}}" class="img-fluid">Sign in with Apple</a></li>
     				    </ul>
     				    <div class="divider">or</div>
-    				    <form class="signup-form">
-    				    	<input type="text" placeholder="Full Name" name="">
-    				    	<input type="text" placeholder="Email Address" name="">
-    				    	<input type="text" placeholder="Password" name="">
-    				    	<button class="signup-btn">Sign Up</button>
-    				    	<p>Already Have an Account? <a href="#">Sign In</a></p>
+    				    <!-- <form class=""> -->
+                        <form class="form signup-form" method="post" action="{{route('register.submit')}}">
+                            @csrf
+                            <input type="text" name="name" placeholder="Full Name" required="required" value="{{old('name')}}">
+                                @error('name')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            <input type="text" name="email" placeholder="Email Address" required="required" value="{{old('email')}}">
+                                @error('email')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            <input type="password" name="password" placeholder="Password" required="required" value="{{old('password')}}">
+                            @error('password')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+
+                            <input type="password" name="password_confirmation" placeholder="confirm Password" required="required" value="{{old('password_confirmation')}}">
+                                @error('password_confirmation')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            <button class="btn signup-btn" type="submit">Register</button>
+    				    	<!-- <button class="signup-btn">Sign Up</button> -->
+    				    	<p>Already Have an Account? <a href="{{ route('login.form') }}">Sign In</a></p>
     				    </form>
     				</div>
     			</div>
@@ -192,8 +207,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="{{asset(js/jquery.ripples.js)}}"></script>
-    <script src="{{asset('js/custom.js')}}"></script>  
+    
     <script>
         AOS.init();
       </script>

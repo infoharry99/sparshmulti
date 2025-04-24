@@ -84,7 +84,8 @@ class Helper{
         return PostCategory::has('posts')->orderBy('id','DESC')->get();
     }
     // Cart Count
-    public static function cartCount($user_id){
+    public static function cartCount(){
+        $user_id=auth()->user()->id;
         return Cart::where('user_id',$user_id)->where('order_id',null)->sum('quantity');
     }
 
@@ -92,30 +93,35 @@ class Helper{
         return $this->hasOne('App\Models\Product','id','product_id');
     }
 
-    public static function getAllProductFromCart($user_id){
+    public static function getAllProductFromCart(){
+        $user_id=auth()->user()->id;
         return Cart::with('product')->where('user_id',$user_id)->where('order_id',null)->get();
     }
     // Total amount cart
-    public static function totalCartPrice($user_id){
+    public static function totalCartPrice(){
+        $user_id=auth()->user()->id;
         return Cart::where('user_id',$user_id)->where('order_id',null)->sum('amount');
     }
     // Wishlist Count
-    public static function wishlistCount($user_id){
-       
+    public static function wishlistCount(){
+        
+        $user_id=auth()->user()->id;
         return Wishlist::where('user_id',$user_id)->where('cart_id',null)->sum('quantity');
        
     }
-    public static function getAllProductFromWishlist($user_id){
-
+    public static function getAllProductFromWishlist(){
+        $user_id=auth()->user()->id;
         return Wishlist::with('product')->where('user_id',$user_id)->where('cart_id',null)->get();
     
     }
 
-    public static function totalWishlistPrice($user_id){
+    public static function totalWishlistPrice(){
+        $user_id=auth()->user()->id;
         return Wishlist::where('user_id',$user_id)->where('cart_id',null)->sum('amount');
     }
 
-    public static function grandPrice($id,$user_id){
+    public static function grandPrice($id){
+        $user_id=auth()->user()->id;
         $order=Order::find($id);
         if($order){
             $shipping_price=(float)$order->shipping->price;

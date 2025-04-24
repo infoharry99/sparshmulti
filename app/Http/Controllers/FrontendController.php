@@ -49,13 +49,11 @@ class FrontendController extends Controller
 
     public function productDetail($slug){
         $product_detail= Product::getProductBySlug($slug);
-        // dd($product_detail);
         return view('frontend.pages.product_detail')->with('product_detail',$product_detail);
     }
 
       public function productPlay($slug){
         $product_detail= Product::getProductBySlug($slug);
-        // dd($product_detail);
         return view('frontend.pages.product-play')->with('product_play',$product_detail);
     }
 
@@ -411,6 +409,7 @@ class FrontendController extends Controller
     }
 
     public function subscribe(Request $request){
+
         if(! Newsletter::isSubscribed($request->email)){
                 Newsletter::subscribePending($request->email);
                 if(Newsletter::lastActionSucceeded()){

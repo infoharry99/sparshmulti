@@ -47,10 +47,8 @@ class MessageController extends Controller
             'subject'=>'string|required',
             'phone'=>'numeric|required'
         ]);
-        // return $request->all();
 
         $message=Message::create($request->all());
-            // return $message;
         $data=array();
         $data['url']=route('message.show',$message->id);
         $data['date']=$message->created_at->format('F d, Y h:i A');

@@ -82,70 +82,7 @@
   
   <footer>
       <!-- instagram sec start -->
-      <section class="instagram-sec sectionpadding">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-heading">
-                <h3 class="text-center mb-5">
-                  <i class="fab fa-instagram"></i> Instagram
-                </h3>
-              </div>
-
-              <div class="instrgram-slider owl-carousel">
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
       <!-- instagram sec end -->
 
       <!-- follow sec start -->
@@ -216,8 +153,9 @@
               <div class="newsletter text-center">
                 <h5>Newsletter</h5>
                 <p>Receive our newsletter for art lovers and collectors</p>
-                <form action="{{route('subscribe')}}" method="post" class="newsletter-inner">
-                            @csrf
+                <!-- <form action="{{route('subscribe')}}" method="post" class="newsletter-inner"> -->
+                <form action="#" class="newsletter-inner">
+                      
                   <input
                  
                     type="text"

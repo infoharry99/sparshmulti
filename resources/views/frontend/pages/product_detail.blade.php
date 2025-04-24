@@ -29,13 +29,19 @@
     <!-- subbanner sec end -->
    
    <!-- product-details sec start -->
+   @php
+        $photos = json_decode($product_detail->photo);
+    @endphp
    <section class="product-details-sec sectionpadding">
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
                 <div class="product-img">
-                    <a href="images/product-img.png" class="position-relative" data-fancybox="1">
-						<img src="{{asset('images/product-img.png')}}" class="img-fluid"><button class="pd-play-zoom"><i class="fas fa-search-plus"></i></button></a>
+                    <a href="{{asset($photos[0]) }}" class="position-relative" data-fancybox="1">
+						<img src="{{asset($photos[0]) }}" class="img-fluid">
+                        <button class="pd-play-zoom">
+                            <i class="fas fa-search-plus"></i></button>
+                        </a>
                 </div>
             </div>
             <div class="col-lg-5">
@@ -58,7 +64,7 @@
                         </div>
                     </div>
                     <div class="product-heading">
-                        <h4>Painting Title Painting Title</h4>
+                        <h4>{{$product_detail->title}}</h4>
                         <p><strong>Medium:</strong> Water colour on paper</p>
                     </div>
                     <div class="form-part">
@@ -84,7 +90,9 @@
                             <div class="form-group">
                                 <label>Quantity</label>
                                 <select class="form-select">
+                                    <option>1</option>
                                     <option>2</option>
+                                    <option>3</option>
                                 </select>
                             </div>
                             <div class="currency-area">
@@ -97,7 +105,7 @@
                                     </div>
                                     <div>
                                         <div class="cost-area">
-                                            <p><strong>Cost</strong> (Including Shipping):</p> <h3>$240</h3>
+                                            <p><strong>Cost</strong> (Including Shipping):</p> <h3>${{$product_detail->price}}</h3>
                                         </div>
                                     </div>
                             </div>
@@ -119,9 +127,13 @@
 
                             <div class="cart-area">
                                 <div class="wistlist-btn">
-                                    <a href="#">Add To Wistlist</a>
+                                    <a href="{{route('add-to-wishlist',$product_detail->slug)}}">Add To Wistlist</a>
                                 </div>
-                                <div class="cart-box"><a href="#"><img src="{{asset('images/cart-img.png')}}" class="img-fluid">Add to Cart</a></div>
+                                <div class="cart-box">
+                                    <a href="{{route('add-to-cart',$product_detail->slug)}}">
+                                        <img src="{{asset('images/cart-img.png')}}" class="img-fluid">Add to Cart
+                                    </a>
+                                </div>
                             </div>
                             <div class="pd-lern-more">
                                 <p>All profits from print sales will be used to fund art and music scholarships for talented budding artists.<a href="">Click here to learn more.</a> </p>

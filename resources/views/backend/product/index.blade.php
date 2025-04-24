@@ -23,11 +23,6 @@
               <!-- <th>Category</th> -->
               <th>Is Featured</th>
               <th>Price</th>
-              <th>Discount</th>
-              <th>Size</th>
-              <th>Condition</th>
-              <th>Brand</th>
-              <th>Stock</th>
               <th>Photo</th>
               <th>Status</th>
               <th>Action</th>
@@ -37,14 +32,8 @@
             <tr>
               <th>S.N.</th>
               <th>Title</th>
-              <!-- <th>Category</th> -->
               <th>Is Featured</th>
               <th>Price</th>
-              <th>Discount</th>
-              <th>Size</th>
-              <th>Condition</th>
-              <th>Brand</th>
-              <th>Stock</th>
               <th>Photo</th>
               <th>Status</th>
               <th>Action</th>
@@ -61,24 +50,15 @@
                 <tr>
                     <td>{{$product->id}}</td>
                     <td>{{$product->title}}</td>
-                    {{-- <td>{{$product->cat_info['title']}}
-                      <sub>
-                          {{$product->sub_cat_info->title ?? ''}}
-                      </sub> 
-                      </td> --}}
                     <td>{{(($product->is_featured==1)? 'Yes': 'No')}}</td>
                     <td>Rs. {{$product->price}} /-</td>
-                    <td>  {{$product->discount}}% OFF</td>
-                    <td>{{$product->size}}</td>
-                    <td>{{$product->condition}}</td>
-                    <td> {{ ucfirst(optional($product->brand)->title) ?? null }}</td>
-                    <td>
+                    <!-- <td>
                       @if($product->stock>0)
                       <p class="badge badge-primary">{{$product->stock}}</p>
                       @else
                       <p class="badge badge-danger">{{$product->stock}}</p>
                       @endif
-                    </td>
+                    </td> -->
                     <td>
                         @if($product->photo)
                             @php

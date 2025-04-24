@@ -23,10 +23,9 @@
     </section>
     <!-- subbanner sec end -->
 
-
     <!-- gallery listing sec start -->
     <section class="gallery-sec sectionpadding">
-        <div class="container">
+        {{-- <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                 <div class="featured-item">
@@ -248,7 +247,115 @@
                     </ul>
                 </div>
             </div>
+        </div> --}}
+
+@php
+    $featured = DB::table('products')
+        ->where('is_featured', 1)
+        ->where('status', 'active')
+        ->orderBy('id', 'DESC')
+        ->limit(20)
+        ->get();
+@endphp
+
+        <style>
+            .product-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+                max-width: 1400px;
+                margin: auto;
+                padding: 40px 40px 40px 60px;/* 40px top, 40px right, 40px bottom, 60px left */
+            }
+
+            .product-card {
+                background: #fff;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            .product-img {
+                width: 100%;
+                object-fit: cover;
+                display: block;
+                border-radius: 8px;  /* Border-radius applied to all corners */
+            }
+
+            .tall { height: 400px; }
+            .short { height: 280px; }
+
+            .product-info {
+                padding: 12px 10px;
+            }
+
+            .title {
+                font-weight: bold;
+                font-size: 14px;
+                margin-bottom: 4px;
+            }
+
+            .meta {
+                font-size: 13px;
+                color: #444;
+                margin-bottom: 2px;
+            }
+
+            .reaction {
+                display: flex;
+                gap: 12px;
+                padding: 8px 10px 12px;
+                font-size: 13px;
+                color: #666;
+            }
+
+            @media screen and (max-width: 1200px) {
+                .product-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            @media screen and (max-width: 900px) {
+                .product-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                .product-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <div class="product-grid">
+            @foreach ($featured as $index => $product)
+                @php
+                    $photos = json_decode($product->photo);
+                    $image  = $photos[0] ?? '/placeholder.jpg';
+                    $isTall = $index % 2 === 0; // even index = tall
+                @endphp
+
+                <div class="product-card">
+                    <a  href="{{ route('product-play', $product->slug) }}">
+                        <img src="{{ asset($image) }}" class="product-img {{ $isTall ? 'tall' : 'short' }}" alt="{{ $product->title }}">
+                    </a>
+                    <div class="product-info">
+                        <div class="title">{{ Str::limit($product->title, 40) }}</div>
+                        <div class="meta">Code: <strong>{{ $product->code ?? 'HF' . $product->id }}</strong></div>
+                        <div class="meta">Size: {{ $product->size ?? '36 x 36 in' }}</div>
+                        <div class="meta">Medium: {{ $product->medium ?? 'Water Colour' }}</div>
+                    </div>
+                    <div class="reaction">
+                        <span><i class="far fa-heart"></i> 120</span>
+                        <span><i class="far fa-comment"></i> 89</span>
+                    </div>
+                </div>
+            @endforeach
         </div>
+
+
+
+
     </section>
     <!-- gallery listing sec end -->
 

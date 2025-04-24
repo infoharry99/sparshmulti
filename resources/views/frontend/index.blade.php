@@ -1,7 +1,6 @@
 @extends('frontend.layouts.master')
 @section('title','E-Paninting || HOME PAGE')
 @section('main-content')
-<!-- Slider Area -->
 @if(count($banners)>0)
     <section id="Gslider" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -17,7 +16,6 @@
                     <div class="carousel-caption d-none d-md-block text-left">
                         <h1 class="wow fadeInDown">{{$banner->title}}</h1>
                         <p>{!! html_entity_decode($banner->description) !!}</p>
-                        <a class="btn btn-lg ws-btn wow fadeInUpBig" href="{{route('product-grids')}}" role="button">Shop Now<i class="far fa-arrow-alt-circle-right"></i></i></a>
                     </div>
                 </div>
             @endforeach
@@ -32,47 +30,9 @@
         </a>
     </section>
 @endif
-
-
-
-
-<!--/ End Slider Area -->
-
-<!-- Start Small Banner  -->
-
-<!-- End Small Banner -->
-
-<!-- Start Product Area -->
-
-<!-- End Product Area -->
 {{-- @php
     $featured=DB::table('products')->where('is_featured',1)->where('status','active')->orderBy('id','DESC')->limit(1)->get();
 @endphp --}} 
-<!-- Start Midium Banner  -->
-<!-- <section class="midium-banner">
-    <div class="container">
-        <div class="row">
-            @if($featured)
-                @foreach($featured as $data)
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="single-banner">
-                            @php
-                                $photo=explode(',',$data->photo);
-                            @endphp
-                            <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                            <div class="content">
-                                <p>{{$data->cat_info['title']}}</p>
-                                <h3>{{$data->title}} <br>Up to<span> {{$data->discount}}%</span></h3>
-                                <a href="{{route('product-detail',$data->slug)}}">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            @endif
-        </div>
-    </div>
-</section> -->
-<!-- End Midium Banner -->
 
 <!-- why sec start -->
 <section class="why-sec sectionpadding">
@@ -146,23 +106,24 @@
             </div>
                <div class="featured-slider owl-carousel">
                     @php
-                        $product_listss=DB::table('products')->where('status','active')->orderBy('id','DESC')->limit(6)->get();
+                        $product_listss = DB::table('products')->where('status','active')->orderBy('id','DESC')->limit(6)->get();
                     @endphp
                     @foreach($product_listss as $product)
                         <div class="featured-item">
                             <a href="#">
                                 <div class="featured-img">
                                     @php
-                                        $photos = json_decode($data->photo); // Properly decode JSON array
+                                        $photos = json_decode($product->photo); // Use $product instead of $data
                                     @endphp
                                     @if(!empty($photos) && isset($photos[0]))
                                         <img src="{{ asset($photos[0]) }}" alt="Featured Image" class="img-fluid">
                                     @endif
+                                </div>
                                 <div class="featured-content">
                                     <h4 class="title">
-                                        <a href="#">{{$product->title}}</a>
+                                        <a href="#">{{ $product->title }}</a>
                                     </h4>
-                                <p class="price with-discount">${{number_format($product->discount,2)}}</p>
+                                    <p class="price with-discount">${{ number_format($product->discount, 2) }}</p>
                                 </div>
                             </a>
                             <div class="featured-attribute mt-3">
@@ -170,11 +131,75 @@
                                 <button class="comment"><i class="far fa-comment"></i>89</button>
                             </div>
                         </div>
-                    @endforeach                                                                              
+                    @endforeach                                                                            
                </div>
            </div>
        </div>
    </section>
+   <section class="instagram-sec sectionpadding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading">
+                <h3 class="text-center mb-5">
+                  <i class="fab fa-instagram"></i> Instagram
+                </h3>
+              </div>
+
+              <div class="instrgram-slider owl-carousel">
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
    <!-- popular sec end -->
 <!-- Start Shop Home List  -->
 <!-- <section class="shop-home-list section">
@@ -447,6 +472,7 @@
 </section> -->
 
 
+
 <!-- End Shop Blog  -->
  {{-- <section class="instagram-sec sectionpadding">
        <div class="container">
@@ -556,7 +582,7 @@
 </section> -->
 <!-- End Shop Services Area -->
 
-@include('frontend.layouts.newsletter')
+<!-- @include('frontend.layouts.newsletter') -->
 
 <!-- Modal -->
 @if($product_lists)

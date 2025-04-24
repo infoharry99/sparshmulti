@@ -1,7 +1,5 @@
 @extends('frontend.layouts.master')
-
 @section('main-content')
-	<!-- Breadcrumbs -->
 	<div class="breadcrumbs">
 		<div class="container">
 			<div class="row">
@@ -17,9 +15,41 @@
 		</div>
 	</div>
 	<!-- End Breadcrumbs -->
-  
+    <section class="contact-sec padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="text-center mb-5">Leave Your Comment</h3>
+					<form class="form-contact form contact-form" method="post" action="{{route('contact.store')}}" id="contactForm" novalidate="novalidate">
+						@csrf
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" placeholder="Your Subject">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email Address">
+                        </div>
+						<div class="form-group">
+                            <input type="number" class="form-control" name="phone" placeholder="Your Contact number">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 right-btn">
+								<button type="submit" class="theme-btn">Send Message</button>
+                                <!-- <a href="#" class="theme-btn"><span><i class="fas fa-angle-right"></i></span>Submit</a> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 	<!-- Start Contact -->
-	<section id="contact-us" class="contact-us section">
+	<!-- <section id="contact-us" class="contact-us section">
 		<div class="container">
 				<div class="contact-head">
 					<div class="row">
@@ -102,15 +132,15 @@
 					</div>
 				</div>
 			</div>
-	</section>
+	</section> -->
 	<!--/ End Contact -->
 	
 	<!-- Map Section -->
-	<div class="map-section">
+	<!-- <div class="map-section">
 		<div id="myMap">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14130.857353934944!2d85.36529494999999!3d27.6952226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sne!2snp!4v1595323330171!5m2!1sne!2snp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		</div>
-	</div>
+	</div> -->
 	<!--/ End Map Section -->
 	
 	<!-- Start Shop Newsletter  -->

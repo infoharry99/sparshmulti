@@ -31,7 +31,7 @@
                         </ul>
                         <form>
                         <ul class="lang-list">
-                        <li>
+                            <li>
                                 <select>
                                     <option>Language</option>
                                     <option>Hindi</option>
@@ -94,16 +94,14 @@
             </div>
         </div>
     </div> --}}
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Header / Nav -->
     <div class="header-inner">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="img-fluid me-2 logo-img">
-                    
                 </a>
-
                 <div class="collapse navbar-collapse justify-content-between">
                     <ul class="navbar-nav main-menu mx-auto">
                         <li class="nav-item {{ Request::path() == 'home' ? 'active' : '' }}">
@@ -111,14 +109,11 @@
                         </li>
                         <li class="nav-item @if(Request::path() == 'product-grids' || Request::path() == 'product-lists') active @endif">
                             <a class="nav-link" href="{{ route('product-grids') }}">Gallary 
-                                {{-- <span class="new">New</span> --}}
                             </a>
                         </li>
                         <li class="nav-item {{ Request::path() == 'about-us' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('about-us') }}">About Us</a>
                         </li>
-                        
-                        {{-- {!! Helper::getHeaderCategory() !!} --}}
                         <li class="nav-item {{ Request::path() == 'blog' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('blog') }}">Blog</a>
                         </li>
@@ -129,16 +124,36 @@
 
                     <!-- Tools -->
                     <div class="d-flex align-items-center">
-                        <select class="form-select-sm me-2 lang-select">
-                            <option>Language</option>
-                            <option>Hindi</option>
-                            <option>English</option>
+                    <div class="d-flex align-items-center">
+                        <select class="form-select-sm me-2 lang-select" onchange="changeLanguage(this)">
+                            <option value="">Language</option>
+                            <option value="hi" {{ app()->getLocale() == 'hi' ? 'selected' : '' }}>Hindi</option>
+                            <option value="en" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>English</option>
                         </select>
-                        <a href="#" class="lang-code me-2">অস</a>
-                        <a href="#" class="lang-code me-3">EN</a>
-                        <a href="#"><img src="{{ asset('images/search.png') }}" class="icon-img me-3" alt="Search"></a>
-                        <a href="{{ route('cart') }}"><img src="{{ asset('images/cart.png') }}" class="icon-img me-3" alt="Cart"></a>
-                        <a href="{{ route('user') }}"><img src="{{ asset('images/profile.png') }}" class="icon-img" alt="Profile"></a>
+
+                        <a href="{{ url('lang/hi') }}" class="lang-code me-2 {{ app()->getLocale() == 'hi' ? 'fw-bold text-primary' : '' }}">HN</a>
+                        <a href="{{ url('lang/en') }}" class="lang-code me-3 {{ app()->getLocale() == 'en' ? 'fw-bold text-primary' : '' }}">EN</a>
+                        <a href="#">
+                            <img src="{{ asset('images/search.png') }}" class="icon-img me-3" alt="Search"></a>
+                       
+                        <ul class="list-inline mb-0">
+                            <!-- <li class="list-inline-item"><i class="ti-location-pin"></i> <a href="{{ route('order.track') }}">Track Order</a></li> -->
+                            @auth
+                                @if(Auth::user()->role === 'admin')
+                                    <li class="list-inline-item"><i class="ti-user"></i> <a href="{{ route('admin') }}" target="_blank">Dashboard</a></li>
+                                @else
+                                <a href="{{ route('cart') }}"><img src="{{ asset('images/cart.png') }}" class="icon-img me-3" alt="Cart"></a>
+                                    <li class="list-inline-item"><i class="ti-user"></i> <a href="{{ route('user') }}" target="_blank">Dashboard</a></li>
+                                @endif
+                                <li class="list-inline-item"><i class="ti-power-off"></i> <a href="{{ route('user.logout') }}">Logout</a></li>
+                            @else
+                                <li class="list-inline-item"><i class="ti-power-off"></i> 
+                                    <a href="{{ route('login.form') }}">Login</a> / 
+                                    <a href="{{ route('register.form') }}">Register</a>
+                                </li>
+                            @endauth
+                        </ul>
+                        <!-- <a href="{{ route('user') }}"><img src="{{ asset('images/profile.png') }}" class="icon-img" alt="Profile"></a> -->
                     </div>
                 </div>
             </nav>
@@ -146,7 +161,14 @@
     </div>
 </header>
 
-
+<script>
+    function changeLanguage(select) {
+        const lang = select.value;
+        if (lang) {
+            window.location.href = `/lang/${lang}`;
+        }
+    }
+</script>
 
 
 
