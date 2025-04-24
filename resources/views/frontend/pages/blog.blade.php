@@ -29,7 +29,7 @@
                         <h4 class="mb-3">{{$post->title}}</h4>
                         <p class="mb-4">{!! html_entity_decode($post->summary) !!}</p>
                         <span class="mb-4">Posted by {{$post->author_info->name ?? 'Anonymous'}}<br>{{$post->created_at->format('d M, Y. D')}}</span>
-                    <a href="{{route('blog.detail',$post->slug">
+                    <a href="{{route('blog.detail',$post->slug)}}">
                             <img src="{{$post->photo}}" class="img-fluid">
                         </a>
                         <div class="blog-more">
