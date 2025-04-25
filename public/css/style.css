@@ -1444,9 +1444,7 @@ a {
     text-decoration: underline;
     background: transparent;
 }
-/*===== dashbord page sec end ========*/
 
-/*=== btn style ===*/
 .theme-btn {
     display: inline-block;
     padding: 10px 25px;
@@ -1458,17 +1456,17 @@ a {
     border: 1px solid var(--sdcolor);
     transition: 0.5s;
 }
+
 .theme-btn span {
     margin-right: 5px;
 }
+
 .theme-btn:hover {
     background: transparent;
     color: var(--sdcolor);
     transition: 0.5s;
 }
-/*=== btn style ===*/
 
-/*==== search area ====*/
 .main-search-area {
     position: fixed;
     left: 0;
@@ -1527,4 +1525,18 @@ a {
 .fancybox__container {
     z-index: 999999999999;
 }
+
 /*==== search area======*/
+
+    #st-10 {    
+        display: none !important;
+    }
+    .st-sticky-share-buttons .st-right .st-toggleable .st-has-labels .st-show-total{
+        display: none !important;
+    }
+    .share-bar, 
+    .share-buttons, 
+    .social-share, 
+    #social-share-sidebar {
+        display: none !important;
+    }

@@ -24,6 +24,9 @@
         app()->setLocale($lang);
         return redirect()->back();
     });
+    Route::get('/check-locale', function () {
+        return session('locale');
+    });
     Route::get('cache-clear', function () {
         Artisan::call('optimize:clear');
         request()->session()->flash('success', 'Successfully cache cleared.');
@@ -42,7 +45,7 @@
     // STORAGE LINKED ROUTE
     Route::get('storage-link',[AdminController::class,'storageLink'])->name('storage.link');
     Auth::routes(['register' => false]);
-    Route::group(['middleware' => ['language']], function (){
+    // Route::group(['middleware' => ['language']], function (){
             Route::get('user/login', [FrontendController::class, 'login'])->name('login.form');
             Route::post('user/login', [FrontendController::class, 'loginSubmit'])->name('login.submit');
             Route::get('user/logout', [FrontendController::class, 'logout'])->name('user.logout');
@@ -124,7 +127,7 @@
             Route::get('payment', [PayPalController::class, 'payment'])->name('payment');
             Route::get('cancel', [PayPalController::class, 'cancel'])->name('payment.cancel');
             Route::get('payment/success', [PayPalController::class, 'success'])->name('payment.success');
-    });
+
 
 // Backend section start
 

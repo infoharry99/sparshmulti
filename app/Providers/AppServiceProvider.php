@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -24,5 +26,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        App::setLocale(Session::get('locale', config('app.locale')));
     }
 }

@@ -85,116 +85,141 @@
     
       <!-- instagram sec end -->
 
-      <!-- follow sec start -->
-      <section class="follow-sec sectionpadding">
+      <section class="instagram-sec sectionpadding">
         <div class="container">
           <div class="row">
-            <div class="col-lg-12">
-              <div class="section-heading">
-                <h3 class="text-center mb-5">Follow Us</h3>
-              </div>
-              <div class="social-links">
-                <ul>
-                  <li>
-                    <a href=""
-                      ><img src="{{asset('images/facebook.png')}}" class="img-fluid"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href=""
-                      ><img src="{{asset('images/instra.png')}}" class="img-fluid"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href=""
-                      ><img src="{{asset('images/pin.png')}}" class="img-fluid"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href=""
-                      ><img src="{{asset('images/you.png')}}" class="img-fluid"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href=""><img src="{{asset('images/in.png')}}" class="img-fluid" /></a>
-                  </li>
-                  <li>
-                    <a href=""
-                      ><img src="{{asset('images/twi.png')}}" class="img-fluid"
-                    /></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- follow sec end -->
-
-      <!-- footer links sec start  -->
-      <section class="footerlinks-sec sectionhalf">
-        <div class="container">
-          <div class="row justify-content-center">
             <div class="col-lg-12">
               <div class="section-heading">
                 <h3 class="text-center mb-5">
-                  <ul class="footer-links">
-                    <li><a href="" class="active">Home</a></li>
-                    <li><a href="">Gallery</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Event</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact</a></li>
-                  </ul>
+                  <i class="fab fa-instagram"></i>@lang('home.instagram')
                 </h3>
               </div>
-            </div>
-            <div class="col-lg-5">
-              <div class="newsletter text-center">
-                <h5>Newsletter</h5>
-                <p>Receive our newsletter for art lovers and collectors</p>
-                <!-- <form action="{{route('subscribe')}}" method="post" class="newsletter-inner"> -->
-                <form action="#" class="newsletter-inner">
-                      
-                  <input
-                 
-                    type="text"
-                    placeholder="Your E-mail ID"
-                    name="email"
-                    class="form-control"
-                  />
-                  <button 
-                    type="submit"
-                  class="sign-up"
-                  >Sign Up</button>
-                </form>
+
+              <div class="instrgram-slider owl-carousel">
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- footer links sec end  -->
-
-      <!-- copyright sec start -->
-      <section class="copyright-sec sectionhalf">
+    </section>
+      <!-- follow sec start -->
+      <section class="follow-sec sectionpadding">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <ul class="copyright-list">
-                <li><a href="#">Terms Of Use</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li>© 2024 Melody Brush. All rights reserved.</li>
-                <li>
-                  Powered by <a href="" class="creat-a">www.digibrandx.com</a>
-                </li>
-              </ul>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h3 class="text-center mb-5">@lang('home.follow_us')</h3>
+                    </div>
+                    <div class="social-links">
+                        <ul>
+                            <li><a href=""><img src="{{asset('images/facebook.png')}}" class="img-fluid"/></a></li>
+                            <li><a href=""><img src="{{asset('images/instra.png')}}" class="img-fluid"/></a></li>
+                            <li><a href=""><img src="{{asset('images/pin.png')}}" class="img-fluid"/></a></li>
+                            <li><a href=""><img src="{{asset('images/you.png')}}" class="img-fluid"/></a></li>
+                            <li><a href=""><img src="{{asset('images/in.png')}}" class="img-fluid"/></a></li>
+                            <li><a href=""><img src="{{asset('images/twi.png')}}" class="img-fluid"/></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
       </section>
-      <!-- copyright sec end -->
-    </footer>
-   <!-- footer sec start -->
+
+      <section class="footerlinks-sec sectionhalf">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-12">
+                      <div class="section-heading">
+                          <h3 class="text-center mb-5">
+                              <ul class="footer-links">
+                                  <li><a href="{{ route('home') }}" class="active">@lang('home.home')</a></li>
+                                  <li><a href="{{ route('product-grids') }}">@lang('home.gallery')</a></li>
+                                  <li><a href="{{ route('about-us') }}">@lang('home.about')</a></li>
+                                  <li><a href="{{ route('blog') }}">@lang('home.blog')</a></li>
+                                  <li><a href="{{ route('contact') }}">@lang('home.contact')</a></li>
+                              </ul>
+                          </h3>
+                      </div>
+                  </div>
+                  <div class="col-lg-5">
+                      <div class="newsletter text-center">
+                          <h5>@lang('home.newsletter')</h5>
+                          <p>@lang('home.newsletter_text')</p>
+                          <form action="#" class="newsletter-inner">
+                              <input type="text" placeholder="@lang('home.email_placeholder')" name="email" class="form-control"/>
+                              <button type="submit" class="sign-up">@lang('home.sign_up')</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="copyright-sec sectionhalf">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <ul class="copyright-list">
+                          <li><a href="{{url('/terms')}}">@lang('home.terms')</a></li>
+                          <li><a href="{{url('/terms')}}">@lang('home.privacy')</a></li>
+                          <li>© 2024 Melody Brush. @lang('home.rights')</li>
+                          <li>
+                              @lang('home.powered_by') <a href="" class="creat-a">www.digibrandx.com</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+    <!-- footer sec start -->
    
 
 
@@ -235,15 +260,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{asset('js/jquery.ripples.js')}}"></script>
     <script src="{{asset('js/custom.js')}}"></script>  
-    <script>
-			// Fancybox Config
-	Fancybox.bind('[data-fancybox]', {
-	//
-	}); 
-    </script>
-    <script>
-        AOS.init();
-      </script>
+  
+    
 
 	{{-- Jquery --}}
     <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
@@ -261,38 +279,33 @@
 	<script src="{{asset('frontend/js/flex-slider.js')}}"></script>
 	<script src="{{asset('frontend/js/scrollup.js')}}"></script>
 	<script src="{{asset('frontend/js/onepage-nav.min.js')}}"></script>
-
-	<script src="{{asset('frontend/js/isotope/isotope.pkgd.min.js')}}"></script>
 	<!-- Easing JS -->
 	<script src="{{asset('frontend/js/easing.js')}}"></script>
 
 	<!-- Active JS -->
 	<script src="{{asset('frontend/js/active.js')}}"></script>
 
-	
-	@stack('scripts')
-	<script>
-		setTimeout(function(){
-		  $('.alert').slideUp();
-		},5000);
-		$(function() {
-		// ------------------------------------------------------- //
-		// Multi Level dropdowns
-		// ------------------------------------------------------ //
-			$("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
-				event.preventDefault();
-				event.stopPropagation();
+  <script>
+    $(document).ready(function(){
+        $('.share-bar, .share-buttons, .social-share, #social-share-sidebar')
+            .hide(); // Add your exact class/ID here if known
+    });
+</script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const shareBar = document.querySelector('.sharethis-sticky-share-buttons');
+        if (shareBar) shareBar.style.display = 'none';
+    });
+</script>
 
-				$(this).siblings().toggleClass("show");
+<script>
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const stickyBar = document.querySelector('.sharethis-sticky-share-buttons');
+            const inlineButtons = document.querySelector('.sharethis-inline-follow-buttons');
 
-
-				if (!$(this).next().hasClass('show')) {
-				$(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-				}
-				$(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-				$('.dropdown-submenu .show').removeClass("show");
-				});
-
-			});
-		});
-	  </script>
+            if (stickyBar) stickyBar.style.display = 'none';
+            if (inlineButtons) inlineButtons.style.display = 'none';
+        }, 10000); // Delay to wait for async loading
+    });
+</script>

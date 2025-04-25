@@ -1,9 +1,6 @@
 @extends('frontend.layouts.master')
-
-@section('title','E-SHOP || Blog Page')
-
+@section('title','E-Paninting || Blog Page')
 @section('main-content')
-    <!-- Breadcrumbs -->
     <div class="breadcrumbs">
         <div class="container">
             <div class="row">

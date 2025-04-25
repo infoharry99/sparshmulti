@@ -42,6 +42,9 @@ class FrontendController extends Controller
     public function aboutUs(){
         return view('frontend.pages.about-us');
     }
+    public function terms(){
+        return view('frontend.pages.terms');
+    }
 
     public function contact(){
         return view('frontend.pages.contact');

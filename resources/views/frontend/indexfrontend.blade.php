@@ -1,39 +1,39 @@
 @extends('frontend.layouts.master')
-@section('title', __('home.title')) {{-- Translatable title --}}
+@section('title','E-Paninting || HOME PAGE')
 @section('main-content')
-
-@if(count($banners) > 0)
+@if(count($banners)>0)
     <section id="Gslider" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            @foreach($banners as $key => $banner)
-                <li data-target="#Gslider" data-slide-to="{{ $key }}" class="{{ $key == 0 ? 'active' : '' }}"></li>
+            @foreach($banners as $key=>$banner)
+        <li data-target="#Gslider" data-slide-to="{{$key}}" class="{{(($key==0)? 'active' : '')}}"></li>
             @endforeach
+
         </ol>
         <div class="carousel-inner" role="listbox">
-            @foreach($banners as $key => $banner)
-                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                    <img class="first-slide" src="{{ $banner->photo }}" alt="Slide {{ $key + 1 }}">
+                @foreach($banners as $key=>$banner)
+                <div class="carousel-item  {{(($key==0)? 'active' : '')}}" >
+                    <img class="first-slide" src="{{$banner->photo}}" alt="First slide " >
                     <div class="carousel-caption d-none d-md-block text-left">
-                        <h1 class="wow fadeInDown">{{ $banner->title }}</h1>
+                        <h1 class="wow fadeInDown">{{$banner->title}}</h1>
                         <p>{!! html_entity_decode($banner->description) !!}</p>
                     </div>
                 </div>
             @endforeach
         </div>
         <a class="carousel-control-prev" href="#Gslider" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">@lang('home.previous')</span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#Gslider" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">@lang('home.next')</span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
         </a>
     </section>
 @endif
-@php
-    $locale = app()->getLocale();
-  
-@endphp
+{{-- @php
+    $featured=DB::table('products')->where('is_featured',1)->where('status','active')->orderBy('id','DESC')->limit(1)->get();
+@endphp --}} 
+
 <!-- why sec start -->
     <section class="why-sec sectionpadding">
        <div class="container">
@@ -52,59 +52,56 @@
            </div>
        </div>
    </section>
-
    <!-- why sec end -->
          <!-- featured sec start -->
-    <section class="feature-sec sectionpadding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading">
-                        <h3 class="text-center mb-5">
-                            @lang('home.feature_collections')
-                        </h3>
-                    </div>
-                </div>
-                <div class="featured-slider owl-carousel">
-                    @if($featured)
-                        @foreach($featured as $data)
-                            <div class="featured-item">
-                                <a href="#">
-                                    <div class="featured-img">
-                                        @php
-                                            $photos = json_decode($data->photo); // Properly decode JSON array
-                                        @endphp
-                                        @if(!empty($photos) && isset($photos[0]))
-                                            <img src="{{ asset($photos[0]) }}" alt="Featured Image" class="img-fluid">
-                                        @endif
-                                        {{-- <img src="{{$photo[0]}}" alt="{{$photo[0]}}" class="img-fluid"> --}}
-                                    </div>
-                                    <div class="featured-content">
-                                        <!-- <p>{{$data->cat_info['title']}}</p> -->
-                                        <h3>{{$data->title}} </h3>
-                                        <a href="{{route('product-detail',$data->slug)}}">Shop Now</a>
-                                    </div>
-                                </a>
-                                <div class="featured-attribute mt-3">
-                                    <button class="hearts"><i class="far fa-heart"></i>120</button>
-                                    <button class="comment"><i class="far fa-comment"></i>89</button>
-                                </div>
-                            </div>
-                        @endforeach
-                    @endif
-                </div>
-            </div>
-        </div>
-    </section>
-   <!-- featured sec end -->
-
-   <!-- popular sec start -->
-    <section class="feature-sec sectionpadding">
+   <section class="feature-sec sectionpadding">
        <div class="container">
            <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading">
-                    <h3 class="text-center mb-5">@lang('home.popular_painting')</h3>
+                    <h3 class="text-center mb-5">Feature Collections</h3>
+                </div>
+            </div>
+               <div class="featured-slider owl-carousel">
+                 @if($featured)
+                    @foreach($featured as $data)
+                        <div class="featured-item">
+                            <a href="#">
+                                <div class="featured-img">
+                                    @php
+                                        $photos = json_decode($data->photo); 
+                                    @endphp
+                                    @if(!empty($photos) && isset($photos[0]))
+                                        <img src="{{ asset($photos[0]) }}" alt="Featured Image" class="img-fluid">
+                                    @endif
+                                    {{-- <img src="{{$photo[0]}}" alt="{{$photo[0]}}" class="img-fluid"> --}}
+                                </div>
+                                <div class="featured-content">
+                                    <!-- <p>{{$data->cat_info['title']}}</p> -->
+                                    <h3>{{$data->title}} <br>Up to<span> {{$data->discount}}%</span></h3>
+                                    <a href="{{route('product-detail',$data->slug)}}">Shop Now</a>
+                                </div>
+                            </a>
+                            <div class="featured-attribute mt-3">
+                                <button class="hearts"><i class="far fa-heart"></i>120</button>
+                                <button class="comment"><i class="far fa-comment"></i>89</button>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
+               </div>
+           </div>
+       </div>
+   </section>
+   <!-- featured sec end -->
+
+   <!-- popular sec start -->
+   <section class="feature-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h3 class="text-center mb-5">Popular Painting</h3>
                 </div>
             </div>
                <div class="featured-slider owl-carousel">
@@ -138,9 +135,120 @@
                </div>
            </div>
        </div>
-    </section>
-  
+   </section>
+   <section class="instagram-sec sectionpadding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading">
+                <h3 class="text-center mb-5">
+                  <i class="fab fa-instagram"></i> Instagram
+                </h3>
+              </div>
+
+              <div class="instrgram-slider owl-carousel">
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+                <div class="ins-item position-relative">
+                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
+                  <div class="ins-overley">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
    <!-- popular sec end -->
+<!-- Start Shop Home List  -->
+<!-- <section class="shop-home-list section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="shop-section-title">
+                            <h1>Latest Items</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @php
+                        $product_lists=DB::table('products')->where('status','active')->orderBy('id','DESC')->limit(6)->get();
+                    @endphp
+                    @foreach($product_lists as $product)
+                        <div class="col-md-4">
+                            <div class="single-list">
+                                <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="list-image overlay">
+                                        @php
+                                            $photo=explode(',',$product->photo);
+                                            // dd($photo);
+                                        @endphp
+                                        <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                        <a href="{{route('add-to-cart',$product->slug)}}" class="buy"><i class="fa fa-shopping-bag"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12 no-padding">
+                                    <div class="content">
+                                        <h4 class="title"><a href="#">{{$product->title}}</a></h4>
+                                        <p class="price with-discount">${{number_format($product->discount,2)}}</p>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- End Shop Home List  -->
+
 
    <!-- testimonial sec start -->
   <section class="testimonial-sec sectionpadding">
@@ -149,7 +257,7 @@
             <div class="col-lg-2"></div>
                <div class="col-lg-10">
                    <div class="section-heading position-relative">
-                       <h3 class="mb-5">@lang('home.testimonial')</h3>
+                       <h3 class="mb-5">Testimonial</h3>
                    </div>
                    </div>
                    <div class="testimonial-area owl-carousel">
@@ -300,8 +408,8 @@
            <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading position-relative">
-                    <h3 class="text-center mb-5">@lang('home.latest_blog')</h3>
-                    <a href="#" class="view-all">@land('home.view_all')</a>
+                    <h3 class="text-center mb-5">Latest Blog</h3>
+                    <a href="#" class="view-all">View All</a>
                 </div>
             </div>
             @if($posts)
@@ -333,10 +441,150 @@
        </div>
    </section>
    <!-- blog sec end -->
+<!-- Start Shop Blog  -->
+<!-- <section class="shop-blog section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2>From Our Blog</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @if($posts)
+                @foreach($posts as $post)
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="shop-single-blog">
+                            <img src="{{$post->photo}}" alt="{{$post->photo}}">
+                            <div class="content">
+                                <p class="date">{{$post->created_at->format('d M , Y. D')}}</p>
+                                <a href="{{route('blog.detail',$post->slug)}}" class="title">{{$post->title}}</a>
+                                <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">Continue Reading</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
+
+        </div>
+    </div>
+</section> -->
 
 
 
+<!-- End Shop Blog  -->
+ {{-- <section class="instagram-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-12">
+                   <div class="section-heading">
+                       <h3 class="text-center mb-5"><i class="fab fa-instagram"></i> Instagram</h3>
+                   </div>
 
+                   <div class="instrgram-slider owl-carousel">
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                       <div class="ins-item position-relative">
+                           <img src="images/image 11.png" class="img-fluid">
+                           <div class="ins-overley"><i class="fab fa-instagram"></i></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section> --}}
+<!-- Start Shop Services Area -->
+
+ <!-- follow sec start -->
+ {{-- <section class="follow-sec sectionpadding">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-12">
+                   <div class="section-heading">
+                       <h3 class="text-center mb-5">Follow Us</h3>
+                   </div>
+                   <div class="social-links">
+                       <ul>
+                           <li><a href=""><img src="images/facebook.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/instra.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/pin.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/you.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/in.png" class="img-fluid"></a></li>
+                           <li><a href=""><img src="images/twi.png" class="img-fluid"></a></li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section> --}}
+   <!-- follow sec end -->
+
+<!-- <section class="shop-services section home">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="single-service">
+                    <i class="ti-rocket"></i>
+                    <h4>Free shiping</h4>
+                    <p>Orders over $100</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="single-service">
+                    <i class="ti-reload"></i>
+                    <h4>Free Return</h4>
+                    <p>Within 30 days returns</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="single-service">
+                    <i class="ti-lock"></i>
+                    <h4>Sucure Payment</h4>
+                    <p>100% secure payment</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="single-service">
+                    <i class="ti-tag"></i>
+                    <h4>Best Peice</h4>
+                    <p>Guaranteed price</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- End Shop Services Area -->
+
+<!-- @include('frontend.layouts.newsletter') -->
+
+<!-- Modal -->
 @if($product_lists)
     @foreach($product_lists as $key=>$product)
         <div class="modal fade" id="{{$product->id}}" tabindex="-1" role="dialog">
@@ -466,6 +714,7 @@
         </div>
     @endforeach
 @endif
+<!-- Modal end -->
 @endsection
 
 @push('styles')

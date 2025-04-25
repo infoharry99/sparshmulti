@@ -38,9 +38,9 @@
     .dropdown-submenu {
     position: relative;
     }
-    .st-sticky-share-buttons
-    {
-    display: none;
+    .sharethis-sticky-share-buttons,
+    .sharethis-inline-follow-buttons {
+        display: none !important;
     }
     .dropdown-submenu>a:after {
     content: "\f0da";
@@ -56,6 +56,16 @@
     margin-left: 0px;
     }
 
-    /*
 </style>
 @stack('styles')
+<script>
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const stickyBar = document.querySelector('.sharethis-sticky-share-buttons');
+            const inlineButtons = document.querySelector('.sharethis-inline-follow-buttons');
+
+            if (stickyBar) stickyBar.style.display = 'none';
+            if (inlineButtons) inlineButtons.style.display = 'none';
+        }, 10000); // Delay to wait for async loading
+    });
+</script>

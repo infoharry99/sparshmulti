@@ -1,60 +1,17 @@
-# Laravel core
-/vendor
-/node_modules
-/public/storage
-/storage/*.key
+
+node_modules/
 .env
-.phpunit.result.cache
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-
-# Laravel 8/9/10 auto-generated files
-/storage/app/public
-/storage/framework/cache
-/storage/framework/sessions
-/storage/framework/views
-/storage/logs
-
-# IDE/editor stuff
-/.idea
-/.vscode
-*.sublime-workspace
-*.sublime-project
-
-# OS-specific
+vendor/
+*.log
 .DS_Store
 Thumbs.db
-
-# Composer / npm
-composer.lock
-package-lock.json
-
-# Cache & Debug
-.env.backup
-.env.example.local
-.env.testing
-.env.*.backup
-.env.local
-.env.development
-.env.production
-.env.staging
-.env.phpunit
-
-# PHPUnit
-coverage/
-.phpunit.cache
-
-# Telescope (optional if using Laravel Telescope)
-storage/telescope
-
-# Laravel Mix / Vite
-/public/hot
-/public/mix-manifest.json
-/public/build
-
-# Jetstream / Livewire specific
-/livewire-tmp
-/vendor
-
+dist/
+build/
+.vscode/
+.idea/
+vendor/
+/storage/*
+!/storage/app/
+/storage/framework/*
+/storage/logs/*
+.env
