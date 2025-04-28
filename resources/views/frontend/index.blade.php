@@ -1,7 +1,211 @@
 @extends('frontend.layouts.master')
 @section('title', __('home.title')) {{-- Translatable title --}}
 @section('main-content')
+<style>
+    .blog-sec {
+        padding: 60px 20px;
+        background: #fff;
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-heading {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .blog-row {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .blog-card {
+            flex: 0 0 30%;
+            background: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .blog-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-image-wrapper img  {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+            border-radius: 10px;
+        }
+        .blog-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .blog-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: black;
+            color: #fff;
+            font-size: 14px;
+            padding: 6px 15px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .blog-title {
+            font-size: 22px;
+            margin: 20px 0 15px;
+            padding: 0 10px;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .read-more .arrow {
+        margin-left: 5px;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+        }
+
+        .read-more:hover .arrow {
+        transform: translateX(5px);
+        }
+
+
+    .product-card {
+        position: relative;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .product-img-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+            border-radius: 10px;
+        }
+
+        .product-hover-icons {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            transition: all 0.2s ease;
+        }
+
+        .product-hover-icons button {
+            background: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .product-card:hover .product-hover-icons {
+        opacity: 1;
+        }
+
+        .product-details {
+            
+            padding: 10px 5px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 14px;
+            color: #000;
+        }
+
+    .featured-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .featured-img {
+        position: relative;
+    }
+
+    .featured-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+        transition: transform 0.4s ease;
+    }
+
+        .featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .featured-item:hover img {
+        transform: scale(1.05);
+        }
+
+        .featured-item:hover .featured-overlay {
+        opacity: 1;
+        }
+
+        .featured-overlay h4 {
+        font-size: 16px;
+        margin: 0;
+        }
+
+</style>
 @if(count($banners) > 0)
     <section id="Gslider" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -14,8 +218,8 @@
                 <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                     <img class="first-slide" src="{{ $banner->photo }}" alt="Slide {{ $key + 1 }}">
                     <div class="carousel-caption d-none d-md-block text-left">
-                        <h1 class="wow fadeInDown">{{ $banner->title }}</h1>
-                        <p>{!! html_entity_decode($banner->description) !!}</p>
+                        <!-- <h1 class="wow fadeInDown">{{ $banner->title }}</h1> -->
+                        <!-- <p>{!! html_entity_decode($banner->description) !!}</p> -->
                     </div>
                 </div>
             @endforeach
@@ -32,441 +236,262 @@
 @endif
 @php
     $locale = app()->getLocale();
-  
 @endphp
-<!-- why sec start -->
-    <section class="why-sec sectionpadding">
-       <div class="container">
-           <div class="row">
-               <div class="col-md-12">
-                   <div class="section-heading">
-                       <h3 class="text-center mb-5">Why Melody Brush</h3>
-                   </div>
-                   <div class="why-body text-center">
-                       <p> dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                       <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
-                       <a href="#" class="theme-btn"><span><i class="fas fa-angle-right"></i></span> Read More</a>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
-
-   <!-- why sec end -->
-         <!-- featured sec start -->
-    <section class="feature-sec sectionpadding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading">
-                        <h3 class="text-center mb-5">
-                            @lang('home.feature_collections')
-                        </h3>
-                    </div>
-                </div>
-                <div class="featured-slider owl-carousel">
-                    @if($featured)
-                        @foreach($featured as $data)
-                            <div class="featured-item">
-                                <a href="#">
-                                    <div class="featured-img">
-                                        @php
-                                            $photos = json_decode($data->photo); // Properly decode JSON array
-                                        @endphp
-                                        @if(!empty($photos) && isset($photos[0]))
-                                            <img src="{{ asset($photos[0]) }}" alt="Featured Image" class="img-fluid">
-                                        @endif
-                                        {{-- <img src="{{$photo[0]}}" alt="{{$photo[0]}}" class="img-fluid"> --}}
-                                    </div>
-                                    <div class="featured-content">
-                                        <!-- <p>{{$data->cat_info['title']}}</p> -->
-                                        <h3>{{$data->title}} </h3>
-                                        <a href="{{route('product-detail',$data->slug)}}">Shop Now</a>
-                                    </div>
-                                </a>
-                                <div class="featured-attribute mt-3">
-                                    <button class="hearts"><i class="far fa-heart"></i>120</button>
-                                    <button class="comment"><i class="far fa-comment"></i>89</button>
-                                </div>
-                            </div>
-                        @endforeach
-                    @endif
-                </div>
-            </div>
-        </div>
-    </section>
-   <!-- featured sec end -->
 
    <!-- popular sec start -->
     <section class="feature-sec sectionpadding">
-       <div class="container">
-           <div class="row">
+        <div class="container">
+            <div class="row">
             <div class="col-lg-12">
                 <div class="section-heading">
-                    <h3 class="text-center mb-5">@lang('home.popular_painting')</h3>
+                <h1 class="text-center mt-5"><strong>Everyday Demi-fine Jewellery</strong></h1>
                 </div>
             </div>
-               <div class="featured-slider owl-carousel">
+
+            <div class="featured-slider owl-carousel">
+                @php
+                $product_listss = DB::table('products')->where('status', 'active')->orderBy('id', 'DESC')->limit(6)->get();
+                @endphp
+
+                @foreach($product_listss as $product)
+                <div class="featured-item">
+                <a href="#">
+                    <div class="featured-img">
                     @php
-                        $product_listss = DB::table('products')->where('status','active')->orderBy('id','DESC')->limit(6)->get();
+                        $photos = json_decode($product->photo);
                     @endphp
-                    @foreach($product_listss as $product)
-                        <div class="featured-item">
-                            <a href="#">
-                                <div class="featured-img">
-                                    @php
-                                        $photos = json_decode($product->photo); // Use $product instead of $data
-                                    @endphp
-                                    @if(!empty($photos) && isset($photos[0]))
-                                        <img src="{{ asset($photos[0]) }}" alt="Featured Image" class="img-fluid">
-                                    @endif
-                                </div>
-                                <div class="featured-content">
-                                    <h4 class="title">
-                                        <a href="#">{{ $product->title }}</a>
-                                    </h4>
-                                    <p class="price with-discount">${{ number_format($product->discount, 2) }}</p>
-                                </div>
-                            </a>
-                            <div class="featured-attribute mt-3">
-                                <button class="hearts"><i class="far fa-heart"></i>120</button>
-                                <button class="comment"><i class="far fa-comment"></i>89</button>
-                            </div>
-                        </div>
-                    @endforeach                                                                            
-               </div>
-           </div>
-       </div>
+                    @if(!empty($photos) && isset($photos[0]))
+                        <img src="{{ asset($photos[0]) }}" alt="{{ $product->title }}" class="img-fluid">
+                    @endif
+                    <div class="featured-overlay">
+                        <h4 class="title">{{ $product->title }}</h4>
+                    </div>
+                    </div>
+                </a>
+                </div>
+                @endforeach
+
+            </div>
+            </div>
+        </div>
     </section>
   
    <!-- popular sec end -->
-
-   <!-- testimonial sec start -->
-  <section class="testimonial-sec sectionpadding">
-       <div class="container">
-           <div class="row">
-            <div class="col-lg-2"></div>
-               <div class="col-lg-10">
-                   <div class="section-heading position-relative">
-                       <h3 class="mb-5">@lang('home.testimonial')</h3>
-                   </div>
-                   </div>
-                   <div class="testimonial-area owl-carousel">
-                       <div class="testi-item">
-                           <div class="row">
-                               <div class="col-lg-2">
-                                   <div class="testi-img">
-                                       <img src="images/image 10.png" class="img-fluid">
-                                   </div>
-                               </div>
-                               <div class="col-lg-9">
-                               <div class="tesimonial-content">
-                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                               </div>                                   
-                               </div>
-                               <div class="col-lg-9">
-                               </div>
-                               <div class="col-lg-3">
-                                 <div class="test-hed mt-4">
-                                    <h6><strong>Rakesh Kumer</strong></h6>
-                                    <p>Desinassion</p>
-                                </div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="testi-item">
-                           <div class="row">
-                               <div class="col-lg-2">
-                                   <div class="testi-img">
-                                       <img src="images/image 10.png" class="img-fluid">
-                                   </div>
-                               </div>
-                               <div class="col-lg-9">
-                               <div class="tesimonial-content">
-                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                               </div>                                   
-                               </div>
-                               <div class="col-lg-9">
-                               </div>
-                               <div class="col-lg-3">
-                                 <div class="test-hed mt-4">
-                                    <h6><strong>Rakesh Kumer</strong></h6>
-                                    <p>Desinassion</p>
-                                </div>
-                               </div>
-                           </div>
-
-                       </div>
-                       <div class="testi-item">
-                           <div class="row">
-                               <div class="col-lg-2">
-                                   <div class="testi-img">
-                                       <img src="images/image 10.png" class="img-fluid">
-                                   </div>
-                               </div>
-                               <div class="col-lg-9">
-                               <div class="tesimonial-content">
-                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                               </div>                                   
-                               </div>
-                               <div class="col-lg-9">
-                               </div>
-                               <div class="col-lg-3">
-                                 <div class="test-hed mt-4">
-                                    <h6><strong>Rakesh Kumer</strong></h6>
-                                    <p>Desinassion</p>
-                                </div>
-                               </div>
-                           </div>
-
-                       </div>
-                       <div class="testi-item">
-                           <div class="row">
-                               <div class="col-lg-2">
-                                   <div class="testi-img">
-                                       <img src="images/image 10.png" class="img-fluid">
-                                   </div>
-                               </div>
-                               <div class="col-lg-9">
-                               <div class="tesimonial-content">
-                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                               </div>                                   
-                               </div>
-                               <div class="col-lg-9">
-                               </div>
-                               <div class="col-lg-3">
-                                 <div class="test-hed mt-4">
-                                    <h6><strong>Rakesh Kumer</strong></h6>
-                                    <p>Desinassion</p>
-                                </div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="testi-item">
-                           <div class="row">
-                               <div class="col-lg-2">
-                                   <div class="testi-img">
-                                       <img src="images/image 10.png" class="img-fluid">
-                                   </div>
-                               </div>
-                               <div class="col-lg-9">
-                               <div class="tesimonial-content">
-                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                               </div>                                   
-                               </div>
-                               <div class="col-lg-9">
-                               </div>
-                               <div class="col-lg-3">
-                                 <div class="test-hed mt-4">
-                                    <h6><strong>Rakesh Kumer</strong></h6>
-                                    <p>Desinassion</p>
-                                </div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="testi-item">
-                           <div class="row">
-                               <div class="col-lg-2">
-                                   <div class="testi-img">
-                                       <img src="images/image 10.png" class="img-fluid">
-                                   </div>
-                               </div>
-                               <div class="col-lg-9">
-                               <div class="tesimonial-content">
-                                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                               </div>                                   
-                               </div>
-                               <div class="col-lg-9">
-                               </div>
-                               <div class="col-lg-3">
-                                 <div class="test-hed mt-4">
-                                    <h6><strong>Rakesh Kumer</strong></h6>
-                                    <p>Desinassion</p>
-                                </div>
-                               </div>
-                           </div>
-
-                       </div>                                                                                                                   
-                   </div>
-              </div>
-       </div>
-   </section>
-   <!-- testimonial sec end -->
-
-     <!-- blog sec start -->
-     <section class="blog-sec sectionpadding">
-       <div class="container">
-           <div class="row">
-            <div class="col-lg-12">
-                <div class="section-heading position-relative">
-                    <h3 class="text-center mb-5">@lang('home.latest_blog')</h3>
-                    <a href="#" class="view-all">@land('home.view_all')</a>
+        <section class="banner-sec mt-5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="first-slide" src="{{ asset('/frontend/banner/image.png') }}" alt="Slide 1">
                 </div>
             </div>
-            @if($posts)
-                @foreach($posts as $post)
-                    <div class="col-lg-6">
-                        <div class="blog-list">
-                                <h5 class="mb-3">{{$post->title}}</h5>
-                            <span>{{$post->created_at->format('d M , Y. D')}}</span>
-                            <p>{!! $post->summary!!}</p>
-                            <a href="{{route('blog.detail',$post->slug)}}">
-                                <img src="{{$post->photo}}" alt="{{$post->photo}}" class="img-fluid">
-                            </a>
+        </section>
+
+        <section class="feature-sec sectionpadding mt-5">
+          <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-heading">
+                        <h1 class="text-center mt-5"><strong>Best Seller</strong></h1>
+                        <p class="text-center">Shop the Latest Styles: Stay ahead of the curve with our newest arrivals</p>
                         </div>
                     </div>
-                @endforeach
-            @endif
-               
-               {{-- <div class="col-lg-6">
-                   <div class="blog-list">
-                       <h5 class="mb-3">Lorem Ipsum is simply </h5>
-                       <span>Megha Biswas, Mumbai, Indian 20th Oct’24</span>
-                       <p>of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a</p>
-                       <a href="#">
-                           <img src="images/image 12.png" class="img-fluid">
-                       </a>
-                   </div>
-               </div>                --}}
-           </div>
-       </div>
-   </section>
+
+                    <div class="row g-4 mt-4">
+                        @php
+                        $product_listss = DB::table('products')->where('status', 'active')->orderBy('id', 'DESC')->limit(6)->get();
+                        @endphp
+
+                        @foreach($product_listss as $product)
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="product-card">
+                                <div class="product-img-wrapper">
+                                    @php
+                                        $photos = json_decode($product->photo);
+                                    @endphp
+                                    @if(!empty($photos) && isset($photos[0]))
+                                        <img src="{{ asset($photos[0]) }}" alt="{{ $product->title }}" class="img-fluid">
+                                    @endif
+
+
+
+                                    <div class="product-hover-icons">
+                                        <button><i class="fas fa-shopping-bag"></i></button>
+                                        <button><i class="far fa-heart"></i></button>
+                                        <button><i class="far fa-times-circle"></i></button>
+                                        <button><i class="far fa-eye"></i></button>
+                                    </div>
+                                </div>
+
+                                <div class="product-details mt-2">
+                                <h5 class="product-title">{{ $product->title }}</h5>
+                                <p class="product-price"><strong>Rs. {{ number_format($product->discount, 2) }}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     <!-- blog sec start -->
+    
+        <section class="blog-sec">
+            <div class="container">
+                <h2 class="blog-heading">Blogs</h2>
+                <div class="blog-row">
+
+                @if($posts)
+                    @foreach($posts as $post)
+                    <div class="blog-card">
+                        <div class="blog-image-wrapper">
+                        <a href="{{ route('blog.detail', $post->slug) }}">
+                            <div class="featured-img">
+                                <img src="{{ $post->photo }}" alt="{{ $post->title }}" class="blog-image">
+                            </div>
+                        </a>
+                        <span class="blog-label">Blog</span>
+                        </div>
+                        <h3 class="blog-title">{{ $post->title }}</h3>
+                        <a href="{{ route('blog.detail', $post->slug) }}" class="read-more">
+                        Read more <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                    @endforeach
+                @endif
+
+                </div>
+            </div>
+        </section>
+<!-- Blog Section End -->
+
    <!-- blog sec end -->
 
-
-
-
-@if($product_lists)
-    @foreach($product_lists as $key=>$product)
-        <div class="modal fade" id="{{$product->id}}" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row no-gutters">
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="product-gallery">
-                                            <div class="quickview-slider-active">
-                                                @php
-                                                    $photo=explode(',',$product->photo);
-                                                @endphp
-                                                @foreach($photo as $data)
-                                                    <div class="single-slider">
-                                                        <img src="{{$data}}" alt="{{$data}}">
-                                                    </div>
-                                                @endforeach
-                                            </div>
-                                        </div>
-                                    <!-- End Product slider -->
-                                </div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="quickview-content">
-                                        <h2>{{$product->title}}</h2>
-                                        <div class="quickview-ratting-review">
-                                            <div class="quickview-ratting-wrap">
-                                                <div class="quickview-ratting">
-                                                    {{-- <i class="yellow fa fa-star"></i>
-                                                    <i class="yellow fa fa-star"></i>
-                                                    <i class="yellow fa fa-star"></i>
-                                                    <i class="yellow fa fa-star"></i>
-                                                    <i class="fa fa-star"></i> --}}
+    @if($product_lists)
+        @foreach($product_lists as $key=>$product)
+            <div class="modal fade" id="{{$product->id}}" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close" aria-hidden="true"></span></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="product-gallery">
+                                                <div class="quickview-slider-active">
                                                     @php
-                                                        $rate=DB::table('product_reviews')->where('product_id',$product->id)->avg('rate');
-                                                        $rate_count=DB::table('product_reviews')->where('product_id',$product->id)->count();
+                                                        $photo=explode(',',$product->photo);
                                                     @endphp
-                                                    @for($i=1; $i<=5; $i++)
-                                                        @if($rate>=$i)
-                                                            <i class="yellow fa fa-star"></i>
-                                                        @else
-                                                        <i class="fa fa-star"></i>
-                                                        @endif
-                                                    @endfor
-                                                </div>
-                                                <a href="#"> ({{$rate_count}} customer review)</a>
-                                            </div>
-                                            <div class="quickview-stock">
-                                                @if($product->stock >0)
-                                                <span><i class="fa fa-check-circle-o"></i> {{$product->stock}} in stock</span>
-                                                @else
-                                                <span><i class="fa fa-times-circle-o text-danger"></i> {{$product->stock}} out stock</span>
-                                                @endif
-                                            </div>
-                                        </div>
-                                        @php
-                                            $after_discount=($product->price-($product->price*$product->discount)/100);
-                                        @endphp
-                                        <h3><small><del class="text-muted">${{number_format($product->price,2)}}</del></small>    ${{number_format($after_discount,2)}}  </h3>
-                                        <div class="quickview-peragraph">
-                                            <p>{!! html_entity_decode($product->summary) !!}</p>
-                                        </div>
-                                        @if($product->size)
-                                            <div class="size">
-                                                <div class="row">
-                                                    <div class="col-lg-6 col-12">
-                                                        <h5 class="title">Size</h5>
-                                                        <select>
-                                                            @php
-                                                            $sizes=explode(',',$product->size);
-                                                            // dd($sizes);
-                                                            @endphp
-                                                            @foreach($sizes as $size)
-                                                                <option>{{$size}}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                    {{-- <div class="col-lg-6 col-12">
-                                                        <h5 class="title">Color</h5>
-                                                        <select>
-                                                            <option selected="selected">orange</option>
-                                                            <option>purple</option>
-                                                            <option>black</option>
-                                                            <option>pink</option>
-                                                        </select>
-                                                    </div> --}}
+                                                    @foreach($photo as $data)
+                                                        <div class="single-slider">
+                                                            <img src="{{$data}}" alt="{{$data}}">
+                                                        </div>
+                                                    @endforeach
                                                 </div>
                                             </div>
-                                        @endif
-                                        <form action="{{route('single-add-to-cart')}}" method="POST" class="mt-4">
-                                            @csrf
-                                            <div class="quantity">
-                                                <!-- Input Order -->
-                                                <div class="input-group">
-                                                    <div class="button minus">
-                                                        <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                                            <i class="ti-minus"></i>
-                                                        </button>
+                                        <!-- End Product slider -->
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="quickview-content">
+                                            <h2>{{$product->title}}</h2>
+                                            <div class="quickview-ratting-review">
+                                                <div class="quickview-ratting-wrap">
+                                                    <div class="quickview-ratting">
+                                                        @php
+                                                            $rate=DB::table('product_reviews')->where('product_id',$product->id)->avg('rate');
+                                                            $rate_count=DB::table('product_reviews')->where('product_id',$product->id)->count();
+                                                        @endphp
+                                                        @for($i=1; $i<=5; $i++)
+                                                            @if($rate>=$i)
+                                                                <i class="yellow fa fa-star"></i>
+                                                            @else
+                                                            <i class="fa fa-star"></i>
+                                                            @endif
+                                                        @endfor
                                                     </div>
-													<input type="hidden" name="slug" value="{{$product->slug}}">
-                                                    <input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
-                                                    <div class="button plus">
-                                                        <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
-                                                            <i class="ti-plus"></i>
-                                                        </button>
+                                                    <a href="#"> ({{$rate_count}} customer review)</a>
+                                                </div>
+                                                <div class="quickview-stock">
+                                                    @if($product->stock >0)
+                                                    <span><i class="fa fa-check-circle-o"></i> {{$product->stock}} in stock</span>
+                                                    @else
+                                                    <span><i class="fa fa-times-circle-o text-danger"></i> {{$product->stock}} out stock</span>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            @php
+                                                $after_discount=($product->price-($product->price*$product->discount)/100);
+                                            @endphp
+                                            <h3><small><del class="text-muted">${{number_format($product->price,2)}}</del></small>    ${{number_format($after_discount,2)}}  </h3>
+                                            <div class="quickview-peragraph">
+                                                <p>{!! html_entity_decode($product->summary) !!}</p>
+                                            </div>
+                                            @if($product->size)
+                                                <div class="size">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-12">
+                                                            <h5 class="title">Size</h5>
+                                                            <select>
+                                                                @php
+                                                                $sizes=explode(',',$product->size);
+                                                                // dd($sizes);
+                                                                @endphp
+                                                                @foreach($sizes as $size)
+                                                                    <option>{{$size}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                        {{-- <div class="col-lg-6 col-12">
+                                                            <h5 class="title">Color</h5>
+                                                            <select>
+                                                                <option selected="selected">orange</option>
+                                                                <option>purple</option>
+                                                                <option>black</option>
+                                                                <option>pink</option>
+                                                            </select>
+                                                        </div> --}}
                                                     </div>
                                                 </div>
-                                                <!--/ End Input Order -->
+                                            @endif
+                                            <form action="{{route('single-add-to-cart')}}" method="POST" class="mt-4">
+                                                @csrf
+                                                <div class="quantity">
+                                                    <!-- Input Order -->
+                                                    <div class="input-group">
+                                                        <div class="button minus">
+                                                            <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                                                <i class="ti-minus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <input type="hidden" name="slug" value="{{$product->slug}}">
+                                                        <input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
+                                                        <div class="button plus">
+                                                            <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
+                                                                <i class="ti-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <!--/ End Input Order -->
+                                                </div>
+                                                <div class="add-to-cart">
+                                                    <button type="submit" class="btn">Add to cart</button>
+                                                    <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
+                                                </div>
+                                            </form>
+                                            <div class="default-social">
+                                            <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
                                             </div>
-                                            <div class="add-to-cart">
-                                                <button type="submit" class="btn">Add to cart</button>
-                                                <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
-                                            </div>
-                                        </form>
-                                        <div class="default-social">
-                                        <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-        </div>
-    @endforeach
-@endif
-@endsection
+            </div>
+        @endforeach
+    @endif
+    @endsection
 
 @push('styles')
     <!-- <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script> -->
@@ -474,7 +499,7 @@
     <style>
         /* Banner Sliding */
         #Gslider .carousel-inner {
-        background: #000000;
+        /* background: #000000; */
         color:black;
         }
 

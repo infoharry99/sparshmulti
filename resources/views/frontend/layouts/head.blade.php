@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="{{asset('frontend/css/slicknav.min.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/reset.css')}}">
-<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/styles.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
@@ -30,8 +30,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="{{asset('/frontend/css/style.css')}}">
+<!-- <link rel="stylesheet" href="{{asset('/frontend/css/style.css')}}"> -->
 <link rel="stylesheet" href="{{asset('/frontend/css/responstive.css')}}">
+
 <!-- <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script> -->
 <style>
     /* Multilevel dropdown */

@@ -1,7 +1,6 @@
 
 	<!-- Start Footer Area -->
-	<!-- <footer class="footer">
-		Footer Top 
+  <!-- <footer class="footer">
 		<div class="footer-top section">
 			<div class="container">
 				<div class="row">
@@ -63,7 +62,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
-								<p>Copyright © {{date('Y')}} <a href="https://github.com/Prajwal100" target="_blank">Prajwal Rai</a>  -  All Rights Reserved.</p>
+								<p>Copyright © {{date('Y')}} <a href="" target="_blank"></a>  -  All Rights Reserved.</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">
@@ -75,179 +74,266 @@
 				</div>
 			</div>
 		</div>
-	</footer> -->
-	<!-- /End Footer Area -->
-   <!-- footer links sec start  -->
-  <!-- follow sec start -->
-  
-  <footer>
-      <!-- instagram sec start -->
-    
-      <!-- instagram sec end -->
-
-      <section class="instagram-sec sectionpadding">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-heading">
-                <h3 class="text-center mb-5">
-                  <i class="fab fa-instagram"></i>@lang('home.instagram')
-                </h3>
-              </div>
-
-              <div class="instrgram-slider owl-carousel">
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-                <div class="ins-item position-relative">
-                  <img src="{{asset('images/image 11.png')}}" class="img-fluid" />
-                  <div class="ins-overley">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-      <!-- follow sec start -->
-      <section class="follow-sec sectionpadding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading">
-                        <h3 class="text-center mb-5">@lang('home.follow_us')</h3>
-                    </div>
-                    <div class="social-links">
-                        <ul>
-                            <li><a href=""><img src="{{asset('images/facebook.png')}}" class="img-fluid"/></a></li>
-                            <li><a href=""><img src="{{asset('images/instra.png')}}" class="img-fluid"/></a></li>
-                            <li><a href=""><img src="{{asset('images/pin.png')}}" class="img-fluid"/></a></li>
-                            <li><a href=""><img src="{{asset('images/you.png')}}" class="img-fluid"/></a></li>
-                            <li><a href=""><img src="{{asset('images/in.png')}}" class="img-fluid"/></a></li>
-                            <li><a href=""><img src="{{asset('images/twi.png')}}" class="img-fluid"/></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-
-      <section class="footerlinks-sec sectionhalf">
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-12">
-                      <div class="section-heading">
-                          <h3 class="text-center mb-5">
-                              <ul class="footer-links">
-                                  <li><a href="{{ route('home') }}" class="active">@lang('home.home')</a></li>
-                                  <li><a href="{{ route('product-grids') }}">@lang('home.gallery')</a></li>
-                                  <li><a href="{{ route('about-us') }}">@lang('home.about')</a></li>
-                                  <li><a href="{{ route('blog') }}">@lang('home.blog')</a></li>
-                                  <li><a href="{{ route('contact') }}">@lang('home.contact')</a></li>
-                              </ul>
-                          </h3>
-                      </div>
-                  </div>
-                  <div class="col-lg-5">
-                      <div class="newsletter text-center">
-                          <h5>@lang('home.newsletter')</h5>
-                          <p>@lang('home.newsletter_text')</p>
-                          <form action="#" class="newsletter-inner">
-                              <input type="text" placeholder="@lang('home.email_placeholder')" name="email" class="form-control"/>
-                              <button type="submit" class="sign-up">@lang('home.sign_up')</button>
-                          </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-      <section class="copyright-sec sectionhalf">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <ul class="copyright-list">
-                          <li><a href="{{url('/terms')}}">@lang('home.terms')</a></li>
-                          <li><a href="{{url('/terms')}}">@lang('home.privacy')</a></li>
-                          <li>© 2024 Melody Brush. @lang('home.rights')</li>
-                          <li>
-                              @lang('home.powered_by') <a href="" class="creat-a">www.digibrandx.com</a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-    <!-- footer sec start -->
+	</footer>  -->
    
+  <style>
+    /* ================
+       Reset & container
+       ================ */
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    h4 {
+      margin-top: -38px !important;
+    }
+
+    /* =========================
+       Feature-cards section
+       ========================= */
+    .features {
+      padding: 4rem 0;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .feature-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 2rem 1rem;
+      text-align: center;
+      transition: box-shadow .2s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .feature-card .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .feature-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: .5rem;
+    }
+    .feature-card p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    /* ================
+       Footer
+       ================ */
+    footer.site-footer {
+      border-top: 1px solid #ddd;
+      padding: 4rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .footer-col h5 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .footer-col address,
+    .footer-col p,
+    .footer-col a {
+      display: block;
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: .5rem;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col ul li {
+      margin-bottom: .5rem;
+    }
+    .footer-col ul li a {
+      color: #555;
+      font-size: .95rem;
+    }
+    .footer-col form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .footer-col form input[type="email"] {
+      flex: 1 1 150px;
+      padding: .75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: .95rem;
+    }
+    .footer-col form button {
+      padding: .75rem 1.25rem;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+    .footer-col form button .fa-arrow-right {
+      margin-left: .5rem;
+      font-size: 0.9rem;
+    }
+    .footer-social {
+      margin-top: 1rem;
+      display: flex;
+      gap: .75rem;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      color: #555;
+      font-size: 1rem;
+      transition: background .2s, color .2s;
+    }
+    .footer-social a:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    /* ======================
+       Back-to-top button
+       ====================== */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      border: 1px solid #000;
+      border-radius: 4px;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      font-size: 1.25rem;
+      color: #000;
+      transition: background .2s, color .2s;
+      z-index: 100;
+    }
+    .back-to-top:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    /* ================
+       Responsive tweaks
+       ================ */
+    @media (max-width: 600px) {
+      .feature-card { padding: 1.5rem .75rem; }
+      .footer-col form { flex-direction: column; }
+      .footer-col form button { width: 100%; justify-content: center; }
+    }
+  </style>
 
 
-   <div class="mobile-cart-sec">
-       <ul class="e-com-list">
-           <li><a href="javascript:void(0)" class="search-btn"><img src="{{asset('images/search.png')}}" class="img-fluid"></a></li>
-           <li><a href="cart.html"><img src="{{asset('images/cart.png')}}" class="img-fluid"></a></li>
-           <li><a href="dashbord.html"><img src="{{asset('images/profile.png')}}" class="img-fluid"></a></li>
-        </ul>
-   </div>
+<section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon"><i class="fa-solid fa-box"></i></div>
+          <h4>Free Shipping</h4>
+          <p>You will love at great low prices</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon"><i class="fa-solid fa-credit-card"></i></div>
+          <h4>Flexible Payment</h4>
+          <p>Pay with Multiple Credit Cards</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon"><i class="fa-solid fa-arrow-left"></i></div>
+          <h4>14 Day Returns</h4>
+          <p>Within 30 days for an exchange</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon"><i class="fa-solid fa-headphones-simple"></i></div>
+          <h4>Premium Support</h4>
+          <p>Outstanding premium support</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-   <div class="main-search-area">
-       <button class="srh-close"><img src="{{asset('images/x.png')}}" class="img-fluid"></button>
-       <div class="container">
-           <div class="row justify-content-center text-center">
-               <div class="col-lg-7">
-                <div class="searh-cotnent">
-                   <h3>What You Search Today</h3>
-                   <form class="srh-form">
-                       <input type="text" placeholder="Search" name="">
-                       <button class="searh-btn"><img src="{{asset('images/srh-img.png')}}" class="img-fluid"></button>
-                   </form>
-               </div>
-               </div>
-           </div>
-       </div>
-   </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Address -->
+        <div class="footer-col">
+          <h5>Contact Us</h5>
+          <address>
+            1234 Fashion Street, Suite 567,<br>
+            New York, NY
+          </address>
+          <a href="mailto:info@fashionshop.com">info@fashionshop.com</a>
+          <a href="tel:+12125551234"><strong>(212) 555-1234</strong></a>
+          <a href="https://maps.google.com" target="_blank">Get direction <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        <!-- Help -->
+        <div class="footer-col">
+          <h5>Help</h5>
+          <ul>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Order Tracking</a></li>
+          </ul>
+        </div>
+        <!-- Useful Links -->
+        <div class="footer-col">
+          <h5>Useful Links</h5>
+          <ul>
+            <li><a href="#">Necklace Set</a></li>
+            <li><a href="#">Bangles</a></li>
+            <li><a href="#">Earrings</a></li>
+            <li><a href="#">Earrings And Maang Tikka</a></li>
+            <li><a href="#">Payal</a></li>
+            <li><a href="#">Semi Bridal Set</a></li>
+          </ul>
+        </div>
+        <!-- Email Signup -->
+        <div class="footer-col">
+          <h5>Sign Up for Email</h5>
+          <p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
+          <form action="#" method="POST">
+            <input type="email" placeholder="Enter email address" required>
+            <button type="submit">
+              Subscribe <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </a>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -309,3 +395,57 @@
         }, 10000); // Delay to wait for async loading
     });
 </script>
+  
+<script>
+      let index = 0;
+      const items = document.querySelectorAll('#carouselItems > div');
+      const totalItems = items.length;
+      const carouselItems = document.getElementById('carouselItems');
+      
+      // Clone first and last slides to create infinite loop effect
+      const firstSlide = items[0].cloneNode(true);
+      const lastSlide = items[totalItems - 1].cloneNode(true);
+      carouselItems.appendChild(firstSlide); // Append first slide at the end
+      carouselItems.insertBefore(lastSlide, items[0]); // Insert last slide at the beginning
+    
+      const newItems = document.querySelectorAll('#carouselItems > div');
+      const totalNewItems = newItems.length;
+    
+      function changeSlide() {
+        // When the first or last image reaches, reset the index to create an infinite loop feel
+        if (index >= totalNewItems) {
+          carouselItems.style.transition = 'none'; // Disable transition for the reset
+          carouselItems.style.transform = `translateX(0%)`; // Go back to the first image
+          index = 1; // Skip the first cloned image
+          setTimeout(() => {
+            carouselItems.style.transition = 'transform 0.7s ease-in-out'; // Re-enable transition
+          }, 50);
+        } else if (index < 0) {
+          carouselItems.style.transition = 'none'; // Disable transition for the reset
+          carouselItems.style.transform = `translateX(-${(totalNewItems - 2) * 100}%)`; // Go to the last image
+          index = totalNewItems - 3; // Skip the last cloned image
+          setTimeout(() => {
+            carouselItems.style.transition = 'transform 0.7s ease-in-out'; // Re-enable transition
+          }, 50);
+        } else {
+          carouselItems.style.transform = `translateX(-${index * 100}%)`; 
+        }
+      }
+    
+      setInterval(() => {
+        index = (index + 1) % totalNewItems; // Increment index for infinite loop
+        changeSlide();
+      }, 3000); 
+      changeSlide(); // Initialize the first slide
+    
+      // Previous and Next buttons functionality
+      document.querySelector('[data-carousel-prev]').addEventListener('click', () => {
+        index = (index - 1 + totalNewItems) % totalNewItems;
+        changeSlide();
+      });
+    
+      document.querySelector('[data-carousel-next]').addEventListener('click', () => {
+        index = (index + 1) % totalNewItems;
+        changeSlide();
+      });
+    </script>
