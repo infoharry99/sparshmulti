@@ -187,7 +187,7 @@ p {
     margin-bottom: 20px;
 }
 .featured-img img {
-    width: 1600px!important;
+    width: 1600px !important;
     height: 559px !important;
 }
 .featured-item a {
@@ -1533,180 +1533,1151 @@ a {
    Start Checkout Form CSS
 ========================================*/
 .shop.checkout {
-	padding: 0;
-	background: #fff;
-	padding-top: 20px;
-	padding-bottom: 50px;
+    padding: 0;
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 .shop.checkout .checkout-form {
-	margin-top: 30px;
+    margin-top: 30px;
 }
 .shop.checkout .checkout-form h2 {
-	font-size: 25px;
-	color: #333;
-	font-weight: 700;
-	line-height: 27px;
+    font-size: 25px;
+    color: #333;
+    font-weight: 700;
+    line-height: 27px;
 }
 .shop.checkout .checkout-form p {
-	font-size: 16px;
-	color: #333;
-	font-weight: 400;
-	margin-top: 12px;
-	margin-bottom: 30px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 30px;
 }
-.shop.checkout .form{}
+.shop.checkout .form {
+}
 .shop.checkout .form .form-group {
-	margin-bottom: 25px;
+    margin-bottom: 25px;
 }
-.shop.checkout .form .form-group label{
-	color:#333;
-	position:relative;
+.shop.checkout .form .form-group label {
+    color: #333;
+    position: relative;
 }
 .shop.checkout .form .form-group label span {
-	color: #ff2c18;
-	display: inline-block;
-	position: absolute;
-	right: -12px;
-	top: 4px;
-	font-size: 16px;
+    color: #ff2c18;
+    display: inline-block;
+    position: absolute;
+    right: -12px;
+    top: 4px;
+    font-size: 16px;
 }
 .shop.checkout .form .form-group input {
-	width: 100%;
-	height: 45px;
-	line-height: 50px;
-	padding: 0 20px;
-	border-radius: 3px;
-	border-radius: 0px;
-	color: #333 !important;
-	border: none;
-	background: #F6F7FB;
+    width: 100%;
+    height: 45px;
+    line-height: 50px;
+    padding: 0 20px;
+    border-radius: 3px;
+    border-radius: 0px;
+    color: #333 !important;
+    border: none;
+    background: #f6f7fb;
 }
-.shop.checkout .form .form-group input:hover{
-	
+.shop.checkout .form .form-group input:hover {
 }
 .shop.checkout .nice-select {
-	width: 100%;
-	height: 45px;
-	line-height: 50px;
-	margin-bottom: 25px;
-	background: #F6F7FB;
-	border-radius: 0px;
-	border:none;
+    width: 100%;
+    height: 45px;
+    line-height: 50px;
+    margin-bottom: 25px;
+    background: #f6f7fb;
+    border-radius: 0px;
+    border: none;
 }
 .shop.checkout .nice-select .list {
-	width: 100%;
-	height: 300px;
-	overflow: scroll;
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
 }
-.shop.checkout .nice-select .list li{}
-.shop.checkout .nice-select .list li.option{
-	color:#333;
+.shop.checkout .nice-select .list li {
 }
-.shop.checkout .nice-select .list li.option:hover{
-	background:#F6F7FB;
-	color:#333;
+.shop.checkout .nice-select .list li.option {
+    color: #333;
+}
+.shop.checkout .nice-select .list li.option:hover {
+    background: #f6f7fb;
+    color: #333;
 }
 .shop.checkout .form .address input {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
 }
-.shop.checkout .form .address input:last-child{
-	margin:0;
+.shop.checkout .form .address input:last-child {
+    margin: 0;
 }
 .shop.checkout .form .create-account {
-	margin: 0;
+    margin: 0;
 }
 .shop.checkout .form .create-account input {
-	width: auto;
-	display: inline-block;
-	height: auto;
-	border-radius: 100%;
-	margin-right: 3px;
+    width: auto;
+    display: inline-block;
+    height: auto;
+    border-radius: 100%;
+    margin-right: 3px;
 }
 .shop.checkout .form .create-account label {
-	display: inline-block;
-	margin: 0;
+    display: inline-block;
+    margin: 0;
 }
 .shop.checkout .order-details {
-	margin-top: 30px;
-	background: #fff;
-	padding: 15px 0 30px 0;
-	border: 1px solid #eee;
+    margin-top: 30px;
+    background: #fff;
+    padding: 15px 0 30px 0;
+    border: 1px solid #eee;
 }
 .shop.checkout .single-widget {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
-.shop.checkout .single-widget:last-child{
-	margin:0;
+.shop.checkout .single-widget:last-child {
+    margin: 0;
 }
 .shop.checkout .single-widget h2 {
-	position:relative;
-	font-size: 15px;
-	font-weight: 600;
-	padding: 10px 30px;
-	line-height: 24px;
-	text-transform: uppercase;
-	color: #333;
-	padding-bottom: 5px;
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 30px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #333;
+    padding-bottom: 5px;
 }
-.shop.checkout .single-widget h2:before{
-	position:absolute;
-	content:"";
-	left:30px;
-	bottom:0;
-	height:2px;
-	width:50px;
-	background:#F7941D;
+.shop.checkout .single-widget h2:before {
+    position: absolute;
+    content: "";
+    left: 30px;
+    bottom: 0;
+    height: 2px;
+    width: 50px;
+    background: #f7941d;
 }
-.shop.checkout .single-widget .content ul{
-	margin-top:30px;
+.shop.checkout .single-widget .content ul {
+    margin-top: 30px;
 }
 .shop.checkout .single-widget .content ul li {
-	display: block;
-	padding: 0px 30px;
-	font-size: 15px;
-	font-weight: 400;
-	color: #333;
-	margin-bottom: 12px;
+    display: block;
+    padding: 0px 30px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 12px;
 }
-.shop.checkout .single-widget .content ul li span{
-	display:inline-block;
-	float:right;
+.shop.checkout .single-widget .content ul li span {
+    display: inline-block;
+    float: right;
 }
 .shop.checkout .single-widget .content ul li.last {
-	padding-top: 12px;
-	border-top: 1px solid #ebebeb;
-	display: block;
-	font-size: 15px;
-	font-weight: 400;
-	color: #333;
+    padding-top: 12px;
+    border-top: 1px solid #ebebeb;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
 }
 .shop.checkout .single-widget .checkbox {
-	text-align: left;
-	margin: 0;
-	padding: 0px 30px;
-	margin-top:30px;
+    text-align: left;
+    margin: 0;
+    padding: 0px 30px;
+    margin-top: 30px;
 }
 
 .shop.checkout .single-widget.payement {
-	padding: 0px 38px;
-	text-align: center;
-	margin-top: 30px;
+    padding: 0px 38px;
+    text-align: center;
+    margin-top: 30px;
 }
 .shop.checkout .single-widget.get-button {
-	text-align: center;
-	padding:0px 35px;
-    
+    text-align: center;
+    padding: 0px 35px;
 }
 .shop.checkout .single-widget.get-button .btn {
-	height: 46px;
-	width: 100%;
-	line-height: 19px;
-	text-align: center;
-	border-radius: 0;
-	text-transform: uppercase;
-	color: #fff;
-    background-color: #D64933;
+    height: 46px;
+    width: 100%;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #d64933;
 }
 /*======================================
    End Checkout Form CSS
 ========================================*/
+
+.header__icons {
+    z-index: 1003;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info
+    > div
+    > div
+    > i {
+    color: #333333 !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info
+    .mm-socialmedia
+    > a:hover {
+    background: #333333 !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info
+    .mm-socialmedia
+    > a:hover
+    > i {
+    color: #ababab !important;
+}
+
+.vertical-mega-menu
+    .buddha-menu-item
+    ul.mm-submenu
+    li.mm-contact-column
+    button {
+    background: #333333 !important;
+}
+
+.vertical-mega-menu
+    .buddha-menu-item
+    ul.mm-submenu
+    li.mm-contact-column
+    button:hover {
+    background: #1f1f1f !important;
+}
+
+.vertical-mega-menu .buddha-menu-item .mm-add-to-cart > div {
+    background: #333333 !important;
+}
+
+.vertical-mega-menu .buddha-menu-item .mm-add-to-cart > div {
+    border-color: #333333 !important;
+}
+
+.vertical-mega-menu .buddha-menu-item .mm-submenu .mm-add-to-cart > div:hover {
+    border-color: #1f1f1f !important;
+    background-color: #1f1f1f !important;
+}
+
+.vertical-mega-menu > .buddha-menu-item > .mm-submenu.height-transition {
+    background-color: #017b86 !important;
+}
+
+.vertical-mega-menu > .buddha-menu-item > .mm-submenu.height-transition > li {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > a {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > a
+    > .toggle-menu-btn
+    > .mm-cross {
+    background-color: #158f9a !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition {
+    background-color: #158f9a !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a
+    > .toggle-menu-btn
+    > .mm-cross {
+    background-color: #29a3ae !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition {
+    background-color: #29a3ae !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a
+    > .toggle-menu-btn
+    > .mm-cross {
+    background-color: #3db7c2 !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition {
+    background-color: #3db7c2 !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a
+    > .toggle-menu-btn
+    > .mm-cross {
+    background-color: #51cbd6 !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition {
+    background-color: #51cbd6 !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a
+    > .toggle-menu-btn
+    > .mm-cross {
+    background-color: #65dfea !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition {
+    background-color: #65dfea !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a
+    > .toggle-menu-btn
+    > .mm-cross {
+    background-color: #79f3fe !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition {
+    background-color: #79f3fe !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a {
+    background-color: inherit !important;
+}
+
+.vertical-mega-menu
+    > .buddha-menu-item
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > .mm-submenu.height-transition
+    > li
+    > a
+    > .toggle-menu-btn
+    > .mm-cross {
+    background-color: #8dffff !important;
+}
+
+.vertical-mega-menu .buddha-menu-item-countdown .inn,
+.vertical-mega-menu .buddha-menu-item-countdown .up::after,
+.vertical-mega-menu .buddha-menu-item-countdown .flip-clock-dot {
+    background: #333333 !important;
+}
+
+.vertical-mega-menu
+    .flip-clock-wrapper
+    ul.play
+    li.flip-clock-before
+    .up
+    .shadow,
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+    background: -moz-linear-gradient(
+        top,
+        rgba(0, 0, 0, 0.1) 0%,
+        #1a1a1a 100%
+    ) !important;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, rgba(0, 0, 0, 0.1)),
+        color-stop(100%, #1a1a1a)
+    ) !important;
+    background: linear, top, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100% !important;
+    background: -o-linear-gradient(
+        top,
+        rgba(0, 0, 0, 0.1) 0%,
+        #1a1a1a 100%
+    ) !important;
+    background: -ms-linear-gradient(
+        top,
+        rgba(0, 0, 0, 0.1) 0%,
+        #1a1a1a 100%
+    ) !important;
+    background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100% !important;
+}
+
+.vertical-mega-menu
+    .flip-clock-wrapper
+    ul.play
+    li.flip-clock-before
+    .down
+    .shadow,
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+    background: -moz-linear-gradient(
+        top,
+        #1a1a1a 0%,
+        rgba(0, 0, 0, 0.1) 100%
+    ) !important;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, #1a1a1a),
+        color-stop(100%, rgba(0, 0, 0, 0.1))
+    ) !important;
+    background: linear, top, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100% !important;
+    background: -o-linear-gradient(
+        top,
+        #1a1a1a 0%,
+        rgba(0, 0, 0, 0.1) 100%
+    ) !important;
+    background: -ms-linear-gradient(
+        top,
+        #1a1a1a 0%,
+        rgba(0, 0, 0, 0.1) 100%
+    ) !important;
+    background: linear, to bottom, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100% !important;
+}
+
+.vertical-mega-menu .buddha-menu-item-countdown .inn {
+    text-shadow: 0 1px 2px #121212 !important;
+}
+
+.buddha-menu-item .flip-clock-wrapper ul li a div.down:after {
+    background-color: #333333 !important;
+}
+
+.vertical-mega-menu .buddha-menu-item-countdown .inn {
+    color: #ffffff !important;
+}
+
+.vertical-mega-menu .buddha-menu-item .mm-add-to-cart > div {
+    color: #ffffff !important;
+}
+
+.vertical-mega-menu .buddha-menu-item .mm-submenu .mm-add-to-cart > div:hover {
+    color: #ebebeb !important;
+}
+
+.vertical-mega-menu .mm-add-to-cart {
+    display: block !important;
+}
+
+.vertical-mega-menu ul.mm-submenu li.mm-contact-column button {
+    color: #ffffff !important;
+}
+
+.vertical-mega-menu
+    ul.mm-submenu.simple
+    > li
+    .mega-menu-prices
+    span.mega-menu-price
+    span {
+    color: #ffffff !important;
+}
+
+.vertical-mega-menu
+    .buddha-menu-item
+    ul.mm-submenu.simple
+    > li
+    .mega-menu-prices
+    span.mega-menu-compare_at_price
+    span {
+    color: #d7d7d7;
+}
+
+.vertical-mega-menu
+    ul.mm-submenu
+    > li:hover
+    > a[onclick]:not([data-href="no-link"]),
+.vertical-mega-menu
+    ul.mm-submenu
+    > li:hover
+    > a[onclick]:not([data-href="no-link"])
+    > *,
+.vertical-mega-menu
+    ul.mm-submenu
+    > li.mm-hovering
+    > a[onclick]:not([data-href="no-link"]),
+.vertical-mega-menu
+    ul.mm-submenu
+    > li.mm-hovering
+    > a[onclick]:not([data-href="no-link"])
+    > *,
+.vertical-mega-menu
+    ul.mm-submenu.tabbed
+    > li.tab-opened
+    > a[onclick]:not([data-href="no-link"]),
+.vertical-mega-menu
+    ul.mm-submenu.tabbed
+    > li.tab-opened
+    > a[onclick]:not([data-href="no-link"])
+    > *,
+.vertical-mega-menu
+    ul.mm-submenu
+    li
+    a[onclick]:not([data-href="no-link"]):hover,
+.vertical-mega-menu
+    ul.mm-submenu.tree
+    li:hover
+    > a[onclick]:not([data-href="no-link"])
+    > .toggle-menu-btn
+    > span
+    > span,
+.vertical-mega-menu
+    ul.mm-submenu.tree
+    li.mm-hovering
+    > a[onclick]:not([data-href="no-link"])
+    > .toggle-menu-btn
+    > span
+    > span,
+.vertical-mega-menu
+    ul.mm-submenu.tree
+    li.mega-hover
+    > a[onclick]:not([data-href="no-link"])
+    > .toggle-menu-btn
+    > span
+    > span,
+.vertical-mega-menu
+    ul.mm-submenu.tabbed
+    > li.mm-hovering
+    > a[onclick]:not([data-href="no-link"])
+    > .toggle-menu-btn
+    > span
+    > span,
+.vertical-mega-menu
+    ul.mm-submenu.tabbed
+    > li:hover
+    > a[onclick]:not([data-href="no-link"])
+    > .toggle-menu-btn
+    > span
+    > span,
+.vertical-mega-menu
+    ul.mm-submenu
+    > li
+    > .mega-menu-item-container
+    > .mm-list-name
+    > span[onclick]:hover
+    > span,
+.vertical-mega-menu
+    ul.mm-submenu
+    > li
+    > .mega-menu-item-container
+    .mm-list-info
+    > a[onclick]:not([data-href="no-link"]):hover
+    > * {
+    color: #ffffff !important;
+}
+
+.vertical-mega-menu ul.mm-submenu,
+.vertical-mega-menu ul.mm-submenu li.mm-contact-column span,
+.vertical-mega-menu ul.mm-submenu li a,
+.vertical-mega-menu ul.mm-submenu span,
+.vertical-mega-menu ul.mm-submenu > li > a > .toggle-menu-btn > .fa {
+    color: #ffffff !important;
+}
+
+.vertical-mega-menu ul.mm-submenu.simple > li .mm-list-name {
+    border-bottom: 1px solid #ffffff !important;
+}
+
+.vertical-mega-menu ul.mm-submenu,
+.vertical-mega-menu ul.mm-submenu span,
+.vertical-mega-menu
+    ul.mm-submenu.simple
+    > li
+    ul.mm-product-list
+    > li
+    .mm-list-info {
+    font-size: 13px !important;
+}
+
+.vertical-mega-menu .buddha-menu-item .mm-description {
+    font-size: 12px !important;
+}
+
+.vertical-mega-menu ul.mm-submenu,
+.vertical-mega-menu ul.mm-submenu li a,
+.vertical-mega-menu ul.mm-submenu a,
+.vertical-mega-menu ul.mm-submenu a > .mm-title,
+.vertical-mega-menu ul.mm-submenu .mm-title,
+.vertical-mega-menu ul.mm-submenu li.mm-contact-column span {
+    font-family: Default !important;
+}
+
+.horizontal-mega-menu .buddha-menu-item-countdown .inn,
+.horizontal-mega-menu .buddha-menu-item-countdown .up::after,
+.horizontal-mega-menu .buddha-menu-item-countdown .flip-clock-dot {
+    background: #333333 !important;
+}
+
+.horizontal-mega-menu
+    .flip-clock-wrapper
+    ul.play
+    li.flip-clock-before
+    .up
+    .shadow,
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+    background: -moz-linear-gradient(
+        top,
+        rgba(0, 0, 0, 0.1) 0%,
+        #1a1a1a 100%
+    ) !important;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, rgba(0, 0, 0, 0.1)),
+        color-stop(100%, #1a1a1a)
+    ) !important;
+    background: linear, top, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100% !important;
+    background: -o-linear-gradient(
+        top,
+        rgba(0, 0, 0, 0.1) 0%,
+        #1a1a1a 100%
+    ) !important;
+    background: -ms-linear-gradient(
+        top,
+        rgba(0, 0, 0, 0.1) 0%,
+        #1a1a1a 100%
+    ) !important;
+    background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100% !important;
+}
+
+.horizontal-mega-menu
+    .flip-clock-wrapper
+    ul.play
+    li.flip-clock-before
+    .down
+    .shadow,
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+    background: -moz-linear-gradient(
+        top,
+        #1a1a1a 0%,
+        rgba(0, 0, 0, 0.1) 100%
+    ) !important;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, #1a1a1a),
+        color-stop(100%, rgba(0, 0, 0, 0.1))
+    ) !important;
+    background: linear, top, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100% !important;
+    background: -o-linear-gradient(
+        top,
+        #1a1a1a 0%,
+        rgba(0, 0, 0, 0.1) 100%
+    ) !important;
+    background: -ms-linear-gradient(
+        top,
+        #1a1a1a 0%,
+        rgba(0, 0, 0, 0.1) 100%
+    ) !important;
+    background: linear, to bottom, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100% !important;
+}
+
+.horizontal-mega-menu .buddha-menu-item-countdown .inn {
+    text-shadow: 0 1px 2px #121212 !important;
+}
+
+.buddha-menu-item .flip-clock-wrapper ul li a div.down:after {
+    background-color: #333333 !important;
+}
+
+.horizontal-mega-menu .buddha-menu-item-countdown .inn {
+    color: #ffffff !important;
+}
+
+.horizontal-mega-menu
+    .buddha-menu-item
+    .mm-submenu
+    .mm-add-to-cart
+    > div:hover {
+    background: #0da19a !important;
+}
+
+.horizontal-mega-menu
+    .buddha-menu-item
+    .mm-submenu
+    .mm-add-to-cart
+    > div:hover {
+    border-color: #0da19a !important;
+}
+
+.horizontal-mega-menu
+    .buddha-menu-item
+    .mm-submenu
+    .mm-add-to-cart
+    > div:hover {
+    color: #ffffff !important;
+}
+
+.horizontal-mega-menu .mm-add-to-cart > div {
+    background: #ffffff !important;
+}
+
+.horizontal-mega-menu .mm-add-to-cart > div {
+    border-color: #000000 !important;
+}
+
+.horizontal-mega-menu .mm-add-to-cart > div {
+    color: #333333 !important;
+}
+
+.horizontal-mega-menu .mm-add-to-cart {
+    display: block !important;
+}
+
+.horizontal-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info,
+.horizontal-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info
+    a {
+    color: #f1f1f0 !important;
+}
+
+.horizontal-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info
+    > div
+    > div
+    > i {
+    color: #cccccc !important;
+}
+
+.horizontal-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info
+    .mm-socialmedia
+    > a:hover {
+    background: #cccccc !important;
+}
+
+.horizontal-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info
+    .mm-socialmedia
+    > a:hover
+    > i {
+    color: #545454 !important;
+}
+
+.horizontal-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info
+    .mm-img
+    > .mm-large {
+    background: #cccccc !important;
+}
+
+.horizontal-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info
+    .mm-img
+    > .mm-small {
+    background: #909090f0 !important;
+}
+
+.horizontal-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info,
+.horizontal-mega-menu
+    > .buddha-menu-item
+    > ul.mm-submenu
+    li.mm-contact-column.mm-info
+    a {
+    background: #3a3a3a !important;
+}
+
+.horizontal-mega-menu ul.mm-submenu li.mm-contact-column button {
+    background: #3a3a3a !important;
+}
+
+.horizontal-mega-menu ul.mm-submenu li.mm-contact-column button:hover {
+    background: #262626 !important;
+}
+
+.horizontal-mega-menu ul.mm-submenu li.mm-contact-column button {
+    color: #ffffff !important;
+}
+
+.horizontal-mega-menu
+    ul.mm-submenu.simple
+    > li
+    .mega-menu-prices
+    span.mega-menu-price
+    span {
+    color: #0da19a !important;
+}
+
+.horizontal-mega-menu ul.mm-submenu,
+.horizontal-mega-menu > li > ul.mm-submenu.tabbed > li > ul.mm-submenu li,
+.horizontal-mega-menu li.buddha-menu-item:hover ul.mm-submenu.simple li:hover,
+.horizontal-mega-menu
+    li.buddha-menu-item.mega-hover
+    ul.mm-submenu.simple
+    li:hover {
+    background: #ffffff !important;
+}
+
+.horizontal-mega-menu .mm-submenu.tabbed {
+    background-color: #fafafa !important;
+}
+
+.horizontal-mega-menu ul.mm-submenu.tree li:hover,
+.horizontal-mega-menu ul.mm-submenu.tree li.mega-hover,
+.horizontal-mega-menu ul.mm-submenu.tabbed > li.tab-opened {
+    background: #f9f9f9 !important;
+}
+
+.horizontal-mega-menu .buddha-menu-item .mm-submenu.tabbed > li.tab-opened {
+    background-color: #f4f4f4 !important;
+}
+
+.horizontal-mega-menu ul.mm-submenu.tree li:hover > a,
+.horizontal-mega-menu ul.mm-submenu.tree li.mega-hover > a,
+.horizontal-mega-menu ul.mm-submenu.tabbed > li.tab-opened > a,
+.horizontal-mega-menu ul.mm-submenu.tabbed > li.tab-opened > a > .mm-title,
+.horizontal-mega-menu ul.mm-submenu li a:hover,
+.horizontal-mega-menu ul.mm-submenu li:hover > a,
+.horizontal-mega-menu ul.mm-submenu li a:hover i,
+.horizontal-mega-menu ul.mm-submenu li:hover > a > i,
+.horizontal-mega-menu ul.mm-submenu li a:hover > span,
+.horizontal-mega-menu ul.mm-submenu li:hover > a > span,
+.horizontal-mega-menu ul.mm-submenu.tree li.fa:hover:before,
+.horizontal-mega-menu ul.mm-submenu.tree li.mega-hover.fa:before,
+.horizontal-mega-menu ul.mm-submenu.tabbed > li.tab-opened.fa:before,
+.horizontal-mega-menu
+    ul.mm-submenu
+    > li
+    > .mega-menu-item-container
+    > .mm-list-name
+    > span[onclick]:hover {
+    color: #0da19a !important;
+}
+
+.horizontal-mega-menu ul.mm-submenu,
+.horizontal-mega-menu ul.mm-submenu li,
+.horizontal-mega-menu ul.mm-submenu li.mm-contact-column span,
+.horizontal-mega-menu ul.mm-submenu li a,
+.horizontal-mega-menu ul.mm-submenu li a span,
+.horizontal-mega-menu ul.mm-submenu li.fa,
+.horizontal-mega-menu ul.mm-submenu.tree li:hover > a[data-href="no-link"],
+.horizontal-mega-menu ul.mm-submenu.tree li.mega-hover > a[data-href="no-link"],
+.horizontal-mega-menu
+    ul.mm-submenu.tabbed
+    > li.tab-opened
+    > a[data-href="no-link"],
+.horizontal-mega-menu ul.mm-submenu li a[data-href="no-link"]:hover,
+.horizontal-mega-menu ul.mm-submenu li a[data-href="no-link"]:hover > span,
+.horizontal-mega-menu ul.mm-submenu li:hover a[data-href="no-link"] > span {
+    color: #222222 !important;
+}
+
+.horizontal-mega-menu ul.mm-submenu,
+.horizontal-mega-menu ul.mm-submenu a,
+.horizontal-mega-menu ul.mm-submenu a > span,
+.horizontal-mega-menu ul.mm-submenu .money {
+    font-size: 13px !important;
+}
+
+.horizontal-mega-menu .buddha-menu-item .mm-description {
+    font-size: 12px !important;
+}

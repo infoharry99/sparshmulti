@@ -262,7 +262,7 @@
                         $photos = json_decode($product->photo);
                     @endphp
                     @if(!empty($photos) && isset($photos[0]))
-                        <img src="{{ asset($photos[0]) }}" alt="{{ $product->title }}" class="img-fluid">
+                        <a href="{{route('product-grids',$product->slug)}}"><img src="{{ asset($photos[0]) }}" alt="{{ $product->title }}" class="img-fluid"></a>
                     @endif
                     <div class="featured-overlay">
                         <h4 class="title">{{ $product->title }}</h4>
@@ -309,7 +309,7 @@
                                         $photos = json_decode($product->photo);
                                     @endphp
                                     @if(!empty($photos) && isset($photos[0]))
-                                        <img src="{{ asset($photos[0]) }}" alt="{{ $product->title }}" class="img-fluid">
+                                       <a href="{{route('product-grids',$product->slug)}}"> <img src="{{ asset($photos[0]) }}" alt="{{ $product->title }}" class="img-fluid"></a>
                                     @endif
 
 

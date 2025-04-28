@@ -3,7 +3,7 @@
 @section('title','E-Paninting || HOME PAGE')
 @section('main-content')
     <!-- subbanner sec start -->
-    <section class="subbanner-sec sectionpadding">
+    {{-- <section class="subbanner-sec sectionpadding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -20,7 +20,251 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+
+    <style>
+    .blog-sec {
+        padding: 60px 20px;
+        background: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-heading {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .blog-row {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .blog-card {
+            flex: 0 0 30%;
+            background: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .blog-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-image-wrapper img  {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+            border-radius: 10px;
+        }
+        .blog-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .blog-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: black;
+            color: #fff;
+            font-size: 14px;
+            padding: 6px 15px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .blog-title {
+            font-size: 22px;
+            margin: 20px 0 15px;
+            padding: 0 10px;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .read-more .arrow {
+        margin-left: 5px;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+        }
+
+        .read-more:hover .arrow {
+        transform: translateX(5px);
+        }
+
+
+    .product-card {
+        position: relative;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .product-img-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+            border-radius: 10px;
+        }
+
+        .product-hover-icons {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            transition: all 0.2s ease;
+        }
+
+        .product-hover-icons button {
+            background: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .product-card:hover .product-hover-icons {
+        opacity: 1;
+        }
+
+        .product-details {
+            
+            padding: 10px 5px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 14px;
+            color: #000;
+        }
+
+    .featured-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .featured-img {
+        position: relative;
+    }
+
+    .featured-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+        transition: transform 0.4s ease;
+    }
+
+        .featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .featured-item:hover img {
+        transform: scale(1.05);
+        }
+
+        .featured-item:hover .featured-overlay {
+        opacity: 1;
+        }
+
+        .featured-overlay h4 {
+        font-size: 16px;
+        margin: 0;
+        }
+
+</style>
+
+    <section class="feature-sec sectionpadding">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                <h1 class="text-center mt-5"><strong>Necklace Set</strong></h1>
+                </div>
+            </div>
+
+            <div class="featured-slider owl-carousel">
+                @php
+                $product_listss = DB::table('products')->where('status', 'active')->orderBy('id', 'DESC')->limit(6)->get();
+                @endphp
+
+                @foreach($product_listss as $product)
+                <div class="featured-item">
+               <a href="{{route('product-detail',$product->slug)}}">
+                    <div class="featured-img">
+                    @php
+                        $photos = json_decode($product->photo);
+                    @endphp
+                    @if(!empty($photos) && isset($photos[0]))
+                        <img src="{{ asset($photos[0]) }}" alt="{{ $product->title }}" class="img-fluid">
+                    @endif
+                    <div class="featured-overlay">
+                        <h4 class="title">{{ $product->title }}</h4>
+                    </div>
+                    </div>
+                </a>
+                </div>
+                @endforeach
+
+            </div>
+            </div>
+        </div>
     </section>
+
     <!-- subbanner sec end -->
 
     <!-- gallery listing sec start -->
@@ -249,16 +493,16 @@
             </div>
         </div> --}}
 
-@php
+{{-- @php
     $featured = DB::table('products')
         ->where('is_featured', 1)
         ->where('status', 'active')
         ->orderBy('id', 'DESC')
         ->limit(20)
         ->get();
-@endphp
+@endphp --}}
 
-        <style>
+        {{-- <style>
             .product-grid {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -325,9 +569,9 @@
                     grid-template-columns: 1fr;
                 }
             }
-        </style>
+        </style> --}}
 
-        <div class="product-grid">
+        {{-- <div class="product-grid">
             @foreach ($featured as $index => $product)
                 @php
                     $photos = json_decode($product->photo);
@@ -351,7 +595,7 @@
                     </div>
                 </div>
             @endforeach
-        </div>
+        </div> --}}
 
 
 
@@ -366,7 +610,7 @@
     <footer>
 
    <!-- instagram sec start -->
-   <section class="instagram-sec sectionpadding">
+   {{-- <section class="instagram-sec sectionpadding">
        <div class="container">
            <div class="row">
                <div class="col-lg-12">
@@ -411,11 +655,11 @@
                </div>
            </div>
        </div>
-   </section>
+   </section> --}}
    <!-- instagram sec end -->
 
    <!-- follow sec start -->
-   <section class="follow-sec sectionpadding">
+   {{-- <section class="follow-sec sectionpadding">
        <div class="container">
            <div class="row">
                <div class="col-lg-12">
@@ -435,11 +679,11 @@
                </div>
            </div>
        </div>
-   </section>
+   </section> --}}
    <!-- follow sec end -->
 
    <!-- footer links sec start  -->
-   <section class="footerlinks-sec sectionhalf">
+   {{-- <section class="footerlinks-sec sectionhalf">
        <div class="container">
            <div class="row justify-content-center">
                <div class="col-lg-12">
@@ -468,11 +712,11 @@
                </div>
            </div>
        </div>
-   </section>
+   </section> --}}
    <!-- footer links sec end  -->
 
    <!-- copyright sec start -->
-   <section class="copyright-sec sectionhalf">
+   {{-- <section class="copyright-sec sectionhalf">
        <div class="container">
            <div class="row">
                <div class="col-lg-12">
@@ -485,21 +729,21 @@
                </div>
            </div>
        </div>
-   </section>
+   </section> --}}
    <!-- copyright sec end -->
    
    </footer>
    <!-- footer sec start -->
 
-   <div class="mobile-cart-sec">
+   {{-- <div class="mobile-cart-sec">
        <ul class="e-com-list">
            <li><a href="javascript:void(0)" class="search-btn"><img src="images/search.png" class="img-fluid"></a></li>
            <li><a href="cart.html"><img src="images/cart.png" class="img-fluid"></a></li>
            <li><a href="dashbord.html"><img src="images/profile.png" class="img-fluid"></a></li>
         </ul>
-   </div>
+   </div> --}}
 
-
+{{-- 
    <div class="main-search-area">
        <button class="srh-close"><img src="images/x.png" class="img-fluid"></button>
        <div class="container">
@@ -515,7 +759,7 @@
                </div>
            </div>
        </div>
-   </div>
+   </div> --}}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

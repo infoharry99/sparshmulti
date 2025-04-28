@@ -1,186 +1,1030 @@
-@extends('frontend.layouts.master')
 
-@section('title','E-SHOP || About Us')
+<html class="js hdt-pr-img__effect-zoom hdt-badge__shape-round dir--ltr hdt-minimal-products hdt-hidden-products-wishlist hdt-hidden-products-compare hdt-reveal-in-view" lang="en" dir="ltr" style="--scrollbar-w: 15px; --header-height: 94px;"><head><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="https://j02crm-a9.myshopify.com/pages/about-us"><title>
+      About Us
+ – My Store</title>
+<!-- /snippets/social-meta-tags.liquid -->
 
-@section('main-content')
+<meta property="og:site_name" content="My Store">
+<meta property="og:url" content="https://j02crm-a9.myshopify.com/pages/about-us">
+<meta property="og:title" content="About Us">
+<meta property="og:type" content="website">
+<meta property="og:description" content="My Store"><meta name="twitter:site" content="@shopify"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Us">
+<meta name="twitter:description" content="My Store"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+<style data-shopify="">:root {--aspect-ratiocus1:0.716;--scrollbar-w: 0px;/* Spacing */--spacing-0-2: 0.2rem; /* 2px */--spacing-0-4: 0.4rem; /* 4px */--spacing-0-6: 0.6rem; /* 6px */--spacing-0-8: 0.8rem; /* 8px */--spacing-1: 1rem; /* 10px */--spacing-1-2: 1.2rem; /* 12px */--spacing-1-4: 1.4rem; /* 14px */--spacing-1-6: 1.6rem; /* 16px */--spacing-1-8: 1.8rem; /* 18px */--spacing-2: 2rem; /* 20px */--spacing-2-2: 2.2rem; /* 22px */--spacing-2-4: 2.4rem; /* 24px */--spacing-2-6: 2.6rem; /* 26px */--spacing-2-8: 2.8rem; /* 28px */--spacing-3: 3rem; /* 30px */--spacing-3-2: 3.2rem; /* 32px */--spacing-3-4: 3.4rem; /* 34px */--spacing-3-6: 3.6rem; /* 36px */--spacing-3-8: 3.8rem; /* 38px */--spacing-4: 4rem; /* 40px */--spacing-4-2: 4.2rem; /* 42px */--spacing-4-4: 4.4rem; /* 44px */--spacing-4-8: 4.8rem; /* 48px */--spacing-5: 5rem; /* 50px */--spacing-5-6: 5.6rem; /* 56px */--spacing-6: 6rem; /* 60px */--spacing-6-4: 6.4rem; /* 64px */--spacing-7: 7rem; /* 70px */--spacing-7-2: 7.2rem; /* 72px */--spacing-8: 8rem; /* 80px */--spacing-9: 9rem; /* 90px */--spacing-10: 10rem; /* 100px *//* Colors */--color-base-background: 255 255 255;--color-base-text: 134 134 134;--color-accent: 219 18 21;--color-accent-secondary: 255 255 255;--color-focus: 213 58 61;--payment-terms-background-color: rgb(255 255 255);/* Product badge colors */--color-on-sale-badge-background: 252 87 50;--color-on-sale-badge-text: 255 255 255;--color-new-badge-background: 72 212 187;--color-new-badge-text: 255 255 255;--color-sold-out-badge-background: 242 242 242;--color-sold-out-badge-text: 0 0 0;--color-pre-order-badge-background: 85 166 83;--color-pre-order-badge-text: 255 255 255;--color-custom-badge-background: 131 183 53;--color-custom-badge-text: 255 255 255;/* Notices colors */--color-tooltip-background: 35 35 35;--color-tooltip-text: 255 255 255;--color-success-background: 232 240 233;--color-success-text: 66 132 69;--color-warning-background: 251 246 234;--color-warning-text: 224 178 82;--color-error-background: 253 224 228;--color-error-text: 235 0 27;--font-body-family: `Albert Sans`, sans-serif;--font-body-style: normal;--font-body-weight: 400;--font-body-weight-bold: 700;--font-heading-family: `Albert Sans`, sans-serif;--font-heading-style: normal;--font-heading-weight: 400;--font-body-line-height: 1.6;--font-body-spacing: 0.0em;--font-heading-scale: 1.0;--font-heading-line-height: 1.2;--font-heading-spacing: 0.0em;--button-line-height: 1.2;/* Font sizes */--text-xs: 1.0rem;--text-sm: 1.2rem;--text-base: 1.4rem;--text-lg: 1.6rem;--text-xl: 1.8rem;--text-2xl: 2.0rem;--text-4xl: 2.2rem;--text-6xl: 2.4rem;--text-8xl: 2.6rem;--text-10xl: 2.8rem;--text-12xl: 3.0rem;/* Font Weight */--font-light: 300;--font-normal: 400;--font-medium: 500;--font-semibold: 600;--font-bold: 700;--font-extrabold: 800;--font-black: 900;--spacing-x: 15px;--spacing-y: 15px;--container-max-width: 144rem;--container-max-width-padding-lg: 154rem;--container-max-width-padding-md: 150rem;--container-width-margin: 0rem;--spacing-sections-desktop: 0px;--spacing-sections-mobile: 0px;/* Border Radius */--rounded-2xs: 0.16666666666666666rem;--rounded-xs: 0.25rem;--rounded-sm: 0.5rem;--rounded: 1.0rem;--rounded-lg: 2.0rem;--rounded-full: 9999px;--rounded-button: 0.3rem;--rounded-input: 0.3rem;--rounded-product-card: 1.0rem;--rounded-product-media: 1.0rem;--rounded-collection-card: 1.0rem;--rounded-blog-card: 1.0rem;--padding-block-input: var(--spacing-0-6);--padding-inline-input: var(--spacing-1);--height-input: var(--spacing-4-2);--cursor-zoom-in-icon: url(//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/cursor-zoom-in.svg?v=88807523373575012131739289142);--cursor-close-icon: url(//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/cursor-close.svg?v=47636334999695629861739289142);/* RTL support */--value-logical-flip: 1;--value-origin-start: left;--value-origin-end: right;}/* Color schemes */[color-scheme="scheme-1"] {--color-background: 255 255 255;--gradient-background: #ffffff;--color-background2: 242 242 242;--color-foreground: 0 0 0;--color-foreground2: 84 84 84;--color-button: 0 0 0;--color-button-text: 255 255 255;--color-button-border: 0 0 0;--color-secondary-button: 255 255 255;--color-secondary-button-bg: 255 255 255;--color-secondary-button-text: 0 0 0;--color-link: 0 0 0;--color-line-border: 235 235 235;--color-overlay: 0 0 0;--payment-terms-background-color: rgb(255 255 255);/* Product colors */--color-pr-price: 0 0 0;--color-pr-sale-price: 219 18 21;--color-pr-text: 0 0 0;--color-pr-rating: ;/* Input colors */--color-input-primary: 255 255 255;--color-input-secondary: 144 144 144;}[color-scheme="scheme-2"] {--color-background: 255 255 255;--gradient-background: #ffffff;--color-background2: 255 255 255;--color-foreground: 0 0 0;--color-foreground2: 84 84 84;--color-button: 255 255 255;--color-button-text: 0 0 0;--color-button-border: 235 235 235;--color-secondary-button: 255 255 255;--color-secondary-button-bg: 255 255 255;--color-secondary-button-text: 0 0 0;--color-link: 0 0 0;--color-line-border: 236 236 236;--color-overlay: 0 0 0;--payment-terms-background-color: rgb(255 255 255);/* Product colors */--color-pr-price: 0 0 0;--color-pr-sale-price: 219 18 21;--color-pr-text: 0 0 0;--color-pr-rating: ;/* Input colors */--color-input-primary: 255 255 255;--color-input-secondary: 0 0 0;}[color-scheme="scheme-3"] {--color-background: 255 255 255;--gradient-background: #ffffff;--color-background2: 255 255 255;--color-foreground: 0 0 0;--color-foreground2: 0 0 0;--color-button: 242 242 242;--color-button-text: 0 0 0;--color-button-border: 242 242 242;--color-secondary-button: 255 255 255;--color-secondary-button-bg: 255 255 255;--color-secondary-button-text: 0 0 0;--color-link: 0 0 0;--color-line-border: 238 238 238;--color-overlay: 0 0 0;--payment-terms-background-color: rgb(255 255 255);/* Product colors */--color-pr-price: 0 0 0;--color-pr-sale-price: 219 18 21;--color-pr-text: 0 0 0;--color-pr-rating: ;/* Input colors */--color-input-primary: 255 255 255;--color-input-secondary: 0 0 0;}[color-scheme="scheme-4"] {--color-background: 245 245 245;--gradient-background: #f5f5f5;--color-background2: 255 255 255;--color-foreground: 0 0 0;--color-foreground2: 84 84 84;--color-button: 0 0 0;--color-button-text: 255 255 255;--color-button-border: 0 0 0;--color-secondary-button: 245 245 245;--color-secondary-button-bg: 255 255 255;--color-secondary-button-text: 0 0 0;--color-link: 0 0 0;--color-line-border: 235 235 235;--color-overlay: 0 0 0;--payment-terms-background-color: rgb(245 245 245);/* Product colors */--color-pr-price: 0 0 0;--color-pr-sale-price: 219 18 21;--color-pr-text: 0 0 0;--color-pr-rating: ;/* Input colors */--color-input-primary: 255 255 255;--color-input-secondary: 144 144 144;}[color-scheme="scheme-5"] {--color-background: 251 247 240;--gradient-background: #fbf7f0;--color-background2: 251 247 240;--color-foreground: 0 0 0;--color-foreground2: 69 83 94;--color-button: 0 0 0;--color-button-text: 255 255 255;--color-button-border: 0 0 0;--color-secondary-button: 251 247 240;--color-secondary-button-bg: 255 255 255;--color-secondary-button-text: 0 0 0;--color-link: 0 0 0;--color-line-border: 0 0 0;--color-overlay: 0 0 0;--payment-terms-background-color: rgb(251 247 240);/* Product colors */--color-pr-price: 0 0 0;--color-pr-sale-price: 219 18 21;--color-pr-text: 0 0 0;--color-pr-rating: ;/* Input colors */--color-input-primary: 255 255 255;--color-input-secondary: 104 104 104;}[color-scheme="scheme-67a7ca9f-3333-4245-b79f-2e9849d7e615"] {--color-background: 0 0 0;--gradient-background: #000000;--color-background2: 68 68 68;--color-foreground: 255 255 255;--color-foreground2: 231 231 231;--color-button: 255 255 255;--color-button-text: 0 0 0;--color-button-border: 255 255 255;--color-secondary-button: 0 0 0;--color-secondary-button-bg: 0 0 0;--color-secondary-button-text: 255 255 255;--color-link: 255 255 255;--color-line-border: 68 68 68;--color-overlay: 0 0 0;--payment-terms-background-color: rgb(0 0 0);/* Product colors */--color-pr-price: 255 255 255;--color-pr-sale-price: 219 18 21;--color-pr-text: 255 255 255;--color-pr-rating: ;/* Input colors */--color-input-primary: 255 255 255;--color-input-secondary: 144 144 144;}[color-scheme="scheme-4f7d5921-8567-40ac-8211-ef87792674d6"] {--color-background: 252 255 178;--gradient-background: #fcffb2;--color-background2: 255 255 255;--color-foreground: 0 0 0;--color-foreground2: 84 84 84;--color-button: 0 0 0;--color-button-text: 255 255 255;--color-button-border: 0 0 0;--color-secondary-button: 252 255 178;--color-secondary-button-bg: 255 255 255;--color-secondary-button-text: 0 0 0;--color-link: 0 0 0;--color-line-border: 238 238 238;--color-overlay: 255 255 255;--payment-terms-background-color: rgb(252 255 178);/* Product colors */--color-pr-price: 0 0 0;--color-pr-sale-price: 219 18 21;--color-pr-text: 0 0 0;--color-pr-rating: ;/* Input colors */--color-input-primary: 255 255 255;--color-input-secondary: 144 144 144;}[color-scheme="scheme-4f7d5921-8567-40ac-8211-ef87792674d3"] {--color-background: 255 255 255;--gradient-background: #ffffff;--color-background2: 242 242 242;--color-foreground: 0 0 0;--color-foreground2: 255 255 255;--color-button: 219 18 21;--color-button-text: 255 255 255;--color-button-border: 219 18 21;--color-secondary-button: 255 255 255;--color-secondary-button-bg: 255 255 255;--color-secondary-button-text: 0 0 0;--color-link: 0 0 0;--color-line-border: 235 235 235;--color-overlay: 0 0 0;--payment-terms-background-color: rgb(255 255 255);/* Product colors */--color-pr-price: 0 0 0;--color-pr-sale-price: 219 18 21;--color-pr-text: 0 0 0;--color-pr-rating: ;/* Input colors */--color-input-primary: 255 255 255;--color-input-secondary: 144 144 144;}@media screen and (min-width: 768px) {:root {/* Font sizes */--text-xs: 1.0rem;--text-sm: 1.2rem;--text-base: 1.4rem;--text-lg: 1.6rem;--text-xl: 1.8rem;--text-2xl: 2.0rem;--text-4xl: 2.2rem;--text-6xl: 2.4rem;--text-8xl: 2.6rem;--text-10xl: 2.8rem;--text-12xl: 3.0rem;--spacing-x: 30px;--spacing-y: 30px;}}</style>
 
-	<!-- Breadcrumbs -->
-	<div class="breadcrumbs">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="bread-inner">
-						<ul class="bread-list">
-							<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-							<li class="active"><a href="blog-single.html">About Us</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/base.css?v=12049679273222646361743956850" rel="stylesheet" type="text/css" media="all">
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/theme.css?v=174115363151612298321739289142" rel="stylesheet" type="text/css" media="all"><script type="text/javascript" async="" src="//j02crm-a9.myshopify.com/cdn/s/trekkie.storefront.423a314223fb7e8d7c94337fcd62d7ad8c06d7a5.min.js"></script><script>if (!HTMLScriptElement.supports?.("importmap")) { const importMap = document.createElement(`script`); importMap.async = true; importMap.src = "//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/importmap.min.js?v=111504132928535020251739289142"; document.head.appendChild(importMap); }</script>
+<script type="importmap">
+  {
+    "imports": {
+      "vendor": "//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/vendor.min.js?v=94278592681068290511739289142",
+      "global": "//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/global.min.js?v=82437569642889165211739289142",
+      "photoswipe": "//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/es-photoswipe.min.js?v=56831319481966336101739289142",
+      "dayjs": "//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/day.min.js?v=105690777647603308301739289142"
+    }
+  }
+</script>
+<script type="module" src="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/vendor.min.js?v=94278592681068290511739289142"></script>
+<script type="module" src="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/global.min.js?v=82437569642889165211739289142"></script><script>window.performance && window.performance.mark && window.performance.mark(`shopify.content_for_header.start`);</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/88495587593/digital_wallets/dialog">
+<meta id="in-context-paypal-metadata" data-shop-id="88495587593" data-venmo-supported="false" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="INR">
+<script async="async" src="/checkouts/internal/preloads.js?locale=en-GB"></script>
+<script id="shopify-features" type="application/json">{"accessToken":"ffb3e9483bf34160647eacbc07dbb8ad","betas":["rich-media-storefront-analytics"],"domain":"j02crm-a9.myshopify.com","predictiveSearch":true,"shopId":88495587593,"smart_payment_buttons_url":"https:\/\/j02crm-a9.myshopify.com\/cdn\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/j02crm-a9.myshopify.com\/cdn\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js","locale":"en"}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "j02crm-a9.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = {"active":"INR","rate":"1.0"};
+Shopify.country = "GB";
+Shopify.theme = {"name":"ecomus-v1-7-0-official","id":172048056585,"schema_name":"Ecomus","schema_version":"1.7.0","theme_store_id":null,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "j02crm-a9.myshopify.com/cdn";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script id="shop-js-analytics" type="application/json">{"pageType":"page"}</script>
+<script id="__st">var __st={"a":88495587593,"offset":3600,"reqid":"842d3dbd-36b9-4659-b5ea-dbe3a78cb9a0-1745852328","pageurl":"j02crm-a9.myshopify.com\/pages\/about-us","s":"pages-139486200073","u":"18a67a91f5d0","p":"page","rtyp":"page","rid":139486200073};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script id="captcha-bootstrap">!function(){`use strict`;const t=`contact`,e=`account`,n=`new_comment`,o=[[t,t],[`blogs`,n],[`comments`,n],[t,`customer`]],c=[[e,`customer_login`],[e,`guest_login`],[e,`recover_customer_password`],[e,`create_customer`]],r=t=>t.map((([t,e])=>`form[action*=`/${t}`]:not([data-nocaptcha=`true`]) input[name=`form_type`][value=`${e}`]`)).join(`,`),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i=`password`,u=`form_key`,d=[`recaptcha-v3-token`,`g-recaptcha-response`,`h-captcha-response`,i],f=()=>{try{return window.sessionStorage}catch{return}},m=`__shopify_v`,_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error(`form repopulation failed`,{error:o})}}const l=`form_type`,E=`cptcha`;function T(t){t.dataset[E]=!0}const w=window,h=w.document,L=`Shopify`,v=`ce_forms`,y=`captcha`;let A=!1;((t,e)=>{const n=(g=`f06e6c50-85a8-45c8-87d0-21a2b65856fe`,I=`https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.2.iife.js`,D={infoText:`Protected by hCaptcha`,privacyText:`Privacy`,termsText:`Terms`},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement(`script`),{id:`captcha-provider`,async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener(`submit`,(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join(``);!function(t,e){_(t)||t.append(Object.assign(document.createElement(`input`),{type:`hidden`,name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type=`${i}`]`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error(`failed to persist form`,e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of[`focusin`,`change`])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get(`form_key`),M=e.get(l),P=B&&M;t.addEventListener(`DOMContentLoaded`,(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>`true`===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,[`guest_login`])})(!0,!0)}();</script>
+<script integrity="sha256-w1TMG8bx+vw+BuOfT7Dh2avfdjByyjlNYGyp9vJB5oo=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//j02crm-a9.myshopify.com/cdn/shopifycloud/shopify/assets/storefront/load_feature-c354cc1bc6f1fafc3e06e39f4fb0e1d9abdf763072ca394d606ca9f6f241e68a.js" crossorigin="anonymous"></script>
+<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="https://j02crm-a9.myshopify.com/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js",t.type="module",document.head.appendChild(t)}};
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.buyer_consent">
+  function portableWalletsHideBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.add("hidden"),t.setAttribute("aria-hidden","true"),n.removeEventListener("click",e))}function portableWalletsShowBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.remove("hidden"),t.removeAttribute("aria-hidden"),n.addEventListener("click",e))}window.Shopify?.PaymentButton&&(window.Shopify.PaymentButton.hideBuyerConsent=portableWalletsHideBuyerConsent,window.Shopify.PaymentButton.showBuyerConsent=portableWalletsShowBuyerConsent);
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.cart.bootstrap">document.addEventListener("DOMContentLoaded",(function(){function t(){return document.querySelector("shopify-accelerated-checkout-cart, shopify-accelerated-checkout")}if(t())Shopify.PaymentButton.init();else{new MutationObserver((function(e,n){t()&&(Shopify.PaymentButton.init(),n.disconnect())})).observe(document.body,{childList:!0,subtree:!0})}}));
+</script>
+<script id="scb4127" type="text/javascript" async="" src="https://j02crm-a9.myshopify.com/cdn/shopifycloud/privacy-banner/storefront-banner.js"></script>
+<script>window.performance && window.performance.mark && window.performance.mark(`shopify.content_for_header.end`);</script>
+<!-- BEGIN app block: shopify://apps/buddha-mega-menu-navigation/blocks/megamenu/dbb4ce56-bf86-4830-9b3d-16efbef51c6f -->
+<script>
+        var productImageAndPrice = [],
+            collectionImages = [],
+            articleImages = [],
+            mmLivIcons = false,
+            mmFlipClock = false,
+            mmFixesUseJquery = false,
+            mmNumMMI = 9,
+            mmSchemaTranslation = {},
+            mmMenuStrings =  {"menuStrings":{"default":{"Home":"Home","About Us":"About Us","New Arrival":"New Arrival","Best Seller":"Best Seller","Categories":"Categories","Necklace Set":"Necklace Set","Designer Handmade Polki Necklace Set":"Designer Handmade Polki Necklace Set","Designer Mala Set":"Designer Mala Set","Low Price Necklace Set":"Low Price Necklace Set","Paint Meena Necklace Set":"Paint Meena Necklace Set","Polki Necklace Set":"Polki Necklace Set","Earrings":"Earrings","Fancy Earrings":"Fancy Earrings","Indian Reverse Ad Jhumkas":"Indian Reverse Ad Jhumkas","Mint Meena Earrings":"Mint Meena Earrings","Polki Earrings":"Polki Earrings","Real Kundan Earrings":"Real Kundan Earrings","Real Kundan Studs":"Real Kundan Studs","Studs":"Studs","Bangles":"Bangles","Cz Bangles":"Cz Bangles","Paint Meena Bangles":"Paint Meena Bangles","Polki Bangles":"Polki Bangles","Real Kundan Bangles":"Real Kundan Bangles","Payal":"Payal","Kundan Payal":"Kundan Payal","Polki Payal":"Polki Payal","Mangalsutra":"Mangalsutra","Collections":"Collections","Occasion":"Occasion","Gifting":"Gifting","Contact Us":"Contact Us"}},"additional":{"default":{}}} ,
+            mmShopLocale = "en",
+            mmShopLocaleCollectionsRoute = "/collections",
+            mmSchemaDesignJSON = [{"action":"menu-select","value":"main-menu"},{"action":"design","setting":"vertical_contact_left_alt_color","value":"#333333"},{"action":"design","setting":"vertical_contact_right_btn_bg_color","value":"#333333"},{"action":"design","setting":"vertical_addtocart_background_color","value":"#333333"},{"action":"design","setting":"vertical_background_color","value":"#017b86"},{"action":"design","setting":"vertical_countdown_background_color","value":"#333333"},{"action":"design","setting":"vertical_countdown_color","value":"#ffffff"},{"action":"design","setting":"vertical_addtocart_text_color","value":"#ffffff"},{"action":"design","setting":"vertical_addtocart_enable","value":"true"},{"action":"design","setting":"vertical_contact_right_btn_text_color","value":"#ffffff"},{"action":"design","setting":"vertical_price_color","value":"#ffffff"},{"action":"design","setting":"vertical_link_hover_color","value":"#ffffff"},{"action":"design","setting":"vertical_text_color","value":"#ffffff"},{"action":"design","setting":"vertical_font_size","value":"13px"},{"action":"design","setting":"vertical_font_family","value":"Default"},{"action":"design","setting":"countdown_background_color","value":"#333333"},{"action":"design","setting":"countdown_color","value":"#ffffff"},{"action":"design","setting":"addtocart_background_hover_color","value":"#0da19a"},{"action":"design","setting":"addtocart_text_hover_color","value":"#ffffff"},{"action":"design","setting":"addtocart_background_color","value":"#ffffff"},{"action":"design","setting":"addtocart_text_color","value":"#333333"},{"action":"design","setting":"addtocart_enable","value":"true"},{"action":"design","setting":"contact_left_text_color","value":"#f1f1f0"},{"action":"design","setting":"contact_left_alt_color","value":"#CCCCCC"},{"action":"design","setting":"contact_left_bg_color","value":"#3A3A3A"},{"action":"design","setting":"contact_right_btn_bg_color","value":"#3A3A3A"},{"action":"design","setting":"contact_right_btn_text_color","value":"#ffffff"},{"action":"design","setting":"price_color","value":"#0da19a"},{"action":"design","setting":"background_color","value":"#ffffff"},{"action":"design","setting":"background_hover_color","value":"#f9f9f9"},{"action":"design","setting":"link_hover_color","value":"#0da19a"},{"action":"design","setting":"text_color","value":"#222222"},{"action":"design","setting":"font_size","value":"13px"},{"action":"design","setting":"font_family","value":"Default"}],
+            mmDomChangeSkipUl = "",
+            buddhaMegaMenuShop = "j02crm-a9.myshopify.com",
+            mmWireframeCompression = "0",
+            mmExtensionAssetUrl = "https://cdn.shopify.com/extensions/fb6be52e-2a2f-428b-a230-3cfa66bc190c/buddha-mega-menu-navigation-96/assets/";var bestSellersHTML = ``;var newestProductsHTML = ``;/* get link lists api */
+        var linkLists={"main-menu" : {"title":"Main menu", "items":["/",]},"footer" : {"title":"Footer menu", "items":["/search","/pages/order-tracking",]},"customer-account-main-menu" : {"title":"Customer account main menu", "items":["/","https://shopify.com/88495587593/account/orders?locale=en&amp;region_country=GB",]},"useful-links" : {"title":"Useful Links", "items":["/pages/necklace-set","/pages/bangles","/pages/earrings","/pages/earrings-and-maang-tikka","/pages/payal","/pages/semi-bridal-set","/pages/bracelet","/pages/bridal-set","/pages/jhumka-and-maang-tikka","/pages/long-rani-haar","/pages/hath-panja","/pages/mathapati","/pages/passa","/pages/maang-tikka","/pages/waist-belt","/pages/dulha-mala","/pages/sheeshful",]},};/*ENDPARSE*/
+
+        
+
+        /* set product prices *//* get the collection images *//* get the collection images *//* customer fixes */
+        var mmThemeFixesBeforeInit = function(){ customMenuUls=".header__menu-items,nav,ul"; /* generic mobile menu toggle translate effect */ document.addEventListener("toggleSubmenu", function (e) { var pc = document.querySelector("#PageContainer"); var mm = document.querySelector("#MobileNav"); if (pc && mm && typeof e.mmMobileHeight != "undefined"){ var pcStyle = pc.getAttribute("style"); if (pcStyle && pcStyle.indexOf("translate3d") != -1) { pc.style.transform = "translate3d(0px, "+ e.mmMobileHeight +"px, 0px)"; } } }); mmAddStyle(" .header__icons {z-index: 1003;} "); if (document.querySelectorAll(".sf-menu-links,ul.sf-nav").length == 2) { customMenuUls=".sf-menu-links,ul.sf-nav"; mmHorizontalMenus="ul.sf-nav"; mmVerticalMenus=".sf-menu-links"; mmAddStyle("@media screen and (min-width:1280px) { .sf-header__desktop {display: block !important;} }"); } if (document.querySelector(".mobile-menu__content>ul")) { mmDisableVisibleCheck=true; mmVerticalMenus=".mobile-menu__content>ul"; } window.mmLoadFunction = function(){ var num = 15; var intv = setInterval(function(){ var m = document.querySelector("#megamenu_level__1"); if (m && m.matches(".vertical-mega-menu")) reinitMenus("#megamenu_level__1"); if (num--==0) clearInterval(intv); },300); }; if (document.readyState !== "loading") { mmLoadFunction(); } else { document.removeEventListener("DOMContentLoaded", mmLoadFunction); document.addEventListener("DOMContentLoaded", mmLoadFunction); } }; var mmThemeFixesBefore = function(){ window.buddhaFilterLiElements = function(liElements){ var elements = []; for (var i=0; i<liElements.length; i++) { if (liElements[i].querySelector("[href=\"/cart\"],[href=\"/account/login\"]") == null) { elements.push(liElements[i]); } } return elements; }; if (tempMenuObject.u.matches("#mobile_menu, #velaMegamenu .nav, #SiteNav, #siteNav")) { tempMenuObject.liItems = buddhaFilterLiElements(mmNot(tempMenuObject.u.children, ".search_container,.site-nav__item_cart", true)); } else if (tempMenuObject.u.matches(".main_nav .nav .menu")) { var numMenusApplied = 0, numMenusAppliedSticky = 0; mmForEach(document, ".main_nav .nav .menu", function(el){ if (el.closest(".sticky_nav") == null) { if (el.querySelector(".buddha-menu-item")) { numMenusApplied++; } } else { if (el.querySelector(".buddha-menu-item")) { numMenusAppliedSticky++; } } }); if (((tempMenuObject.u.closest(".sticky_nav")) && (numMenusAppliedSticky < 1)) || ((tempMenuObject.u.closest(".sticky_nav")) && (numMenusApplied < 1))) { tempMenuObject.liItems = buddhaFilterLiElements(mmNot(tempMenuObject.u.children, ".search_container,.site-nav__item_cart")); } } else if (tempMenuObject.u.matches("#mobile-menu:not(.mm-menu)") && tempMenuObject.u.querySelector(".hamburger,.shifter-handle") == null) { tempMenuObject.liItems = buddhaFilterLiElements(tempMenuObject.u.children); } else if (tempMenuObject.u.matches("#accessibleNav") && tempMenuObject.u.closest("#topnav2") == null) { tempMenuObject.liItems = buddhaFilterLiElements(mmNot(tempMenuObject.u.children, ".customer-navlink")); } else if (tempMenuObject.u.matches("#megamenu_level__1")) { tempMenuObject.liClasses = "level_1__item"; tempMenuObject.aClasses = "level_1__link"; tempMenuObject.liItems = buddhaFilterLiElements(tempMenuObject.u.children); } else if (tempMenuObject.u.matches(".mobile-nav__items")) { tempMenuObject.liClasses = "mobile-nav__item"; tempMenuObject.aClasses = "mobile-nav__link"; tempMenuObject.liItems = buddhaFilterLiElements(tempMenuObject.u.children); } else if (tempMenuObject.u.matches("#NavDrawer > .mobile-nav") && document.querySelector(".mobile-nav>.buddha-menu-item") == null ) { tempMenuObject.liClasses = "mobile-nav__item"; tempMenuObject.aClasses = "mobile-nav__link"; tempMenuObject.liItems = buddhaFilterLiElements(mmNot(tempMenuObject.u.children, ".mobile-nav__search")); } else if (tempMenuObject.u.matches(".mobile-nav-wrapper > .mobile-nav")) { tempMenuObject.liClasses = "mobile-nav__item border-bottom"; tempMenuObject.aClasses = "mobile-nav__link"; tempMenuObject.liItems = buddhaFilterLiElements(mmNot(tempMenuObject.u.children, ".mobile-nav__search")); } else if (tempMenuObject.u.matches("#nav .mm-panel .mm-listview")) { tempMenuObject.liItems = buddhaFilterLiElements(tempMenuObject.u.children); var firstMmPanel = true; mmForEach(document, "#nav>.mm-panels>.mm-panel", function(el){ if (firstMmPanel) { firstMmPanel = false; el.classList.remove("mm-hidden"); el.classList.remove("mm-subopened"); } else { el.parentElement.removeChild(el); } }); } else if (tempMenuObject.u.matches(".SidebarMenu__Nav--primary")) { tempMenuObject.liClasses = "Collapsible"; tempMenuObject.aClasses = "Collapsible__Button Heading u-h6"; tempMenuObject.liItems = buddhaFilterLiElements(tempMenuObject.u.children); } else if (tempMenuObject.u.matches(".mm_menus_ul")) { tempMenuObject.liClasses = "ets_menu_item"; tempMenuObject.aClasses = "mm-nowrap"; tempMenuObject.liItems = buddhaFilterLiElements(tempMenuObject.u.children); mmAddStyle(" .horizontal-mega-menu > .buddha-menu-item > a {white-space: nowrap;} ", "mmThemeCStyle"); } else if (tempMenuObject.u.matches("#accordion")) { tempMenuObject.liClasses = ""; tempMenuObject.aClasses = ""; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".mobile-menu__panel:first-child .mobile-menu__nav")) { tempMenuObject.liClasses = "mobile-menu__nav-item"; tempMenuObject.aClasses = "mobile-menu__nav-link"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches("#nt_menu_id")) { tempMenuObject.liClasses = "menu-item type_simple"; tempMenuObject.aClasses = "lh__1 flex al_center pr"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches("#menu_mb_cat")) { tempMenuObject.liClasses = "menu-item type_simple"; tempMenuObject.aClasses = ""; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches("#menu_mb_ul")) { tempMenuObject.liClasses = "menu-item only_icon_false"; tempMenuObject.aClasses = ""; tempMenuObject.liItems = mmNot(tempMenuObject.u.children, "#customer_login_link,#customer_register_link,#item_mb_help", true); mmAddStyle(" #menu_mb_ul.vertical-mega-menu li.buddha-menu-item>a {display: flex !important;} #menu_mb_ul.vertical-mega-menu li.buddha-menu-item>a>.mm-title {padding: 0 !important;} ", "mmThemeStyle"); } else if (tempMenuObject.u.matches(".header__inline-menu > .list-menu")) { tempMenuObject.liClasses = ""; tempMenuObject.aClasses = "header__menu-item list-menu__item link focus-inset"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".menu-drawer__navigation>.list-menu")) { tempMenuObject.liClasses = ""; tempMenuObject.aClasses = "menu-drawer__menu-item list-menu__item link link--text focus-inset"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".header__menu-items")) { tempMenuObject.liClasses = "navbar-item header__item has-mega-menu"; tempMenuObject.aClasses = "navbar-link header__link"; tempMenuObject.liItems = tempMenuObject.u.children; mmAddStyle(" .horizontal-mega-menu .buddha-menu-item>a:after{content: none;} .horizontal-mega-menu>li>a{padding-right:10px !important;} .horizontal-mega-menu>li:not(.buddha-menu-item) {display: none !important;} ", "mmThemeStyle"); } else if (tempMenuObject.u.matches(".header__navigation")) { tempMenuObject.liClasses = "header__nav-item"; tempMenuObject.aClasses = ""; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".slide-nav")) { mmVerticalMenus=".slide-nav"; tempMenuObject.liClasses = "slide-nav__item"; tempMenuObject.aClasses = "slide-nav__link"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".header__links-list")) { tempMenuObject.liClasses = ""; tempMenuObject.aClasses = ""; tempMenuObject.liItems = tempMenuObject.u.children; mmAddStyle(".header__left,.header__links {overflow: visible !important; }"); } else if (tempMenuObject.u.matches("#menu-main-navigation,#menu-mobile-nav,#t4s-menu-drawer")) { tempMenuObject.liClasses = ""; tempMenuObject.aClasses = ""; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".nav-desktop:first-child > .nav-desktop__tier-1")) { tempMenuObject.liClasses = "nav-desktop__tier-1-item"; tempMenuObject.aClasses = "nav-desktop__tier-1-link"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".mobile-nav") && tempMenuObject.u.querySelector(".appear-animation.appear-delay-2") != null) { tempMenuObject.liClasses = "mobile-nav__item appear-animation appear-delay-3"; tempMenuObject.aClasses = "mobile-nav__link"; tempMenuObject.liItems = mmNot(tempMenuObject.u.children, "a[href*=account],.mobile-nav__spacer", true); } else if (tempMenuObject.u.matches("nav > .list-menu")) { tempMenuObject.liClasses = ""; tempMenuObject.aClasses = "header__menu-item list-menu__item link link--text focus-inset"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".site-navigation>.navmenu")) { tempMenuObject.liClasses = "navmenu-item navmenu-basic__item"; tempMenuObject.aClasses = "navmenu-link navmenu-link-depth-1"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches("nav>.site-navigation")) { tempMenuObject.liClasses = "site-nav__item site-nav__expanded-item site-nav--has-dropdown site-nav__dropdown-li--first-level"; tempMenuObject.aClasses = "site-nav__link site-nav__link--underline site-nav__link--has-dropdown"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches("nav>.js-accordion-mobile-nav")) { tempMenuObject.liClasses = "js-accordion-header c-accordion__header"; tempMenuObject.aClasses = "js-accordion-link c-accordion__link"; tempMenuObject.liItems = mmNot(tempMenuObject.u.children, ".mobile-menu__item"); } else if (tempMenuObject.u.matches(".sf-menu-links")) { tempMenuObject.liClasses = "list-none"; tempMenuObject.aClasses = "block px-4 py-3"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".sf-nav")) { tempMenuObject.liClasses = "sf-menu-item list-none sf-menu-item--no-mega sf-menu-item-parent"; tempMenuObject.aClasses = "block px-4 py-5 flex items-center sf__parent-item"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".main-nav:not(.topnav)") && tempMenuObject.u.children.length>2) { tempMenuObject.liClasses = "main-nav__tier-1-item"; tempMenuObject.aClasses = "main-nav__tier-1-link"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".mobile-nav") && tempMenuObject.u.querySelector(".mobile-nav__item") != null && document.querySelector(".mobile-nav .buddha-menu-item")==null) { tempMenuObject.liClasses = "mobile-nav__item"; tempMenuObject.aClasses = "mobile-nav__link"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches("#t4s-nav-ul")) { tempMenuObject.liClasses = "t4s-type__mega menu-width__cus t4s-menu-item has--children menu-has__offsets"; tempMenuObject.aClasses = "t4s-lh-1 t4s-d-flex t4s-align-items-center t4s-pr"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches("#menu-mb__ul")) { tempMenuObject.liClasses = "t4s-menu-item t4s-item-level-0"; tempMenuObject.aClasses = ""; tempMenuObject.liItems = mmNot(tempMenuObject.u.children, "#item_mb_wis,#item_mb_sea,#item_mb_acc,#item_mb_help"); } else if (tempMenuObject.u.matches(".navbar-nav")) { tempMenuObject.liClasses = "nav-item"; tempMenuObject.aClasses = "nav-link list-menu__item"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".navbar-nav-sidebar")) { tempMenuObject.liClasses = "nav-item sidemenu-animation sidemenu-animation-delay-2"; tempMenuObject.aClasses = "list-menu__item"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".mobile-menu__content>ul")) { tempMenuObject.liClasses = ""; tempMenuObject.aClasses = ""; tempMenuObject.liItems = tempMenuObject.u.children; mmAddStyle(" .vertical-mega-menu>li{padding:10px !important;} .vertical-mega-menu>li:not(.buddha-menu-item) {display: none !important;} "); } else if (tempMenuObject.u.matches("#offcanvas-menu-nav")) { tempMenuObject.liClasses = "nav-item"; tempMenuObject.aClasses = "nav-link"; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".main__navigation")) { tempMenuObject.liClasses = "nav__link__holder"; tempMenuObject.aClasses = ""; tempMenuObject.liItems = tempMenuObject.u.children; } else if (tempMenuObject.u.matches(".mobile__navigation")) { tempMenuObject.liClasses = "nav__link__holder"; tempMenuObject.aClasses = ""; tempMenuObject.liItems = mmNot(tempMenuObject.u.children, ".mobile__navigation__footer"); mmAddStyle(" .vertical-mega-menu>li{padding:10px !important;} "); } if (tempMenuObject.liItems) { tempMenuObject.skipCheck = true; tempMenuObject.forceMenu = true; } /* try to find li and a classes for requested menu if they are not set */ if (tempMenuObject.skipCheck == true) { var _links=[]; var keys = Object.keys(linkLists); for (var i=0; i<keys.length; i++) { if (selectedMenu == keys[i]) { _links = linkLists[keys[i]].items; break; } } mmForEachChild(tempMenuObject.u, "LI", function(li){ var href = null; var a = li.querySelector("a"); if (a) href = a.getAttribute("href"); if (href == null || (href != null && (href.substr(0,1) == "#" || href==""))){ var a2 = li.querySelector((!!document.documentMode) ? "* + a" : "a:nth-child(2)"); if (a2) { href = a2.getAttribute("href"); a = a2; } } if (href == null || (href != null && (href.substr(0,1) == "#" || href==""))) { var a2 = li.querySelector("a>a"); if (a2) { href = a2.getAttribute("href"); a = a2; } } /* stil no matching href, search all children a for a matching href */ if (href == null || (href != null && (href.substr(0,1) == "#" || href==""))) { var a2 = li.querySelectorAll("a[href]"); for (var i=0; i<a2.length; i++) { var href2 = a2[i].getAttribute("href"); if (_links[tempMenuObject.elementFits] != undefined && href2 == _links[tempMenuObject.elementFits]) { href = href2; a = a2[i]; break; } } } if (_links[tempMenuObject.elementFits] != undefined && href == _links[tempMenuObject.elementFits]) { if (tempMenuObject.liClasses == undefined) { tempMenuObject.liClasses = ""; } tempMenuObject.liClasses = concatClasses(li.getAttribute("class"), tempMenuObject.liClasses); if (tempMenuObject.aClasses == undefined) { tempMenuObject.aClasses = ""; } if (a) tempMenuObject.aClasses = concatClasses(a.getAttribute("class"), tempMenuObject.aClasses); tempMenuObject.elementFits++; } else if (tempMenuObject.elementFits > 0 && tempMenuObject.elementFits != _links.length) { tempMenuObject.elementFits = 0; if (href == _links[0]) { tempMenuObject.elementFits = 1; } } }); } }; 
+        
+
+        var mmWireframe = {"html" : "<li class=\"buddha-menu-item\" itemId=\"9lKUC\"  ><a data-href=\"/\" href=\"/\" aria-label=\"Home\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Home</span></a></li><li class=\"buddha-menu-item\" itemId=\"ENqv8\"  ><a data-href=\"/pages/about-us\" href=\"/pages/about-us\" aria-label=\"About Us\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">About Us</span></a></li><li class=\"buddha-menu-item\" itemId=\"bDnyf\"  ><a data-href=\"/pages/new-arrival\" href=\"/pages/new-arrival\" aria-label=\"New Arrival\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">New Arrival</span></a></li><li class=\"buddha-menu-item\" itemId=\"MUZWt\"  ><a data-href=\"/pages/best-seller\" href=\"/pages/best-seller\" aria-label=\"Best Seller\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Best Seller</span></a></li><li class=\"buddha-menu-item\" itemId=\"kO9aX\"  ><a data-href=\"/pages/shop-by-categories\" href=\"/pages/shop-by-categories\" aria-label=\"Categories\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Categories</span><i class=\"mm-arrow mm-angle-down\" aria-hidden=\"true\"></i><span class=\"toggle-menu-btn\" style=\"display:none;\" title=\"Toggle menu\" onclick=\"return toggleSubmenu(this)\"><span class=\"mm-arrow-icon\"><span class=\"bar-one\"></span><span class=\"bar-two\"></span></span></span></a><ul class=\"mm-submenu simple   mm-last-level\"><li submenu-columns=\"1\" item-type=\"link-list\"  ><div class=\"mega-menu-item-container\"  ><div class=\"mm-list-name\"  ><span onclick=\"mmGoToPage(this); return false;\" data-href=\"/pages/necklace-set\"  ><span class=\"mm-title\">Necklace Set</span></span></div><ul class=\"mm-submenu link-list   mm-last-level\"><li  ><a data-href=\"/collections/designer-handmade-polki-necklace-set\" href=\"/collections/designer-handmade-polki-necklace-set\" aria-label=\"Designer Handmade Polki Necklace Set\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Designer Handmade Polki Necklace Set</span></a></li><li  ><a data-href=\"/collections/designer-mala-set\" href=\"/collections/designer-mala-set\" aria-label=\"Designer Mala Set\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Designer Mala Set</span></a></li><li  ><a data-href=\"/collections/low-price-necklace-set\" href=\"/collections/low-price-necklace-set\" aria-label=\"Low Price Necklace Set\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Low Price Necklace Set</span></a></li><li  ><a data-href=\"/collections/paint-meena-necklace-set\" href=\"/collections/paint-meena-necklace-set\" aria-label=\"Paint Meena Necklace Set\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Paint Meena Necklace Set</span></a></li><li  ><a data-href=\"/collections/polki-necklace-set\" href=\"/collections/polki-necklace-set\" aria-label=\"Polki Necklace Set\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Polki Necklace Set</span></a></li></ul></div></li><li submenu-columns=\"1\" item-type=\"link-list\"  ><div class=\"mega-menu-item-container\"  ><div class=\"mm-list-name\"  ><span onclick=\"mmGoToPage(this); return false;\" data-href=\"/pages/earrings\"  ><span class=\"mm-title\">Earrings</span></span></div><ul class=\"mm-submenu link-list   mm-last-level\"><li  ><a data-href=\"/collections/fancy-earrings\" href=\"/collections/fancy-earrings\" aria-label=\"Fancy Earrings\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Fancy Earrings</span></a></li><li  ><a data-href=\"/collections/indian-reverse-ad-jhumkas\" href=\"/collections/indian-reverse-ad-jhumkas\" aria-label=\"Indian Reverse Ad Jhumkas\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Indian Reverse Ad Jhumkas</span></a></li><li  ><a data-href=\"/collections/mint-meena-earrings\" href=\"/collections/mint-meena-earrings\" aria-label=\"Mint Meena Earrings\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Mint Meena Earrings</span></a></li><li  ><a data-href=\"/collections/polki-earrings\" href=\"/collections/polki-earrings\" aria-label=\"Polki Earrings\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Polki Earrings</span></a></li><li  ><a data-href=\"/collections/real-kundan-earrings\" href=\"/collections/real-kundan-earrings\" aria-label=\"Real Kundan Earrings\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Real Kundan Earrings</span></a></li><li  ><a data-href=\"/collections/real-kundan-studs\" href=\"/collections/real-kundan-studs\" aria-label=\"Real Kundan Studs\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Real Kundan Studs</span></a></li><li  ><a data-href=\"/collections/studs\" href=\"/collections/studs\" aria-label=\"Studs\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Studs</span></a></li></ul></div></li><li submenu-columns=\"1\" item-type=\"link-list\"  ><div class=\"mega-menu-item-container\"  ><div class=\"mm-list-name\"  ><span onclick=\"mmGoToPage(this); return false;\" data-href=\"/pages/bangles\"  ><span class=\"mm-title\">Bangles</span></span></div><ul class=\"mm-submenu link-list   mm-last-level\"><li  ><a data-href=\"/collections/cz-bangles\" href=\"/collections/cz-bangles\" aria-label=\"Cz Bangles\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Cz Bangles</span></a></li><li  ><a data-href=\"/collections/paint-meena-bangles\" href=\"/collections/paint-meena-bangles\" aria-label=\"Paint Meena Bangles\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Paint Meena Bangles</span></a></li><li  ><a data-href=\"/collections/polki-bangles\" href=\"/collections/polki-bangles\" aria-label=\"Polki Bangles\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Polki Bangles</span></a></li><li  ><a data-href=\"/collections/real-kundan-bangles\" href=\"/collections/real-kundan-bangles\" aria-label=\"Real Kundan Bangles\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Real Kundan Bangles</span></a></li></ul></div></li><li submenu-columns=\"1\" item-type=\"link-list\"  ><div class=\"mega-menu-item-container\"  ><div class=\"mm-list-name\"  ><span onclick=\"mmGoToPage(this); return false;\" data-href=\"/pages/payal\"  ><span class=\"mm-title\">Payal</span></span></div><ul class=\"mm-submenu link-list   mm-last-level\"><li  ><a data-href=\"/collections/kundan-payal\" href=\"/collections/kundan-payal\" aria-label=\"Kundan Payal\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Kundan Payal</span></a></li><li  ><a data-href=\"/collections/polki-payal\" href=\"/collections/polki-payal\" aria-label=\"Polki Payal\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Polki Payal</span></a></li></ul></div></li><li submenu-columns=\"1\" item-type=\"link-list\"  ><div class=\"mega-menu-item-container\"  ><div class=\"mm-list-name\"  ><span onclick=\"mmGoToPage(this); return false;\" data-href=\"/pages/mangalsutra\"  ><span class=\"mm-title\">Mangalsutra</span></span></div></div></li></ul></li><li class=\"buddha-menu-item\" itemId=\"fWuHk\"  ><a data-href=\"/collections\" href=\"/collections\" aria-label=\"Collections\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Collections</span></a></li><li class=\"buddha-menu-item\" itemId=\"ZEajz\"  ><a data-href=\"/pages/occasion\" href=\"/pages/occasion\" aria-label=\"Occasion\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Occasion</span></a></li><li class=\"buddha-menu-item\" itemId=\"Splg9\"  ><a data-href=\"/pages/gifting\" href=\"/pages/gifting\" aria-label=\"Gifting\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Gifting</span></a></li><li class=\"buddha-menu-item\" itemId=\"CbPhN\"  ><a data-href=\"/pages/contact\" href=\"/pages/contact\" aria-label=\"Contact Us\" data-no-instant=\"\" onclick=\"mmGoToPage(this, event); return false;\"  ><span class=\"mm-title\">Contact Us</span></a></li>" };
+
+        function mmLoadJS(file, async = true) {
+            let script = document.createElement("script");
+            script.setAttribute("src", file);
+            script.setAttribute("data-no-instant", "");
+            script.setAttribute("type", "text/javascript");
+            script.setAttribute("async", async);
+            document.head.appendChild(script);
+        }
+        function mmLoadCSS(file) {  
+            var style = document.createElement(`link`);
+            style.href = file;
+            style.type = `text/css`;
+            style.rel = `stylesheet`;
+            document.head.append(style); 
+        }
+              
+        var mmDisableWhenResIsLowerThan = ``;
+        var mmLoadResources = (mmDisableWhenResIsLowerThan == `` || mmDisableWhenResIsLowerThan == 0 || (mmDisableWhenResIsLowerThan > 0 && window.innerWidth>=mmDisableWhenResIsLowerThan));
+        if (mmLoadResources) {
+            /* load resources via js injection */
+            mmLoadJS("https://cdn.shopify.com/extensions/fb6be52e-2a2f-428b-a230-3cfa66bc190c/buddha-mega-menu-navigation-96/assets/buddha-megamenu.js");
+            
+            mmLoadCSS("https://cdn.shopify.com/extensions/fb6be52e-2a2f-428b-a230-3cfa66bc190c/buddha-mega-menu-navigation-96/assets/buddha-megamenu2.css");}
+    </script><script src="https://cdn.shopify.com/extensions/fb6be52e-2a2f-428b-a230-3cfa66bc190c/buddha-mega-menu-navigation-96/assets/buddha-megamenu.js" data-no-instant="" type="text/javascript" async="true"></script><link href="https://cdn.shopify.com/extensions/fb6be52e-2a2f-428b-a230-3cfa66bc190c/buddha-mega-menu-navigation-96/assets/buddha-megamenu2.css" type="text/css" rel="stylesheet"><!-- HIDE ORIGINAL MENU -->
+        <script>
+            if (mmLoadResources) {
+                setTimeout(function(){
+                    var mmHideStyle  = document.querySelector("#mmHideOriginalMenuStyle");
+                    if (mmHideStyle) mmHideStyle.parentNode.removeChild(mmHideStyle);
+                },10000);
+            }
+        </script>
+<!-- END app block --><link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 88495587593,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "page"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener(`pagehide`, handle_abandonment_event);}}());</script>
+<script id="web-pixels-manager-setup">(function e(e,d,r,n,o,i){if(void 0===i&&(i={}),!Boolean(null===(t=null===(a=window.Shopify)||void 0===a?void 0:a.analytics)||void 0===t?void 0:t.replayQueue)){var a,t;window.Shopify=window.Shopify||{};var s=window.Shopify;s.analytics=s.analytics||{};var l=s.analytics;l.replayQueue=[],l.publish=function(e,d,r){return l.replayQueue.push([e,d,r]),!0};try{self.performance.mark("wpm:start")}catch(e){}var u=function(){var e={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(13[2-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(13[2-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[1-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/},d=e.modern,r=e.legacy,n=navigator.userAgent;return n.match(d)?"modern":n.match(r)?"legacy":"unknown"}(),c="modern"===u?"modern":"legacy",f=(null!=o?o:{modern:"",legacy:""})[c],m=function(e){return[e.baseUrl,"/wpm","/b",e.hashVersion,"modern"===e.buildTarget?"m":"l",".js"].join("")}({baseUrl:r,hashVersion:n,buildTarget:c}),p=function(e){var d=e.version,r=e.bundleTarget,n=e.surface,o=e.pageUrl,i=e.monorailEndpoint;return{emit:function(e){var a=e.status,t=e.errorMsg,s=(new Date).getTime(),l=JSON.stringify({metadata:{event_sent_at_ms:s},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:d,bundle_target:r,page_url:o,status:a,surface:n,error_msg:t},metadata:{event_created_at_ms:s}}]});if(!i)return console&&console.warn&&console.warn("[Web Pixels Manager] No Monorail endpoint provided, skipping logging."),!1;try{return self.navigator.sendBeacon.bind(self.navigator)(i,l)}catch(e){}var u=new XMLHttpRequest;try{return u.open("POST",i,!0),u.setRequestHeader("Content-Type","text/plain"),u.send(l),!0}catch(e){return console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging to Monorail."),!1}}}}({version:n,bundleTarget:u,surface:e.surface,pageUrl:self.location.href,monorailEndpoint:e.monorailEndpoint});try{i.browserTarget=u,function(e){var d=e.src,r=e.async,n=void 0===r||r,o=e.onload,i=e.onerror,a=e.sri,t=e.scriptDataAttributes,s=void 0===t?{}:t,l=document.createElement("script"),u=document.querySelector("head"),c=document.querySelector("body");if(l.async=n,l.src=d,a&&(l.integrity=a,l.crossOrigin="anonymous"),s)for(var f in s)if(Object.prototype.hasOwnProperty.call(s,f))try{l.dataset[f]=s[f]}catch(e){}if(o&&l.addEventListener("load",o),i&&l.addEventListener("error",i),u)u.appendChild(l);else{if(!c)throw new Error("Did not find a head or body element to append the script");c.appendChild(l)}}({src:m,async:!0,onload:function(){if(!function(){var e,d;return Boolean(null===(d=null===(e=window.Shopify)||void 0===e?void 0:e.analytics)||void 0===d?void 0:d.initialized)}()){var r=window.webPixelsManager.init(e)||void 0;if(r){d(r);var n=window.Shopify.analytics;n.replayQueue.forEach((function(e){var d=e[0],n=e[1],o=e[2];r.publishCustomEvent(d,n,o)})),n.replayQueue=[],n.publish=r.publishCustomEvent,n.visitor=r.visitor,n.initialized=!0}}},onerror:function(){return p.emit({status:"failed",errorMsg:"".concat(m," has failed to load")})},sri:function(e){var d=/^sha384-[A-Za-z0-9+/=]+$/;return"string"==typeof e&&d.test(e)}(f)?f:"",scriptDataAttributes:i}),p.emit({status:"loading"})}catch(e){p.emit({status:"failed",errorMsg:(null==e?void 0:e.message)||"Unknown error"})}}})({shopId: 88495587593,storefrontBaseUrl: "https://j02crm-a9.myshopify.com",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",monorailEndpoint: "https://monorail-edge.shopifysvc.com/unstable/produce_batch",surface: "storefront-renderer",enabledBetaFlags: [],webPixelsConfigList: [{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0411","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0411","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,effectiveTopLevelDomain: "myshopify.com",initData: {"shop":{"name":"My Store","paymentSettings":{"currencyCode":"INR"},"myshopifyDomain":"j02crm-a9.myshopify.com","countryCode":"GB","storefrontUrl":"https://j02crm-a9.myshopify.com"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"purchasingCompany":null},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed", {});},"https://j02crm-a9.myshopify.com/cdn","fe9401c6w6fcd3e4fp464410b4m1f17cd9f",{"modern":"","legacy":""},{"shopId":"88495587593","storefrontBaseUrl":"https://j02crm-a9.myshopify.com","extensionBaseUrl":"https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager","surface":"storefront-renderer","enabledBetaFlags":"[]","isMerchantRequest":"false","hashVersion":"fe9401c6w6fcd3e4fp464410b4m1f17cd9f"});</script><script async="" src="https://j02crm-a9.myshopify.com/cdn/wpm/bfe9401c6w6fcd3e4fp464410b4m1f17cd9fm.js" data-shop-id="88495587593" data-storefront-base-url="https://j02crm-a9.myshopify.com" data-extension-base-url="https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager" data-surface="storefront-renderer" data-enabled-beta-flags="[]" data-is-merchant-request="false" data-hash-version="fe9401c6w6fcd3e4fp464410b4m1f17cd9f" data-browser-target="modern"></script><script>
+  window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+  window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+  window.ShopifyAnalytics.meta.currency = `INR`;
+  var meta = {"page":{"pageType":"page","resourceType":"page","resourceId":139486200073}};
+  for (var attr in meta) {
+    window.ShopifyAnalytics.meta[attr] = meta[attr];
+  }
+</script>
+<script class="analytics">
+  (function () {
+    var customDocumentWrite = function(content) {
+      var jquery = null;
+
+      if (window.jQuery) {
+        jquery = window.jQuery;
+      } else if (window.Checkout && window.Checkout.$) {
+        jquery = window.Checkout.$;
+      }
+
+      if (jquery) {
+        jquery(`body`).append(content);
+      }
+    };
+
+    var hasLoggedConversion = function(token) {
+      if (token) {
+        return document.cookie.indexOf(`loggedConversion=` + token) !== -1;
+      }
+      return false;
+    }
+
+    var setCookieIfConversion = function(token) {
+      if (token) {
+        var twoMonthsFromNow = new Date(Date.now());
+        twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+        document.cookie = `loggedConversion=` + token + `; expires=` + twoMonthsFromNow;
+      }
+    }
+
+    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+    if (trekkie.integrations) {
+      return;
+    }
+    trekkie.methods = [
+      `identify`,
+      `page`,
+      `ready`,
+      `track`,
+      `trackForm`,
+      `trackLink`
+    ];
+    trekkie.factory = function(method) {
+      return function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift(method);
+        trekkie.push(args);
+        return trekkie;
+      };
+    };
+    for (var i = 0; i < trekkie.methods.length; i++) {
+      var key = trekkie.methods[i];
+      trekkie[key] = trekkie.factory(key);
+    }
+    trekkie.load = function(config) {
+      trekkie.config = config || {};
+      trekkie.config.initialDocumentCookie = document.cookie;
+      var first = document.getElementsByTagName(`script`)[0];
+      var script = document.createElement(`script`);
+      script.type = `text/javascript`;
+      script.onerror = function(e) {
+        var scriptFallback = document.createElement(`script`);
+        scriptFallback.type = `text/javascript`;
+        scriptFallback.onerror = function(error) {
+                var Monorail = {
+      produce: function produce(monorailDomain, schemaId, payload) {
+        var currentMs = new Date().getTime();
+        var event = {
+          schema_id: schemaId,
+          payload: payload,
+          metadata: {
+            event_created_at_ms: currentMs,
+            event_sent_at_ms: currentMs
+          }
+        };
+        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+      },
+      sendRequest: function sendRequest(endpointUrl, payload) {
+        // Try the sendBeacon API
+        if (window && window.navigator && typeof window.navigator.sendBeacon === `function` && typeof window.Blob === `function` && !Monorail.isIos12()) {
+          var blobData = new window.Blob([payload], {
+            type: `text/plain`
+          });
+
+          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+            return true;
+          } // sendBeacon was not successful
+
+        } // XHR beacon
+
+        var xhr = new XMLHttpRequest();
+
+        try {
+          xhr.open(`POST`, endpointUrl);
+          xhr.setRequestHeader(`Content-Type`, `text/plain`);
+          xhr.send(payload);
+        } catch (e) {
+          console.log(e);
+        }
+
+        return false;
+      },
+      isIos12: function isIos12() {
+        return window.navigator.userAgent.lastIndexOf(`iPhone; CPU iPhone OS 12_`) !== -1 || window.navigator.userAgent.lastIndexOf(`iPad; CPU OS 12_`) !== -1;
+      }
+    };
+    Monorail.produce(`monorail-edge.shopifysvc.com`,
+      `trekkie_storefront_load_errors/1.1`,
+      {shop_id: 88495587593,
+      theme_id: 172048056585,
+      app_name: "storefront",
+      context_url: window.location.href,
+      source_url: "//j02crm-a9.myshopify.com/cdn/s/trekkie.storefront.423a314223fb7e8d7c94337fcd62d7ad8c06d7a5.min.js"});
+
+        };
+        scriptFallback.async = true;
+        scriptFallback.src = `//j02crm-a9.myshopify.com/cdn/s/trekkie.storefront.423a314223fb7e8d7c94337fcd62d7ad8c06d7a5.min.js`;
+        first.parentNode.insertBefore(scriptFallback, first);
+      };
+      script.async = true;
+      script.src = `//j02crm-a9.myshopify.com/cdn/s/trekkie.storefront.423a314223fb7e8d7c94337fcd62d7ad8c06d7a5.min.js`;
+      first.parentNode.insertBefore(script, first);
+    };
+    trekkie.load(
+      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":88495587593,"isMerchantRequest":null,"themeId":172048056585,"themeCityHash":"8756055985989648764","contentLanguage":"en","currency":"INR"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain"},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false,"source":"trekkie-storefront-renderer","apiClientId":580111}}
+    );
+
+    var loaded = false;
+    trekkie.ready(function() {
+      if (loaded) return;
+      loaded = true;
+
+      window.ShopifyAnalytics.lib = window.trekkie;
+
+      var originalDocumentWrite = document.write;
+      document.write = customDocumentWrite;
+      try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+      document.write = originalDocumentWrite;
+
+      window.ShopifyAnalytics.lib.page(null,{"pageType":"page","resourceType":"page","resourceId":139486200073,"shopifyEmitted":true});
+
+      var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+      var token = match? match[1]: undefined;
+      if (!hasLoggedConversion(token)) {
+        setCookieIfConversion(token);
+        
+      }
+    });
+
+
+        var eventsListenerScript = document.createElement(`script`);
+        eventsListenerScript.async = true;
+        eventsListenerScript.src = "//j02crm-a9.myshopify.com/cdn/shopifycloud/shopify/assets/shop_events_listener-f55dd2979ec32029c7d9e0b454ab8b33f79c01ca039d17a6f5c9b95647564b19.js";
+        document.getElementsByTagName(`head`)[0].appendChild(eventsListenerScript);
+
+})();</script><script async="" src="//j02crm-a9.myshopify.com/cdn/shopifycloud/shopify/assets/shop_events_listener-f55dd2979ec32029c7d9e0b454ab8b33f79c01ca039d17a6f5c9b95647564b19.js"></script>
+<script defer="" src="https://j02crm-a9.myshopify.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-1.6.1.min.js" data-application="storefront-renderer" data-shop-id="88495587593" data-render-region="gcp-europe-west3" data-page-type="page" data-theme-instance-id="172048056585" data-monorail-region="shop_domain" data-resource-timing-sampling-rate="10" data-shs="true"></script>
+<link rel="dns-prefetch preconnect" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/" crossorigin=""><style> .header__icons {z-index: 1003;} </style><style id="previewStyle">.vertical-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info>div>div>i{color: #333333 !important;}.vertical-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info .mm-socialmedia>a:hover {background: #333333 !important;}.vertical-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info .mm-socialmedia>a:hover>i {color: #ababab !important;}.vertical-mega-menu .buddha-menu-item ul.mm-submenu li.mm-contact-column button{background: #333333 !important; }.vertical-mega-menu .buddha-menu-item ul.mm-submenu li.mm-contact-column button:hover{background: #1f1f1f !important;}.vertical-mega-menu .buddha-menu-item .mm-add-to-cart>div{background: #333333 !important; }.vertical-mega-menu .buddha-menu-item .mm-add-to-cart>div {border-color: #333333 !important;}.vertical-mega-menu .buddha-menu-item .mm-submenu .mm-add-to-cart>div:hover {border-color: #1f1f1f !important;background-color: #1f1f1f !important;}.vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition{background-color: #017b86 !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>a{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>a>.toggle-menu-btn>.mm-cross{background-color: #158f9a !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition{background-color: #158f9a !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a>.toggle-menu-btn>.mm-cross{background-color: #29a3ae !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition{background-color: #29a3ae !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a>.toggle-menu-btn>.mm-cross{background-color: #3db7c2 !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition{background-color: #3db7c2 !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a>.toggle-menu-btn>.mm-cross{background-color: #51cbd6 !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition{background-color: #51cbd6 !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a>.toggle-menu-btn>.mm-cross{background-color: #65dfea !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition{background-color: #65dfea !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a>.toggle-menu-btn>.mm-cross{background-color: #79f3fe !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition{background-color: #79f3fe !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a{background-color: inherit !important;} .vertical-mega-menu>.buddha-menu-item>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>.mm-submenu.height-transition>li>a>.toggle-menu-btn>.mm-cross{background-color: #8dffff !important;} .vertical-mega-menu .buddha-menu-item-countdown .inn,.vertical-mega-menu .buddha-menu-item-countdown .up::after,.vertical-mega-menu .buddha-menu-item-countdown .flip-clock-dot{background: #333333 !important; }.vertical-mega-menu .flip-clock-wrapper ul.play li.flip-clock-before .up .shadow, .flip-clock-wrapper ul.play li.flip-clock-active .up .shadow  {background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100%) !important;background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, #1a1a1a)) !important;background: linear, top, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100% !important;background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100%) !important;background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100%) !important;background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100% !important;}.vertical-mega-menu .flip-clock-wrapper ul.play li.flip-clock-before .down .shadow, .flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {background: -moz-linear-gradient(top, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100%) !important;background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a1a1a), color-stop(100%, rgba(0, 0, 0, 0.1))) !important;background: linear, top, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100% !important;background: -o-linear-gradient(top, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100%) !important;background: -ms-linear-gradient(top, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100%) !important;background: linear, to bottom, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100% !important;}.vertical-mega-menu .buddha-menu-item-countdown .inn { text-shadow: 0 1px 2px #121212 !important; } .buddha-menu-item .flip-clock-wrapper ul li a div.down:after {background-color: #333333 !important}.vertical-mega-menu .buddha-menu-item-countdown .inn{color: #ffffff !important; }.vertical-mega-menu .buddha-menu-item .mm-add-to-cart>div{color: #ffffff !important; }.vertical-mega-menu .buddha-menu-item .mm-submenu .mm-add-to-cart>div:hover {color: #ebebeb !important;}.vertical-mega-menu .mm-add-to-cart {display: block !important;}.vertical-mega-menu ul.mm-submenu li.mm-contact-column button{color: #ffffff !important; }.vertical-mega-menu ul.mm-submenu.simple > li .mega-menu-prices span.mega-menu-price span{color: #ffffff !important; }.vertical-mega-menu .buddha-menu-item ul.mm-submenu.simple>li .mega-menu-prices span.mega-menu-compare_at_price span {color: #d7d7d7;}.vertical-mega-menu ul.mm-submenu>li:hover>a[onclick]:not([data-href=`no-link`]), .vertical-mega-menu ul.mm-submenu>li:hover>a[onclick]:not([data-href=`no-link`])>*, .vertical-mega-menu ul.mm-submenu>li.mm-hovering>a[onclick]:not([data-href=`no-link`]),.vertical-mega-menu ul.mm-submenu>li.mm-hovering>a[onclick]:not([data-href=`no-link`])>*, .vertical-mega-menu ul.mm-submenu.tabbed>li.tab-opened>a[onclick]:not([data-href=`no-link`]), .vertical-mega-menu ul.mm-submenu.tabbed>li.tab-opened>a[onclick]:not([data-href=`no-link`])>*, .vertical-mega-menu ul.mm-submenu li a[onclick]:not([data-href=`no-link`]):hover, .vertical-mega-menu ul.mm-submenu.tree li:hover>a[onclick]:not([data-href=`no-link`])>.toggle-menu-btn>span>span, .vertical-mega-menu ul.mm-submenu.tree li.mm-hovering>a[onclick]:not([data-href=`no-link`])>.toggle-menu-btn>span>span, .vertical-mega-menu ul.mm-submenu.tree li.mega-hover>a[onclick]:not([data-href=`no-link`])>.toggle-menu-btn>span>span, .vertical-mega-menu ul.mm-submenu.tabbed>li.mm-hovering>a[onclick]:not([data-href=`no-link`])>.toggle-menu-btn>span>span, .vertical-mega-menu ul.mm-submenu.tabbed>li:hover>a[onclick]:not([data-href=`no-link`])>.toggle-menu-btn>span>span, .vertical-mega-menu ul.mm-submenu>li>.mega-menu-item-container>.mm-list-name>span[onclick]:hover>span, .vertical-mega-menu ul.mm-submenu>li>.mega-menu-item-container .mm-list-info>a[onclick]:not([data-href=`no-link`]):hover>*{color: #ffffff !important; }.vertical-mega-menu ul.mm-submenu,.vertical-mega-menu ul.mm-submenu li.mm-contact-column span,.vertical-mega-menu ul.mm-submenu li a, .vertical-mega-menu ul.mm-submenu span, .vertical-mega-menu ul.mm-submenu>li>a>.toggle-menu-btn>.fa{color: #ffffff !important; }.vertical-mega-menu ul.mm-submenu.simple > li .mm-list-name  { border-bottom: 1px solid #ffffff !important; }.vertical-mega-menu ul.mm-submenu,.vertical-mega-menu ul.mm-submenu span, .vertical-mega-menu ul.mm-submenu.simple>li ul.mm-product-list>li .mm-list-info{font-size: 13px !important; }.vertical-mega-menu .buddha-menu-item .mm-description {font-size: 12px !important;}.vertical-mega-menu ul.mm-submenu,.vertical-mega-menu ul.mm-submenu li a,.vertical-mega-menu ul.mm-submenu a,.vertical-mega-menu ul.mm-submenu a>.mm-title,.vertical-mega-menu ul.mm-submenu .mm-title,.vertical-mega-menu ul.mm-submenu li.mm-contact-column span{font-family: Default !important; }.horizontal-mega-menu .buddha-menu-item-countdown .inn,.horizontal-mega-menu .buddha-menu-item-countdown .up::after,.horizontal-mega-menu .buddha-menu-item-countdown .flip-clock-dot{background: #333333 !important; }.horizontal-mega-menu .flip-clock-wrapper ul.play li.flip-clock-before .up .shadow, .flip-clock-wrapper ul.play li.flip-clock-active .up .shadow  {background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100%) !important;background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, #1a1a1a)) !important;background: linear, top, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100% !important;background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100%) !important;background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100%) !important;background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, #1a1a1a 100% !important;}.horizontal-mega-menu .flip-clock-wrapper ul.play li.flip-clock-before .down .shadow, .flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {background: -moz-linear-gradient(top, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100%) !important;background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a1a1a), color-stop(100%, rgba(0, 0, 0, 0.1))) !important;background: linear, top, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100% !important;background: -o-linear-gradient(top, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100%) !important;background: -ms-linear-gradient(top, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100%) !important;background: linear, to bottom, #1a1a1a 0%, rgba(0, 0, 0, 0.1) 100% !important;}.horizontal-mega-menu .buddha-menu-item-countdown .inn { text-shadow: 0 1px 2px #121212 !important; } .buddha-menu-item .flip-clock-wrapper ul li a div.down:after {background-color: #333333 !important}.horizontal-mega-menu .buddha-menu-item-countdown .inn{color: #ffffff !important; }.horizontal-mega-menu .buddha-menu-item .mm-submenu .mm-add-to-cart>div:hover{background: #0da19a !important; }.horizontal-mega-menu .buddha-menu-item .mm-submenu .mm-add-to-cart>div:hover {border-color: #0da19a !important;}.horizontal-mega-menu .buddha-menu-item .mm-submenu .mm-add-to-cart>div:hover{color: #ffffff !important; }.horizontal-mega-menu .mm-add-to-cart>div{background: #ffffff !important; }.horizontal-mega-menu .mm-add-to-cart>div {border-color: #000000 !important;}.horizontal-mega-menu .mm-add-to-cart>div{color: #333333 !important; }.horizontal-mega-menu .mm-add-to-cart {display: block !important;}.horizontal-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info,.horizontal-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info a{color: #f1f1f0 !important;}.horizontal-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info>div>div>i{color: #CCCCCC !important;}.horizontal-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info .mm-socialmedia>a:hover {background: #CCCCCC !important;}.horizontal-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info .mm-socialmedia>a:hover>i {color: #545454 !important;}.horizontal-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info .mm-img>.mm-large {background: #CCCCCC !important;}.horizontal-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info .mm-img>.mm-small {background: #909090f0 !important;}.horizontal-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info,.horizontal-mega-menu>.buddha-menu-item>ul.mm-submenu li.mm-contact-column.mm-info a {background: #3A3A3A !important;}.horizontal-mega-menu ul.mm-submenu li.mm-contact-column button{background: #3A3A3A !important; }.horizontal-mega-menu ul.mm-submenu li.mm-contact-column button:hover{background: #262626 !important;}.horizontal-mega-menu ul.mm-submenu li.mm-contact-column button{color: #ffffff !important; }.horizontal-mega-menu ul.mm-submenu.simple > li .mega-menu-prices span.mega-menu-price span{color: #0da19a !important; }.horizontal-mega-menu ul.mm-submenu, .horizontal-mega-menu>li>ul.mm-submenu.tabbed>li>ul.mm-submenu li,.horizontal-mega-menu li.buddha-menu-item:hover ul.mm-submenu.simple li:hover, .horizontal-mega-menu li.buddha-menu-item.mega-hover ul.mm-submenu.simple li:hover{background: #ffffff !important; }.horizontal-mega-menu .mm-submenu.tabbed { background-color: #fafafa !important; }.horizontal-mega-menu ul.mm-submenu.tree li:hover, .horizontal-mega-menu ul.mm-submenu.tree li.mega-hover,.horizontal-mega-menu ul.mm-submenu.tabbed>li.tab-opened{background: #f9f9f9 !important; }.horizontal-mega-menu .buddha-menu-item .mm-submenu.tabbed > li.tab-opened { background-color: #f4f4f4 !important; }.horizontal-mega-menu ul.mm-submenu.tree li:hover>a, .horizontal-mega-menu ul.mm-submenu.tree li.mega-hover>a, .horizontal-mega-menu ul.mm-submenu.tabbed>li.tab-opened>a,.horizontal-mega-menu ul.mm-submenu.tabbed>li.tab-opened>a>.mm-title, .horizontal-mega-menu ul.mm-submenu li a:hover,.horizontal-mega-menu ul.mm-submenu li:hover>a, .horizontal-mega-menu ul.mm-submenu li a:hover i, .horizontal-mega-menu ul.mm-submenu li:hover>a>i, .horizontal-mega-menu ul.mm-submenu li a:hover>span, .horizontal-mega-menu ul.mm-submenu li:hover>a>span, .horizontal-mega-menu ul.mm-submenu.tree li.fa:hover:before, .horizontal-mega-menu ul.mm-submenu.tree li.mega-hover.fa:before, .horizontal-mega-menu ul.mm-submenu.tabbed>li.tab-opened.fa:before, .horizontal-mega-menu ul.mm-submenu>li>.mega-menu-item-container>.mm-list-name>span[onclick]:hover{color: #0da19a !important; }.horizontal-mega-menu ul.mm-submenu,.horizontal-mega-menu ul.mm-submenu li,.horizontal-mega-menu ul.mm-submenu li.mm-contact-column span,.horizontal-mega-menu ul.mm-submenu li a,.horizontal-mega-menu ul.mm-submenu li a span,.horizontal-mega-menu ul.mm-submenu li.fa, .horizontal-mega-menu ul.mm-submenu.tree li:hover>a[data-href="no-link"], .horizontal-mega-menu ul.mm-submenu.tree li.mega-hover>a[data-href="no-link"], .horizontal-mega-menu ul.mm-submenu.tabbed>li.tab-opened>a[data-href="no-link"], .horizontal-mega-menu ul.mm-submenu li a[data-href="no-link"]:hover, .horizontal-mega-menu ul.mm-submenu li a[data-href="no-link"]:hover > span, .horizontal-mega-menu ul.mm-submenu li:hover a[data-href="no-link"] > span{color: #222222 !important; }.horizontal-mega-menu ul.mm-submenu,.horizontal-mega-menu ul.mm-submenu a,.horizontal-mega-menu ul.mm-submenu a>span,.horizontal-mega-menu ul.mm-submenu .money{font-size: 13px !important; }.horizontal-mega-menu .buddha-menu-item .mm-description {font-size: 12px !important;}</style><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/polyfills.CPIGHvSH.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/app.DGBnFLnj.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/page-OnePage.BS4dqy6S.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/DeliveryMethodSelectorSection.BKGeWtF8.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/useEditorShopPayNavigation.CQfVEPnc.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/VaultedPayment.DIfkW_oC.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/LocalizationExtensionField.Bt66Pak_.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/ShopPayOptInDisclaimer.CWdQ6c9c.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/ShipmentBreakdown.CD0Yj8QD.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/MerchandiseModal.CBrn0ct6.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/StackedMerchandisePreview.BtBgOZEs.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/PayButtonSection.CHjcIC9d.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/component-ShopPayVerificationSwitch.DkfmHIba.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/useSubscribeMessenger.HDvcgc1o.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/index.i3jKlkbN.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/assets/app.CCgslaTw.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/assets/OnePage.PMX4OSBO.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/assets/DeliveryMethodSelectorSection.DmqjTkNB.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/assets/useEditorShopPayNavigation.DCOTvxC3.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/assets/VaultedPayment.OxMVm7u-.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/assets/StackedMerchandisePreview.CKAakmU8.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/assets/ShopPayVerificationSwitch.DW7NMDXG.css" crossorigin=""></head>
+  <body class="hdt-page-type-page animate--hover-light_skew template-page"><script>
+  window.themeHDN = {
+    settings: {
+      shopCurency: "INR",
+      currencyFormat: "Rs. 100",
+      moneyFormat: "Rs. 100",
+      moneyWithCurrencyFormat: "Rs. 100",
+      pageType: `page`,
+      actionAfterATC: `open_cart_drawer`,
+      currencyCodeEnabled: false,
+      autoCurrencies: false,
+      currencyRound: false,
+      revealInView: true
+      , shopTimezone: "+0100"}
+  };
+  document.documentElement.className = document.documentElement.className.replace(`no-js`, `js`);</script><template id="hdt-tmp-drawer"><style>:host * { box-sizing: border-box; transition: none !important; }:host wrapp-close-btn { display: contents; }@media (min-width: 1025px) {:host .hdt-scrollbar-light { --color-scrollbar-track: 255 255 255;--color-scrollbar-thumb: 255 255 255; }:host ::-webkit-scrollbar { height: 5px;width: 5px; }:host ::-webkit-scrollbar-track { background-color: rgb(var(--color-scrollbar-track) / .05) }:host ::-webkit-scrollbar-thumb { background-color: rgb(var(--color-scrollbar-thumb) / .12);border-radius: 8px; }}</style><wrapp-close-btn>
+  <button part="outside-close-button" aria-label="Close"><svg part="hdt-close-icon" class="hdt-icon hdt-icon-close" role="presentation" fill="none" focusable="false" width="16" height="16" viewBox="0 0 16 16">
+      <path d="M16 1.4L14.6 0L8 6.6L1.4 0L0 1.4L6.6 8L0 14.6L1.4 16L8 9.4L14.6 16L16 14.6L9.4 8L16 1.4Z" fill="currentColor"></path>
+    </svg></button>
+</wrapp-close-btn>
+  <div part="overlay"></div>
+  <div part="content">
+    <header part="header">
+      <slot name="header"></slot>
+      <wrapp-close-btn>
+      <button part="close-button" aria-label="Close"><svg part="hdt-close-icon" class="hdt-icon hdt-icon-close" role="presentation" fill="none" focusable="false" width="16" height="16" viewBox="0 0 16 16">
+      <path d="M16 1.4L14.6 0L8 6.6L1.4 0L0 1.4L6.6 8L0 14.6L1.4 16L8 9.4L14.6 16L16 14.6L9.4 8L16 1.4Z" fill="currentColor"></path>
+    </svg></button>
+      </wrapp-close-btn>
+    </header>
+    <div part="sticky"><slot name="sticky"></slot></div>
+    <div part="body"><slot></slot></div>
+    <footer part="footer"><slot name="footer"></slot></footer>
+  </div>
+</template><div tabindex="-1" aria-hidden="true" id="web-pixels-manager-sandbox-container" data-shopify-privacy="exclude" style="height: 0px !important; width: 0px !important; position: fixed !important; visibility: hidden !important; overflow: hidden !important; z-index: -100 !important; margin: 0px !important; padding: 0px !important; border: 0px !important;"><iframe tabindex="-1" aria-hidden="true" name="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-fe9401c6w6fcd3e4fp464410b4m1f17cd9f" src="https://j02crm-a9.myshopify.com/wpm@fe9401c6w6fcd3e4fp464410b4m1f17cd9f/custom/web-pixel-shopify-custom-pixel@0411/sandbox/modern/pages/about-us" id="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-fe9401c6w6fcd3e4fp464410b4m1f17cd9f" sandbox="allow-scripts allow-forms" style="height: 0px !important; width: 0px !important; visibility: hidden !important;"></iframe></div>
+
+<template id="hdt-tmp-modal"><style>
+  :host * { box-sizing: border-box; transition: none !important; }
+  :host wrapp-close-btn { display: contents; }
+  @media (min-width: 1025px) {
+    :host .hdt-scrollbar-light { --color-scrollbar-track: 255 255 255;--color-scrollbar-thumb: 255 255 255; }
+    :host ::-webkit-scrollbar { height: 5px;width: 5px; }
+    :host ::-webkit-scrollbar-track { background-color: rgb(var(--color-scrollbar-track) / .05) }
+    :host ::-webkit-scrollbar-thumb { background-color: rgb(var(--color-scrollbar-thumb) / .12);border-radius: 8px; }
+  }
+</style><div part="wrapper">
+    <div part="overlay"></div>
+    <div part="content">
+      <header part="header">
+        <slot name="header"></slot>
+        <wrapp-close-btn>
+        <button part="close-button" aria-label="Close"><svg part="hdt-close-icon" class="hdt-icon hdt-icon-close" role="presentation" fill="none" focusable="false" width="16" height="16" viewBox="0 0 16 16">
+      <path d="M16 1.4L14.6 0L8 6.6L1.4 0L0 1.4L6.6 8L0 14.6L1.4 16L8 9.4L14.6 16L16 14.6L9.4 8L16 1.4Z" fill="currentColor"></path>
+    </svg></button>
+        </wrapp-close-btn>
+      </header>
+      <div part="body">
+        <slot></slot>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template id="hdt-tmp-popover"><style>
+  :host * { box-sizing: border-box; transition: none !important; }
+  :host wrapp-close-btn { display: contents; }
+  @media (min-width: 1025px) {
+    :host .hdt-scrollbar-light { --color-scrollbar-track: 255 255 255;--color-scrollbar-thumb: 255 255 255; }
+    :host ::-webkit-scrollbar { height: 5px;width: 5px; }
+    :host ::-webkit-scrollbar-track { background-color: rgb(var(--color-scrollbar-track) / .05) }
+    :host ::-webkit-scrollbar-thumb { background-color: rgb(var(--color-scrollbar-thumb) / .12);border-radius: 8px; }
+  }
+</style><wrapp-close-btn>
+  <button part="outside-close-button" aria-label="Close"><svg part="hdt-close-icon" class="hdt-icon hdt-icon-close" role="presentation" fill="none" focusable="false" width="12" height="12" viewBox="0 0 16 16">
+      <path d="M16 1.4L14.6 0L8 6.6L1.4 0L0 1.4L6.6 8L0 14.6L1.4 16L8 9.4L14.6 16L16 14.6L9.4 8L16 1.4Z" fill="currentColor"></path>
+    </svg></button>
+</wrapp-close-btn>
+  <div part="overlay"></div>
+  <div part="arrow"></div>
+  <div part="content">
+    <header part="header">
+      <slot name="header"></slot>
+      <wrapp-close-btn>
+      <button part="close-button" aria-label="Close"><svg part="hdt-close-icon" class="hdt-icon hdt-icon-close" role="presentation" fill="none" focusable="false" width="12" height="12" viewBox="0 0 16 16">
+      <path d="M16 1.4L14.6 0L8 6.6L1.4 0L0 1.4L6.6 8L0 14.6L1.4 16L8 9.4L14.6 16L16 14.6L9.4 8L16 1.4Z" fill="currentColor"></path>
+    </svg></button>
+    </wrapp-close-btn>
+    </header>
+    <div part="body" class="hdt-current-scrollbar">
+      <slot></slot>
+    </div>
+  </div>
+</template>
+<hdt-loading-bar class="hdt-loading-bar" aria-hidden="true"></hdt-loading-bar>
+
+<svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" class="hdt-d-none" hidden="">
+  <defs>
+    <symbol id="hdt-icon-cp">
+      <path d="M6.59 5.17L1.41 0L0 1.41L5.17 6.58L6.59 5.17ZM10.5 0L12.54 2.04L0 14.59L1.41 16L13.96 3.46L16 5.5V0H10.5ZM10.83 9.41L9.42 10.82L12.55 13.95L10.5 16H16V10.5L13.96 12.54L10.83 9.41Z"></path>
+    </symbol>
+    <symbol id="hdt-icon-cp-added">
+      <path d="M0 6.5105L5.4791 12.0001L16 1.48956L14.4896 0L5.4791 8.99999L1.48953 5.01045L0 6.5105Z"></path>
+    </symbol>
+    <symbol id="hdt-icon-wis">
+      <path d="M32.32,52.4l-.32.32-.35-.32C16.45,38.61,6.4,29.49,6.4,20.24A10.94,10.94,0,0,1,17,9h.57A12.55,12.55,0,0,1,29,16.59h6A12.55,12.55,0,0,1,46.4,9,10.94,10.94,0,0,1,57.6,19.67v.53C57.6,29.49,47.55,38.61,32.32,52.4ZM46.4,2.64A19.22,19.22,0,0,0,32,9.3,19.22,19.22,0,0,0,17.6,2.64,17.41,17.41,0,0,0,0,19.86v.38c0,12.06,10.88,22,27.36,36.9L32,61.36l4.64-4.22C53.12,42.19,64,32.3,64,20.24A17.41,17.41,0,0,0,46.78,2.64Z"></path>
+    </symbol>
+    <symbol id="hdt-icon-wis-added">
+      <path d="M46.4,2.64A19.22,19.22,0,0,0,32,9.3,19.22,19.22,0,0,0,17.6,2.64,17.41,17.41,0,0,0,0,19.86v.38c0,12.06,10.88,22,27.36,36.9L32,61.36l4.64-4.22C53.12,42.19,64,32.3,64,20.24A17.41,17.41,0,0,0,46.78,2.64Z"></path>
+    </symbol>
+    <symbol id="hdt-icon-wis-remove">
+      <path xmlns="http://www.w3.org/2000/svg" d="M5.905 13.6783L3.95083 11.7958L5.10833 10.5967L7.0725 12.4892L11.3492 8.305L12.5175 9.49333L8.25667 13.6825C7.94367 13.9928 7.52052 14.1664 7.0798 14.1655C6.63908 14.1645 6.21668 13.9899 5.905 13.6783ZM16.6667 5H15V17.5C15 18.8783 13.8783 20 12.5 20H4.16667C2.78833 20 1.66667 18.8783 1.66667 17.5V5H0V3.33333H4.16667V1.66667C4.16667 0.7475 4.91417 0 5.83333 0H10.8333C11.7525 0 12.5 0.7475 12.5 1.66667V3.33333H16.6667V5ZM5.83333 3.33333H10.8333V1.66667H5.83333V3.33333ZM13.3333 5H3.33333V17.5C3.33333 17.721 3.42113 17.933 3.57741 18.0893C3.73369 18.2455 3.94565 18.3333 4.16667 18.3333H12.5C12.721 18.3333 12.933 18.2455 13.0893 18.0893C13.2455 17.933 13.3333 17.721 13.3333 17.5V5Z"></path>
+    </symbol>
+    <symbol id="hdt-icon-quickview">
+      <path d="M18.7079 5.6338C18.5397 5.40371 14.5321 0 9.4137 0C4.29527 0 0.287485 5.40371 0.119471 5.63358C0.041836 5.73994 0 5.86821 0 5.99989C0 6.13157 0.041836 6.25984 0.119471 6.3662C0.287485 6.59629 4.29527 12 9.4137 12C14.5321 12 18.5397 6.59625 18.7079 6.36638C18.7857 6.26008 18.8276 6.13179 18.8276 6.00009C18.8276 5.86839 18.7857 5.74011 18.7079 5.6338ZM9.4137 10.7586C5.64343 10.7586 2.37798 7.17207 1.41133 5.99958C2.37673 4.82605 5.63534 1.24137 9.4137 1.24137C13.1838 1.24137 16.449 4.8273 17.4161 6.00042C16.4507 7.17391 13.1921 10.7586 9.4137 10.7586Z"></path>
+      <path d="M9.4137 2.27586C7.36024 2.27586 5.68954 3.94656 5.68954 6.00002C5.68954 8.05348 7.36024 9.72417 9.4137 9.72417C11.4672 9.72417 13.1379 8.05348 13.1379 6.00002C13.1379 3.94656 11.4672 2.27586 9.4137 2.27586ZM9.4137 8.48276C8.04465 8.48276 6.93095 7.36903 6.93095 6.00002C6.93095 4.63101 8.04469 3.51727 9.4137 3.51727C10.7827 3.51727 11.8964 4.63101 11.8964 6.00002C11.8964 7.36903 10.7827 8.48276 9.4137 8.48276Z"></path>
+    </symbol>
+    <symbol id="hdt-icon-cart">
+      <path d="M13.2222 16H0.777778C0.571498 16 0.373667 15.9157 0.227806 15.7657C0.0819442 15.6157 0 15.4122 0 15.2V0.8C0 0.587827 0.0819442 0.384344 0.227806 0.234315C0.373667 0.0842854 0.571498 0 0.777778 0H13.2222C13.4285 0 13.6263 0.0842854 13.7722 0.234315C13.9181 0.384344 14 0.587827 14 0.8V15.2C14 15.4122 13.9181 15.6157 13.7722 15.7657C13.6263 15.9157 13.4285 16 13.2222 16ZM12.4444 14.4V1.6H1.55556V14.4H12.4444ZM4.66667 3.2V4.8C4.66667 5.43652 4.9125 6.04697 5.35008 6.49706C5.78767 6.94714 6.38116 7.2 7 7.2C7.61884 7.2 8.21233 6.94714 8.64992 6.49706C9.0875 6.04697 9.33333 5.43652 9.33333 4.8V3.2H10.8889V4.8C10.8889 5.86087 10.4792 6.87828 9.74986 7.62843C9.02055 8.37857 8.0314 8.8 7 8.8C5.9686 8.8 4.97945 8.37857 4.25014 7.62843C3.52083 6.87828 3.11111 5.86087 3.11111 4.8V3.2H4.66667Z"></path>
+    </symbol>
+  </defs>
+</svg><a class="skip-to-content-link button sr-only" href="#MainContent">Skip to content</a><!-- BEGIN sections: header-group -->
+<header id="shopify-section-sections--23589416435977__header" class="shopify-section shopify-section-group-header-group hdt-section-group hdt-section-header hdt-header-inline scrolled-past-header shopify-section-header-sticky animate shopify-section-header-hidden"><!-- header-inline.liquid --><style data-shopify="">:root{--sticky-header-enabled: 
+    
+      1
+    
+  }
+  html {
+    --header-height2: 78px;
+    --header-height:var(--header-height2);
+    --h-space-tr:0;
+  }
+  @media (min-width:1150px){
+    html {
+      --header-height2: 94px;
+    }
+    .hdt-navigation { 
+      --spacing-menu-item:calc(23px * .7);
+    }
+  }
+  @media (min-width:1441px){
+    .hdt-navigation { 
+      --spacing-menu-item:23px;
+    }
+  }
+  .hdt-menu-uppercase-true #hdt-nav-ul > li > a ,
+  .hdt-menu-uppercase-true #hdt-nav-ul>li> details > summary,
+  .hdt-menu-uppercase-true #hdt-nav-ul>li> hdt-header-menu > details > summary {
+    text-transform:uppercase;
+    letter-spacing:.6px;
+  }
+  </style><hdt-sticky-header sticky-type="on_scroll_up" prefix="header" class="hdt-main-header hdt-s-gradient hdt-header-logo_center hdt-header-fullwidth-true hdt-header-tranparent-false hdt-header-sticky-on_scroll_up hdt-header-sticky--glass is-sticky" color-scheme="scheme-1">
+  <div class="hdt-container-full lg:hdt-px-40 hdt-px-15">
+    <div data-header-height="" class="hdt-flex hdt-align-center hdt-spacing-15 md:hdt-px-15 hdt-px-10"><div class="lg:hdt-custom-col-5 lg:hdt-block hdt-hidden">
+          
+<nav class="hdt-navigation hdt-text-center hdt-menu-uppercase-false hdt-nav-arrow_true">
+		<ul id="hdt-nav-ul" class="hdt-nav__ul hdt-inline-flex hdt-align-center horizontal-mega-menu"><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="9lKUC"><a data-href="/" href="/" aria-label="Home" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Home</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="ENqv8"><a data-href="/pages/about-us" href="/pages/about-us" aria-label="About Us" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">About Us</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="bDnyf"><a data-href="/pages/new-arrival" href="/pages/new-arrival" aria-label="New Arrival" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">New Arrival</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="MUZWt"><a data-href="/pages/best-seller" href="/pages/best-seller" aria-label="Best Seller" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Best Seller</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="kO9aX"><a data-href="/pages/shop-by-categories" href="/pages/shop-by-categories" aria-label="Categories" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Categories</span><i class="mm-arrow mm-angle-down" aria-hidden="true"></i><span class="toggle-menu-btn" style="display:none;" title="Toggle menu" onclick="return toggleSubmenu(this)"><span class="mm-arrow-icon"><span class="bar-one"></span><span class="bar-two"></span></span></span></a><ul class="mm-submenu simple   mm-last-level" style=""><li submenu-columns="1" item-type="link-list"><div class="mega-menu-item-container"><div class="mm-list-name"><span onclick="mmGoToPage(this); return false;" data-href="/pages/necklace-set"><span class="mm-title">Necklace Set</span></span></div><ul class="mm-submenu link-list   mm-last-level"><li><a data-href="/collections/designer-handmade-polki-necklace-set" href="/collections/designer-handmade-polki-necklace-set" aria-label="Designer Handmade Polki Necklace Set" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Designer Handmade Polki Necklace Set</span></a></li><li><a data-href="/collections/designer-mala-set" href="/collections/designer-mala-set" aria-label="Designer Mala Set" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Designer Mala Set</span></a></li><li><a data-href="/collections/low-price-necklace-set" href="/collections/low-price-necklace-set" aria-label="Low Price Necklace Set" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Low Price Necklace Set</span></a></li><li><a data-href="/collections/paint-meena-necklace-set" href="/collections/paint-meena-necklace-set" aria-label="Paint Meena Necklace Set" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Paint Meena Necklace Set</span></a></li><li><a data-href="/collections/polki-necklace-set" href="/collections/polki-necklace-set" aria-label="Polki Necklace Set" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Polki Necklace Set</span></a></li></ul></div></li><li submenu-columns="1" item-type="link-list"><div class="mega-menu-item-container"><div class="mm-list-name"><span onclick="mmGoToPage(this); return false;" data-href="/pages/earrings"><span class="mm-title">Earrings</span></span></div><ul class="mm-submenu link-list   mm-last-level"><li><a data-href="/collections/fancy-earrings" href="/collections/fancy-earrings" aria-label="Fancy Earrings" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Fancy Earrings</span></a></li><li><a data-href="/collections/indian-reverse-ad-jhumkas" href="/collections/indian-reverse-ad-jhumkas" aria-label="Indian Reverse Ad Jhumkas" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Indian Reverse Ad Jhumkas</span></a></li><li><a data-href="/collections/mint-meena-earrings" href="/collections/mint-meena-earrings" aria-label="Mint Meena Earrings" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Mint Meena Earrings</span></a></li><li><a data-href="/collections/polki-earrings" href="/collections/polki-earrings" aria-label="Polki Earrings" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Polki Earrings</span></a></li><li><a data-href="/collections/real-kundan-earrings" href="/collections/real-kundan-earrings" aria-label="Real Kundan Earrings" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Real Kundan Earrings</span></a></li><li><a data-href="/collections/real-kundan-studs" href="/collections/real-kundan-studs" aria-label="Real Kundan Studs" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Real Kundan Studs</span></a></li><li><a data-href="/collections/studs" href="/collections/studs" aria-label="Studs" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Studs</span></a></li></ul></div></li><li submenu-columns="1" item-type="link-list"><div class="mega-menu-item-container"><div class="mm-list-name"><span onclick="mmGoToPage(this); return false;" data-href="/pages/bangles"><span class="mm-title">Bangles</span></span></div><ul class="mm-submenu link-list   mm-last-level"><li><a data-href="/collections/cz-bangles" href="/collections/cz-bangles" aria-label="Cz Bangles" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Cz Bangles</span></a></li><li><a data-href="/collections/paint-meena-bangles" href="/collections/paint-meena-bangles" aria-label="Paint Meena Bangles" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Paint Meena Bangles</span></a></li><li><a data-href="/collections/polki-bangles" href="/collections/polki-bangles" aria-label="Polki Bangles" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Polki Bangles</span></a></li><li><a data-href="/collections/real-kundan-bangles" href="/collections/real-kundan-bangles" aria-label="Real Kundan Bangles" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Real Kundan Bangles</span></a></li></ul></div></li><li submenu-columns="1" item-type="link-list"><div class="mega-menu-item-container"><div class="mm-list-name"><span onclick="mmGoToPage(this); return false;" data-href="/pages/payal"><span class="mm-title">Payal</span></span></div><ul class="mm-submenu link-list   mm-last-level"><li><a data-href="/collections/kundan-payal" href="/collections/kundan-payal" aria-label="Kundan Payal" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Kundan Payal</span></a></li><li><a data-href="/collections/polki-payal" href="/collections/polki-payal" aria-label="Polki Payal" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Polki Payal</span></a></li></ul></div></li><li submenu-columns="1" item-type="link-list"><div class="mega-menu-item-container"><div class="mm-list-name"><span onclick="mmGoToPage(this); return false;" data-href="/pages/mangalsutra"><span class="mm-title">Mangalsutra</span></span></div></div></li></ul></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="fWuHk"><a data-href="/collections" href="/collections" aria-label="Collections" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Collections</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="ZEajz"><a data-href="/pages/occasion" href="/pages/occasion" aria-label="Occasion" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Occasion</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="Splg9"><a data-href="/pages/gifting" href="/pages/gifting" aria-label="Gifting" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Gifting</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="CbPhN"><a data-href="/pages/contact" href="/pages/contact" aria-label="Contact Us" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Contact Us</span></a></li><li class="hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col buddha-disabled"><a id="hdt-menu-home" href="/" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium">
+	            <span class="hdt-menu-link-text hdt-block">
+	              <span class="hdt-block hdt-line-clamp">Home</span></span>
+						</a></li></ul>
+	</nav>
+        </div>
+        <div class="lg:hdt-hidden md:hdt-custom-col-4 hdt-custom-col-3">
+          <button aria-controls="menu_mobile" class="hdt-push-menu-btn hdt-menu-bar hdt-flex hdt-justify-center hdt-align-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" fill="none">
+              <path d="M2.00056 2.28571H16.8577C17.1608 2.28571 17.4515 2.16531 17.6658 1.95098C17.8802 1.73665 18.0006 1.44596 18.0006 1.14286C18.0006 0.839753 17.8802 0.549063 17.6658 0.334735C17.4515 0.120408 17.1608 0 16.8577 0H2.00056C1.69745 0 1.40676 0.120408 1.19244 0.334735C0.978109 0.549063 0.857702 0.839753 0.857702 1.14286C0.857702 1.44596 0.978109 1.73665 1.19244 1.95098C1.40676 2.16531 1.69745 2.28571 2.00056 2.28571ZM0.857702 8C0.857702 7.6969 0.978109 7.40621 1.19244 7.19188C1.40676 6.97755 1.69745 6.85714 2.00056 6.85714H22.572C22.8751 6.85714 23.1658 6.97755 23.3801 7.19188C23.5944 7.40621 23.7148 7.6969 23.7148 8C23.7148 8.30311 23.5944 8.59379 23.3801 8.80812C23.1658 9.02245 22.8751 9.14286 22.572 9.14286H2.00056C1.69745 9.14286 1.40676 9.02245 1.19244 8.80812C0.978109 8.59379 0.857702 8.30311 0.857702 8ZM0.857702 14.8571C0.857702 14.554 0.978109 14.2633 1.19244 14.049C1.40676 13.8347 1.69745 13.7143 2.00056 13.7143H12.2863C12.5894 13.7143 12.8801 13.8347 13.0944 14.049C13.3087 14.2633 13.4291 14.554 13.4291 14.8571C13.4291 15.1602 13.3087 15.4509 13.0944 15.6653C12.8801 15.8796 12.5894 16 12.2863 16H2.00056C1.69745 16 1.40676 15.8796 1.19244 15.6653C0.978109 15.4509 0.857702 15.1602 0.857702 14.8571Z" fill="currentColor"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="lg:hdt-custom-col-2 md:hdt-custom-col-4 hdt-custom-col-6 hdt-text-center"><div class="hdt-logo hdt-flex hdt-align-center hdt-justify-center "><a class="hdt-inline-flex hdt-align-center" href="/"><picture class="hdt-logo-default">
+        <source media="(min-width:768px)" srcset="//j02crm-a9.myshopify.com/cdn/shop/files/Sparsh_Logo.jpg?v=1743177875&amp;width=172 1x, //j02crm-a9.myshopify.com/cdn/shop/files/Sparsh_Logo.jpg?v=1743177875&amp;width=344 2x"><img src="//j02crm-a9.myshopify.com/cdn/shop/files/Sparsh_Logo.jpg?v=1743177875&amp;width=344" alt="Sparsh Logo" width="172" height="61" class="hdt-logo-img" sizes="(min-width: 768px) 172px, 110px" srcset="//j02crm-a9.myshopify.com/cdn/shop/files/Sparsh_Logo.jpg?v=1743177875&amp;width=110 1x, //j02crm-a9.myshopify.com/cdn/shop/files/Sparsh_Logo.jpg?v=1743177875&amp;width=220 2x" reload="true"></picture>
+      
+<picture class="hdt-logo-sticky">
+          <source media="(min-width:768px)" srcset="//j02crm-a9.myshopify.com/cdn/shop/files/Sparsh_Logo.jpg?v=1743177875&amp;width=172 1x, //j02crm-a9.myshopify.com/cdn/shop/files/Sparsh_Logo.jpg?v=1743177875&amp;width=344 2x"><img src="//j02crm-a9.myshopify.com/cdn/shop/files/Sparsh_Logo.jpg?v=1743177875&amp;width=344" alt="Sparsh Logo" width="172" height="61" class="hdt-logo-img" sizes="(min-width: 768px) 172px, 110px" srcset="//j02crm-a9.myshopify.com/cdn/shop/files/Sparsh_Logo.jpg?v=1743177875&amp;width=110 1x, //j02crm-a9.myshopify.com/cdn/shop/files/Sparsh_Logo.jpg?v=1743177875&amp;width=220 2x" reload="true"></picture>
+      
+    </a><style data-shopify="">.hdt-logo {padding: 5px 0;}.hdt-logo a img{width: 110px !important;}.hdt-logo picture.hdt-logo-sticky {display: none;}.scrolled-past-header.shopify-section-header-sticky .hdt-logo picture.hdt-logo-sticky {display: inline-flex;}.scrolled-past-header.shopify-section-header-sticky .hdt-logo picture:not(.hdt-logo-sticky) {display: none;}@media (min-width: 768px) {.hdt-logo a img{width: 172px !important;}}</style></div></div>
+        <div class="lg:hdt-custom-col-5 md:hdt-custom-col-4 hdt-custom-col-3"><div class="hdt-site-top_nav hdt-flex hdt-align-center hdt-justify-end">
+		<div class="hdt-site-nav_icon hdt-site-nav_search hdt-inline-flex hdt-align-center">
+			<a href="/search" class="hdt-inline-flex hdt-align-center hdt-relative" aria-controls="drawer-search-form">
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M17.7241 16.1932L13.6436 12.1127C14.626 10.8049 15.1563 9.21299 15.1546 7.57728C15.1546 3.39919 11.7554 0 7.57728 0C3.39919 0 0 3.39919 0 7.57728C0 11.7554 3.39919 15.1546 7.57728 15.1546C9.21299 15.1563 10.8049 14.626 12.1127 13.6436L16.1932 17.7241C16.3998 17.9088 16.6692 18.0073 16.9461 17.9996C17.2231 17.9918 17.4865 17.8783 17.6824 17.6824C17.8783 17.4865 17.9918 17.2231 17.9996 16.9461C18.0073 16.6692 17.9088 16.3998 17.7241 16.1932ZM2.16494 7.57728C2.16494 6.50682 2.48237 5.4604 3.07708 4.57034C3.6718 3.68029 4.51709 2.98657 5.50607 2.57693C6.49504 2.16728 7.58328 2.0601 8.63318 2.26893C9.68307 2.47777 10.6475 2.99325 11.4044 3.75018C12.1613 4.5071 12.6768 5.47149 12.8856 6.52138C13.0945 7.57128 12.9873 8.65952 12.5776 9.64849C12.168 10.6375 11.4743 11.4828 10.5842 12.0775C9.69416 12.6722 8.64774 12.9896 7.57728 12.9896C6.14237 12.9879 4.76672 12.4171 3.75208 11.4025C2.73744 10.3878 2.16666 9.01219 2.16494 7.57728Z" fill="currentColor"></path></svg>
+			</a>
+		</div><div class="hdt-site-nav_icon hdt-site-nav_user lg:hdt-inline-flex md:hdt-inline-flex hdt-align-center hdt-hidden">
+				<a class="hdt-inline-flex hdt-align-center hdt-relative" data-no-instant="" href="/account" aria-controls="login-form-popup">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 64 64" fill="currentColor"><path d="M56,64V57.48A8.43,8.43,0,0,0,47.56,49H16.44A8.43,8.43,0,0,0,8,57.48V64H.9V57.48A15.53,15.53,0,0,1,16.44,41.94H47.56A15.53,15.53,0,0,1,63.1,57.48V64Zm-23.47-27a18.66,18.66,0,0,1-13.11-5.43,18.54,18.54,0,0,1,0-26.22A18.53,18.53,0,0,1,51.07,18.51,18.52,18.52,0,0,1,32.54,37.05Zm0-30a11.44,11.44,0,1,0,8.09,3.35A11.36,11.36,0,0,0,32.54,7.07Z"></path></svg>
+				</a>
+			</div><div class="hdt-site-nav_icon hdt-site-nav_wishlist lg:hdt-inline-flex md:hdt-inline-flex hdt-align-center hdt-hidden">
+					<hdt-wishlist-a class="hdt-contents">
+					<a href="/search/?view=wishlist" class="hdt-inline-flex hdt-align-center hdt-relative hdt-has-count-box">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="currentColor">
+						  <path d="M9.90736 15.2534L9.80926 15.3515L9.70136 15.2534C5.04196 11.0256 1.96185 8.22997 1.96185 5.3951C1.96185 3.43324 3.43324 1.96185 5.3951 1.96185C6.90572 1.96185 8.37711 2.94278 8.897 4.27684H10.7215C11.2414 2.94278 12.7128 1.96185 14.2234 1.96185C16.1853 1.96185 17.6567 3.43324 17.6567 5.3951C17.6567 8.22997 14.5766 11.0256 9.90736 15.2534ZM14.2234 0C12.5166 0 10.8785 0.79455 9.80926 2.04033C8.74005 0.79455 7.10191 0 5.3951 0C2.37384 0 0 2.36403 0 5.3951C0 9.09319 3.33515 12.1243 8.38692 16.7052L9.80926 18L11.2316 16.7052C16.2834 12.1243 19.6185 9.09319 19.6185 5.3951C19.6185 2.36403 17.2447 0 14.2234 0Z"></path>
+						</svg>
+						<hdt-wishlist-count class="hdt-count-box hdt-absolute">0</hdt-wishlist-count>
+					</a>
+					</hdt-wishlist-a>
+				</div><div class="hdt-site-nav_icon hdt-site-nav_cart hdt-inline-flex hdt-align-center">
+			<a class="hdt-inline-flex hdt-align-center hdt-relative hdt-has-count-box" href="/cart" aria-controls="CartDrawer">
+				<svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="currentColor">
+					<path d="M15.3 18H0.9C0.661305 18 0.432387 17.9052 0.263604 17.7364C0.0948211 17.5676 0 17.3387 0 17.1V0.9C0 0.661305 0.0948211 0.432387 0.263604 0.263604C0.432387 0.0948211 0.661305 0 0.9 0H15.3C15.5387 0 15.7676 0.0948211 15.9364 0.263604C16.1052 0.432387 16.2 0.661305 16.2 0.9V17.1C16.2 17.3387 16.1052 17.5676 15.9364 17.7364C15.7676 17.9052 15.5387 18 15.3 18ZM14.4 16.2V1.8H1.8V16.2H14.4ZM5.4 3.6V5.4C5.4 6.11608 5.68446 6.80284 6.19081 7.30919C6.69716 7.81554 7.38392 8.1 8.1 8.1C8.81608 8.1 9.50284 7.81554 10.0092 7.30919C10.5155 6.80284 10.8 6.11608 10.8 5.4V3.6H12.6V5.4C12.6 6.59347 12.1259 7.73807 11.282 8.58198C10.4381 9.42589 9.29347 9.9 8.1 9.9C6.90653 9.9 5.76193 9.42589 4.91802 8.58198C4.07411 7.73807 3.6 6.59347 3.6 5.4V3.6H5.4Z"></path>
+				</svg>
+				<hdt-cart-count class="hdt-count-box hdt-absolute">0</hdt-cart-count>
+			</a>
 		</div>
-	</div>
-	<!-- End Breadcrumbs -->
+	</div></div></div>
+  </div>
+</hdt-sticky-header>
 
-	<!-- About Us -->
-	<!-- <section class="about-us section">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-12">
-						<div class="about-content">
-							@php
-								$settings=DB::table('settings')->get();
-							@endphp
-							<h3>Welcome To <span>Eshop</span></h3>
-							<p>@foreach($settings as $data) {{$data->description}} @endforeach</p>
-							<div class="button">
-								<a href="{{route('blog')}}" class="btn">Our Blog</a>
-								<a href="{{route('contact')}}" class="btn primary">Contact Us</a>
+<hdt-drawer id="menu_mobile" class="hdt-drawer hdt-drawer-not-header hdt-drawer-menu-mb hdt-hidden hdt-header-menu-mobile hdt-fixed hdt-top-0 hdt-left-0 hdt-bottom-0" color-scheme="scheme-2" effect="left" config="{&quot;appendToBody&quot;: true}" role="dialog" aria-modal="true"><hdt-lazy-submenu id="sub-hdt-nav-mb" data-section="sections--23589416435977__header">
+			<ul id="hdt-nav-ul-mb" class="hdt-nav__ul-mb hdt-flex hdt-flex-col horizontal-mega-menu"><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="9lKUC"><a data-href="/" href="/" aria-label="Home" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Home</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="ENqv8"><a data-href="/pages/about-us" href="/pages/about-us" aria-label="About Us" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">About Us</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="bDnyf"><a data-href="/pages/new-arrival" href="/pages/new-arrival" aria-label="New Arrival" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">New Arrival</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="MUZWt"><a data-href="/pages/best-seller" href="/pages/best-seller" aria-label="Best Seller" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Best Seller</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="kO9aX"><a data-href="/pages/shop-by-categories" href="/pages/shop-by-categories" aria-label="Categories" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Categories</span><i class="mm-arrow mm-angle-down" aria-hidden="true"></i><span class="toggle-menu-btn" style="display:none;" title="Toggle menu" onclick="return toggleSubmenu(this)"><span class="mm-arrow-icon"><span class="bar-one"></span><span class="bar-two"></span></span></span></a><ul class="mm-submenu simple   mm-last-level" style=""><li submenu-columns="1" item-type="link-list"><div class="mega-menu-item-container"><div class="mm-list-name"><span onclick="mmGoToPage(this); return false;" data-href="/pages/necklace-set"><span class="mm-title">Necklace Set</span></span></div><ul class="mm-submenu link-list   mm-last-level"><li><a data-href="/collections/designer-handmade-polki-necklace-set" href="/collections/designer-handmade-polki-necklace-set" aria-label="Designer Handmade Polki Necklace Set" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Designer Handmade Polki Necklace Set</span></a></li><li><a data-href="/collections/designer-mala-set" href="/collections/designer-mala-set" aria-label="Designer Mala Set" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Designer Mala Set</span></a></li><li><a data-href="/collections/low-price-necklace-set" href="/collections/low-price-necklace-set" aria-label="Low Price Necklace Set" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Low Price Necklace Set</span></a></li><li><a data-href="/collections/paint-meena-necklace-set" href="/collections/paint-meena-necklace-set" aria-label="Paint Meena Necklace Set" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Paint Meena Necklace Set</span></a></li><li><a data-href="/collections/polki-necklace-set" href="/collections/polki-necklace-set" aria-label="Polki Necklace Set" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Polki Necklace Set</span></a></li></ul></div></li><li submenu-columns="1" item-type="link-list"><div class="mega-menu-item-container"><div class="mm-list-name"><span onclick="mmGoToPage(this); return false;" data-href="/pages/earrings"><span class="mm-title">Earrings</span></span></div><ul class="mm-submenu link-list   mm-last-level"><li><a data-href="/collections/fancy-earrings" href="/collections/fancy-earrings" aria-label="Fancy Earrings" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Fancy Earrings</span></a></li><li><a data-href="/collections/indian-reverse-ad-jhumkas" href="/collections/indian-reverse-ad-jhumkas" aria-label="Indian Reverse Ad Jhumkas" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Indian Reverse Ad Jhumkas</span></a></li><li><a data-href="/collections/mint-meena-earrings" href="/collections/mint-meena-earrings" aria-label="Mint Meena Earrings" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Mint Meena Earrings</span></a></li><li><a data-href="/collections/polki-earrings" href="/collections/polki-earrings" aria-label="Polki Earrings" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Polki Earrings</span></a></li><li><a data-href="/collections/real-kundan-earrings" href="/collections/real-kundan-earrings" aria-label="Real Kundan Earrings" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Real Kundan Earrings</span></a></li><li><a data-href="/collections/real-kundan-studs" href="/collections/real-kundan-studs" aria-label="Real Kundan Studs" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Real Kundan Studs</span></a></li><li><a data-href="/collections/studs" href="/collections/studs" aria-label="Studs" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Studs</span></a></li></ul></div></li><li submenu-columns="1" item-type="link-list"><div class="mega-menu-item-container"><div class="mm-list-name"><span onclick="mmGoToPage(this); return false;" data-href="/pages/bangles"><span class="mm-title">Bangles</span></span></div><ul class="mm-submenu link-list   mm-last-level"><li><a data-href="/collections/cz-bangles" href="/collections/cz-bangles" aria-label="Cz Bangles" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Cz Bangles</span></a></li><li><a data-href="/collections/paint-meena-bangles" href="/collections/paint-meena-bangles" aria-label="Paint Meena Bangles" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Paint Meena Bangles</span></a></li><li><a data-href="/collections/polki-bangles" href="/collections/polki-bangles" aria-label="Polki Bangles" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Polki Bangles</span></a></li><li><a data-href="/collections/real-kundan-bangles" href="/collections/real-kundan-bangles" aria-label="Real Kundan Bangles" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Real Kundan Bangles</span></a></li></ul></div></li><li submenu-columns="1" item-type="link-list"><div class="mega-menu-item-container"><div class="mm-list-name"><span onclick="mmGoToPage(this); return false;" data-href="/pages/payal"><span class="mm-title">Payal</span></span></div><ul class="mm-submenu link-list   mm-last-level"><li><a data-href="/collections/kundan-payal" href="/collections/kundan-payal" aria-label="Kundan Payal" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Kundan Payal</span></a></li><li><a data-href="/collections/polki-payal" href="/collections/polki-payal" aria-label="Polki Payal" data-no-instant="" onclick="mmGoToPage(this, event); return false;"><span class="mm-title">Polki Payal</span></a></li></ul></div></li><li submenu-columns="1" item-type="link-list"><div class="mega-menu-item-container"><div class="mm-list-name"><span onclick="mmGoToPage(this); return false;" data-href="/pages/mangalsutra"><span class="mm-title">Mangalsutra</span></span></div></div></li></ul></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="fWuHk"><a data-href="/collections" href="/collections" aria-label="Collections" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Collections</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="ZEajz"><a data-href="/pages/occasion" href="/pages/occasion" aria-label="Occasion" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Occasion</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="Splg9"><a data-href="/pages/gifting" href="/pages/gifting" aria-label="Gifting" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Gifting</span></a></li><li class="buddha-menu-item hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col" itemid="CbPhN"><a data-href="/pages/contact" href="/pages/contact" aria-label="Contact Us" data-no-instant="" onclick="mmGoToPage(this, event); return false;" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="mm-title">Contact Us</span></a></li><li class="hdt-menu-item hdt-flex hdt-justify-center hdt-flex-col buddha-disabled"><a href="/" class="hdt-menu-link hdt-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-base hdt-font-medium"><span class="hdt-menu-link-text hdt-block">
+									<span class="hdt-block hdt-line-clamp">Home</span></span>
+							</a></li></ul>
+		</hdt-lazy-submenu><div class="hdt-mobile-other-content">
+	<div class="hdt-mobile_group_icons hdt-flex hdt-align-start"><div class="hdt-site-nav_icon hdt-site-nav_user hdt-inline-flex hdt-align-center">
+				<hdt-wishlist-a class="hdt-contents">
+				<a class="hdt-inline-flex hdt-align-center hdt-relative hdt-rounded-xs" href="/search/?view=wishlist">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none"><path d="M7.70572 11.8638L7.62943 11.9401L7.5455 11.8638C3.92153 8.57548 1.52589 6.40109 1.52589 4.19619C1.52589 2.6703 2.6703 1.52589 4.19619 1.52589C5.37112 1.52589 6.51553 2.28883 6.91989 3.32643H8.33896C8.74332 2.28883 9.88774 1.52589 11.0627 1.52589C12.5886 1.52589 13.733 2.6703 13.733 4.19619C13.733 6.40109 11.3373 8.57548 7.70572 11.8638ZM11.0627 0C9.73515 0 8.46104 0.617984 7.62943 1.58692C6.79782 0.617984 5.52371 0 4.19619 0C1.84632 0 0 1.83869 0 4.19619C0 7.07248 2.59401 9.42997 6.52316 12.9929L7.62943 14L8.73569 12.9929C12.6649 9.42997 15.2589 7.07248 15.2589 4.19619C15.2589 1.83869 13.4125 0 11.0627 0Z" fill="currentColor"></path></svg>
+					<span class="hdt-icon-text hdt-text-base hdt-font-medium">Wishlist</span>
+				</a>
+				</hdt-wishlist-a>
+			</div><div class="hdt-site-nav_icon hdt-site-nav_search hdt-inline-flex hdt-align-center">
+			<a href="/search" class="hdt-inline-flex hdt-align-center hdt-relative hdt-rounded-xs">
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13.7854 12.5947L10.6117 9.421C11.3758 8.4038 11.7883 7.16566 11.7869 5.89344C11.7869 2.64382 9.14306 0 5.89344 0C2.64382 0 0 2.64382 0 5.89344C0 9.14306 2.64382 11.7869 5.89344 11.7869C7.16566 11.7883 8.4038 11.3758 9.421 10.6117L12.5947 13.7854C12.7554 13.929 12.9649 14.0057 13.1803 13.9997C13.3957 13.9936 13.6006 13.9054 13.753 13.753C13.9054 13.6006 13.9936 13.3957 13.9997 13.1803C14.0057 12.9649 13.929 12.7554 13.7854 12.5947ZM1.68384 5.89344C1.68384 5.06086 1.93073 4.24698 2.39329 3.55471C2.85584 2.86245 3.51329 2.32289 4.2825 2.00428C5.0517 1.68566 5.89811 1.6023 6.71469 1.76473C7.53127 1.92715 8.28135 2.32808 8.87008 2.9168C9.4588 3.50553 9.85972 4.25561 10.0222 5.07219C10.1846 5.88877 10.1012 6.73518 9.7826 7.50438C9.46399 8.27359 8.92443 8.93104 8.23217 9.39359C7.5399 9.85615 6.72602 10.103 5.89344 10.103C4.7774 10.1017 3.70745 9.65776 2.91828 8.8686C2.12912 8.07943 1.68518 7.00948 1.68384 5.89344Z" fill="currentColor"></path></svg>
+				<span class="hdt-icon-text hdt-text-base hdt-font-medium">Search</span>
+			</a>
+		</div>
+	</div><div class="hdt-notice-mobile"><span class="hdt-inline-flex hdt-text-base hdt-font-medium" style="color: rgb(var(--color-foreground));border-bottom: solid 1px rgb(var(--color-foreground));margin-bottom: 11px;"><a href="https://demo-ecomus-global.myshopify.com/pages/contact-1" aria-describedby="a11y-external-message">Need help ?</a></span><span class="hdt-flex hdt-flex-col hdt-text-base hdt-font-normal" style="line-height: 24px;"><span>Address: 1234 Fashion Street, Suite 567,<br> New York, NY 10001 </span><span>Email: <b>info@fashionshop.com </b></span><span>Phone: <b>(212) 555-1234</b></span></span></div></div>
+<div slot="footer" class="hdt-mobile_bottom"><div class="hdt-site-nav_icon hdt-site-nav_user hdt-inline-flex hdt-align-center">
+			<a class="hdt-inline-flex hdt-align-center hdt-relative hdt-rounded-xs" href="/account" data-drawer-delay-="" data-drawer-options="{ &quot;id&quot;:&quot;#hdt-login-sidebar&quot; }">
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13.4818 13.8852H12.1703V12.5738C12.1703 12.052 11.9631 11.5517 11.5941 11.1827C11.2252 10.8138 10.7248 10.6066 10.2031 10.6066H3.39344C2.8717 10.6066 2.37134 10.8138 2.00241 11.1827C1.63349 11.5517 1.42623 12.052 1.42623 12.5738V13.8852H0.114754V12.5738C0.114754 11.7042 0.460186 10.8703 1.07506 10.2554C1.68993 9.64051 2.52388 9.29508 3.39344 9.29508H10.2031C11.0727 9.29508 11.9066 9.64051 12.5215 10.2554C13.1364 10.8703 13.4818 11.7042 13.4818 12.5738V13.8852ZM6.91621 7.98361C6.39953 7.98361 5.88792 7.88184 5.41057 7.68412C4.93323 7.48639 4.4995 7.19659 4.13415 6.83124C3.76881 6.46589 3.479 6.03217 3.28128 5.55482C3.08355 5.07747 2.98178 4.56586 2.98178 4.04918C2.98178 3.5325 3.08355 3.02089 3.28128 2.54354C3.479 2.06619 3.76881 1.63247 4.13415 1.26712C4.4995 0.901776 4.93323 0.611968 5.41057 0.414244C5.88792 0.216521 6.39953 0.114754 6.91621 0.114754C7.95969 0.114754 8.96042 0.529273 9.69827 1.26712C10.4361 2.00497 10.8506 3.00571 10.8506 4.04918C10.8506 5.09266 10.4361 6.09339 9.69827 6.83124C8.96042 7.56909 7.95969 7.98361 6.91621 7.98361ZM6.91621 6.67213C7.61186 6.67213 8.27902 6.39579 8.77092 5.90389C9.26282 5.41199 9.53916 4.74483 9.53916 4.04918C9.53916 3.35353 9.26282 2.68637 8.77092 2.19447C8.27902 1.70258 7.61186 1.42623 6.91621 1.42623C6.22056 1.42623 5.5534 1.70258 5.0615 2.19447C4.56961 2.68637 4.29326 3.35353 4.29326 4.04918C4.29326 4.74483 4.56961 5.41199 5.0615 5.90389C5.5534 6.39579 6.22056 6.67213 6.91621 6.67213Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5965 14H12.0556V12.5738C12.0556 12.0825 11.8604 11.6113 11.513 11.2639C11.1656 10.9165 10.6944 10.7213 10.2031 10.7213H3.39344C2.90214 10.7213 2.43096 10.9165 2.08356 11.2639C1.73615 11.6113 1.54098 12.0825 1.54098 12.5738V14H0V12.5738C0 11.6738 0.357523 10.8106 0.993916 10.1742C1.63031 9.53785 2.49345 9.18033 3.39344 9.18033H10.2031C11.1031 9.18033 11.9662 9.53785 12.6026 10.1742C13.239 10.8106 13.5965 11.6738 13.5965 12.5738V14ZM6.91621 8.09836C6.38447 8.09836 5.85793 7.99363 5.36666 7.79014C4.87539 7.58664 4.42901 7.28838 4.05301 6.91238C3.67701 6.53638 3.37875 6.09 3.17526 5.59873C2.97177 5.10747 2.86703 4.58093 2.86703 4.04918C2.86703 3.51743 2.97177 2.9909 3.17526 2.49963C3.37875 2.00836 3.67701 1.56198 4.05301 1.18598C4.42901 0.809976 4.87539 0.511716 5.36666 0.308225C5.85793 0.104735 6.38447 -1.13998e-08 6.91621 0C7.99012 1.13998e-08 9.02005 0.426609 9.77942 1.18598C10.5388 1.94535 10.9654 2.97527 10.9654 4.04918C10.9654 5.12309 10.5388 6.15301 9.77942 6.91238C9.02005 7.67175 7.99012 8.09836 6.91621 8.09836ZM6.91621 6.55738C7.58143 6.55738 8.2194 6.29312 8.68977 5.82274C9.16015 5.35237 9.42441 4.7144 9.42441 4.04918C9.42441 3.38397 9.16015 2.746 8.68977 2.27562C8.2194 1.80524 7.58143 1.54098 6.91621 1.54098C6.251 1.54098 5.61303 1.80524 5.14265 2.27562C4.67227 2.746 4.40801 3.38397 4.40801 4.04918C4.40801 4.7144 4.67227 5.35237 5.14265 5.82274C5.61303 6.29312 6.251 6.55738 6.91621 6.55738ZM13.4818 13.8852V12.5738C13.4818 11.7042 13.1364 10.8703 12.5215 10.2554C11.9066 9.64051 11.0727 9.29508 10.2031 9.29508H3.39344C2.52388 9.29508 1.68993 9.64051 1.07506 10.2554C0.460186 10.8703 0.114754 11.7042 0.114754 12.5738V13.8852H1.42623V12.5738C1.42623 12.052 1.63349 11.5517 2.00241 11.1827C2.37134 10.8138 2.8717 10.6066 3.39344 10.6066H10.2031C10.7248 10.6066 11.2252 10.8138 11.5941 11.1827C11.9631 11.5517 12.1703 12.052 12.1703 12.5738V13.8852H13.4818ZM5.41057 7.68412C5.88792 7.88184 6.39953 7.98361 6.91621 7.98361C7.95969 7.98361 8.96042 7.56909 9.69827 6.83124C10.4361 6.09339 10.8506 5.09266 10.8506 4.04918C10.8506 3.00571 10.4361 2.00497 9.69827 1.26712C8.96042 0.529273 7.95969 0.114754 6.91621 0.114754C6.39953 0.114754 5.88792 0.216521 5.41057 0.414244C4.93323 0.611968 4.4995 0.901776 4.13415 1.26712C3.76881 1.63247 3.479 2.06619 3.28128 2.54354C3.08355 3.02089 2.98178 3.5325 2.98178 4.04918C2.98178 4.56586 3.08355 5.07747 3.28128 5.55482C3.479 6.03217 3.76881 6.46589 4.13415 6.83124C4.4995 7.19659 4.93323 7.48639 5.41057 7.68412ZM8.77092 5.90389C8.27902 6.39579 7.61186 6.67213 6.91621 6.67213C6.22056 6.67213 5.5534 6.39579 5.0615 5.90389C4.56961 5.41199 4.29326 4.74483 4.29326 4.04918C4.29326 3.35353 4.56961 2.68637 5.0615 2.19447C5.5534 1.70258 6.22056 1.42623 6.91621 1.42623C7.61186 1.42623 8.27902 1.70258 8.77092 2.19447C9.26282 2.68637 9.53916 3.35353 9.53916 4.04918C9.53916 4.74483 9.26282 5.41199 8.77092 5.90389Z" fill="currentColor"></path></svg>
+			  <span class="hdt-icon-text hdt-text-base hdt-font-medium">Login</span>
+			</a>
+		</div><div class="hdt-mb-language_currencies hdt-flex hdt-align-center"></div>
+</div>
+</hdt-drawer>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "My Store",
+    "logo": "https:\/\/j02crm-a9.myshopify.com\/cdn\/shop\/files\/Sparsh_Logo.jpg?v=1743177875\u0026width=500",
+    "sameAs": ["https:\/\/facebook.com\/shopify","https:\/\/twitter.com\/shopify","https:\/\/www.instagram.com\/","https:\/\/tiktok.com\/@shopify","https:\/\/pinterest.com\/shopify",""
+    ],
+    "url": "https:\/\/j02crm-a9.myshopify.com\/pages\/about-us"
+  }
+</script>
+
+<style> #shopify-section-sections--23589416435977__header ul.hdt-menu-list.hdt-sub-menu-lever-1 {display: flex; flex-direction: column; gap: 15px;} #shopify-section-sections--23589416435977__header #hdt-nav-ul .hdt-sub-menu .hdt-menu-list li:not(:last-child) {margin-bottom: 0;} </style></header>
+<!-- END sections: header-group --><main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1"><section id="shopify-section-template--23589415911689__main" class="shopify-section hdt-section hdt-section-main-page"><!-- sections/main-page.liquid -->
+<div timeline="" hdt-reveal="slide-in" class="hdt-main-page hdt-relative hdt-section-spacing hdt-s-gradient" color-scheme="scheme-1" observed="" animationend="">
+  <div class="hdt-container"></div>
+</div><style data-shopify="">#shopify-section-template--23589415911689__main{--section-pt:0px;--section-pb:0px;--section-prate:75}.hdt-main-page .hdt-main-area{z-index:2}</style>
+</section><div id="shopify-section-template--23589415911689__322c5629-7f71-4b6e-bb7c-fd009621a40d" class="shopify-section hdt-section section-allow-transparent hdt-section-hero-image"><!-- sections/hero-image.liquid -->
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-hero.css?v=16031767067609445591739289142" rel="stylesheet" type="text/css" media="all">
+<style data-shopify="">#Image-template--23589415911689__322c5629-7f71-4b6e-bb7c-fd009621a40d{ --aspect-ratioapt:350px;}#shopify-section-template--23589415911689__322c5629-7f71-4b6e-bb7c-fd009621a40d{--section-pt:0px;--section-pb:0px;--section-prate:75}</style><div id="Image-template--23589415911689__322c5629-7f71-4b6e-bb7c-fd009621a40d" class="hdt-hero-image hdt-section-spacing md:hdt-height--full hdt-height--fixed" color-scheme="scheme-67a7ca9f-3333-4245-b79f-2e9849d7e615">
+  <div class="hdt-container-full">
+    <hdt-effect-img eff="ambient" class="hdt-hero-image__inner hdt-animate--ambient hdt-hero-image__overlay--true hdt-media-overlap-content "><picture class="hdt-media-wrapper"><img src="//j02crm-a9.myshopify.com/cdn/shop/files/about-us-hero-banner-_1.jpg?v=1744046627&amp;width=1023" alt="" srcset="//j02crm-a9.myshopify.com/cdn/shop/files/about-us-hero-banner-_1.jpg?v=1744046627&amp;width=400 400w, //j02crm-a9.myshopify.com/cdn/shop/files/about-us-hero-banner-_1.jpg?v=1744046627&amp;width=600 600w, //j02crm-a9.myshopify.com/cdn/shop/files/about-us-hero-banner-_1.jpg?v=1744046627&amp;width=800 800w, //j02crm-a9.myshopify.com/cdn/shop/files/about-us-hero-banner-_1.jpg?v=1744046627&amp;width=1000 1000w" width="1023" height="575" loading="lazy" fetchpriority="auto" sizes="100vw" class=""></picture><div class="hdt-hero-image__content-wrap hdt-pe-none hdt-grid hdt-container">
+        <div class="hdt-hero-image__content hdt-hero-image__content-bg--false hdt-place-self-center md:hdt-place-self-center">
+          <div class="hdt-hero-image__content-box hdt-pe-none hdt-text-center md:hdt-text-center"><h2 class="hdt-hero-image__heading hdt-h2 hdt-font-normal hdt-s-text">From a Small Town in India to London’s Iconic Jewellery Designer – Zeba’s Unbreakable Passion</h2></div>
+        </div>
+      </div>
+    </hdt-effect-img>
+  </div>
+</div>
+
+<style> @media (max-width: 767px) {#shopify-section-template--23589415911689__322c5629-7f71-4b6e-bb7c-fd009621a40d .hdt-h2 {font-size: 2.4rem; }} </style></div><section id="shopify-section-template--23589415911689__d8fc1681-68ca-4252-93e0-ec64c9e6e014" class="shopify-section hdt-section hdt-top-heading"><!-- sections/top-heading.liquid --><style data-shopify="">#shopify-section-template--23589415911689__d8fc1681-68ca-4252-93e0-ec64c9e6e014{--section-pt:64px;--section-pb:69px;--spacing-y:16.5px;--section-prate:40}@media (min-width:768px){#shopify-section-template--23589415911689__d8fc1681-68ca-4252-93e0-ec64c9e6e014{--spacing-y:24.75px}}@media (min-width:1150px){#shopify-section-template--23589415911689__d8fc1681-68ca-4252-93e0-ec64c9e6e014{--spacing-y:33px}}@media (max-width:767px){#shopify-section-template--23589415911689__d8fc1681-68ca-4252-93e0-ec64c9e6e014:where(.hdt-text-lg,.hdt-text-xl){font-size:var(--text-base)}}</style><div class="hdt-section-spacing hdt-s-gradient" color-scheme="scheme-2">
+  <div class="hdt-container">
+    <div class="hdt-row-grid hdt-text-center md:hdt-text-center hdt-grid-cols-1"><p class="hdt-s-text2 hdt-text-h6">In a quiet town nestled in the heart of India, where the sun kissed the earth in golden hues and the air carried the scent of fresh marigolds, a little girl named Zeba would sit for hours beside her grandmother, mesmerized by the delicate bangles that clinked softly as she moved. To Zeba, jewellery was never just an ornament; it was a story waiting to be told, an emotion cast in gold, a memory woven into intricate patterns. Even as a child, she believed that every piece of jewellery held whispers of love, strength, and heritage.
+<br><br>
+Born into a humble family, Zeba’s passion for jewellery design was met with curiosity and, at times, skepticism. While other children played outside, she would gather old trinkets, broken chains, and glass beads, weaving them into something beautiful with her tiny hands. The first time she saw her mother wear one of her handmade creations, a fire lit inside her—a fire that would define her journey.</p></div>
+  </div>
+</div>
+
+
+<style> #shopify-section-template--23589415911689__d8fc1681-68ca-4252-93e0-ec64c9e6e014 p {line-height: 1.5;} </style></section><section id="shopify-section-template--23589415911689__6e9ed9a2-d37f-427d-af6f-6d4d53f2947b" class="shopify-section hdt-section hdt-line-section"><!-- sections/custom-line.liquid --><style data-shopify="">#template--23589415911689__6e9ed9a2-d37f-427d-af6f-6d4d53f2947b .hdt-custom-line{width:100%;border-style:solid;border-top-width:1px;border-color:#ebebeb}</style><div id="template--23589415911689__6e9ed9a2-d37f-427d-af6f-6d4d53f2947b" class="hdt-section-spacing hdt-s-gradient" style="--section-pt: 0px; --section-pb: 3px; --section-prate:20;">
+  <div class="hdt-container hdt-flex hdt-justify-center">
+    <div class="hdt-custom-line"></div>
+  </div>
+</div>
+
+</section><section id="shopify-section-template--23589415911689__bd32e121-64a7-4410-9db7-ba92286059ec" class="shopify-section hdt-section hdt-image-with_text"><!-- sections/image-with-text.liquid-->
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-image-with-text.css?v=170472356846289205531739289142" rel="stylesheet" type="text/css" media="all">
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-countdown.css?v=21403643049901934871739289142" rel="stylesheet" type="text/css" media="all">
+<style data-shopify="">#shopify-section-template--23589415911689__bd32e121-64a7-4410-9db7-ba92286059ec{--section-pt:100px;--section-pb:78px;--section-prate:35}#shopify-section-template--23589415911689__bd32e121-64a7-4410-9db7-ba92286059ec.hdt-image-with_text .hdt-image_wrap.hdt-1_img::after{padding-top:100.0%}#shopify-section-template--23589415911689__bd32e121-64a7-4410-9db7-ba92286059ec.hdt-image-with_text .hdt-image_wrap.hdt-2_img::after{padding-top:95%}#shopify-section-template--23589415911689__bd32e121-64a7-4410-9db7-ba92286059ec.hdt-image-with_text .hdt-image_wrap.hdt-22_img::after{padding-top:68%}#shopify-section-template--23589415911689__bd32e121-64a7-4410-9db7-ba92286059ec.hdt-image-with_text .hdt-image_wrap.hdt-3_img::after{padding-top:89%}#shopify-section-template--23589415911689__bd32e121-64a7-4410-9db7-ba92286059ec.hdt-image-with_text .hdt-image_wrap.hdt-33_img::after{padding-top:89%}</style><div class="hdt-section-spacing" color-scheme="scheme-2" hdt-reveal="fade-in" observed="" animationend="">
+  <div class="hdt-container">
+    <div class="hdt-row-grid hdt-s-gradient hdt-effect-lunc hdt-oh hdt-grid-cols-1 md:hdt-grid-cols-2 lg:hdt-grid-cols-2 hdt-rounded hdt-oh hdt-1_img">
+      <div class="hdt-image_wrap hdt-1_img hdt-relative hdt-oh">
+        <div class="hdt-img_group hdt-full-width-link hdt-grid"><div class="hdt-img_item" hdt-reveal="slide-in" timeline="" observed="" animationend="" style="--animation-order: 0;">
+            <div class="hdt-media hdt-h-full hdt-rounded hdt-relative hdt-oh">
+              <img src="//j02crm-a9.myshopify.com/cdn/shop/files/Designer.jpg?v=1744051754&amp;width=1024" alt="" srcset="//j02crm-a9.myshopify.com/cdn/shop/files/Designer.jpg?v=1744051754&amp;width=400 400w, //j02crm-a9.myshopify.com/cdn/shop/files/Designer.jpg?v=1744051754&amp;width=600 600w, //j02crm-a9.myshopify.com/cdn/shop/files/Designer.jpg?v=1744051754&amp;width=800 800w, //j02crm-a9.myshopify.com/cdn/shop/files/Designer.jpg?v=1744051754&amp;width=1000 1000w" width="1024" height="1024" loading="lazy" class="hdt-full-width-link hdt-object-cover hdt-object-center hdt-w-full hdt-h-full" sizes="(min-width: 1150px) calc(1440px / 2 ), calc(100vw - 30px)">
+            </div>
+          </div></div>
+      </div>
+      <div class="hdt-content_wrap hdt-grid   md:hdt-order-last" style="--padding-start: 15px;">
+        <div class="hdt-content hdt-place-self-center hdt-text-center md:hdt-place-self-center-start md:hdt-text-start lg:hdt-place-self-start-center lg:hdt-text-left"><h2 class="hdt-heading hdt-h4 hdt-s-text" hdt-reveal="slide-in" timeline="" observed="" animationend="" style="--animation-order: 0;">The Dream Takes Shape</h2><p class="hdt-subheading hdt-text-base hdt-s-text2" hdt-reveal="slide-in" timeline="" observed="" animationend="" style="--animation-order: 0;">As she grew older, Zeba pursued her love for jewellery design with relentless determination. She studied by day and sketched designs by night, driven by an unshakable belief that her creations could one day adorn the world’s most elegant women. Her talent did not go unnoticed—local jewellers, enchanted by her ability to tell stories through her designs, commissioned her to work on intricate pieces. Soon, her artistry spread beyond her small town, reaching jewellery houses across India.
+<br><br>
+But Zeba wanted more. She longed to bring her artistry to the world, to make women across the globe feel the magic she saw in every piece. And so, with nothing but her passion and a heart full of dreams, she took a bold leap—London.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style> @media (min-width: 1150px) {#shopify-section-template--23589415911689__bd32e121-64a7-4410-9db7-ba92286059ec.hdt-image-with_text * + .hdt-subheading {margin-top: var(--spacing-1-8); } #shopify-section-template--23589415911689__bd32e121-64a7-4410-9db7-ba92286059ec.hdt-image-with_text .hdt-content_wrap {padding-top: 150px; } #shopify-section-template--23589415911689__bd32e121-64a7-4410-9db7-ba92286059ec .hdt-heading.hdt-h4 {font-size: var(--text-10xl); }} </style></section><section id="shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078" class="shopify-section hdt-section hdt-image-with_text"><!-- sections/image-with-text.liquid-->
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-image-with-text.css?v=170472356846289205531739289142" rel="stylesheet" type="text/css" media="all">
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-countdown.css?v=21403643049901934871739289142" rel="stylesheet" type="text/css" media="all">
+<style data-shopify="">#shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078{--section-pt:78px;--section-pb:100px;--section-prate:20}#shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078.hdt-image-with_text .hdt-image_wrap.hdt-1_img::after{padding-top:100.0%}#shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078.hdt-image-with_text .hdt-image_wrap.hdt-2_img::after{padding-top:95%}#shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078.hdt-image-with_text .hdt-image_wrap.hdt-22_img::after{padding-top:68%}#shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078.hdt-image-with_text .hdt-image_wrap.hdt-3_img::after{padding-top:89%}#shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078.hdt-image-with_text .hdt-image_wrap.hdt-33_img::after{padding-top:89%}</style><div class="hdt-section-spacing" color-scheme="scheme-2" hdt-reveal="fade-in" observed="" animationend="">
+  <div class="hdt-container">
+    <div class="hdt-row-grid hdt-s-gradient hdt-effect-lunc hdt-oh hdt-grid-cols-1 md:hdt-grid-cols-2 lg:hdt-grid-cols-2 hdt-rounded hdt-oh hdt-1_img">
+      <div class="hdt-image_wrap hdt-1_img hdt-relative hdt-oh">
+        <div class="hdt-img_group hdt-full-width-link hdt-grid"><div class="hdt-img_item" hdt-reveal="slide-in" timeline="" observed="" animationend="" style="--animation-order: 0;">
+            <div class="hdt-media hdt-h-full hdt-rounded hdt-relative hdt-oh">
+              <img src="//j02crm-a9.myshopify.com/cdn/shop/files/Close-up_of_a_women_Intricate_Jewelry_Being_Crafted_A_New_Beginning_in_London.jpg?v=1744053936&amp;width=1024" alt="" srcset="//j02crm-a9.myshopify.com/cdn/shop/files/Close-up_of_a_women_Intricate_Jewelry_Being_Crafted_A_New_Beginning_in_London.jpg?v=1744053936&amp;width=400 400w, //j02crm-a9.myshopify.com/cdn/shop/files/Close-up_of_a_women_Intricate_Jewelry_Being_Crafted_A_New_Beginning_in_London.jpg?v=1744053936&amp;width=600 600w, //j02crm-a9.myshopify.com/cdn/shop/files/Close-up_of_a_women_Intricate_Jewelry_Being_Crafted_A_New_Beginning_in_London.jpg?v=1744053936&amp;width=800 800w, //j02crm-a9.myshopify.com/cdn/shop/files/Close-up_of_a_women_Intricate_Jewelry_Being_Crafted_A_New_Beginning_in_London.jpg?v=1744053936&amp;width=1000 1000w" width="1024" height="1024" loading="lazy" class="hdt-full-width-link hdt-object-cover hdt-object-center hdt-w-full hdt-h-full" sizes="(min-width: 1150px) calc(1440px / 2 ), calc(100vw - 30px)">
+            </div>
+          </div></div>
+      </div>
+      <div class="hdt-content_wrap hdt-grid  md:hdt-order-first" style="--padding-start: 15px;">
+        <div class="hdt-content hdt-place-self-center hdt-text-center md:hdt-place-self-center-start md:hdt-text-start lg:hdt-place-self-start-center lg:hdt-text-left"><h2 class="hdt-heading hdt-h4 hdt-s-text" hdt-reveal="slide-in" timeline="" observed="" animationend="" style="--animation-order: 0;">A New Beginning in London</h2><p class="hdt-subheading hdt-text-base hdt-s-text2" hdt-reveal="slide-in" timeline="" observed="" animationend="" style="--animation-order: 0;">Arriving in London was both exhilarating and daunting. The towering skyline, the fast-paced life, and the sheer competitiveness of the fashion and jewellery industry could have intimidated anyone. But not Zeba. She knew that if jewellery was a language, she spoke it fluently. She worked tirelessly, sketching designs in the dim glow of her tiny apartment, reaching out to brands, and knocking on doors that remained closed—until one finally opened.
+<br><br>
+Her designs, rich in Indian heritage yet infused with modern elegance, caught the eye of top jewellery houses. They saw in her what she had always known—her jewellery wasn’t just metal and stone; it was a story, a soul, a feeling. With each creation, she wove her emotions, her struggles, her triumphs, and the legacy of Indian craftsmanship into something timeless.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style> @media (min-width: 1150px) {#shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078.hdt-image-with_text * + .hdt-subheading {margin-top: var(--spacing-1-8); } #shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078.hdt-image-with_text .hdt-content_wrap {padding-top: 130px; } #shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078 .hdt-heading.hdt-h4 {font-size: var(--text-10xl); } #shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078.hdt-image-with_text .hdt-2_img .hdt-img_group .hdt-img_item:nth-child(2) {grid-row: 5 / 12; margin: 20px 0 0 40px; }} #shopify-section-template--23589415911689__92907300-e2dd-450f-91df-8a2a70e85078.hdt-image-with_text .hdt-2_img .hdt-img_group .hdt-img_item:nth-child(2) {grid-column: 7/13;} </style></section><section id="shopify-section-template--23589415911689__4048e7b3-eff4-45f1-a0d3-bb9c3a956612" class="shopify-section hdt-section hdt-line-section"><!-- sections/custom-line.liquid --><style data-shopify="">#template--23589415911689__4048e7b3-eff4-45f1-a0d3-bb9c3a956612 .hdt-custom-line{width:100%;border-style:solid;border-top-width:1px;border-color:#ffffff}</style><div id="template--23589415911689__4048e7b3-eff4-45f1-a0d3-bb9c3a956612" class="hdt-section-spacing hdt-s-gradient" style="--section-pt: 0px; --section-pb: 32px; --section-prate:75;">
+  <div class="hdt-container-full hdt-flex hdt-justify-center">
+    <div class="hdt-custom-line"></div>
+  </div>
+</div>
+
+</section><div id="shopify-section-template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d" class="shopify-section hdt-section hdt-section-icon-box"><!-- sections/icon-box.liquid -->
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-icon-box.css?v=62456496226758979481739289142" rel="stylesheet" type="text/css" media="all">
+<div timeline="" hdt-reveal="slide-in" class="hdt-icon-box" color-scheme="scheme-5" observed="" animationend="" style="--animation-order: 0;">
+  <hdt-scrollsnap class="hdt-container">
+    <div id="template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d" class="hdt-icon-box__wrapper hdt-s-gradient hdt-section-spacing hdt-rounded hdt-px-15">
+  <div class="hdt-section-head hdt-relative hdt-flex md:hdt-align-center hdt-justify-center hdt-nav_in_content hdt-top-dots_in_content hdt-slider__dots_outline" style="--heading-gap: 29px;"> 
+      <div class="hdt-section-main-heading hdt-flex hdt-flex-col hdt-justify-center hdt-align-center hdt-text-center ">
+        
+          <h3 class="hdt-sec-heading hdt-h4 hdt-flex hdt-align-center" hdt-reveal="slide-in" timeline="" observed="" animationend="" style="--animation-order: 0;">
+            <span>The Birth of Sparsh – A Jewellery Store Like No Other</span>
+            
+          </h3>
+        
+        
+        
+      </div>  
+    
+</div>
+
+<style data-shopify="">
+  #template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d .hdt-section-head{
+    --section-head-spacing:30px;
+  }
+  @media(min-width:768px){
+    #template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d .hdt-section-head{
+      --section-head-spacing:50px;
+    }
+  }
+  @media(min-width:1150px){
+    #template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d .hdt-section-head{
+      --section-head-spacing:74px;
+      }
+  }
+
+</style><div id="Scroller-template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d" class="hdt-icon-box__wrap hdt-icon-box__border-style-none lg:hdt-text-center md:hdt-text-center hdt-text-center hdt-icon-box__icon-circle hdt-icon-box__heading-large hdt-icon-box__spacing-icon-heading-small hdt-icon-box__spacing-heading-content-large hdt-scroll-snap hdt-snap-x md:hdt-justify-center hdt-row-flex lg:hdt-flex-cols-1 md:hdt-flex-cols-2 hdt-flex-cols-1 sm:hdt-snap-flex"><div id="Scroll-icon-box1-template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d" class="hdt-icon-box__item hdt-col hdt-snap-center">
+              <div data-href="" class="hdt-icon-box__inner hdt-block" target="_blank"><div class="hdt-icon-box__content"><div class="hdt-icon-box__description hdt-s-text2 hdt-tag-list"><p>Through sheer perseverance and unwavering faith, Zeba’s dream took its ultimate form—Sparsh, her own jewellery boutique in the heart of London. The name, meaning “touch” in Sanskrit, was a tribute to the emotions her jewellery evoked. Every piece at Sparsh carried a part of her journey, a fragment of her soul, a whisper of the small-town girl who dared to dream.<br><br>Women from all walks of life, from London’s elite to young dreamers like Zeba herself, walked into Sparsh and found something more than just jewellery—they found stories, emotions, and a connection to something deeper.<br><br>As she stood inside her boutique, running her fingers over the delicate designs she once sketched in the dim light of her childhood home, Zeba knew she had made it. But more importantly, she knew she had never lost sight of the little girl who believed that every piece of jewellery speaks a story.<br><br>Today, Sparsh isn’t just a jewellery store; it is a celebration of passion, perseverance, and the unbreakable spirit of a woman who refused to settle for anything less than her dreams.<br><br>And so, every time a woman adorns a piece from Sparsh, she doesn’t just wear jewellery—she wears a piece of Zeba’s heart, her struggles, her triumphs, and the timeless art of storytelling through design.</p></div></div>
+              </div>
+            </div></div><div class="hdt-icon-box__scrollsnap-dots hdt-scrollsnap-dots hdt-text-center hdt-hidden"><button class="hdt-scrollsnap-dot__link hdt-scrollsnap-dot"></button></div></div>
+  </hdt-scrollsnap>
+</div><style data-shopify="">#shopify-section-template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d{--section-pt:60px;--section-pb:100px;--section-prate:30}</style><style> @media (min-width: 1150px) {#shopify-section-template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d .hdt-icon-box__wrapper {padding-inline-start: 90px; padding-inline-end: 90px; } #shopify-section-template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d .hdt-sec-subheading {font-size: var(--text-2xl); } #shopify-section-template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d .hdt-icon-box__wrapper {--section-pt: 109px; --section-pb: 132px; }} #shopify-section-template--23589415911689__f7f3ac60-3246-4e11-b8db-6976b318321d .hdt-container {--rounded: 1rem;} </style></div><section id="shopify-section-template--23589415911689__6da3b683-3a88-416e-8665-c6985933cfaf" class="shopify-section hdt-section hdt-line-section"><!-- sections/custom-line.liquid --><style data-shopify="">#template--23589415911689__6da3b683-3a88-416e-8665-c6985933cfaf .hdt-custom-line{width:100%;border-style:solid;border-top-width:1px;border-color:#ebebeb}</style><div id="template--23589415911689__6da3b683-3a88-416e-8665-c6985933cfaf" class="hdt-section-spacing hdt-s-gradient" style="--section-pt: 0px; --section-pb: 0px; --section-prate:75;">
+  <div class="hdt-container hdt-flex hdt-justify-center">
+    <div class="hdt-custom-line"></div>
+  </div>
+</div>
+
+</section>
+    </main><!-- BEGIN sections: footer-group -->
+<div id="shopify-section-sections--23589416403209__8b1cf2b6-9e6b-4ace-85e5-e52ad96e7b43" class="shopify-section shopify-section-group-footer-group hdt-section-group hdt-footer-section"><!-- sections/footer.liquid -->
+
+<div class="hdt-section-inner hdt-section-sections--23589416403209__8b1cf2b6-9e6b-4ace-85e5-e52ad96e7b43 hdt-footer hdt-s-gradient hdt-section-spacing" color-scheme="scheme-1" style="--spacing_top: 0px; --animation-order: 0;" timeline="" hdt-reveal="fade-in" observed="" animationend="">
+  <div class="hdt-footer-main hdt-border_top-bottom hdt-border_container hdt-relative" style="--padding-t-main:40px; --padding-bt-main:40px;">
+    <div class="hdt-container"><div class="hdt-row-flex lg:hdt-flex-cols-4 hdt-custom_width hdt-footer-collapse-true md:hdt-flex-cols-2 hdt-grid-cols-1 hdt-footer-column hdt-justify-center" style="--spacing-y:0px;--spacing-x:0px;"><div class="hdt-social-media hdt-border-column-false hdt-col-block hdt-col hdt-relative" id="hdt-sections--20958099472688__8b1cf2b6-9e6b-4ace-85e5-e52ad96e7b43-social-1" style="--cus-width:25%;--pd-top: 0;--pd-right: 0;--pd-bottom: 0;--pd-left: 0;"><div class="hdt-collapse-contents"><div class=" hdt-raw-html hdt-s-text2 hdt-text-base  hdt-tag-list"><p>Address: 1234 Fashion Street, Suite 567,</p><p>New York, NY</p><p>Email: <strong>info@fashionshop.com</strong></p><p>Phone: <strong>(212)555-1234</strong></p></div><div class="hdt-footer-button">
+                        <a href="/pages/contact-1" class="hdt-btn hdt-oh hdt-inline-flex hdt-align-center hdt-justify-center hdt-relative hdt-btn-link hdt-font-semibold"><span>Get direction</span>
+                          <svg class="hdt-icon hdt-icon-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 64 64" fill="currentColor"><path d="M6.89,64,0,57.11,47.26,9.85H4.92V0H64V59.08H54.15V16.74Z"></path></svg>
+                        </a>
+                      </div>
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-icon-social.css?v=97746197690081763391739289142" rel="stylesheet" type="text/css" media="all">
+<ul class="hdt-socials__list hdt-socials__style-outline hdt-socials__size-medium"><li class="hdt-socials__item hdt-inline-block">
+          <a href="https://facebook.com/shopify" class="hdt-social-facebook hdt-flex hdt-align-center hdt-justify-center" aria-describedby="a11y-external-message"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg><span class="sr-only">Facebook</span></a>
+        </li><li class="hdt-socials__item hdt-inline-block">
+          <a href="https://twitter.com/shopify" class="hdt-social-twitter hdt-flex hdt-align-center hdt-justify-center" aria-describedby="a11y-external-message"><svg viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg><span class="sr-only">Twitter</span></a>
+        </li><li class="hdt-socials__item hdt-inline-block">
+          <a href="https://www.instagram.com/" class="hdt-social-instagram hdt-flex hdt-align-center hdt-justify-center" aria-describedby="a11y-external-message"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><span class="sr-only">Instagram</span></a>
+        </li><li class="hdt-socials__item hdt-inline-block">
+          <a href="https://tiktok.com/@shopify" class="hdt-social-tiktok hdt-flex hdt-align-center hdt-justify-center" aria-describedby="a11y-external-message"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path></svg><span class="sr-only">TikTok</span></a>
+        </li><li class="hdt-socials__item hdt-inline-block">
+          <a href="https://pinterest.com/shopify" class="hdt-social-pinterest hdt-flex hdt-align-center hdt-justify-center" aria-describedby="a11y-external-message"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"></path></svg><span class="sr-only">Pinterest</span></a>
+        </li></ul></div>
+                </div><div id=" hdt-sections--20958099472688__8b1cf2b6-9e6b-4ace-85e5-e52ad96e7b43-menu-1" class="hdt-footer-menu hdt-border-column-false hdt-col-block hdt-col hdt-relative" style="--cus-width:25%;--pd-top: 0;--pd-right: 0;--pd-bottom: 0;--pd-left: 0;"><div class="hdt-heading-f collapsible hdt-flex hdt-align-center hdt-justify-between">
+                      <h6 class=" hdt-text-xl hdt-s-text hdt-font-medium"> Help</h6>
+                      <span class="hdt-collapse-icon hdt-relative"></span>
+                    </div><ul class="hdt-collapse-content hdt-footer-menu-list"><li> <a href="/search" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Search</a></li><li> <a href="/pages/order-tracking" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Order Tracking</a></li></ul></div><div id=" hdt-sections--20958099472688__8b1cf2b6-9e6b-4ace-85e5-e52ad96e7b43-menu-2" class="hdt-footer-menu hdt-border-column-false hdt-col-block hdt-col hdt-relative" style="--cus-width:25%;--pd-top: 0;--pd-right: 0;--pd-bottom: 0;--pd-left: 0;"><div class="hdt-heading-f collapsible hdt-flex hdt-align-center hdt-justify-between">
+                      <h6 class=" hdt-text-xl hdt-s-text hdt-font-medium"> Useful Links</h6>
+                      <span class="hdt-collapse-icon hdt-relative"></span>
+                    </div><ul class="hdt-collapse-content hdt-footer-menu-list"><li> <a href="/pages/necklace-set" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Necklace Set</a></li><li> <a href="/pages/bangles" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Bangles</a></li><li> <a href="/pages/earrings" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Earrings</a></li><li> <a href="/pages/earrings-and-maang-tikka" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Earrings And Maang Tikka</a></li><li> <a href="/pages/payal" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Payal</a></li><li> <a href="/pages/semi-bridal-set" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Semi Bridal Set</a></li><li> <a href="/pages/bracelet" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Bracelet</a></li><li> <a href="/pages/bridal-set" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Bridal Set</a></li><li> <a href="/pages/jhumka-and-maang-tikka" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Jhumka And Maang Tikka</a></li><li> <a href="/pages/long-rani-haar" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Long Rani Haar</a></li><li> <a href="/pages/hath-panja" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Hath Panja</a></li><li> <a href="/pages/mathapati" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Mathapati</a></li><li> <a href="/pages/passa" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Passa</a></li><li> <a href="/pages/maang-tikka" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Maang Tikka</a></li><li> <a href="/pages/waist-belt" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Waist Belt</a></li><li> <a href="/pages/dulha-mala" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Dulha Mala</a></li><li> <a href="/pages/sheeshful" class="hdt-footer-menu_item hdt-s-text2 hdt-text-base"> Sheeshful</a></li></ul></div><div class="hdt-footer-newsletter hdt-border-column-false hdt-footer-news hdt-col-block hdt-col hdt-relative" id="hdt-sections--20958099472688__8b1cf2b6-9e6b-4ace-85e5-e52ad96e7b43-newsletter-1" style="--cus-width:25%;--pd-top: 0;--pd-right: 0;--pd-bottom: 0;--pd-left: 0;"><div class="hdt-heading-f collapsible hdt-flex hdt-align-center hdt-justify-between">
+                    <h6 class=" hdt-text-xl hdt-s-text hdt-font-medium"> Sign Up for Email</h6>
+                    <span class="hdt-collapse-icon hdt-relative"></span>
+                  </div><div class="hdt-collapse-content"><div class="hdt-s-text2 hdt-text-newsletter hdt-text-base"><p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p></div><div class="hdt-footer-newsletter ">
+<div class="hdt-newsletter-parent hdt-inline-block"><form method="post" action="/contact#hdt-form-sections--20958099472688__8b1cf2b6-9e6b-4ace-85e5-e52ad96e7b43-newsletter-1" id="hdt-form-sections--20958099472688__8b1cf2b6-9e6b-4ace-85e5-e52ad96e7b43-newsletter-1" accept-charset="UTF-8" class="hdt-pr hdt-z-100 hdt-newsletter__form" data-form-mail-agree=""><input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="contact[tags]" value="newsletter">
+    <div class="hdt-newsletter__fields">
+       <div class="hdt-newsletter__inner hdt-flex hdt-oh hdt-justify-center ">
+          <div class=" is--col-email hdt-flex">
+           <input type="email" name="contact[email]" placeholder="Enter email address" value="" class=" hdt-newsletter__email hdt-flex hdt-align-center hdt-input" required="required" fdprocessedid="jazmc">
+         </div>
+          <div class=" is--col-btn hdt-b hdt-flex ">
+            <button data-agreemail-btn="" type="submit" class="hdt-w-100 hdt-newsletter__submit hdt-truncate hdt-btn-loading__svg hdt-flex hdt-align-center hdt-btn hdt-btn-solid hdt-button hdt-font-semibold hdt-oh hdt-relative" fdprocessedid="dw9hpb">
+              <span class="hdt-newsletter__text">Subscribe</span><span class="hdt-loading__spinner hdt-dn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><path d="M0.861539 8L0 7.13846L5.90769 1.23077H0.615385V0H8V7.38462H6.76923V2.09231L0.861539 8Z"></path></svg>
+                </span></button>
+          </div>
+       </div>
+        <div class="hdt-agree_email ">
+          
+        </div>
+    </div>
+    <div data-hdt-response-form="" data-new-response-form="" class="hdt-newsletter__response"></div></form></div>
+</div><div class="hdt-footer-cur hdt-flex"></div></div>
+                </div></div></div>
+  </div>
+  <div class="hdt-footer-bottom">
+    <div class="hdt-container">
+      <div class="hdt-footer-content-bottom">
+        <div class="hdt-row-grid md:hdt-grid-cols-2 hdt-grid-cols-1  hdt-align-center hdt-footer-bt-bar"><div class=" hdt-footer-copyright hdt-flex hdt-flex-col  md:hdt-align-start hdt-align-center hdt-align-start  hdt-s-text2 hdt-text-base">
+              <div class=" hdt-list-toleft hdt-flex hdt-flex-col hdt-text-center md:hdt-text-start"><div class="hdt-coppy-right">© 2025 <span class="">Ecomus</span> . All rights reserved.</div></div></div><div class="hdt-footer-payments hdt-flex hdt-flex-col  md:hdt-align-end hdt-align-center "><div class="hdt-payment-footer-svg hdt-pr hdt-flex lg:hdt-justify-end hdt-justify-center" style="--height-img:30px"><img loading="lazy" class="lazyloadhdt" src="//j02crm-a9.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg" width="" height="" alt="visa"><img loading="lazy" class="lazyloadhdt" src="//j02crm-a9.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/paypal-49e4c1e03244b6d2de0d270ca0d22dd15da6e92cc7266e93eb43762df5aa355d.svg" width="" height="" alt="paypal"><img loading="lazy" class="lazyloadhdt" src="//j02crm-a9.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg" width="" height="" alt="master"><img loading="lazy" class="lazyloadhdt" src="//j02crm-a9.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/american_express-12858714bc10cdf384b62b8f41d20f56d8c32c1b8fed98b662f2bfc158dcbcf0.svg" width="" height="" alt="american express"><img loading="lazy" class="lazyloadhdt" src="//j02crm-a9.myshopify.com/cdn/shopifycloud/shopify/assets/payment_icons/diners_club-16436b9fb6dd9060edb51f1c7c44e23941e544ad798282d6aef1604319562fba.svg" width="" height="" alt="diners club"></div>
+            </div></div>
+      </div>
+    </div>
+  </div>
+</div><link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/newsletter.css?v=159452462977550634021739289142" rel="stylesheet" type="text/css" media="all">
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-icon-social.css?v=97746197690081763391739289142" rel="stylesheet" type="text/css" media="all">
+<style data-shopify="">#shopify-section-sections--23589416403209__8b1cf2b6-9e6b-4ace-85e5-e52ad96e7b43{--section-pt:0px;--section-pb:23px;--section-prate:100}.hdt-footer .hdt-heading-f{--mg-bt-heading:30px}@media(max-width:1150px){.hdt-list-toleft{flex-direction:column}.hdt-list-toleft .hdt-policies li{margin:0}}@media only screen and (max-width :767px){.hdt-footer-collapse-true .hdt-heading-f{cursor:pointer}.hdt-footer-collapse-true .hdt-collapse-icon{margin-inline-end:1rem}.hdt-footer-collapse-true .hdt-heading-f .hdt-collapse-icon:after,.hdt-footer-collapse-true .hdt-heading-f .hdt-collapse-icon:before{position:absolute;content:"";background-color:rgb(var(--color-foreground));transform:translate(-50%,-50%) rotate(-90deg);top:50%;left:50%;transition:transform .25s ease-in-out,opacity .25s ease-in-out,-webkit-transform .25s ease-in-out}.hdt-footer-collapse-true .hdt-heading-f .hdt-collapse-icon:after{width:1px;height:12px}.hdt-footer-collapse-true .hdt-heading-f .hdt-collapse-icon:before{width:12px;height:1px}.hdt-footer-collapse-true .open .hdt-heading-f .hdt-collapse-icon:after{transform:translate(-50%,-50%) rotate(90deg)}.hdt-footer-collapse-true .open .hdt-heading-f .hdt-collapse-icon:before{opacity:0}.hdt-footer-collapse-true .hdt-col-block .hdt-collapse-content{height:0;overflow:hidden;transition:height 0.25s ease-out}.hdt-footer-collapse-true .hdt-col-block.open .hdt-collapse-content{max-height:auto;transition:height 0.25s ease-in-out 0s!important}}@media(min-width:1150px){.hdt-custom_width .hdt-col{flex:0 0 auto;max-width:100%;width:var(--cus-width)}}.hdt-footer-section .hdt-policies{gap:10px} .hdt-footer-payments img{width:var(--width-image_list);}</style>
+</div>
+<!-- END sections: footer-group --><!-- BEGIN sections: system-group -->
+<div id="shopify-section-sections--23589416468745__cart-drawer" class="shopify-section shopify-section-group-system-group hdt-section-group hdt-section-cart-drawer"><!-- sections/cart-drawer.liquid --><link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-cart-drawer.css?v=2887727049149660381739289142" rel="stylesheet" type="text/css" media="all">
+<hdt-cart-drawer detect-adm-se-evt="" id="CartDrawer" section-id="sections--23589416468745__cart-drawer" initial-focus="false" class="hdt-drawer hdt-mini-cart hdt-hidden hdt-right-0" color-scheme="scheme-1" effect="right" role="dialog" aria-modal="true">
+  <h3 slot="header" class="hdt-mini-cart__header-title hdt-text-2xl hdt-font-medium">Shopping cart</h3><div class="hdt-mini-cart__wrap hdt-flex hdt-flex-col">
+    <div class="hdt-mini-cart__main hdt-relative">
+      <div data-hdt-scroll-me="" class="hdt-mini-cart__sroll hdt-current-scrollbar hdt-full-width-link"><div class="hdt-mini-cart__emty hdt-text-center">
+            <h3 class="hdt-mini-cart__emty-heading hdt-text-10xl hdt-font-normal">Your cart is empty</h3>
+            <p class="hdt-s-text2">You may check out all the available products and buy some in the shop</p><a href="/collections/all" class="hdt-mini-cart__emty-button hdt-btn hdt-oh hdt-inline-flex hdt-align-center hdt-justify-center hdt-relative hdt-btn-solid hdt-font-semibold">
+                <span>Return to shop</span><svg class="hdt-icon hdt-icon-2" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 64 64" fill="currentColor"><path d="M6.89,64,0,57.11,47.26,9.85H4.92V0H64V59.08H54.15V16.74Z"></path></svg>
+              </a></div></div>
+    </div><wrapp-hdt-cart-form class="hdt-contents"><form will-change-cart="" action="/cart" id="CartDrawer-Form" method="POST"><input type="hidden" name="attributes[products_items_per_row]" value=""></form></wrapp-hdt-cart-form></div>
+</hdt-cart-drawer>
+<svg class="hdt-hidden">
+  <symbol id="icon-cart-remove" viewBox="0 0 16 16" fill="currentColor">
+    <path d="M15.2 2.4H0.8C0.587827 2.4 0.384344 2.48429 0.234315 2.63431C0.0842854 2.78434 0 2.98783 0 3.2C0 3.41217 0.0842854 3.61566 0.234315 3.76569C0.384344 3.91571 0.587827 4 0.8 4H2.4V13.6C2.4 14.2365 2.65286 14.847 3.10294 15.2971C3.55303 15.7471 4.16348 16 4.8 16H11.2C11.5152 16.0001 11.8273 15.9381 12.1186 15.8175C12.4098 15.697 12.6744 15.5202 12.8973 15.2973C13.1202 15.0744 13.297 14.8098 13.4175 14.5186C13.5381 14.2273 13.6001 13.9152 13.6 13.6V4H15.2C15.4122 4 15.6157 3.91571 15.7657 3.76569C15.9157 3.61566 16 3.41217 16 3.2C16 2.98783 15.9157 2.78434 15.7657 2.63431C15.6157 2.48429 15.4122 2.4 15.2 2.4ZM12 13.6C11.9998 13.8121 11.9154 14.0155 11.7655 14.1655C11.6155 14.3154 11.4121 14.3998 11.2 14.4H4.8C4.58789 14.3998 4.38453 14.3154 4.23455 14.1655C4.08457 14.0155 4.00021 13.8121 4 13.6V4H12V13.6ZM6.4 1.6H9.6C9.81217 1.6 10.0157 1.51571 10.1657 1.36569C10.3157 1.21566 10.4 1.01217 10.4 0.8C10.4 0.587827 10.3157 0.384344 10.1657 0.234315C10.0157 0.0842854 9.81217 0 9.6 0H6.4C6.18783 0 5.98434 0.0842854 5.83431 0.234315C5.68429 0.384344 5.6 0.587827 5.6 0.8C5.6 1.01217 5.68429 1.21566 5.83431 1.36569C5.98434 1.51571 6.18783 1.6 6.4 1.6Z"></path><path d="M7.2 11.2V7.2C7.2 6.98783 7.11571 6.78434 6.96569 6.63432C6.81566 6.48429 6.61217 6.4 6.4 6.4C6.18783 6.4 5.98434 6.48429 5.83431 6.63432C5.68429 6.78434 5.6 6.98783 5.6 7.2V11.2C5.6 11.4122 5.68429 11.6157 5.83431 11.7657C5.98434 11.9157 6.18783 12 6.4 12C6.61217 12 6.81566 11.9157 6.96569 11.7657C7.11571 11.6157 7.2 11.4122 7.2 11.2ZM10.4 11.2V7.2C10.4 6.98783 10.3157 6.78434 10.1657 6.63432C10.0157 6.48429 9.81217 6.4 9.6 6.4C9.38783 6.4 9.18434 6.48429 9.03432 6.63432C8.88429 6.78434 8.8 6.98783 8.8 7.2V11.2C8.8 11.4122 8.88429 11.6157 9.03432 11.7657C9.18434 11.9157 9.38783 12 9.6 12C9.81217 12 10.0157 11.9157 10.1657 11.7657C10.3157 11.6157 10.4 11.4122 10.4 11.2Z"></path>
+  </symbol>
+  <symbol id="icon-cart-edit" viewBox="0 0 14 16" fill="currentColor">
+    <path d="M1.61967 13.4726C1.77963 13.4726 1.81162 13.4566 1.95559 13.4246L4.83487 12.8488C5.13879 12.7688 5.44271 12.6248 5.68265 12.3849L12.6569 5.41065C13.7286 4.33892 13.7286 2.49937 12.6569 1.42764L12.0651 0.803799C10.9933 -0.267933 9.13779 -0.267933 8.06606 0.803799L1.0918 7.79405C0.867858 8.018 0.707898 8.33792 0.627918 8.64184L0.0200697 11.5531C-0.0599103 12.097 0.10005 12.6248 0.483954 13.0087C0.787878 13.3127 1.23577 13.4726 1.61967 13.4726ZM2.16353 8.94576L9.13779 1.95551C9.60167 1.49163 10.4495 1.49163 10.8974 1.95551L11.5052 2.56336C12.0491 3.10722 12.0491 3.87503 11.5052 4.4029L4.54694 11.3932L1.58768 11.889L2.16353 8.94576ZM12.5929 14.4644H0.787878C0.323994 14.4644 0.0200697 14.7683 0.0200697 15.2322C0.0200697 15.6961 0.403974 16 0.787878 16H12.5289C12.9928 16 13.3767 15.6961 13.3767 15.2322C13.3607 14.7683 12.9768 14.4644 12.5929 14.4644Z"></path>
+  </symbol>
+</svg></div><div id="shopify-section-sections--23589416468745__toolbar-mobile" class="shopify-section shopify-section-group-system-group hdt-section-group hdt-section-toolbar-mobile hdt-toolbar-mobile"><!-- sections/toolbar-mobile.liquid --><style>@media(max-width:1024px){.hdt-sticky-btn-atc{bottom:6.7rem;border-bottom:.1rem solid rgb(var(--color-line-border));-webkit-transform:translate3d(0,calc(100% + 6.7rem),0)!important;transform:translate3d(0,calc(100% + 6.7rem),0)!important}.sticky-shown back-to-top.hdt-back-to-top{bottom:calc(8rem + var(--hdt-sticky-atc-height, 0))}}.hdt-toolbar{z-index:24;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;padding:0 5px;box-shadow:0 -4px 10px 0 rgba(0,0,0,.08);transform:none;transition:transform .25s}.hdt-toolbar .hdt-toolbar-item{-ms-flex:1 0 20%;flex:1 0 20%}.hdt-toolbar-item .hdt-toolbar-item-btn{width:100%;padding-right:10px;padding-left:10px;line-height:1;height:67px;gap:9px}.hdt-toolbar-label-false .hdt-toolbar-item .hdt-toolbar-item-btn{height:60px}.hdt-toolbar-item .hdt-toolbar-item-btn::before{background-color:rgb(var(--color-accent));position:absolute;content:``;top:0;left:0;width:0;height:3px;transition:all .3s ease}.hdt-toolbar-item__active>.hdt-toolbar-item-btn::before{width:100%}.hdt-toolbar-item__active .hdt-toolbar-icon{color:rgb(var(--color-accent))}.hdt-toolbar-label{overflow:hidden;text-align:center;text-overflow:ellipsis;white-space:nowrap;line-height:1;width:100%}.hdt-toolbar-icon svg{width:18px;height:18px}.hdt-toolbar__count-box{width:18px;height:18px;line-height:18px;letter-spacing:0;color:#fff;background-color:rgb(var(--color-accent));top:-6px;right:-12px}.hdt-toolbar-item .hdt-toolbar-item-btn img{max-height:18px;width:auto}@media(max-width:1024px){.hdt-toolbar-mobile{height:67px}}@media (min-width:1150px){.hdt-toolbar{display:none!important}}#hdt-shop-toolbar-mb::part(body){padding-top:0;padding-bottom:0}.hdt-back-to-top{--backtop-bottom:90px}</style>
+<div class="hdt-toolbar hdt-s-gradient hdt-toolbar-label-true hdt-fixed hdt-right-0 hdt-left-0 hdt-bottom-0 hdt-flex hdt-align-center hdt-justify-between hdt-text-sm hdt-font-semibold hdt-s-text" color-scheme="scheme-1"><div class="hdt-toolbart-shop hdt-toolbar-item hdt-relative hdt-oh"><a href="/collections/all" class="hdt-toolbar-item-btn hdt-flex hdt-flex hdt-align-center hdt-justify-center hdt-flex-col">
+              <span class="hdt-toolbar-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.39 64.26" width="18" height="18" fill="currentColor"><path d="M45.47,64.26a11.21,11.21,0,0,1-11.2-11.2V45.34a11.21,11.21,0,0,1,11.2-11.2h7.72a11.21,11.21,0,0,1,11.2,11.2v7.72a11.22,11.22,0,0,1-11.2,11.2Zm0-22.53a3.61,3.61,0,0,0-3.61,3.61v7.72a3.61,3.61,0,0,0,3.61,3.6h7.72a3.6,3.6,0,0,0,3.6-3.6V45.34a3.61,3.61,0,0,0-3.6-3.61ZM11.2,64.26A11.22,11.22,0,0,1,0,53.06V45.34a11.21,11.21,0,0,1,11.2-11.2h7.72a11.21,11.21,0,0,1,11.2,11.2v7.72a11.21,11.21,0,0,1-11.2,11.2Zm0-22.53a3.61,3.61,0,0,0-3.61,3.61v7.72a3.61,3.61,0,0,0,3.61,3.6h7.72a3.61,3.61,0,0,0,3.61-3.6V45.34a3.61,3.61,0,0,0-3.61-3.61ZM45.47,30.12a11.21,11.21,0,0,1-11.2-11.2V11.2A11.21,11.21,0,0,1,45.47,0h7.72a11.21,11.21,0,0,1,11.2,11.2v7.72a11.22,11.22,0,0,1-11.2,11.2Zm0-22.53a3.61,3.61,0,0,0-3.61,3.61v7.72a3.61,3.61,0,0,0,3.61,3.61h7.72a3.61,3.61,0,0,0,3.6-3.61V11.2a3.61,3.61,0,0,0-3.6-3.61ZM11.2,30.12A11.22,11.22,0,0,1,0,18.92V11.2A11.21,11.21,0,0,1,11.2,0h7.72a11.21,11.21,0,0,1,11.2,11.2v7.72a11.21,11.21,0,0,1-11.2,11.2Zm0-22.53A3.61,3.61,0,0,0,7.59,11.2v7.72a3.61,3.61,0,0,0,3.61,3.61h7.72a3.61,3.61,0,0,0,3.61-3.61V11.2a3.61,3.61,0,0,0-3.61-3.61Z"></path></svg>
+              </span><span class="hdt-toolbar-label">Shop</span></a></div><div class="hdt-toolbart-filter hdt-toolbar-item hdt-relative hdt-oh hdt-hidden">
+          <a href="/pages/about-us" aria-controls="hdt-filter_form" class="hdt-toolbar-item-btn hdt-flex hdt-align-center hdt-justify-center hdt-flex-col">
+            <span class="hdt-toolbar-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="currentColor"><path d="M10.7489 19C10.5867 19 10.4288 18.9474 10.2989 18.85L7.29893 16.6C7.20579 16.5301 7.13018 16.4395 7.07811 16.3354C7.02604 16.2313 6.99893 16.1164 6.99893 16V11.785L1.73693 5.86524C1.36322 5.44365 1.11922 4.9231 1.03424 4.36616C0.949268 3.80923 1.02694 3.2396 1.25793 2.72575C1.48891 2.21189 1.86338 1.77568 2.33632 1.46954C2.80926 1.16339 3.36055 1.00034 3.92393 0.999988H14.5739C15.1373 1.00065 15.6884 1.16397 16.1612 1.47032C16.6339 1.77667 17.0082 2.21302 17.2389 2.72693C17.4696 3.24084 17.5471 3.81044 17.4619 4.3673C17.3767 4.92415 17.1325 5.44456 16.7587 5.86599L11.4989 11.785V18.25C11.4989 18.4489 11.4199 18.6397 11.2793 18.7803C11.1386 18.921 10.9478 19 10.7489 19ZM8.49893 15.625L9.99893 16.75V11.5C9.99909 11.3164 10.0666 11.1392 10.1887 11.002L15.6397 4.86924C15.8214 4.6638 15.9401 4.41027 15.9813 4.13908C16.0225 3.86789 15.9845 3.59057 15.872 3.34041C15.7595 3.09025 15.5771 2.87788 15.3469 2.7288C15.1166 2.57973 14.8482 2.50028 14.5739 2.49999H3.92393C3.64977 2.5004 3.38155 2.5799 3.15144 2.72894C2.92132 2.87798 2.73909 3.09023 2.62659 3.34025C2.51409 3.59027 2.4761 3.86743 2.51718 4.1385C2.55826 4.40957 2.67666 4.66303 2.85818 4.86849L8.30993 11.002C8.43174 11.1393 8.49899 11.3165 8.49893 11.5V15.625Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7587 5.86599L11.4989 11.785V18.25C11.4989 18.4489 11.4199 18.6397 11.2793 18.7803C11.1386 18.921 10.9478 19 10.7489 19C10.5867 19 10.4288 18.9474 10.2989 18.85L7.29893 16.6C7.20579 16.5301 7.13018 16.4395 7.07811 16.3354C7.02604 16.2313 6.99893 16.1164 6.99893 16V11.785L1.73693 5.86524C1.36322 5.44365 1.11922 4.9231 1.03424 4.36616C0.949268 3.80923 1.02694 3.2396 1.25793 2.72575C1.48891 2.21189 1.86338 1.77568 2.33632 1.46954C2.80926 1.16339 3.36055 1.00034 3.92393 0.999988H14.5739C15.1373 1.00065 15.6884 1.16397 16.1612 1.47032C16.6339 1.77667 17.0082 2.21302 17.2389 2.72693C17.4696 3.24084 17.5471 3.81044 17.4619 4.3673C17.3767 4.92415 17.1325 5.44456 16.7587 5.86599ZM6.79894 11.861L1.58745 5.99811C1.18819 5.54769 0.927318 4.99135 0.836534 4.39633C0.745749 3.80131 0.828733 3.19274 1.07551 2.64375C1.32229 2.09476 1.72236 1.62872 2.22764 1.30164C2.73292 0.974565 3.32191 0.800368 3.92381 0.799988L14.5739 0.799988C15.1758 0.800694 15.7649 0.97518 16.2699 1.30248C16.775 1.62977 17.1748 2.09596 17.4213 2.64501C17.6679 3.19406 17.7506 3.80261 17.6596 4.39754C17.5686 4.99247 17.3077 5.54846 16.9083 5.99871L11.6989 11.861V18.25C11.6989 18.5019 11.5988 18.7436 11.4207 18.9217C11.2425 19.0999 11.0009 19.2 10.7489 19.2C10.5434 19.2 10.3434 19.1333 10.1789 19.01L7.17894 16.76C7.06095 16.6715 6.96519 16.5568 6.89923 16.4248C6.83327 16.2929 6.79894 16.1475 6.79894 16V11.861ZM8.30993 11.002C8.43174 11.1393 8.49899 11.3165 8.49893 11.5V15.625L9.99893 16.75V11.5C9.99909 11.3164 10.0666 11.1392 10.1887 11.002L15.6397 4.86924C15.8214 4.6638 15.9401 4.41027 15.9813 4.13908C16.0225 3.86789 15.9845 3.59057 15.872 3.34041C15.7595 3.09025 15.5771 2.87788 15.3469 2.7288C15.1166 2.57973 14.8482 2.50028 14.5739 2.49999H3.92393C3.64977 2.5004 3.38155 2.5799 3.15144 2.72894C2.92132 2.87798 2.73909 3.09023 2.62659 3.34025C2.51409 3.59027 2.4761 3.86743 2.51718 4.1385C2.55826 4.40957 2.67666 4.66303 2.85818 4.86849L8.30993 11.002ZM3.00807 4.73607L8.45942 10.8691C8.6137 11.043 8.69899 11.2675 8.69894 11.5V15.525L9.79894 16.35V11.5C9.79913 11.2674 9.88462 11.0429 10.0392 10.8691L15.4899 4.73671C15.6461 4.56012 15.7481 4.34211 15.7835 4.10903C15.819 3.8759 15.7864 3.6375 15.6896 3.42245C15.5929 3.2074 15.4361 3.02484 15.2382 2.89669C15.0403 2.76856 14.8096 2.70026 14.5738 2.69999H3.92409M3.00807 4.73607C2.85213 4.55948 2.75022 4.34146 2.71492 4.10853C2.67961 3.87551 2.71227 3.63725 2.80898 3.42232C2.90569 3.20739 3.06235 3.02493 3.26016 2.8968C3.45794 2.76871 3.92409 2.69999 3.92409 2.69999"></path></svg>
+            </span><span class="hdt-toolbar-label">Filter</span></a>
+        </div><div class="hdt-toolbart-search hdt-toolbar-item hdt-relative hdt-oh">
+          <a href="/search" class="hdt-toolbar-item-btn hdt-flex hdt-align-center hdt-justify-center hdt-flex-col" aria-controls="drawer-search-form">
+            <span class="hdt-toolbar-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                <path d="M17.7241 16.1932L13.6436 12.1127C14.626 10.8049 15.1563 9.21299 15.1546 7.57728C15.1546 3.39919 11.7554 0 7.57728 0C3.39919 0 0 3.39919 0 7.57728C0 11.7554 3.39919 15.1546 7.57728 15.1546C9.21299 15.1563 10.8049 14.626 12.1127 13.6436L16.1932 17.7241C16.3998 17.9088 16.6692 18.0073 16.9461 17.9996C17.2231 17.9918 17.4865 17.8783 17.6824 17.6824C17.8783 17.4865 17.9918 17.2231 17.9996 16.9461C18.0073 16.6692 17.9088 16.3998 17.7241 16.1932ZM2.16494 7.57728C2.16494 6.50682 2.48237 5.4604 3.07708 4.57034C3.6718 3.68029 4.51709 2.98657 5.50607 2.57693C6.49504 2.16728 7.58328 2.0601 8.63318 2.26893C9.68307 2.47777 10.6475 2.99325 11.4044 3.75018C12.1613 4.5071 12.6768 5.47149 12.8856 6.52138C13.0945 7.57128 12.9873 8.65952 12.5776 9.64849C12.168 10.6375 11.4743 11.4828 10.5842 12.0775C9.69416 12.6722 8.64774 12.9896 7.57728 12.9896C6.14237 12.9879 4.76672 12.4171 3.75208 11.4025C2.73744 10.3878 2.16666 9.01219 2.16494 7.57728Z"></path>
+              </svg>
+            </span><span class="hdt-toolbar-label">Search</span></a>
+        </div><div class="hdt-toolbart-account hdt-toolbar-item hdt-relative hdt-oh">
+          <a href="/account" data-no-instant="" class="hdt-toolbar-item-btn hdt-flex hdt-align-center hdt-justify-center hdt-flex-col" aria-controls="login-form-popup">
+            <span class="hdt-toolbar-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="18" height="18" fill="currentColor"><path d="M56,64V57.48A8.43,8.43,0,0,0,47.56,49H16.44A8.43,8.43,0,0,0,8,57.48V64H.9V57.48A15.53,15.53,0,0,1,16.44,41.94H47.56A15.53,15.53,0,0,1,63.1,57.48V64Zm-23.47-27a18.66,18.66,0,0,1-13.11-5.43,18.54,18.54,0,0,1,0-26.22A18.53,18.53,0,0,1,51.07,18.51,18.52,18.52,0,0,1,32.54,37.05Zm0-30a11.44,11.44,0,1,0,8.09,3.35A11.36,11.36,0,0,0,32.54,7.07Z"></path></svg>
+            </span><span class="hdt-toolbar-label">Account</span></a>
+        </div><div class="hdt-toolbart-wishlist hdt-toolbar-item hdt-relative hdt-oh">
+          <hdt-wishlist-a class="hdt-contents">
+          <a href="/search/?view=wishlist" class="hdt-toolbar-item-btn hdt-flex hdt-align-center hdt-justify-center hdt-flex-col">
+            <span class="hdt-toolbar-icon hdt-relative">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="18" height="18" fill="currentColor"><path d="M32.32,52.4l-.32.32-.35-.32C16.45,38.61,6.4,29.49,6.4,20.24A10.94,10.94,0,0,1,17.6,9,12.55,12.55,0,0,1,29,16.59h6A12.55,12.55,0,0,1,46.4,9a10.94,10.94,0,0,1,11.2,11.2C57.6,29.49,47.55,38.61,32.32,52.4ZM46.4,2.64A19.23,19.23,0,0,0,32,9.3,19.23,19.23,0,0,0,17.6,2.64,17.41,17.41,0,0,0,0,20.24c0,12.06,10.88,22,27.36,36.9L32,61.36l4.64-4.22C53.12,42.19,64,32.3,64,20.24A17.41,17.41,0,0,0,46.4,2.64Z"></path></svg>
+              <hdt-wishlist-count class="hdt-toolbar__count-box hdt-absolute hdt-absolute hdt-rounded-full hdt-text-center hdt-text-xs hdt-font-medium">0</hdt-wishlist-count>
+            </span><span class="hdt-toolbar-label">Wishlist</span></a>
+         </hdt-wishlist-a>
+        </div><div class="hdt-toolbart-cart hdt-toolbar-item hdt-relative hdt-oh">
+          <a href="/cart" class="hdt-toolbar-item-btn hdt-flex hdt-align-center hdt-justify-center hdt-flex-col" aria-controls="CartDrawer">
+            <span class="hdt-toolbar-icon hdt-relative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="currentColor"><path d="M16.3028 19H1.90281C1.66412 19 1.4352 18.9052 1.26642 18.7364C1.09763 18.5676 1.00281 18.3387 1.00281 18.1V1.9C1.00281 1.66131 1.09763 1.43239 1.26642 1.26361C1.4352 1.09483 1.66412 1 1.90281 1H16.3028C16.5415 1 16.7704 1.09483 16.9392 1.26361C17.108 1.43239 17.2028 1.66131 17.2028 1.9V18.1C17.2028 18.3387 17.108 18.5676 16.9392 18.7364C16.7704 18.9052 16.5415 19 16.3028 19ZM15.4028 17.2V2.8H2.80281V17.2H15.4028ZM6.40281 4.6V6.4C6.40281 7.11609 6.68728 7.80285 7.19362 8.30919C7.69997 8.81554 8.38673 9.1 9.10281 9.1C9.8189 9.1 10.5057 8.81554 11.012 8.30919C11.5183 7.80285 11.8028 7.11609 11.8028 6.4V4.6H13.6028V6.4C13.6028 7.59348 13.1287 8.73807 12.2848 9.58199C11.4409 10.4259 10.2963 10.9 9.10281 10.9C7.90934 10.9 6.76475 10.4259 5.92083 9.58199C5.07692 8.73807 4.60281 7.59348 4.60281 6.4V4.6H6.40281Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.52281 4.48V6.4C6.52281 7.08426 6.79463 7.7405 7.27848 8.22434C7.76232 8.70818 8.41855 8.98 9.10281 8.98C9.78707 8.98 10.4433 8.70818 10.9271 8.22434C11.411 7.7405 11.6828 7.08426 11.6828 6.4V4.48H13.7228V6.4C13.7228 7.6253 13.2361 8.80042 12.3696 9.66684C11.5032 10.5333 10.3281 11.02 9.10281 11.02C7.87751 11.02 6.7024 10.5333 5.83598 9.66684C4.96956 8.80042 4.48281 7.6253 4.48281 6.4V4.48H6.52281ZM16.3028 19.12H1.90281C1.63229 19.12 1.37285 19.0125 1.18156 18.8213C0.990276 18.63 0.882812 18.3705 0.882812 18.1V1.9C0.882812 1.62948 0.990276 1.37004 1.18156 1.17876C1.37285 0.987469 1.63229 0.880005 1.90281 0.880005H16.3028C16.5733 0.880005 16.8328 0.987469 17.0241 1.17876C17.2154 1.37004 17.3228 1.62948 17.3228 1.9V18.1C17.3228 18.3705 17.2154 18.63 17.0241 18.8213C16.8328 19.0125 16.5733 19.12 16.3028 19.12ZM15.4028 2.8V17.2H2.80281V2.8H15.4028ZM2.92281 2.92V17.08H15.2828V2.92H2.92281ZM1.90281 19H16.3028C16.5415 19 16.7704 18.9052 16.9392 18.7364C17.108 18.5676 17.2028 18.3387 17.2028 18.1V1.9C17.2028 1.66131 17.108 1.43239 16.9392 1.26361C16.7704 1.09483 16.5415 1 16.3028 1H1.90281C1.66412 1 1.4352 1.09483 1.26642 1.26361C1.09763 1.43239 1.00281 1.66131 1.00281 1.9V18.1C1.00281 18.3387 1.09763 18.5676 1.26642 18.7364C1.4352 18.9052 1.66412 19 1.90281 19ZM6.40281 4.6H4.60281V6.4C4.60281 7.59348 5.07692 8.73807 5.92083 9.58199C6.76475 10.4259 7.90934 10.9 9.10281 10.9C10.2963 10.9 11.4409 10.4259 12.2848 9.58199C13.1287 8.73807 13.6028 7.59348 13.6028 6.4V4.6H11.8028V6.4C11.8028 7.11609 11.5183 7.80285 11.012 8.30919C10.5057 8.81554 9.8189 9.1 9.10281 9.1C8.38673 9.1 7.69997 8.81554 7.19362 8.30919C6.68728 7.80285 6.40281 7.11609 6.40281 6.4V4.6Z"></path></svg>
+              <hdt-cart-count class="hdt-toolbar__count-box hdt-absolute hdt-absolute hdt-rounded-full hdt-text-center hdt-text-xs hdt-font-medium">0</hdt-cart-count>
+            </span><span class="hdt-toolbar-label">Cart</span></a>
+        </div></div>
+
+
+</div><div id="shopify-section-sections--23589416468745__065b2487-37b3-4771-810e-b88870b5b74f" class="shopify-section shopify-section-group-system-group hdt-section-admn2-fixed"><style data-shopify="">@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}.hdt-back-to-top{right:40px;bottom:var(--backtop-bottom,55px);cursor:pointer;z-index:100;pointer-events:none;opacity:0;visibility:hidden;transition:.25s;position:fixed;z-index:100;transition:0.4s ease 0s;width:40px;height:40px;text-align:center;line-height:40px;font-size:35px;border-radius:var(--backtop-radius);background:#fff;color:rgb(var(--color-accent)/0.5);display:inline-flex;align-items:center;justify-content:center;pointer-events:auto;transition:opacity .4s ease,visibility .4s ease,margin-right 0s,border-color .25s ease-in,color .25s ease-in;box-shadow:0 0 3px 0 rgb(var(--color-accent)/0.2);--backtop-radius:var(--rounded-button)}:is(.hdt-modal-opened,.is--opend-drawer) .hdt-back-to-top{margin-right:var(--scroll-w)}.hdt-back-to-top.is--show{opacity:1;visibility:visible;z-index:21}.hdt-back-to-top svg{width:12px}.hdt-back-to-top.hdt-back-to-top__design2{line-height:42px;border:1px solid rgb(var(--color-accent)/0.5);box-shadow:none;--backtop-radius:var(--rounded-full);color:rgb(var(--color-accent)/0.5)}.hdt-back-to-top:hover,.hdt-back-to-top.hdt-back-to-top__design2:hover{border-color:rgb(var(--color-accent));color:rgb(var(--color-accent))}.hdt-back-to-top .hdt-circle--inner{display:flex;align-items:center;justify-content:center}.hdt-back-to-top .hdt-circle-css{position:absolute;width:100%;height:100%;border-radius:var(--backtop-radius)}.hdt-back-to-top.hdt-back-to-top__design1 .hdt-circle--inner,.hdt-back-to-top.hdt-back-to-top__design1 .hdt-circle--bg{--backtop-radius:var(--rounded-button)}.hdt-back-to-top.hdt-back-to-top__design2 .hdt-circle-css{--backtop-radius:var(--rounded-full)}.hdt-back-to-top.hdt-progress_bar_true,.hdt-back-to-top.hdt-progress_bar_true:hover{border:none;box-shadow:none;color:var(--cricle-active)}.hdtp-hover .hdt-back-to-top.hdt-progress_bar_true:hover svg{-webkit-animation:move_on_top .5s ease-in-out forwards;animation:move_on_top .5s ease-in-out forwards}@keyframes move_on_top{0%{transform:translateY(0%)}25%{opacity:0;transform:translateY(-100%)}50%{opacity:0;transform:translateY(100%)}75%{opacity:1;transform:translateY(0%)}}@media(max-width:1024px){.hdt-back-to-top{right:15px}.hdt-back-to-top span{width:40px;height:40px;text-align:center;line-height:40px}}.sticky-is--active .hdt-back-to-top{bottom:calc(10px + var(--stickyATC-height, 45px))}.hdt-circle-css{position:relative;width:100px;height:100px;display:flex;justify-content:center;align-items:center;--border-minus:calc(var(--border-w, 1px) * 2);--hdt-light-color:#fff}.hdt-circle--inner{width:calc(100% - var(--border-minus));height:calc(100% - var(--border-minus));background:var(--hdt-light-color);position:relative;z-index:2;border-radius:var(--backtop-radius)}.hdt-circle--bg{position:absolute;z-index:1;width:100%;height:100%;border-radius:var(--backtop-radius);background:conic-gradient(var(--cricle-active,#000) var(--cricle-degrees),var(--cricle-normal,#eee) var(--cricle-degrees));mask:radial-gradient(circle,transparent 62%,white calc(62% + 1px));-webkit-mask:radial-gradient(circle,transparent 62%,white calc(62% + 1px));will-change:background;transition:background .15s ease-in-out 0s}@media (max-width:767px){.hdt-back-to-top{width:32px;height:32px}}.sticky-shown .hdt-back-to-top{bottom:calc(1rem + var(--hdt-sticky-atc-height, 3rem))}</style>
+<back-to-top config="{&quot;hiddenMobile&quot;: false,&quot;scrollTop&quot;: 100 }" class="hdt-back-to-top hdt-back-to-top__design1 hdt-pf hdt-progress_bar_true hdt-op-0 is--show" rel="nofollow" href="#" aria-label="Back to the top" style="--border-w:1px;--cricle-normal:#f5f5f5;--cricle-active:#000000;"><div class="hdt-circle-css" style="--border-w: 1px; --cricle-degrees: 40.573688423074884deg;">
+      <div class="hdt-circle--inner">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="9.98 12.06 12.05 6.79" width="14" height="14"><path d="M16.767 12.809l-0.754-0.754-6.035 6.035 0.754 0.754 5.281-5.281 5.256 5.256 0.754-0.754-3.013-3.013z" fill="currentColor"></path></svg>
+      </div>
+      <div class="hdt-circle--bg"></div>
+    </div></back-to-top></div><div id="shopify-section-sections--23589416468745__exit_popup_MMerM4" class="shopify-section shopify-section-group-system-group hdt-section-admn2-fixed sys-exit"><!-- section/exit-popup.liquid -->
+
+</div>
+<!-- END sections: system-group --><!-- snippets/compare-offcanvas.liquid -->
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-compare.css?v=122473356326263841231739289142" rel="stylesheet" media="all" onload="this.media=`all`">
+<hdt-drawer id="drawerCompare" class="hdt-drawer hdt-hidden hdt-bottom-0 hdt-left-0 hdt-right-0" effect="bottom" color-scheme="scheme-1" role="dialog" aria-modal="true">
+  <h3 slot="header" class="hdt-hidden"></h3>
+  <div class="hdt-container">
+    <div class="hdt-compare-list hdt-flex hdt-align-center">
+      <div slot="header" class="hdt-compare-head hdt-flex hdt-align-center">
+        <h3 class="hdt-compare-head__title">Compare Products</h3>
+      </div>
+      <offcanvas-compare class="hdt-compare-offcanvas hdt-compare-products hdt-flex hdt-current-scrollbar hdt-ratio--adapt_image"></offcanvas-compare>
+      <div class="hdt-compare-buttons hdt-flex hdt-align-center">
+        <div class="hdt-compare-buttons-wrap">
+          <hdt-compare-a class="hdt-contents"><a href="/search/?view=compare" class="hdt-compapre-button__view-page hdt-btn hdt-text-base hdt-oh hdt-inline-flex hdt-align-center hdt-justify-center hdt-relative hdt-btn-solid hdt-font-semibold">Compare</a></hdt-compare-a>
+          <div class="hdt-compapre-button__clear-all">
+            <hdt-clear-all role="button" class="hdt-btn hdt-text-base hdt-oh hdt-inline-flex hdt-align-center hdt-justify-center hdt-relative hdt-btn-link hdt-font-semibold" of-fn="compare">Clear All</hdt-clear-all>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</hdt-drawer><ul hidden="">
+  <li id="a11y-refresh-page-message">Choosing a selection results in a full page refresh.</li>
+  <li id="a11y-new-window-message">Opens in a new tab.</li>
+  <li id="a11y-external-message">Opens external website.</li>
+  <li id="a11y-new-window-external-message">Opens external website in a new window.</li>
+</ul>
+
+<script>
+  window.themeHDN.routes = {
+    search_url: "/search",
+    predictive_search_url: `/search/suggest`
+  };
+  window.themeHDN.extras = {
+    addToCart: `Add to cart`,
+    soldOut: `Sold out`,
+    preOrder: `Pre-order`,
+    unavailable: `Unavailable`,
+    savePercent: `-[sale]%`,
+    quantity: {
+      increment: `Increments of 1904`,
+      min: `Minimum of 1904`,
+      max: `Maximum of 1904`
+    },
+    pswp: {
+      close: `Close`,
+      zoom: `Zoom`,
+      prev: `Previous`,
+      next: `Next`,
+      errorMsg: `The image cannot be loaded`
+    },
+    exit_popup:{
+      copy: `Copy`,
+      copied: `Copied`
+    },
+    timezone: "shop",
+    order: {
+      dayNames  : "Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday",
+      monthNames: "January,February,March,April,May,June,July,August,September,October,November,December"
+    },
+    AddedWishlistRemove: true,
+    text_wis_add: `Add to Wishlist`,
+    text_wis_adding: `Adding to Wishlist`,
+    text_wis_added: `Browse Wishlist`,
+    text_wis_remove: `Remove Wishlist`,
+    enableComparePopup:true,
+    text_cp_add: `Add to Compare`,
+    text_cp_added: `Browse Compare`,
+   icon_cp_add: `
+      <svg height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false" class="hdt-svg-cp">
+        <use xlink:href="#hdt-icon-cp"></use>
+      </svg>
+    `,
+    icon_cp_added: `
+      <svg width="18" height="18" aria-hidden="true" focusable="false" class="hdt-svg-cp is-ic--added" viewBox="0 0 16 12">
+        <use xlink:href="#hdt-icon-cp-added"></use>
+      </svg>
+    `,
+    icon_wis_add: `
+      <svg width="18" height="18" aria-hidden="true" focusable="false" class="hdt-svg-wis" viewBox="0 0 64 64">
+        <use xlink:href="#hdt-icon-wis"></use>
+      </svg>
+    `,
+    icon_wis_added: `
+      <svg width="18" height="18" aria-hidden="true" focusable="false" class="hdt-svg-wis is-ic--added" viewBox="0 0 64 64">
+        <use xlink:href="#hdt-icon-wis-added"></use>
+      </svg>
+    `,
+    icon_wis_remove: `
+      <svg class="hdt-svg-wis is-ic--remove" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M1.6 4.8H14.4V15.2C14.4 15.4122 14.3157 15.6157 14.1657 15.7657C14.0157 15.9157 13.8122 16 13.6 16H2.4C2.18783 16 1.98434 15.9157 1.83431 15.7657C1.68429 15.6157 1.6 15.4122 1.6 15.2V4.8ZM3.2 6.4V14.4H12.8V6.4H3.2ZM5.6 8H7.2V12.8H5.6V8ZM8.8 8H10.4V12.8H8.8V8ZM4 2.4V0.8C4 0.587827 4.08429 0.384344 4.23431 0.234315C4.38434 0.0842854 4.58783 0 4.8 0H11.2C11.4122 0 11.6157 0.0842854 11.7657 0.234315C11.9157 0.384344 12 0.587827 12 0.8V2.4H16V4H0V2.4H4ZM5.6 1.6V2.4H10.4V1.6H5.6Z" fill="currentColor"/>
+      </svg>
+    `
+  };
+</script>
+
+<link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-search-form.css?v=56705286784049309541739289142" rel="stylesheet" type="text/css" media="all">
+
+	<hdt-predictive-search data-section-id-results="hdt_predictive-search" id="drawer-search-form" class="hdt-drawer with-slot-sticky hdt-drawer-search hdt-hidden hdt-fixed hdt-search-fullwidth hdt-top-0 hdt-left-0 hdt-right-0" effect="right" effect-lg="top" color-scheme="scheme-2" role="dialog" aria-modal="true">
+		<div slot="header" class="hdt-search-head lg:hdt-text-center">
+			<h5 class="hdt-font-medium hdt-font-medium">Search our site</h5>
+		</div>
+		<div slot="sticky" class="hdt-search-sticky lg:hdt-text-center">
+			<div class="hdt-container">
+				<form data-frm-search="" action="/search" method="get" class="hdt-mini-search__frm hdt-pr" role="search">
+          <input type="hidden" name="resources[options][fields]" value="title,product_type,variants.title,vendor,variants.sku,tag">
+					<input type="hidden" name="resources[limit_scope]" value="each">
+					<div class="hdt-search-inner hdt-relative hdt-oh">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="hdt-absolute hdt-top-0 hdt-bottom-0">
+							<path d="M15.7548 14.394L12.1277 10.7669C13.0009 9.60434 13.4723 8.18932 13.4707 6.73536C13.4707 3.02151 10.4492 0 6.73536 0C3.02151 0 0 3.02151 0 6.73536C0 10.4492 3.02151 13.4707 6.73536 13.4707C8.18932 13.4723 9.60434 13.0009 10.7669 12.1277L14.394 15.7548C14.5776 15.9189 14.8171 16.0065 15.0632 15.9996C15.3094 15.9927 15.5436 15.8919 15.7177 15.7177C15.8919 15.5436 15.9927 15.3094 15.9996 15.0632C16.0065 14.8171 15.9189 14.5776 15.7548 14.394ZM1.92439 6.73536C1.92439 5.78384 2.20655 4.85369 2.73518 4.06253C3.26382 3.27137 4.01519 2.65473 4.89428 2.2906C5.77337 1.92647 6.7407 1.8312 7.67393 2.01683C8.60717 2.20246 9.4644 2.66066 10.1372 3.33349C10.8101 4.00632 11.2683 4.86355 11.4539 5.79679C11.6395 6.73002 11.5442 7.69735 11.1801 8.57644C10.816 9.45553 10.1994 10.2069 9.40819 10.7355C8.61703 11.2642 7.68688 11.5463 6.73536 11.5463C5.45988 11.5448 4.23708 11.0374 3.33518 10.1355C2.43328 9.23364 1.92592 8.01084 1.92439 6.73536Z" fill="currentColor"></path>
+						</svg>
+						<input data-input-search="" class="hdt-input hdt-search-input hdt-text-base hdt-font-normal stop-mega-menu-reinit" autocomplete="off" type="search" name="q" placeholder="Search" value="">
+						<button data-submit-search="" class="hdt-hidden hdt-mini-search__submit" type="submit">
+							<svg class="hdt-btn-op0" viewBox="0 0 18 19" width="16"><use href="#hdt-icon-search"></use></svg>
+							<div class="hdt-loading__spinner hdt-hidden">
+								<svg width="16" height="16" aria-hidden="true" focusable="false" role="presentation" class="hdt-svg__spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="hdt-path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg>
 							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-12">
-						<div class="about-img overlay">
-							{{-- <div class="button">
-								<a href="https://www.youtube.com/watch?v=nh2aYrGMrIE" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
-							</div> --}}
-							<img src="@foreach($settings as $data) {{$data->photo}} @endforeach" alt="@foreach($settings as $data) {{$data->photo}} @endforeach">
-						</div>
-					</div>
-				</div>
-			</div>
-	</section> -->
-	<!-- End About Us -->
-
-
-	    <!-- subbanner sec start -->
-		<section class="subbanner-sec sectionpadding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading">
-                        <h3 class="mb-3">Why Melody Brush</h3>
-                        <p class="mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type </p>
-                        <p class="mb-3">specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versio</p>
-                        <p class="mb-3">ns of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- subbanner sec end -->
-
-
-    <!-- about sec start -->
-    <section class="about-sec sectionpadding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="about-img">
-                        <img src="images/product-img.png" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="about-content">
-                        <h3 class="mb-4">About The Artist</h3>
-                        <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                        <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknowLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
-                        <p>industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="about-revers">
-                <div class="col-lg-7">
-                    <div class="about-img" id="about-img1">
-                        <img src="images/frame.png">
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="about-content">
-                        <h3 class="mb-4">About The Brand</h3>
-                        <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                        <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknowLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
-                        <p>industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                    </div>
-                </div>                
-            </div>
-        </div>
-    </section>
-    <!-- about sec end -->
-
-   <!-- second about sec start -->
-   <section class="snd-about-sec sectionhalf">
-       <div class="container">
-           <div class="row">
-               <div class="col-lg-12">
-                   <div class="snd-about-content">
-                       <h3 class="mb-4">Purpose of Melody Brush</h3>
-                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus P</p>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
-   <!-- second about sec end -->
-
-
-   <!-- third about sec start -->
-   <section class="snd-about-sec sectionhalf">
-       <div class="container">
-           <div class="row">
-               <div class="col-lg-12">
-                   <div class="snd-about-content">
-                       <h3 class="mb-4">About The Scholarship</h3>
-                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus P</p>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
-   <!-- third about sec end -->
-	<!-- Start Shop Services Area -->
-	<section class="shop-services section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-rocket"></i>
-						<h4>Free shiping</h4>
-						<p>Orders over $100</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-reload"></i>
-						<h4>Free Return</h4>
-						<p>Within 30 days returns</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-lock"></i>
-						<h4>Sucure Payment</h4>
-						<p>100% secure payment</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-tag"></i>
-						<h4>Best Peice</h4>
-						<p>Guaranteed price</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
+						</button>
+					</div><div data-listsuggest-search="" data-listkey="" class="hdt-mini-search__keys"></div>
+				</form>
 			</div>
 		</div>
-	</section>
-	<!-- End Shop Services Area -->
-
-	@include('frontend.layouts.newsletter')
-@endsection
+		<div class="hdt-container">
+			<div class="hdt-cart-hide-has-results">
+				<div class="hdt-search-parent lg:hdt-flex">
+					
+					<div class="hdt-col-content hdt-custom-col-12">
+						<div class="hdt-search-hidden-inner"></div>
+					</div>
+				</div>
+			</div>
+			<div class="hdt-cart-show-has-results">
+				<div data-skeleton-search="" class="hdt-skeleton_wrap hdt-hidden">
+					<div class="hdt-row-grid hdt-row-products xl:hdt-grid-cols-4 lg:hdt-grid-cols-4 hdt-grid-cols-1 hdt-text-start"><div class="hdt-product hdt-pr-loop">
+						    <div class="hdt-card-product__wrapper hdt-flex ">
+						      <div class="hdt-skeleton_img"></div>
+						      <div class="hdt-card-product__info">
+						        <div class="hdt-skeleton_txt1"></div>
+										<div class="hdt-skeleton_txt2"></div>
+						      </div>
+						    </div>
+						  </div><div class="hdt-product hdt-pr-loop">
+						    <div class="hdt-card-product__wrapper hdt-flex ">
+						      <div class="hdt-skeleton_img"></div>
+						      <div class="hdt-card-product__info">
+						        <div class="hdt-skeleton_txt1"></div>
+										<div class="hdt-skeleton_txt2"></div>
+						      </div>
+						    </div>
+						  </div><div class="hdt-product hdt-pr-loop">
+						    <div class="hdt-card-product__wrapper hdt-flex ">
+						      <div class="hdt-skeleton_img"></div>
+						      <div class="hdt-card-product__info">
+						        <div class="hdt-skeleton_txt1"></div>
+										<div class="hdt-skeleton_txt2"></div>
+						      </div>
+						    </div>
+						  </div><div class="hdt-product hdt-pr-loop">
+						    <div class="hdt-card-product__wrapper hdt-flex ">
+						      <div class="hdt-skeleton_img"></div>
+						      <div class="hdt-card-product__info">
+						        <div class="hdt-skeleton_txt1"></div>
+										<div class="hdt-skeleton_txt2"></div>
+						      </div>
+						    </div>
+						  </div></div>
+				</div>
+				<hdt-scrollsnap data-results-search="" class="hdt-mini-search__content hdt-ratio--custom-pr hdt-object-cover hdt-text-center"></hdt-scrollsnap>
+			</div>
+		</div>
+	</hdt-predictive-search><link href="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/hdt-customer.css?v=100990331402337340931739289142" rel="stylesheet" type="text/css" media="all">
+<hdt-modal id="login-form-popup" class="hdt-modal-customer hdt-modal hdt-hidden" color-scheme="scheme-1" role="dialog" aria-modal="true">
+  <h3 slot="header" id="recover-modal" class="hdt-s-text hdt-text-10xl hdt-font-normal">Reset your password</h3>
+  <div class="hdt-customer hdt-login-form"><form method="post" action="/account/recover" id="recover-customer-password-modal-0" accept-charset="UTF-8"><input type="hidden" name="form_type" value="recover_customer_password"><input type="hidden" name="utf8" value="✓"><div class="hdt-field hdt-relative">
+        <p>Sign up for early Sale access plus tailored new arrivals, trends and promotions. To opt out, click unsubscribe in our emails</p>
+      </div>
+      <div class="hdt-field hdt-relative">
+        <input class="hdt-input" type="email" name="email" id="RecoverEmail-recover-customer-password-modal-0" autocomplete="email" autocorrect="off" autocapitalize="off" placeholder="Email">
+        <label for="RecoverEmail-recover-customer-password-modal-0" class="hdt-absolute hdt-top-0 hdt-pe-none hdt-flex hdt-align-center">Email<span class="hdt-required hdt-s-text">*</span></label>
+      </div>
+      <div class="hdt-field">
+        <a href="#login-modal" class="hdt-inline-block hdt-link-cancel hdt-s-text2">Cancel</a>
+      </div>
+      <div class="hdt-field hdt-field-mb0 hdt-row-grid hdt-grid-cols-1">
+        <button class="hdt-inline-flex hdt-align-center hdt-justify-center hdt-relative hdt-btn hdt-oh hdt-btn-solid hdt-font-semibold"><span class="hdt-truncate">Reset password</span></button>
+      </div></form></div>
+  <h3 slot="header" id="login-modal" class="hdt-s-text hdt-text-10xl hdt-font-normal">Log in</h3>
+  <div class="hdt-customer hdt-login-form"><form method="post" action="/account/login" id="customer-login-modal-0" accept-charset="UTF-8" data-login-with-shop-sign-in="true" novalidate="novalidate"><input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓"><div class="hdt-field hdt-relative">
+        <input class="hdt-input" type="email" name="customer[email]" id="CustomerEmail-customer-login-modal-0" autocomplete="email" autocorrect="off" autocapitalize="off" placeholder="Email">
+        <label for="CustomerEmail-customer-login-modal-0" class="hdt-absolute hdt-top-0 hdt-pe-none hdt-flex hdt-align-center">Email<span class="hdt-required hdt-s-text">*</span></label>
+      </div><div class="hdt-field hdt-relative">
+          <input class="hdt-input" type="password" value="" name="customer[password]" id="CustomerPassword-customer-login-modal-0" autocomplete="current-password" placeholder="Password">
+          <label for="CustomerPassword-customer-login-modal-0" class="hdt-absolute hdt-top-0 hdt-pe-none hdt-flex hdt-align-center">Password<span class="hdt-required hdt-s-text">*</span></label>
+        </div><div class="hdt-field">
+        <a href="#recover-modal" class="hdt-inline-block hdt-link-recover hdt-s-text2">Forgot your password?</a>
+      </div>
+      <div class="hdt-field hdt-field-mb0 hdt-row-grid hdt-grid-cols-1 lg:hdt-grid-cols-2">
+        <button class="hdt-login-form__submit hdt-inline-flex hdt-align-center hdt-justify-center hdt-relative hdt-btn hdt-oh hdt-btn-solid hdt-font-semibold"><span class="hdt-truncate">Log in</span></button>
+        <div class="hdt-inline-block"><a href="https://shopify.com/88495587593/account?locale=en&amp;region_country=GB" class="hdt-inline-block hdt-link-login hdt-s-text hdt-text-center hdt-font-semibold" aria-controls="register-form-popup" close-dialog="login-form-popup" aria-describedby="a11y-external-message">New customer? Create your account <svg class="hdt-icon hdt-icon-2 hdt-inline-block" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 64 64" fill="currentColor"><path d="M6.89,64,0,57.11,47.26,9.85H4.92V0H64V59.08H54.15V16.74Z"></path></svg></a></div>
+      </div></form></div>
+</hdt-modal>
+<hdt-modal id="register-form-popup" class="hdt-modal-customer hdt-modal hdt-hidden" color-scheme="scheme-1" role="dialog" aria-modal="true">
+  <h3 slot="header" class="hdt-s-text hdt-text-10xl hdt-font-normal">Register</h3>
+  <div class="hdt-customer hdt-login-form"><form method="post" action="/account" id="create-customer-modal-0" accept-charset="UTF-8" data-login-with-shop-sign-up="true" novalidate="novalidate"><input type="hidden" name="form_type" value="create_customer"><input type="hidden" name="utf8" value="✓"><div class="hdt-field hdt-relative">
+        <input class="hdt-input stop-mega-menu-reinit" type="text" name="customer[first_name]" id="RegisterForm-FirstName-create-customer-modal-0" autocomplete="given-name" placeholder="First name">
+        <label class="hdt-absolute hdt-top-0 hdt-pe-none hdt-flex hdt-align-center" for="RegisterForm-FirstName-create-customer-modal-0">First name</label>
+      </div>
+      <div class="hdt-field hdt-relative">
+        <input class="hdt-input stop-mega-menu-reinit" type="text" name="customer[last_name]" id="RegisterForm-LastName-create-customer-modal-0" autocomplete="family-name" placeholder="Last name">
+        <label class="hdt-absolute hdt-top-0 hdt-pe-none hdt-flex hdt-align-center" for="RegisterForm-LastName-create-customer-modal-0">Last name</label>
+      </div>
+      <div class="hdt-field hdt-relative">
+        <input class="hdt-input" type="email" name="customer[email]" id="CustomerEmail-create-create-customer-modal-0" spellcheck="false" autocapitalize="off" autocomplete="email" autocorrect="off" placeholder="Email">
+        <label class="hdt-absolute hdt-top-0 hdt-pe-none hdt-flex hdt-align-center" for="CustomerEmail-create-create-customer-modal-0">Email<span class="hdt-required hdt-s-text">*</span></label>
+      </div>
+      <div class="hdt-field hdt-relative">
+        <input class="hdt-input" type="password" value="" name="customer[password]" id="CustomerPassword-create-create-customer-modal-0" autocomplete="current-password" placeholder="Password">
+        <label class="hdt-absolute hdt-top-0 hdt-pe-none hdt-flex hdt-align-center" for="CustomerPassword-create-create-customer-modal-0">Password<span class="hdt-required hdt-s-text">*</span></label>
+      </div>
+      <div class="hdt-field hdt-field-btns hdt-row-grid hdt-grid-cols-1 lg:hdt-grid-cols-2" style="margin-top:var(--spacing-2-8);">
+        <button class="hdt-login-form__submit hdt-inline-flex hdt-align-center hdt-justify-center hdt-relative hdt-btn hdt-oh hdt-btn-solid hdt-font-semibold"><span class="hdt-truncate">Register</span></button>
+        <div class="hdt-inline-block"><a class="hdt-inline-block hdt-link-login hdt-s-text hdt-text-center hdt-font-semibold" href="https://shopify.com/88495587593/account?locale=en&amp;region_country=GB" aria-controls="login-form-popup" close-dialog="register-form-popup" aria-describedby="a11y-external-message">Already have an account? Log in here <svg class="hdt-icon hdt-icon-2 hdt-inline-block" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 64 64" fill="currentColor"><path d="M6.89,64,0,57.11,47.26,9.85H4.92V0H64V59.08H54.15V16.74Z"></path></svg></a></div>
+      </div></form></div>
+</hdt-modal><hdt-tmp-quick hidden=""></hdt-tmp-quick><script type="module" src="//j02crm-a9.myshopify.com/cdn/shop/t/4/assets/custom.js?v=61439486359370910561739289785"></script>
+<hdt-popover class="hdt-popover-currencies hdt-popover hdt-dropdown hdt-hidden hdt-text-start hdt-current-scrollbar hdt-flag-size-sm" id="popover-currencies" placement="bottom" color-scheme="scheme-1" config="{ &quot;closeRichlistSelect&quot;: true }" role="dialog"><form method="post" action="/localization" id="localization_form_currencies_" accept-charset="UTF-8" class="shopify-localization-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="return_to" value="/pages/about-us"><hdt-richlist role="listbox" selected="GB"><button type="submit" name="country_code" role="option" value="GB" data-name="United Kingdom" aria-selected="true"><img src="//cdn.shopify.com/static/images/flags/gb.svg?width=32" alt="United Kingdom" srcset="//cdn.shopify.com/static/images/flags/gb.svg?width=32 32w" width="32" height="24" loading="lazy" class="hdt-flag hdt-relative"><span>INR ₹ | United Kingdom</span>
+          </button></hdt-richlist></form></hdt-popover><script type="application/ld+json">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"name": "Home","item": "https://j02crm-a9.myshopify.com"},{"@type": "ListItem","position": 2,"name": "About Us","item": "https://j02crm-a9.myshopify.com/pages/about-us"}]}</script>
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>

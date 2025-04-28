@@ -134,7 +134,7 @@
         <nav class="nav">
             <ul class="nav-list">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="{{route('about-us')}}">About Us</a></li>
                 <li><a href="#">New Arrival</a></li>
                 <li><a href="#">Best Seller</a></li>
                 
