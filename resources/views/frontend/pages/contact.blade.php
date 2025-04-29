@@ -1,5 +1,97 @@
 @extends('frontend.layouts.master')
 @section('main-content')
+<style>
+h2, h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-section {
+  padding: 40px 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 20px;
+  justify-content: center;
+}
+
+.map {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.form-section {
+  background: #f5f5f5;
+  padding: 50px 20px;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+</style>
+
 	<div class="breadcrumbs">
 		<div class="container">
 			<div class="row">
@@ -15,7 +107,7 @@
 		</div>
 	</div>
 	<!-- End Breadcrumbs -->
-    <section class="contact-sec padding-bottom">
+    <!-- <section class="contact-sec padding-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -40,7 +132,6 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 right-btn">
 								<button type="submit" class="theme-btn">Send Message</button>
-                                <!-- <a href="#" class="theme-btn"><span><i class="fas fa-angle-right"></i></span>Submit</a> -->
                             </div>
                         </div>
                     </form>
@@ -48,6 +139,47 @@
             </div>
         </div>
     </section>
+	 -->
+
+	 <section class="contact-section">
+  <h2>Contact Us</h2>
+
+  <div class="contact-container">
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=London,UK&output=embed" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="contact-info">
+      <h3>Visit Our Store</h3>
+      <p><strong>Address:</strong><br>86 Mott St, New York, New York, Zip Code: 10008, AS</p>
+      <p><strong>Phone:</strong><br>(623) 934-2400</p>
+      <p><strong>Email:</strong><br>ECcomputer@example.com</p>
+      <p><strong>Open Time:</strong><br>Our store has re-opened for shopping, exchange every day 11am to 7pm</p>
+      <div class="social-icons">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="#"><img src="pinterest-icon.png" alt="Pinterest"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section">
+  <div class="form-container">
+    <h3>Get in Touch</h3>
+    <p>If you've got great products you're making or looking to work with us then drop us a line.</p>
+    
+    <form action="#">
+      <div class="form-group">
+        <input type="text" placeholder="Name *" required>
+        <input type="email" placeholder="Email *" required>
+      </div>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
 	<!-- Start Contact -->
 	<!-- <section id="contact-us" class="contact-us section">
 		<div class="container">

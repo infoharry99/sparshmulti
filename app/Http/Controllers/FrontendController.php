@@ -379,14 +379,16 @@ class FrontendController extends Controller
         return view('frontend.pages.register');
     }
     public function registerSubmit(Request $request){
+   
         // return $request->all();
         $this->validate($request,[
-            'name'=>'string|required|min:2',
+            'first_name'=>'string|required|min:2',
+            'last_name'=>'string|required|min:2',
             'email'=>'string|required|unique:users,email',
-            'password'=>'required|min:6|confirmed',
+            'password'=>'required|min:6',
         ]);
+        $request['name'] = $request->first_name.' '.$request->last_name;
         $data=$request->all();
-        // dd($data);
         $check=$this->create($data);
         Session::put('user',$data['email']);
         if($check){

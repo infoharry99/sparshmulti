@@ -1,26 +1,518 @@
-@extends('frontend.layouts.master')
-@section('title','Checkout page')
-@section('main-content')
-
-    <!-- Breadcrumbs -->
-    <div class="breadcrumbs">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="bread-inner">
-                        <ul class="bread-list">
-                            <li><a href="{{route('home')}}">Home<i class="ti-arrow-right"></i></a></li>
-                            <li class="active"><a href="javascript:void(0)">Checkout</a></li>
-                        </ul>
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store - Checkout</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #333;
+            --accent-color: #2874f0;
+            --light-bg: #f8f9fa;
+            --border-color: #e1e1e1;
+            --success-color: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .store-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .cart-icon {
+            font-size: 24px;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .cart-icon .badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .checkout-container {
+            display: flex;
+            width: 100%;
+            gap: 30px;
+        }
+        
+        .checkout-form {
+            flex: 1;
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .checkout-summary {
+            width: 380px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            align-self: flex-start;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .account-info {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .account-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .account-title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .account-toggle {
+            color: var(--accent-color);
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .account-details {
+            margin-bottom: 10px;
+        }
+        
+        .account-email {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .logout-link {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .logout-link:hover {
+            text-decoration: underline;
+        }
+        
+        .newsletter-checkbox {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+        
+        .newsletter-checkbox input {
+            margin-right: 10px;
+        }
+        
+        .delivery-section {
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-col {
+            flex: 1;
+        }
+        
+        .country-select {
+            position: relative;
+        }
+        
+        .country-select .form-control {
+            padding-right: 30px;
+            appearance: none;
+            cursor: pointer;
+        }
+        
+        .country-select::after {
+            content: "▼";
+            font-size: 12px;
+            color: #666;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        
+        .address-search {
+            position: relative;
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+        
+        .shipping-method {
+            margin-top: 30px;
+        }
+        
+        .shipping-placeholder {
+            background-color: var(--light-bg);
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            color: #666;
+        }
+        
+        .product-list {
+            margin-bottom: 25px;
+        }
+        
+        .product-item {
+            display: flex;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .product-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            margin-right: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--accent-color);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        
+        .product-details {
+            flex: 1;
+        }
+        
+        .product-title {
+            font-weight: 500;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .product-price {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .checkout-summary-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .checkout-total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .shipping-info {
+            margin: 15px 0;
+            color: #666;
+        }
+        
+        .currency {
+            font-size: 14px;
+            margin-right: 5px;
+            color: #666;
+        }
+        
+        @media (max-width: 992px) {
+            .checkout-container {
+                flex-direction: column;
+            }
+            
+            .checkout-summary {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="store-name">My Store</a>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge">3</span>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="account-info">
+            <div class="account-header">
+                <h3 class="account-title">Account</h3>
+                <i class="fas fa-chevron-up account-toggle"></i>
+            </div>
+            <div class="account-details">
+                <p class="account-email">infoharry99@gmail.com</p>
+                <a href="#" class="logout-link">Log out</a>
+            </div>
+            <div class="newsletter-checkbox">
+                <input type="checkbox" id="newsletter">
+                <label for="newsletter">Email me with news and offers</label>
+            </div>
+        </div>
+        
+        <div class="checkout-container">
+            <!-- Left Side - Checkout Form -->
+            <div class="checkout-form">
+                <h2 class="section-title">Delivery</h2>
+                
+                <form action="#" method="POST">
+                    <div class="form-group country-select">
+                        <label for="country">Country/Region</label>
+                        <select id="country" class="form-control">
+                            <option value="uk">United Kingdom</option>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                            <option value="au">Australia</option>
+                        </select>
                     </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="firstname">First name (optional)</label>
+                                <input type="text" id="firstname" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="lastname">Last name</label>
+                                <input type="text" id="lastname" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group address-search">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" class="form-control">
+                        <span class="search-icon"><i class="fas fa-search"></i></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apartment">Apartment, suite, etc. (optional)</label>
+                        <input type="text" id="apartment" class="form-control">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="postcode">Postcode</label>
+                                <input type="text" id="postcode" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="shipping-method">
+                        <h3 class="section-title">Shipping method</h3>
+                        <div class="shipping-placeholder">
+                            Enter your shipping address to view available shipping methods.
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Right Side - Order Summary -->
+            <div class="checkout-summary">
+                <div class="product-list">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="/api/placeholder/60/60" alt="Necklace Set">
+                            <span class="product-badge">1</span>
+                        </div>
+                        <div class="product-details">
+                            <h4 class="product-title">Glamorous Reverse Ad Necklace Set</h4>
+                            <p class="product-price">₹4,725.00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="/api/placeholder/60/60" alt="Kundan Bangles">
+                            <span class="product-badge">1</span>
+                        </div>
+                        <div class="product-details">
+                            <h4 class="product-title">Antique Real Kundan Bangles</h4>
+                            <p class="product-price">₹4,350.00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="/api/placeholder/60/60" alt="Kundan Necklace">
+                            <span class="product-badge">1</span>
+                        </div>
+                        <div class="product-details">
+                            <h4 class="product-title">Brass Made Desirable Design Hand Painted Kundan Meena Necklace Set</h4>
+                            <p class="product-price">₹14,715.00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkout-summary-line">
+                    <span>Subtotal · 3 items</span>
+                    <span>₹23,790.00</span>
+                </div>
+                
+                <div class="checkout-summary-line">
+                    <span>Shipping</span>
+                    <span>Enter shipping address</span>
+                </div>
+                
+                <div class="checkout-total">
+                    <span>Total</span>
+                    <span><span class="currency">INR</span>₹23,790.00</span>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Breadcrumbs -->
+    
+    <script>
+        // Toggle account section
+        document.querySelector('.account-toggle').addEventListener('click', function() {
+            const details = document.querySelector('.account-details');
+            const icon = this;
             
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            } else {
+                details.style.display = 'none';
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            }
+        });
+    </script>
+</body>
+</html>`
+
     <!-- Start Checkout -->
-    <section class="shop checkout section">
+    <!-- <section class="shop checkout section">
         <div class="container">
                 <form class="form" method="POST" action="{{route('cart.order')}}">
                     @csrf
@@ -30,7 +522,7 @@
                             <div class="checkout-form">
                                 <h2>Make Your Checkout Here</h2>
                                 <p>Please register in order to checkout more quickly</p>
-                                <!-- Form -->
+
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
@@ -71,253 +563,7 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
                                             <label>Country<span>*</span></label>
-                                            <select name="country" id="country">
-                                                <option value="AF">Afghanistan</option>
-                                                <option value="AX">Åland Islands</option>
-                                                <option value="AL">Albania</option>
-                                                <option value="DZ">Algeria</option>
-                                                <option value="AS">American Samoa</option>
-                                                <option value="AD">Andorra</option>
-                                                <option value="AO">Angola</option>
-                                                <option value="AI">Anguilla</option>
-                                                <option value="AQ">Antarctica</option>
-                                                <option value="AG">Antigua and Barbuda</option>
-                                                <option value="AR">Argentina</option>
-                                                <option value="AM">Armenia</option>
-                                                <option value="AW">Aruba</option>
-                                                <option value="AU">Australia</option>
-                                                <option value="AT">Austria</option>
-                                                <option value="AZ">Azerbaijan</option>
-                                                <option value="BS">Bahamas</option>
-                                                <option value="BH">Bahrain</option>
-                                                <option value="BD">Bangladesh</option>
-                                                <option value="BB">Barbados</option>
-                                                <option value="BY">Belarus</option>
-                                                <option value="BE">Belgium</option>
-                                                <option value="BZ">Belize</option>
-                                                <option value="BJ">Benin</option>
-                                                <option value="BM">Bermuda</option>
-                                                <option value="BT">Bhutan</option>
-                                                <option value="BO">Bolivia</option>
-                                                <option value="BA">Bosnia and Herzegovina</option>
-                                                <option value="BW">Botswana</option>
-                                                <option value="BV">Bouvet Island</option>
-                                                <option value="BR">Brazil</option>
-                                                <option value="IO">British Indian Ocean Territory</option>
-                                                <option value="VG">British Virgin Islands</option>
-                                                <option value="BN">Brunei</option>
-                                                <option value="BG">Bulgaria</option>
-                                                <option value="BF">Burkina Faso</option>
-                                                <option value="BI">Burundi</option>
-                                                <option value="KH">Cambodia</option>
-                                                <option value="CM">Cameroon</option>
-                                                <option value="CA">Canada</option>
-                                                <option value="CV">Cape Verde</option>
-                                                <option value="KY">Cayman Islands</option>
-                                                <option value="CF">Central African Republic</option>
-                                                <option value="TD">Chad</option>
-                                                <option value="CL">Chile</option>
-                                                <option value="CN">China</option>
-                                                <option value="CX">Christmas Island</option>
-                                                <option value="CC">Cocos [Keeling] Islands</option>
-                                                <option value="CO">Colombia</option>
-                                                <option value="KM">Comoros</option>
-                                                <option value="CG">Congo - Brazzaville</option>
-                                                <option value="CD">Congo - Kinshasa</option>
-                                                <option value="CK">Cook Islands</option>
-                                                <option value="CR">Costa Rica</option>
-                                                <option value="CI">Côte d’Ivoire</option>
-                                                <option value="HR">Croatia</option>
-                                                <option value="CU">Cuba</option>
-                                                <option value="CY">Cyprus</option>
-                                                <option value="CZ">Czech Republic</option>
-                                                <option value="DK">Denmark</option>
-                                                <option value="DJ">Djibouti</option>
-                                                <option value="DM">Dominica</option>
-                                                <option value="DO">Dominican Republic</option>
-                                                <option value="EC">Ecuador</option>
-                                                <option value="EG">Egypt</option>
-                                                <option value="SV">El Salvador</option>
-                                                <option value="GQ">Equatorial Guinea</option>
-                                                <option value="ER">Eritrea</option>
-                                                <option value="EE">Estonia</option>
-                                                <option value="ET">Ethiopia</option>
-                                                <option value="FK">Falkland Islands</option>
-                                                <option value="FO">Faroe Islands</option>
-                                                <option value="FJ">Fiji</option>
-                                                <option value="FI">Finland</option>
-                                                <option value="FR">France</option>
-                                                <option value="GF">French Guiana</option>
-                                                <option value="PF">French Polynesia</option>
-                                                <option value="TF">French Southern Territories</option>
-                                                <option value="GA">Gabon</option>
-                                                <option value="GM">Gambia</option>
-                                                <option value="GE">Georgia</option>
-                                                <option value="DE">Germany</option>
-                                                <option value="GH">Ghana</option>
-                                                <option value="GI">Gibraltar</option>
-                                                <option value="GR">Greece</option>
-                                                <option value="GL">Greenland</option>
-                                                <option value="GD">Grenada</option>
-                                                <option value="GP">Guadeloupe</option>
-                                                <option value="GU">Guam</option>
-                                                <option value="GT">Guatemala</option>
-                                                <option value="GG">Guernsey</option>
-                                                <option value="GN">Guinea</option>
-                                                <option value="GW">Guinea-Bissau</option>
-                                                <option value="GY">Guyana</option>
-                                                <option value="HT">Haiti</option>
-                                                <option value="HM">Heard Island and McDonald Islands</option>
-                                                <option value="HN">Honduras</option>
-                                                <option value="HK">Hong Kong SAR China</option>
-                                                <option value="HU">Hungary</option>
-                                                <option value="IS">Iceland</option>
-                                                <option value="IN">India</option>
-                                                <option value="ID">Indonesia</option>
-                                                <option value="IR">Iran</option>
-                                                <option value="IQ">Iraq</option>
-                                                <option value="IE">Ireland</option>
-                                                <option value="IM">Isle of Man</option>
-                                                <option value="IL">Israel</option>
-                                                <option value="IT">Italy</option>
-                                                <option value="JM">Jamaica</option>
-                                                <option value="JP">Japan</option>
-                                                <option value="JE">Jersey</option>
-                                                <option value="JO">Jordan</option>
-                                                <option value="KZ">Kazakhstan</option>
-                                                <option value="KE">Kenya</option>
-                                                <option value="KI">Kiribati</option>
-                                                <option value="KW">Kuwait</option>
-                                                <option value="KG">Kyrgyzstan</option>
-                                                <option value="LA">Laos</option>
-                                                <option value="LV">Latvia</option>
-                                                <option value="LB">Lebanon</option>
-                                                <option value="LS">Lesotho</option>
-                                                <option value="LR">Liberia</option>
-                                                <option value="LY">Libya</option>
-                                                <option value="LI">Liechtenstein</option>
-                                                <option value="LT">Lithuania</option>
-                                                <option value="LU">Luxembourg</option>
-                                                <option value="MO">Macau SAR China</option>
-                                                <option value="MK">Macedonia</option>
-                                                <option value="MG">Madagascar</option>
-                                                <option value="MW">Malawi</option>
-                                                <option value="MY">Malaysia</option>
-                                                <option value="MV">Maldives</option>
-                                                <option value="ML">Mali</option>
-                                                <option value="MT">Malta</option>
-                                                <option value="MH">Marshall Islands</option>
-                                                <option value="MQ">Martinique</option>
-                                                <option value="MR">Mauritania</option>
-                                                <option value="MU">Mauritius</option>
-                                                <option value="YT">Mayotte</option>
-                                                <option value="MX">Mexico</option>
-                                                <option value="FM">Micronesia</option>
-                                                <option value="MD">Moldova</option>
-                                                <option value="MC">Monaco</option>
-                                                <option value="MN">Mongolia</option>
-                                                <option value="ME">Montenegro</option>
-                                                <option value="MS">Montserrat</option>
-                                                <option value="MA">Morocco</option>
-                                                <option value="MZ">Mozambique</option>
-                                                <option value="MM">Myanmar [Burma]</option>
-                                                <option value="NA">Namibia</option>
-                                                <option value="NR">Nauru</option>
-                                                <option value="NP" selected="selected">Nepal</option>
-                                                <option value="NL">Netherlands</option>
-                                                <option value="AN">Netherlands Antilles</option>
-                                                <option value="NC">New Caledonia</option>
-                                                <option value="NZ">New Zealand</option>
-                                                <option value="NI">Nicaragua</option>
-                                                <option value="NE">Niger</option>
-                                                <option value="NG">Nigeria</option>
-                                                <option value="NU">Niue</option>
-                                                <option value="NF">Norfolk Island</option>
-                                                <option value="MP">Northern Mariana Islands</option>
-                                                <option value="KP">North Korea</option>
-                                                <option value="NO">Norway</option>
-                                                <option value="OM">Oman</option>
-                                                <option value="PK">Pakistan</option>
-                                                <option value="PW">Palau</option>
-                                                <option value="PS">Palestinian Territories</option>
-                                                <option value="PA">Panama</option>
-                                                <option value="PG">Papua New Guinea</option>
-                                                <option value="PY">Paraguay</option>
-                                                <option value="PE">Peru</option>
-                                                <option value="PH">Philippines</option>
-                                                <option value="PN">Pitcairn Islands</option>
-                                                <option value="PL">Poland</option>
-                                                <option value="PT">Portugal</option>
-                                                <option value="PR">Puerto Rico</option>
-                                                <option value="QA">Qatar</option>
-                                                <option value="RE">Réunion</option>
-                                                <option value="RO">Romania</option>
-                                                <option value="RU">Russia</option>
-                                                <option value="RW">Rwanda</option>
-                                                <option value="BL">Saint Barthélemy</option>
-                                                <option value="SH">Saint Helena</option>
-                                                <option value="KN">Saint Kitts and Nevis</option>
-                                                <option value="LC">Saint Lucia</option>
-                                                <option value="MF">Saint Martin</option>
-                                                <option value="PM">Saint Pierre and Miquelon</option>
-                                                <option value="VC">Saint Vincent and the Grenadines</option>
-                                                <option value="WS">Samoa</option>
-                                                <option value="SM">San Marino</option>
-                                                <option value="ST">São Tomé and Príncipe</option>
-                                                <option value="SA">Saudi Arabia</option>
-                                                <option value="SN">Senegal</option>
-                                                <option value="RS">Serbia</option>
-                                                <option value="SC">Seychelles</option>
-                                                <option value="SL">Sierra Leone</option>
-                                                <option value="SG">Singapore</option>
-                                                <option value="SK">Slovakia</option>
-                                                <option value="SI">Slovenia</option>
-                                                <option value="SB">Solomon Islands</option>
-                                                <option value="SO">Somalia</option>
-                                                <option value="ZA">South Africa</option>
-                                                <option value="GS">South Georgia</option>
-                                                <option value="KR">South Korea</option>
-                                                <option value="ES">Spain</option>
-                                                <option value="LK">Sri Lanka</option>
-                                                <option value="SD">Sudan</option>
-                                                <option value="SR">Suriname</option>
-                                                <option value="SJ">Svalbard and Jan Mayen</option>
-                                                <option value="SZ">Swaziland</option>
-                                                <option value="SE">Sweden</option>
-                                                <option value="CH">Switzerland</option>
-                                                <option value="SY">Syria</option>
-                                                <option value="TW">Taiwan</option>
-                                                <option value="TJ">Tajikistan</option>
-                                                <option value="TZ">Tanzania</option>
-                                                <option value="TH">Thailand</option>
-                                                <option value="TL">Timor-Leste</option>
-                                                <option value="TG">Togo</option>
-                                                <option value="TK">Tokelau</option>
-                                                <option value="TO">Tonga</option>
-                                                <option value="TT">Trinidad and Tobago</option>
-                                                <option value="TN">Tunisia</option>
-                                                <option value="TR">Turkey</option>
-                                                <option value="TM">Turkmenistan</option>
-                                                <option value="TC">Turks and Caicos Islands</option>
-                                                <option value="TV">Tuvalu</option>
-                                                <option value="UG">Uganda</option>
-                                                <option value="UA">Ukraine</option>
-                                                <option value="AE">United Arab Emirates</option>
-                                                <option value="Uk">United Kingdom</option>
-                                                <option value="UY">Uruguay</option>
-                                                <option value="UM">U.S. Minor Outlying Islands</option>
-                                                <option value="VI">U.S. Virgin Islands</option>
-                                                <option value="UZ">Uzbekistan</option>
-                                                <option value="VU">Vanuatu</option>
-                                                <option value="VA">Vatican City</option>
-                                                <option value="VE">Venezuela</option>
-                                                <option value="VN">Vietnam</option>
-                                                <option value="WF">Wallis and Futuna</option>
-                                                <option value="EH">Western Sahara</option>
-                                                <option value="YE">Yemen</option>
-                                                <option value="ZM">Zambia</option>
-                                                <option value="ZW">Zimbabwe</option>
-                                            </select>
+                                           
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
@@ -349,12 +595,10 @@
                                     </div>
                                     
                                 </div>
-                                <!--/ End Form -->
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="order-details">
-                                <!-- Order Widget -->
                                 <div class="single-widget">
                                     <h2>CART  TOTALS</h2>
                                     <div class="content">
@@ -391,8 +635,6 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <!--/ End Order Widget -->
-                                <!-- Order Widget -->
                                 <div class="single-widget">
                                     <h2>Payments</h2>
                                     <div class="content">
@@ -406,15 +648,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--/ End Order Widget -->
-                                <!-- Payment Method Widget -->
                                 <div class="single-widget payement">
                                     <div class="content">
                                         <img src="{{('backend/img/payment-method.png')}}" alt="#">
                                     </div>
                                 </div>
-                                <!--/ End Payment Method Widget -->
-                                <!-- Button Widget -->
                                 <div class="single-widget get-button">
                                     <div class="content">
                                         <div class="button">
@@ -422,58 +660,50 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--/ End Button Widget -->
                             </div>
                         </div>
                     </div>
                 </form>
         </div>
-    </section>
+    </section> -->
     <!--/ End Checkout -->
     
     <!-- Start Shop Services Area  -->
-    <section class="shop-services section home">
+    <!-- <section class="shop-services section home">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Service -->
                     <div class="single-service">
                         <i class="ti-rocket"></i>
                         <h4>Free shiping</h4>
                         <p>Orders over $100</p>
                     </div>
-                    <!-- End Single Service -->
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Service -->
                     <div class="single-service">
                         <i class="ti-reload"></i>
                         <h4>Free Return</h4>
                         <p>Within 30 days returns</p>
                     </div>
-                    <!-- End Single Service -->
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Service -->
                     <div class="single-service">
                         <i class="ti-lock"></i>
                         <h4>Sucure Payment</h4>
                         <p>100% secure payment</p>
                     </div>
-                    <!-- End Single Service -->
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-                    <!-- Start Single Service -->
+
                     <div class="single-service">
                         <i class="ti-tag"></i>
                         <h4>Best Peice</h4>
                         <p>Guaranteed price</p>
                     </div>
-                    <!-- End Single Service -->
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- End Shop Services -->
     
     <!-- Start Shop Newsletter  -->
@@ -496,7 +726,7 @@
         </div>
     </section> -->
     <!-- End Shop Newsletter -->
-@endsection
+
 @push('styles')
 	<style>
 		li.shipping{

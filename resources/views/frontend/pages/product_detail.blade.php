@@ -194,7 +194,6 @@
     </div>
 </div>
 
-/* public/css/product.css */
 <style>
     
 .container {

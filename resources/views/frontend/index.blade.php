@@ -146,6 +146,9 @@
             
             padding: 10px 5px;
         }
+        .h4 {
+            margin-top: 10px !important;
+        }
 
         .product-title {
             font-size: 16px;
@@ -193,16 +196,16 @@
         }
 
         .featured-item:hover img {
-        transform: scale(1.05);
+            transform: scale(1.05);
         }
 
         .featured-item:hover .featured-overlay {
-        opacity: 1;
+            opacity: 1;
         }
 
         .featured-overlay h4 {
-        font-size: 16px;
-        margin: 0;
+            font-size: 16px;
+            margin: 0;
         }
 
 </style>
@@ -315,8 +318,13 @@
 
 
                                     <div class="product-hover-icons">
-                                        <button><i class="fas fa-shopping-bag"></i></button>
-                                        <button><i class="far fa-heart"></i></button>
+                                        <button><a href="{{route('add-to-cart',$product->slug)}}">
+                                            <i class="fas fa-shopping-bag"></i>
+                                            </a>
+                                        </button>
+                                        <!-- <button><i class="fas fa-shopping-bag"></i></button> -->
+                                        <button><a href="{{route('add-to-wishlist',$product->slug)}}"><i class="far fa-heart"></i></a></button>
+
                                         <button><i class="far fa-times-circle"></i></button>
                                         <button><i class="far fa-eye"></i></button>
                                     </div>
