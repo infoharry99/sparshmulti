@@ -2,15 +2,15 @@
 <!-- <link rel="stylesheet" href="styles.css"> -->
 <style>
       /* Modal Background */
-      .modal-overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.5);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
+    .modal-overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
     }
 
     /* Modal Box */
@@ -138,18 +138,32 @@
           font-size: 12px;
           color: #555;
       }
-
       .header-icons {
-          flex: 1;
-          display: flex;
-          justify-content: flex-end;
-          gap: 15px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        position: relative;
+        margin-right: 30px;
       }
 
-      .header-icons a {
-          text-decoration: none;
+      .icon-badge {
+          position: relative;
+          display: inline-block;
           color: #000;
           font-size: 20px;
+      }
+
+      .icon-badge .badge {
+          position: absolute;
+          top: -6px;
+          right: -8px;
+          background: red;
+          color: white;
+          font-size: 10px;
+          padding: 2px 5px;
+          border-radius: 50%;
+          font-weight: bold;
       }
 
       /* Mega Menu */
@@ -202,19 +216,17 @@
           <div>
             <img src="{{asset('images/Sparsh_Logo.webp')}}" alt="Logo" style="width: 172px; height: auto;">
           </div>
-         <div class="header-icons">
-            <!-- <a id="cartToggle" class="cart-icon">🛒(0)</a>
-            <button onclick="openModal('loginModal')">Open Login Modal</button> -->
-            <a href="#"><i class="fas fa-search"></i></a>
-            <a  class="icon-badge" onclick="openModal('loginModal')"><i class="fas fa-user"></i></a>
-            <a href="#" class="icon-badge">
-              <i class="fas fa-heart"></i>
-              <span class="badge">0</span>
-            </a>
-            <a id="cartToggle"  class="icon-badge">
-              <i class="fas fa-shopping-bag"></i>
-              <span class="badge">3</span>
-            </a>
+          <div class="header-icons">
+              <a href="#"><i class="fas fa-search"></i></a>
+              <a  class="icon-badge" onclick="openModal('loginModal')"><i class="fas fa-user"></i></a>
+              <a href="#" class="icon-badge">
+                <i class="fas fa-heart"></i>
+                <span class="badge">{{Helper::wishlistCount()}}</span>
+              </a>
+              <a id="cartToggle"  class="icon-badge">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="badge">{{Helper::cartCount()}}</span>
+              </a>
           </div>
     </div>
     <div class="header-container">
@@ -230,9 +242,9 @@
                     <div class="mega-menu">
                       @foreach ($categorys as $category)
                           <div class="mega-column">
-                              <h2><a href="{{ route('category.show', $category->slug) }}"><strong>{{ $category->title }}</strong></a></h2>
+                              <h2><a href="{{ route('category.details', $category->slug) }}"><strong>{{ $category->title }}</strong></a></h2>
                               @foreach ($category->children as $child)
-                                  <a href="{{ route('category.show', $child->slug) }}">{{ $child->title }}</a>
+                                  <a href="{{ route('category.details', $child->slug) }}">{{ $child->title }}</a>
                               @endforeach
                           </div>
                       @endforeach

@@ -84,8 +84,7 @@ class CategoryController extends Controller
     public function show($id)
     {
         $category = Category::where('slug', $slug)->firstOrFail();
-        // If category has children, show child categories or related products
-        if ($category->is_parent) {
+        if ($category->parent_id) {
             $childCategories = $category->children;
             return view('category.parent', compact('category', 'childCategories'));
         }

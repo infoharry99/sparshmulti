@@ -66,6 +66,24 @@ class FrontendController extends Controller
                 ->with('category_lists',$category);
     }   
 
+    public function show($slug)
+    {
+        
+        $category = Category::where('slug', $slug)->firstOrFail();
+        if ($category->is_parent == 0) {
+
+            $products = Product::where('child_cat_id', $category->id)->get();
+            return view('frontend.pages.category', compact('category', 'products'));
+            
+        }else{
+
+            $products = Product::where('cat_id', $category->id)->get();
+            return view('frontend.pages.category', compact('category', 'products'));
+
+        }
+       
+    }
+
     public function aboutUs(){
         return view('frontend.pages.about-us');
     }
@@ -385,11 +403,37 @@ class FrontendController extends Controller
     public function loginSubmit(Request $request){
         $data= $request->all();
         if(Auth::attempt(['email' => $data['email'], 'password' => $data['password'],'status'=>'active'])){
+            
             Session::put('user',$data['email']);
+            $sessionCart = session()->get('cart', []);
+            if (!empty($sessionCart)) {
+                foreach ($sessionCart as $productId => $item) {
+                    $existing = Cart::where('user_id', auth()->id())
+                                    ->where('product_id', $item['product_id'])
+                                    ->whereNull('order_id')
+                                    ->first();
+            
+                    if ($existing) {
+                        $existing->quantity += $item['quantity'];
+                        $existing->amount = $existing->price * $existing->quantity;
+                        $existing->save();
+                    } else {
+                        Cart::create([
+                            'user_id' => auth()->id(),
+                            'product_id' => $item['product_id'],
+                            'price' => $item['price'],
+                            'quantity' => $item['quantity'],
+                            'amount' => $item['amount'],
+                            'order_id' => null
+                        ]);
+                    }
+                }
+            
+                session()->forget('cart'); // clear after merge
+            }
             request()->session()->flash('success','Successfully login');
             return redirect()->route('home');
-        }
-        else{
+        }else{
             request()->session()->flash('error','Invalid email and password pleas try again!');
             return redirect()->back();
         }
@@ -417,7 +461,7 @@ class FrontendController extends Controller
         $request['name'] = $request->first_name.' '.$request->last_name;
         $data=$request->all();
         $check=$this->create($data);
-        Session::put('user',$data['email']);
+        // Session::put('user',$data['email']);
         if($check){
             request()->session()->flash('success','Successfully registered');
             return redirect()->route('home');

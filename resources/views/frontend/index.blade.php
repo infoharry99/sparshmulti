@@ -2,9 +2,9 @@
 @section('title', __('home.title')) {{-- Translatable title --}}
 @section('main-content')
 <style>
-    .blog-sec {
-        padding: 60px 20px;
-        background: #fff;
+        .blog-sec {
+            padding: 60px 20px;
+            background: #fff;
         }
 
         .container {
@@ -79,23 +79,23 @@
         }
 
         .read-more .arrow {
-        margin-left: 5px;
-        font-size: 18px;
-        transition: transform 0.3s ease;
+            margin-left: 5px;
+            font-size: 18px;
+            transition: transform 0.3s ease;
         }
 
         .read-more:hover .arrow {
-        transform: translateX(5px);
+            transform: translateX(5px);
         }
 
 
-    .product-card {
-        position: relative;
-        background: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        .product-card {
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .product-img-wrapper {
@@ -139,13 +139,14 @@
         }
 
         .product-card:hover .product-hover-icons {
-        opacity: 1;
+            opacity: 1;
         }
 
         .product-details {
             
             padding: 10px 5px;
         }
+
         .h4 {
             margin-top: 10px !important;
         }
@@ -162,23 +163,23 @@
             color: #000;
         }
 
-    .featured-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-    }
+        .featured-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
 
-    .featured-img {
-        position: relative;
-    }
+        .featured-img {
+            position: relative;
+        }
 
-    .featured-img img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 10px;
-        transition: transform 0.4s ease;
-    }
+        .featured-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.4s ease;
+        }
 
         .featured-overlay {
             position: absolute;
@@ -208,7 +209,7 @@
             margin: 0;
         }
 
-</style>
+    </style>
 @if(count($banners) > 0)
     <section id="Gslider" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -301,38 +302,38 @@
 
                     <div class="row g-4 mt-4">
                         @php
-                        $product_listss = DB::table('products')->where('status', 'active')->orderBy('id', 'DESC')->limit(6)->get();
+                        $product_listss = DB::table('products')->where('status', 'active')->orderBy('id', 'DESC')->limit(4)->get();
                         @endphp
 
                         @foreach($product_listss as $product)
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product-card">
-                                <div class="product-img-wrapper">
-                                    @php
-                                        $photos = json_decode($product->photo);
-                                    @endphp
-                                    @if(!empty($photos) && isset($photos[0]))
-                                       <a href="{{route('product-grids',$product->slug)}}"> <img src="{{ asset($photos[0]) }}" alt="{{ $product->title }}" class="img-fluid"></a>
-                                    @endif
-                                    <div class="product-hover-icons">
-                                        
-                                        <button><a href="{{route('add-to-cart',$product->slug)}}">
-                                            <i class="fas fa-shopping-bag"></i>
-                                            </a>
-                                        </button>
-                                        <button><a href="{{route('add-to-wishlist',$product->slug)}}"><i class="far fa-heart"></i></a></button>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card">
+                                    <div class="product-img-wrapper">
+                                        @php
+                                            $photos = json_decode($product->photo);
+                                        @endphp
+                                        @if(!empty($photos) && isset($photos[0]))
+                                        <a href="{{route('product-grids',$product->slug)}}"> <img src="{{ asset($photos[0]) }}" alt="{{ $product->title }}" class="img-fluid"></a>
+                                        @endif
+                                        <div class="product-hover-icons">
+                                            
+                                            <button><a href="{{route('add-to-cart',$product->slug)}}">
+                                                <i class="fas fa-shopping-bag"></i>
+                                                </a>
+                                            </button>
+                                            <button><a href="{{route('add-to-wishlist',$product->slug)}}"><i class="far fa-heart"></i></a></button>
 
-                                        <button><i class="far fa-times-circle"></i></button>
-                                        <button><i class="far fa-eye"></i></button>
+                                            <button><i class="far fa-times-circle"></i></button>
+                                            <button><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-details mt-2">
+                                    <h5 class="product-title">{{ $product->title }}</h5>
+                                    <p class="product-price"><strong>Rs. {{ number_format($product->discount, 2) }}</strong></p>
                                     </div>
                                 </div>
-
-                                <div class="product-details mt-2">
-                                <h5 class="product-title">{{ $product->title }}</h5>
-                                <p class="product-price"><strong>Rs. {{ number_format($product->discount, 2) }}</strong></p>
-                                </div>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -440,22 +441,12 @@
                                                             <select>
                                                                 @php
                                                                 $sizes=explode(',',$product->size);
-                                                                // dd($sizes);
                                                                 @endphp
                                                                 @foreach($sizes as $size)
                                                                     <option>{{$size}}</option>
                                                                 @endforeach
                                                             </select>
                                                         </div>
-                                                        {{-- <div class="col-lg-6 col-12">
-                                                            <h5 class="title">Color</h5>
-                                                            <select>
-                                                                <option selected="selected">orange</option>
-                                                                <option>purple</option>
-                                                                <option>black</option>
-                                                                <option>pink</option>
-                                                            </select>
-                                                        </div> --}}
                                                     </div>
                                                 </div>
                                             @endif

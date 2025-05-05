@@ -164,6 +164,9 @@ class OrderController extends Controller
             'shipping' => 'nullable|exists:shippings,id'
         ]);
 
+        if(!auth()->check()){
+            return redirect()->route('login.form');
+        }
         // Get cart data
         if (auth()->check()) {
             $cartItems = Cart::where('user_id', auth()->id())->whereNull('order_id')->get();

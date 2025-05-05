@@ -86,7 +86,7 @@
       text-decoration: none;
     }
     .container {
-      max-width: 1200px;
+      max-width: 90rem;
       margin: 0 auto;
       padding: 0 1rem;
     }
@@ -248,7 +248,7 @@
   </style>
 
 
-<section class="features">
+  <!-- <section class="features">
     <div class="container">
       <div class="features-grid">
         <div class="feature-card">
@@ -273,7 +273,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -361,7 +361,7 @@
 	<script src="{{asset('frontend/js/magnific-popup.js')}}"></script>
 	<script src="{{asset('frontend/js/waypoints.min.js')}}"></script>
 	<script src="{{asset('frontend/js/finalcountdown.min.js')}}"></script>
-	<script src="{{asset('frontend/js/nicesellect.js')}}"></script>
+	<!-- <script src="{{asset('frontend/js/nicesellect.js')}}"></script> -->
 	<script src="{{asset('frontend/js/flex-slider.js')}}"></script>
 	<script src="{{asset('frontend/js/scrollup.js')}}"></script>
 	<script src="{{asset('frontend/js/onepage-nav.min.js')}}"></script>

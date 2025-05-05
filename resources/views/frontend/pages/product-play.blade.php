@@ -248,7 +248,7 @@
             padding: 0;
         }
         .container {
-            max-width: 1400px;
+            max-width: 90rem;
             margin: 0 auto;
             padding: 20px;
         }

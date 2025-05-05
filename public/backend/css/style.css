@@ -33,8 +33,8 @@ p{
 
 :root{
     --ftcolor: #3195B7;
-    --sdcolor: #D04938;
-    --primary-color: #D04938 !important;
+    --sdcolor: black;
+    --primary-color: black !important;
     --secondary-color: #3195B7 !important;
 }
 
@@ -70,7 +70,7 @@ p{
     gap: 35px;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: #D04938;
+    color: black;
     font-size: 14px;
     text-transform: uppercase;
     padding: 0;
@@ -134,20 +134,20 @@ p{
 .banner-overlay h1 {
     color: #fff;
     text-transform: capitalize;
-    text-shadow: 1px 0px 11px #D04938;
+    text-shadow: 1px 0px 11px black;
     font-size: 55px;
 }
 .banner-overlay h4 {
     color: #fff;
     text-transform: capitalize;
-    text-shadow: 1px 0px 11px #D04938;
+    text-shadow: 1px 0px 11px black;
     font-size: 30px;
     font-weight: 300;
 }
 .banner-overlay p {
     color: #fff;
     text-transform: capitalize;
-    text-shadow: 1px 0px 11px #D04938;
+    text-shadow: 1px 0px 11px black;
 }
 .owl-dots {
     position: absolute;
@@ -161,7 +161,7 @@ p{
 .owl-dot span {
     width: 10px;
     height: 10px;
-    background: #D04938;
+    background: black;
     display: block;
     border-radius: 50%;
 }
@@ -176,7 +176,7 @@ p{
 }
 .section-heading h3 {
     font-weight: 400;
-    color: #D04938;
+    color: black;
 }
 /*===== why sec end =====*/
 
@@ -192,10 +192,10 @@ p{
 }
 .featured-item a{
     text-decoration: none;
-    color: #D04938;
+    color: black;
 }
 .featured-content h5 {
-    color: #D04938;
+    color: black;
     text-transform: uppercase;
     margin: 0;
     font-weight: 400;
@@ -259,7 +259,7 @@ p{
 
 /*===== blog sec start ========*/
 .view-all {
-    color: #D04938;
+    color: black;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -377,7 +377,7 @@ p{
 }
 .footer-links li a{
    font-size: 16px;
-   color: #D04938;
+   color: black;
    text-transform:uppercase;
    text-decoration: none;
    font-weight: 400;
@@ -386,10 +386,10 @@ p{
     color: var(--ftcolor);
 }
 .newsletter h5{
-    color: #D04938;
+    color: black;
 }
 .newsletter p{
-    color: #D04938;
+    color: black;
 }
 .newsletter input {
     padding: 20px 20px 20px 120px;
@@ -443,10 +443,10 @@ p{
     border-color: #ddd !important;
 }
 .breadcrumb-item.active {
-    color: #D04938;
+    color: black;
 }
 .breadcrumb-item a{
-    color: #D04938;
+    color: black;
 }
 /*===== subbanner sec end =====*/
 
@@ -477,7 +477,7 @@ p{
     text-align: center;
 }
 .pagination li a.active{
-    color: #D04938;
+    color: black;
     font-weight: 500;
     border-color:#898989 ;
 }
@@ -549,7 +549,7 @@ p{
 }
 .lyrics-area p{
     margin-bottom: 0;
-    color: #D04938;
+    color: black;
 }
 .lyrics-area .form-select {
     padding-right: 0;
@@ -636,7 +636,7 @@ p{
 }
 .country .form-select {
     border: 0px;
-    color: #D04938;
+    color: black;
     padding-left: 0;
 }
 .currency-area {
@@ -655,10 +655,10 @@ p{
     color: #898989;
 }
 .cost-area p strong {
-    color: #D04938;
+    color: black;
 }
 .check-text a {
-    color: #D04938;
+    color: black;
     font-size: 15px;
     text-decoration: underline;
 }
@@ -691,7 +691,7 @@ p{
     width: 320px;
 }
 .wistlist-btn a{
-    color: #D04938;
+    color: black;
     text-decoration: underline;
     font-size: 15px;
 }
@@ -711,14 +711,14 @@ p{
 }
 .pd-lern-more p {
     font-size: 12px;
-    color: #D04938;
+    color: black;
     margin: 0;
     padding-top: 30px;
 }
 .pd-lern-more p a {
         font-weight: bold;
         text-decoration: underline;
-        color: #D04938;
+        color: black;
         font-size: 12px;
 }
 .tabcontent {
@@ -742,7 +742,7 @@ p{
     color: #898989;
 }
 .tablinks.active{
-    color: #D04938;
+    color: black;
 }
 .tablinks::after{
     content: "";
@@ -751,7 +751,7 @@ p{
     left: 0;
     width:0%;
     height: 1px;
-    background: #D04938;
+    background: black;
     transition: 0.5s;
 }
 .tablinks.active::after{
@@ -770,7 +770,7 @@ p{
 }
 .print-area p {
     line-height: 30px;
-    color: #D04938;
+    color: black;
     margin-bottom: 2rem;
 }
 .fst-pt p {
@@ -871,12 +871,12 @@ p{
 }
 .blog-area h4{
     font-family: "Montserrat", serif;
-    color: #D04938;
+    color: black;
     font-weight: 500;
 }
 .blog-area p{
     font-family: "Montserrat", serif;
-    color: #D04938;
+    color: black;
     font-size: 14px;
 }
 .blog-area span{
@@ -981,7 +981,7 @@ p{
 
 /*====== signup sec start =======*/
 .signup-area h3 {
-    color: #D04938;
+    color: black;
     font-family: poppins;
     font-size: 37px;
     font-weight: 600;
@@ -989,7 +989,7 @@ p{
 .signup-area p {
     font-size: 18px;
     font-family: poppins;
-    color: #D04938;
+    color: black;
 }
 .login-battns{
     display: flex;
@@ -1001,7 +1001,7 @@ p{
     padding: 0;
 }
 .login-battns li a{
-    color: #D04938;
+    color: black;
     font-family: poppins;
     font-size: 18px;
     width: 100%;
@@ -1051,7 +1051,7 @@ p{
     background: transparent;
     outline: none;
     font-family: poppins;
-    color: #ddd;
+    color: #000000;
     font-size: 18px;
     border: 2px solid #ddd;
     border-radius: 44px;
@@ -1060,7 +1060,7 @@ p{
     width: 100%;
 }
 .signup-form input::placeholder{
-    color: #ddd;
+    color: #000000;
 }
 .signup-btn {
     background: var(--sdcolor);
@@ -1075,10 +1075,10 @@ p{
 .signup-form p{
     margin-bottom: 0;
     margin-top: 15px;
-    color: #D04938;
+    color: black;
     font-family: poppins;
     font-size: 18px;
-    color: #D04938;
+    color: black;
 }
 .signup-form p a{
     color: var(--sdcolor);
@@ -1103,7 +1103,7 @@ p{
     border-bottom: 1px solid #ddd;
 }
 .c-head-text h6{
-    color: #D04938;
+    color: black;
     font-family: poppins;
     font-weight: 600;
 }
@@ -1130,7 +1130,7 @@ p{
 .cart-pd-heading {
     text-transform: uppercase;
     font-weight: 400;
-    color: #D04938;
+    color: black;
 }
 .cart-item-content h6{
     font-weight: 400;
@@ -1157,7 +1157,7 @@ p{
 .qty-container button {
     width: 36px;
     height: 36px;
-    border: 1px solid #D04938;
+    border: 1px solid black;
     border-radius: 50%;
     line-height: 30px;
     text-align: center;
@@ -1169,7 +1169,7 @@ p{
 .qty-container input {
     width: 40px;
     border: none;
-    color: #D04938;
+    color: black;
     text-align: center;
 }
 .cart-qty p{
@@ -1215,7 +1215,7 @@ p{
     display: block;
     border-radius: 50%;
     text-align: center;
-    color: #D04938;
+    color: black;
     font-size: 14px;
     line-height: 25px;
     margin: 0 auto;
@@ -1241,7 +1241,7 @@ p{
 .daslinks{
     position: relative;
     font-family: poppins;
-    color: #D04938;
+    color: black;
     width: 100%;
     background: transparent;
     border: none;
@@ -1297,7 +1297,7 @@ p{
 }
 .change-box button {
     border: none;
-    background: #d049382b;
+    background: black2b;
     padding: 13px 25px;
     border-radius: 44px;
     color: var(--sdcolor);
@@ -1350,10 +1350,10 @@ p{
     justify-content: space-between;
 }
 .order-attrubute ul li p,strong,a{
-    color: #D04938;
+    color: black;
 }
 .order-attrubute ul li p a{
-    color: #D04938 !important;
+    color: black !important;
     text-decoration: underline;
 }
 .td-od-img img{
@@ -1363,7 +1363,7 @@ p{
     border-radius: 8px;
 }
 .td-od-title p {
-    color: #D04938;
+    color: black;
     font-family: poppins;
     font-weight: 600;
     line-height: 160px;
@@ -1374,12 +1374,12 @@ p{
     line-height: 160px;
 }
 .td-od-size p{
-    color: #D04938;
+    color: black;
     font-family: poppins;
     line-height: 160px;
 }
 .td-od-color p{
-    color: #D04938;
+    color: black;
     font-family: poppins;
     line-height: 160px;
 }

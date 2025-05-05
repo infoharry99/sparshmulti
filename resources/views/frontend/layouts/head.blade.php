@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="{{asset('frontend/css/font-awesome.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/jquery.fancybox.min.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/themify-icons.css')}}">
-<link rel="stylesheet" href="{{asset('frontend/css/niceselect.css')}}">
+<!-- <link rel="stylesheet" href="{{asset('frontend/css/niceselect.css')}}"> -->
 <link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/flex-slider.min.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/owl-carousel.css')}}">
@@ -67,6 +67,6 @@
 
             if (stickyBar) stickyBar.style.display = 'none';
             if (inlineButtons) inlineButtons.style.display = 'none';
-        }, 10000); // Delay to wait for async loading
+        }, 10000); 
     });
 </script>

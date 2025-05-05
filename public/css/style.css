@@ -149,7 +149,7 @@ p {
 
 :root {
     --ftcolor: #3195b7;
-    --sdcolor: #d04938;
+    --sdcolor: black;
 }
 
 /*==== header sec start ====*/
@@ -1162,7 +1162,7 @@ a {
     background: transparent;
     outline: none;
     font-family: poppins;
-    color: #ddd;
+    color: #000000;
     font-size: 18px;
     border: 2px solid #ddd;
     border-radius: 44px;
@@ -1171,7 +1171,7 @@ a {
     width: 100%;
 }
 .signup-form input::placeholder {
-    color: #ddd;
+    color: #000000;
 }
 .signup-btn {
     background: var(--sdcolor);
@@ -1407,7 +1407,7 @@ a {
 }
 .change-box button {
     border: none;
-    background: #d049382b;
+    background: black2b;
     padding: 13px 25px;
     border-radius: 44px;
     color: var(--sdcolor);

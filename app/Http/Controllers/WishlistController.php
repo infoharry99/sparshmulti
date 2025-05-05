@@ -13,13 +13,16 @@ class WishlistController extends Controller
     }
 
     public function wishlist(Request $request){
-        // dd($request->all());
+
+        if (!auth()->check()) {
+            request()->session()->flash('error','Please login first');
+            return redirect()->route('login.form');
+        }
         if (empty($request->slug)) {
             request()->session()->flash('error','Invalid Products');
             return back();
         }        
         $product = Product::where('slug', $request->slug)->first();
-        // return $product;
         if (empty($product)) {
             request()->session()->flash('error','Invalid Products');
             return back();

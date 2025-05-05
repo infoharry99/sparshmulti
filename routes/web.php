@@ -48,7 +48,7 @@
     Route::get('storage-link',[AdminController::class,'storageLink'])->name('storage.link');
     Route::post('/cart/update', [CartController::class, 'updateQuantity'])->name('cart.updated');
     Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
-    Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
+    Route::get('/category/{slug}', [FrontendController::class, 'show'])->name('category.details');
     Route::post('/place-order', [CheckoutController::class, 'placeOrder'])->name('checkout.placeOrder');
     Route::post('cart/order', [OrderController::class, 'store'])->name('cart.order');
 
@@ -99,7 +99,7 @@
             Route::get('/wishlist', function () {
                 return view('frontend.pages.wishlist');
             })->name('wishlist');
-            Route::get('/wishlist/{slug}', [WishlistController::class, 'wishlist'])->name('add-to-wishlist')->middleware('user');
+            Route::get('/wishlist/{slug}', [WishlistController::class, 'wishlist'])->name('add-to-wishlist');
             Route::get('wishlist-delete/{id}', [WishlistController::class, 'wishlistDelete'])->name('wishlist-delete');
             // Route::post('cart/order', [OrderController::class, 'store'])->name('cart.order');
             Route::get('order/pdf/{id}', [OrderController::class, 'pdf'])->name('order.pdf');

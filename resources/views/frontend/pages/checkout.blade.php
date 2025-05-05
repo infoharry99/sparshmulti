@@ -72,7 +72,26 @@
                 display: flex;
                 flex-wrap: wrap;
             }
-            
+            @media (max-width: 768px) {
+                .checkout-inner {
+                    flex-direction: column;
+                }
+            }
+            @media (max-width: 768px) {
+                .checkout-inner {
+                    flex-direction: column;
+                }
+
+                .checkout-summary {
+                    width: 100%;
+                }
+            }
+            .checkout-inner {
+                display: flex;
+                gap: 30px;
+                align-items: flex-start;
+                flex-wrap: wrap;
+            }
             .checkout-container {
                 display: flex;
                 width: 100%;
@@ -367,149 +386,153 @@
                     <i class="fas fa-chevron-up account-toggle"></i>
                 </div>
                 <div class="account-details" style="display: block;">
-                    <p class="account-email">{{ auth()->user()->email ?? 'guest@example.com' }}</p>
-                    <a href="{{ route('logout') }}" class="logout-link">Log out</a>
+                    @if(auth()->check())
+                        <p class="account-email">{{ auth()->user()->email }}</p>
+                        <a href="{{ url('/user/logout') }}" class="logout-link">Log out</a>
+                    @else
+                        <a href="{{ url('/user/login') }}" class="login-link">Log in</a>
+                    @endif
                 </div>
                 <div class="newsletter-checkbox">
                     <input type="checkbox" id="newsletter" name="newsletter">
                     <label for="newsletter">Email me with news and offers</label>
                 </div>
             </div>
-
-            <div class="checkout-container">
+           
+            <div class="checkout-container"  style="display:flex">
                 <form method="POST" action="{{ route('cart.order') }}">
                     @csrf
+                    <div class="checkout-inner" style="display: flex; gap: 30px; align-items: flex-start;">
+                        <!-- LEFT -->
+                        <div class="checkout-form">
+                            <h2 class="section-title">Delivery</h2>
 
-                    <!-- LEFT -->
-                    <div class="checkout-form">
-                        <h2 class="section-title">Delivery</h2>
-
-                        <div class="form-group">
-                            <label for="country">Country/Region</label>
-                            <select id="country" name="country" class="form-control select2">
-                                <option value="UK">United Kingdom</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="AU">Australia</option>
-                            </select>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label>First Name *</label>
-                                <input type="text" name="first_name" class="form-control" value="{{ old('first_name') }}">
-                                @error('first_name') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <div class="form-col">
-                                <label>Last Name *</label>
-                                <input type="text" name="last_name" class="form-control" value="{{ old('last_name') }}">
-                                @error('last_name') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label>Email *</label>
-                                <input type="email" name="email" class="form-control" value="{{ old('email') }}">
-                                @error('email') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                            <div class="form-col">
-                                <label>Phone *</label>
-                                <input type="text" name="phone" class="form-control" value="{{ old('phone') }}">
-                                @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Address Line 1 *</label>
-                            <input type="text" name="address1" class="form-control" value="{{ old('address1') }}">
-                            @error('address1') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>
-
-                        <div class="form-group">
-                            <label>Address Line 2</label>
-                            <input type="text" name="address2" class="form-control" value="{{ old('address2') }}">
-                            @error('address2') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-col">
-                                <label>City *</label>
-                                <input type="text" name="city" class="form-control" value="{{ old('city') }}">
-                            </div>
-                            <div class="form-col">
-                                <label>Postal Code *</label>
-                                <input type="text" name="post_code" class="form-control" value="{{ old('post_code') }}">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Shipping Method</label>
-                            @if(count(Helper::shipping()) > 0 && Helper::cartCount() > 0)
-                                <select name="shipping" class="nice-select">
-                                    <option value="">Select your address</option>
-                                    @foreach(Helper::shipping() as $shipping)
-                                        <option value="{{ $shipping->id }}" data-price="{{ $shipping->price }}">{{ $shipping->type }} - ₹{{ $shipping->price }}</option>
-                                    @endforeach
+                            <div class="form-group">
+                                <label for="country">Country/Region</label>
+                                <select id="country" name="country" class="form-control select2">
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="AU">Australia</option>
                                 </select>
-                            @else
-                                <p>Shipping not available</p>
-                            @endif
-                        </div>
+                            </div>
 
-                        <div class="form-group">
-                            <label>Payment Method</label><br>
-                            <input type="radio" name="payment_method" value="cod" checked> Cash on Delivery<br>
-                            <input type="radio" name="payment_method" value="paypal"> PayPal
-                        </div>
-
-                        <div class="button">
-                            <button type="submit" class="btn">Place Order</button>
-                        </div>
-                    </div>
-                    
-
-                    <!-- RIGHT -->
-                    <div class="checkout-summary">
-                        <div class="product-list">
-                            @foreach ($cartItems as $item)
-                                @php $photos = json_decode($item->product->photo); @endphp
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <img src="{{ asset($photos[0]) }}" alt="{{ $item->product->title }}" width="60">
-                                        <span class="product-badge">{{ $item->quantity }}</span>
-                                    </div>
-                                    <div class="product-details">
-                                        <h4 class="product-title">{{ $item->product->title }}</h4>
-                                        <p class="product-price">₹{{ number_format($item->amount, 2) }}</p>
-                                    </div>
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <label>First Name *</label>
+                                    <input type="text" name="first_name" class="form-control" value="{{ old('first_name') }}">
+                                    @error('first_name') <span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
-                            @endforeach
+                                <div class="form-col">
+                                    <label>Last Name *</label>
+                                    <input type="text" name="last_name" class="form-control" value="{{ old('last_name') }}">
+                                    @error('last_name') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <label>Email *</label>
+                                    <input type="email" name="email" class="form-control" value="{{ old('email') }}">
+                                    @error('email') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+                                <div class="form-col">
+                                    <label>Phone *</label>
+                                    <input type="text" name="phone" class="form-control" value="{{ old('phone') }}">
+                                    @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Address Line 1 *</label>
+                                <input type="text" name="address1" class="form-control" value="{{ old('address1') }}">
+                                @error('address1') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label>Address Line 2</label>
+                                <input type="text" name="address2" class="form-control" value="{{ old('address2') }}">
+                                @error('address2') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <label>City *</label>
+                                    <input type="text" name="city" class="form-control" value="{{ old('city') }}">
+                                </div>
+                                <div class="form-col">
+                                    <label>Postal Code *</label>
+                                    <input type="text" name="post_code" class="form-control" value="{{ old('post_code') }}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Shipping Method</label>
+                                @if(count(Helper::shipping()) > 0 && Helper::cartCount() > 0)
+                                    <select name="shipping" class="nice-select">
+                                        <option value="">Select your address</option>
+                                        @foreach(Helper::shipping() as $shipping)
+                                            <option value="{{ $shipping->id }}" data-price="{{ $shipping->price }}">{{ $shipping->type }} - ₹{{ $shipping->price }}</option>
+                                        @endforeach
+                                    </select>
+                                @else
+                                    <p>Shipping not available</p>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
+                                <label>Payment Method</label><br>
+                                <input type="radio" name="payment_method" value="cod" checked> Cash on Delivery<br>
+                                <input type="radio" name="payment_method" value="paypal"> PayPal
+                            </div>
+
+                            <div class="button">
+                                <button type="submit" class="btn">Place Order</button>
+                            </div>
                         </div>
 
-                        <div class="checkout-summary-line">
-                            <span>Subtotal · {{ Helper::cartCount() }} items</span>
-                            <span>₹{{ number_format(Helper::totalCartPrice(), 2) }}</span>
-                        </div>
+                        <!-- RIGHT -->
+                        <div class="checkout-summary">
+                            <div class="product-list">
+                                @foreach ($cartItems as $item)
+                                    @php $photos = json_decode($item->product->photo); @endphp
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <img src="{{ asset($photos[0]) }}" alt="{{ $item->product->title }}" width="60">
+                                            <span class="product-badge">{{ $item->quantity }}</span>
+                                        </div>
+                                        <div class="product-details">
+                                            <h4 class="product-title">{{ $item->product->title }}</h4>
+                                            <p class="product-price">₹{{ number_format($item->amount, 2) }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
 
-                        <div class="checkout-summary-line shipping-summary">
-                            <span>Shipping</span>
-                            <span>Enter shipping address</span>
-                        </div>
+                            <div class="checkout-summary-line">
+                                <span>Subtotal · {{ Helper::cartCount() }} items</span>
+                                <span>₹{{ number_format(Helper::totalCartPrice(), 2) }}</span>
+                            </div>
 
-                        <div class="checkout-total" id="order_total_price">
-                            <span>Total</span>
-                            <span>INR ₹{{ number_format(Helper::totalCartPrice(), 2) }}</span>
+                            <div class="checkout-summary-line shipping-summary">
+                                <span>Shipping</span>
+                                <span>Enter shipping address</span>
+                            </div>
+
+                            <div class="checkout-total" id="order_total_price">
+                                <span>Total</span>
+                                <span>INR ₹{{ number_format(Helper::totalCartPrice(), 2) }}</span>
+                            </div>
                         </div>
                     </div>
-                    
                 </form>
             </div>
+          
         </div>
 
         <script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
         <script src="{{ asset('frontend/js/select2/js/select2.min.js') }}"></script>
-        <script src="{{ asset('frontend/js/nice-select/js/jquery.nice-select.min.js') }}"></script>
+        <!-- <script src="{{ asset('frontend/js/nice-select/js/jquery.nice-select.min.js') }}"></script> -->
 
         <script>
             $(document).ready(function () {

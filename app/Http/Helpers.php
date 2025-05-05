@@ -157,14 +157,25 @@ class Helper{
     }
     // Wishlist Count
     public static function wishlistCount(){
-        
-        $user_id=auth()->user()->id;
-        return Wishlist::where('user_id',$user_id)->where('cart_id',null)->sum('quantity');
+        //Undefined constant "auth"
+
+        if(auth()->check()){
+            $user_id=auth()->user()->id;
+            return Wishlist::where('user_id',$user_id)->where('cart_id',null)->sum('quantity');
+        }else{
+            return 0;
+        }
+       
        
     }
     public static function getAllProductFromWishlist(){
-        $user_id=auth()->user()->id;
-        return Wishlist::with('product')->where('user_id',$user_id)->where('cart_id',null)->get();
+        
+        if(auth()->check()){
+            $user_id=auth()->user()->id;
+            return Wishlist::with('product')->where('user_id',$user_id)->where('cart_id',null)->get();
+        }else
+            return null ;
+
     
     }
 
