@@ -52,11 +52,11 @@
 
         .blog-label {
             position: absolute;
-            top: 10px;
+            top: 130px;
             left: 10px;
             background: black;
             color: #fff;
-            font-size: 14px;
+            font-size: 10px;
             padding: 6px 15px;
             font-weight: bold;
             border-radius: 4px;
@@ -314,15 +314,12 @@
                                     @if(!empty($photos) && isset($photos[0]))
                                        <a href="{{route('product-grids',$product->slug)}}"> <img src="{{ asset($photos[0]) }}" alt="{{ $product->title }}" class="img-fluid"></a>
                                     @endif
-
-
-
                                     <div class="product-hover-icons">
+                                        
                                         <button><a href="{{route('add-to-cart',$product->slug)}}">
                                             <i class="fas fa-shopping-bag"></i>
                                             </a>
                                         </button>
-                                        <!-- <button><i class="fas fa-shopping-bag"></i></button> -->
                                         <button><a href="{{route('add-to-wishlist',$product->slug)}}"><i class="far fa-heart"></i></a></button>
 
                                         <button><i class="far fa-times-circle"></i></button>

@@ -84,23 +84,76 @@ class Helper{
         return PostCategory::has('posts')->orderBy('id','DESC')->get();
     }
     // Cart Count
-    public static function cartCount(){
-        $user_id=auth()->user()->id;
-        return Cart::where('user_id',$user_id)->where('order_id',null)->sum('quantity');
+    public static function cartCount() {
+        if (auth()->check()) {
+            // For logged-in users
+            return \App\Models\Cart::where('user_id', auth()->id())
+                                   ->whereNull('order_id')
+                                   ->sum('quantity');
+        } else {
+            $cart = session()->get('cart', []);
+            $quantity = 0;
+            foreach ($cart as $item) {
+                $quantity += $item['quantity'];
+            }
+            return $quantity;
+        }
     }
 
     public function product(){
         return $this->hasOne('App\Models\Product','id','product_id');
     }
 
-    public static function getAllProductFromCart(){
-        $user_id=auth()->user()->id;
-        return Cart::with('product')->where('user_id',$user_id)->where('order_id',null)->get();
+    // public static function getAllProductFromCart(){
+    //     $user_id=auth()->user()->id;
+    //     return Cart::with('product')->where('user_id',$user_id)->where('order_id',null)->get();
+    // }
+    public static function getAllProductFromCart()
+    {
+        if (auth()->check()) {
+            $user_id = auth()->id();
+            return \App\Models\Cart::with('product')
+                ->where('user_id', $user_id)
+                ->whereNull('order_id')
+                ->get();
+        } else {
+            $sessionCart = session('cart', []);
+            $items = [];
+
+            foreach ($sessionCart as $item) {
+                $product = \App\Models\Product::find($item['product_id']);
+                if ($product) {
+                    $items[] = (object)[
+                        'product' => $product,
+                        'quantity' => $item['quantity'],
+                        'amount' => $item['amount'],
+                    ];
+                }
+            }
+
+            return collect($items);
+        }
     }
     // Total amount cart
-    public static function totalCartPrice(){
-        $user_id=auth()->user()->id;
-        return Cart::where('user_id',$user_id)->where('order_id',null)->sum('amount');
+    // public static function totalCartPrice(){
+    //     $user_id=auth()->user()->id;
+    //     return Cart::where('user_id',$user_id)->where('order_id',null)->sum('amount');
+    // }
+    public static function totalCartPrice()
+    {
+        if (auth()->check()) {
+            $user_id = auth()->id();
+            return \App\Models\Cart::where('user_id', $user_id)
+                ->whereNull('order_id')
+                ->sum('amount');
+        } else {
+            $cart = session()->get('cart', []);
+            $total = 0;
+            foreach ($cart as $item) {
+                $total += $item['amount'];
+            }
+            return $total;
+        }
     }
     // Wishlist Count
     public static function wishlistCount(){

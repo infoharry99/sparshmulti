@@ -43,7 +43,15 @@
     // });
     
     // STORAGE LINKED ROUTE
+    Route::get('/add-to-cart/{slug}', [CartController::class, 'addToCart'])->name('add-to-cart');
+    Route::get('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
     Route::get('storage-link',[AdminController::class,'storageLink'])->name('storage.link');
+    Route::post('/cart/update', [CartController::class, 'updateQuantity'])->name('cart.updated');
+    Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+    Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
+    Route::post('/place-order', [CheckoutController::class, 'placeOrder'])->name('checkout.placeOrder');
+    Route::post('cart/order', [OrderController::class, 'store'])->name('cart.order');
+
     Auth::routes(['register' => false]);
     // Route::group(['middleware' => ['language']], function (){
             Route::get('user/login', [FrontendController::class, 'login'])->name('login.form');
@@ -76,7 +84,7 @@
             Route::get('/product-sub-cat/{slug}/{sub_slug}', [FrontendController::class, 'productSubCat'])->name('product-sub-cat');
             Route::get('/product-brand/{slug}', [FrontendController::class, 'productBrand'])->name('product-brand');
         // Cart section
-            Route::get('/add-to-cart/{slug}', [CartController::class, 'addToCart'])->name('add-to-cart')->middleware('user');
+            // Route::get('/add-to-cart/{slug}', [CartController::class, 'addToCart'])->name('add-to-cart')->middleware('user');
             Route::post('/add-to-cart', [CartController::class, 'singleAddToCart'])->name('single-add-to-cart')->middleware('user');
             Route::get('cart-delete/{id}', [CartController::class, 'cartDelete'])->name('cart-delete');
             Route::post('cart-update', [CartController::class, 'cartUpdate'])->name('cart.update');
@@ -85,7 +93,7 @@
                 return view('frontend.pages.cart');
             })->name('cart');
 
-            Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout')->middleware('user');
+    
             Route::post('/payment/process', [PaymentController::class, 'process'])->name('payment.process');
         // Wishlist
             Route::get('/wishlist', function () {
@@ -93,7 +101,7 @@
             })->name('wishlist');
             Route::get('/wishlist/{slug}', [WishlistController::class, 'wishlist'])->name('add-to-wishlist')->middleware('user');
             Route::get('wishlist-delete/{id}', [WishlistController::class, 'wishlistDelete'])->name('wishlist-delete');
-            Route::post('cart/order', [OrderController::class, 'store'])->name('cart.order');
+            // Route::post('cart/order', [OrderController::class, 'store'])->name('cart.order');
             Route::get('order/pdf/{id}', [OrderController::class, 'pdf'])->name('order.pdf');
             Route::get('/income', [OrderController::class, 'incomeChart'])->name('product.order.income');
         // Route::get('/user/chart',[AdminController::class, 'userPieChart'])->name('user.piechart');

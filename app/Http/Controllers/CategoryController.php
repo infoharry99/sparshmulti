@@ -16,7 +16,6 @@ class CategoryController extends Controller
     public function index()
     {
         $category=Category::getAllCategory();
-        // return $category;
         return view('backend.category.index')->with('categories',$category);
     }
 
@@ -84,7 +83,16 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = Category::where('slug', $slug)->firstOrFail();
+        // If category has children, show child categories or related products
+        if ($category->is_parent) {
+            $childCategories = $category->children;
+            return view('category.parent', compact('category', 'childCategories'));
+        }
+
+        // If child category, show products
+        $products = Product::where('category_id', $category->id)->get();
+        return view('category.products', compact('category', 'products'));
     }
 
     public function edit($id)

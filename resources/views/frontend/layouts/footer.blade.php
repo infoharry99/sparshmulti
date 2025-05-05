@@ -115,7 +115,7 @@
     .feature-card:hover {
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-    .feature-card .icon {
+    .feature-card .icons {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
@@ -252,22 +252,22 @@
     <div class="container">
       <div class="features-grid">
         <div class="feature-card">
-          <div class="icon"><i class="fa-solid fa-box"></i></div>
+          <div class="icons"><i class="fa-solid fa-box"></i></div>
           <h4>Free Shipping</h4>
           <p>You will love at great low prices</p>
         </div>
         <div class="feature-card">
-          <div class="icon"><i class="fa-solid fa-credit-card"></i></div>
+          <div class="icons"><i class="fa-solid fa-credit-card"></i></div>
           <h4>Flexible Payment</h4>
           <p>Pay with Multiple Credit Cards</p>
         </div>
         <div class="feature-card">
-          <div class="icon"><i class="fa-solid fa-arrow-left"></i></div>
+          <div class="icons"><i class="fa-solid fa-arrow-left"></i></div>
           <h4>14 Day Returns</h4>
           <p>Within 30 days for an exchange</p>
         </div>
         <div class="feature-card">
-          <div class="icon"><i class="fa-solid fa-headphones-simple"></i></div>
+          <div class="icons"><i class="fa-solid fa-headphones-simple"></i></div>
           <h4>Premium Support</h4>
           <p>Outstanding premium support</p>
         </div>
@@ -302,7 +302,7 @@
           <h5>Help</h5>
           <ul>
             <li><a href="#">Search</a></li>
-            <li><a href="#">Order Tracking</a></li>
+            <li><a href="{{route('order.track')}}">Order Tracking</a></li>
           </ul>
         </div>
         <!-- Useful Links -->

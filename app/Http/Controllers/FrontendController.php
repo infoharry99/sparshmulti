@@ -23,6 +23,33 @@ class FrontendController extends Controller
     public function index(Request $request){
         return redirect()->route($request->user()->role);
     }
+  
+
+    public function headerCart()
+    {
+        $cartItems = [];
+
+        if (auth()->check()) {
+            $cartItems = Cart::with('product')
+                ->where('user_id', auth()->id())
+                ->whereNull('order_id')
+                ->get();
+        } else {
+            $sessionCart = session('cart', []);
+            foreach ($sessionCart as $item) {
+                $product = Product::find($item['product_id']);
+                if ($product) {
+                    $cartItems[] = (object)[
+                        'product' => $product,
+                        'quantity' => $item['quantity'],
+                        'amount' => $item['amount'],
+                    ];
+                }
+            }
+        }
+
+        return view('layouts.header-cart', compact('cartItems'));
+    }
 
     public function home(){
         $featured=Product::where('status','active')->where('is_featured',1)->orderBy('price','DESC')->limit(2)->get();

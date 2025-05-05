@@ -15,6 +15,10 @@ class Category extends Model
         return  Category::orderBy('id','DESC')->with('parent_info')->paginate(10);
     }
 
+    public function children()
+    {
+        return $this->hasMany(Category::class, 'parent_id')->where('status', 'active');
+    }
     public static function shiftChild($cat_id){
         return Category::whereIn('id',$cat_id)->update(['is_parent'=>1]);
     }

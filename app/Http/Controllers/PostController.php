@@ -117,13 +117,6 @@ class PostController extends Controller
         return view('backend.post.edit')->with('categories',$categories)->with('users',$users)->with('tags',$tags)->with('post',$post);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $post=Post::findOrFail($id);
@@ -135,7 +128,7 @@ class PostController extends Controller
             'description'=>'string|nullable',
             'tags'=>'nullable',
             'added_by'=>'nullable',
-            'post_cat_id'=>'required',
+            // 'post_cat_id'=>'required',
             'status'=>'required|in:active,inactive'
         ]);
 

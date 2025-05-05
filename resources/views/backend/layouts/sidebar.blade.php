@@ -60,7 +60,7 @@ span {
         </div> -->
 
     <!-- Categories -->
-    <!-- <li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#categoryCollapse" aria-expanded="true" aria-controls="categoryCollapse">
           <i class="fas fa-sitemap"></i>
           <span>Category</span>
@@ -72,7 +72,7 @@ span {
             <a class="collapse-item" href="{{route('category.create')}}">Add Category</a>
           </div>
         </div>
-      </li> -->
+      </li>
     {{-- Products --}}
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#productCollapse" aria-expanded="true" aria-controls="productCollapse">

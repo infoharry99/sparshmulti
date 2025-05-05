@@ -82,121 +82,121 @@
         box-sizing: border-box;
     }
 
-        body {
-            font-family: Arial, sans-serif;
-        }
+      body {
+          font-family: Arial, sans-serif;
+      }
 
-        .header {
-            width: 100%;
-            background: #fff;
-            border-bottom: 1px solid #ddd;
-            position: relative;
-            z-index: 1000;
-        }
+      .header {
+          width: 100%;
+          background: #fff;
+          border-bottom: 1px solid #ddd;
+          position: relative;
+          z-index: 1000;
+      }
 
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 240px;
-            position: relative;
-        }
+      .header-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 240px;
+          position: relative;
+      }
 
-        .nav {
-            flex: 4;
-        }
+      .nav {
+          flex: 4;
+      }
 
-        .nav-list {
-            display: flex;
-            align-items: center;
-            list-style: none;
-            gap: 20px;
-        }
+      .nav-list {
+          display: flex;
+          align-items: center;
+          list-style: none;
+          gap: 20px;
+      }
 
-        .nav-list li {
-            position: relative;
-        }
+      .nav-list li {
+          position: relative;
+      }
 
-        .nav-list a {
-            text-decoration: none;
-            color: #000;
-            font-weight: 500;
-            padding: 8px 10px;
-        }
+      .nav-list a {
+          text-decoration: none;
+          color: #000;
+          font-weight: 500;
+          padding: 8px 10px;
+      }
 
-        .logo {
-            flex: 1;
-            text-align: center;
-        }
+      .logo {
+          flex: 1;
+          text-align: center;
+      }
 
-        .logo h1 {
-            font-size: 32px;
-            margin-bottom: 5px;
-        }
+      .logo h1 {
+          font-size: 32px;
+          margin-bottom: 5px;
+      }
 
-        .logo p {
-            font-size: 12px;
-            color: #555;
-        }
+      .logo p {
+          font-size: 12px;
+          color: #555;
+      }
 
-        .header-icons {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-            gap: 15px;
-        }
+      .header-icons {
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+          gap: 15px;
+      }
 
-        .header-icons a {
-            text-decoration: none;
-            color: #000;
-            font-size: 20px;
-        }
+      .header-icons a {
+          text-decoration: none;
+          color: #000;
+          font-size: 20px;
+      }
 
-        /* Mega Menu */
-        .dropdown:hover .mega-menu {
-            display: flex;
-        }
+      /* Mega Menu */
+      .dropdown:hover .mega-menu {
+          display: flex;
+      }
 
-        .mega-menu {
-            display: none;
-            position: absolute;
-            top: 103% !important;
-            left: 0;
-            background: #fff;
-            width: 800px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            padding: 20px;
-            gap: 30px;
-            z-index: 999;
-        }
+      .mega-menu {
+          display: none;
+          position: absolute;
+          top: 103% !important;
+          left: 0;
+          background: #fff;
+          width: 800px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          padding: 20px;
+          gap: 30px;
+          z-index: 999;
+      }
 
-        .mega-column {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
+      .mega-column {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+      }
 
-        .mega-column h4 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
+      .mega-column h4 {
+          font-size: 16px;
+          margin-bottom: 10px;
+          font-weight: 700;
+      }
 
-        .mega-column a {
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #333;
-            text-decoration: none;
-        }
+      .mega-column a {
+          font-size: 14px;
+          margin-bottom: 8px;
+          color: #333;
+          text-decoration: none;
+      }
 
-        .mega-column a:hover {
-                `text-decoration: underline;
-        }
+      .mega-column a:hover {
+              `text-decoration: underline;
+      }
     .sticky {
         display: block !important;
     }
 </style>
-
+@php  $categorys = App\Models\Category::where('status','active')->where('is_parent',1)->orderBy('title','ASC')->get(); @endphp
 <header class="header">
     <div class="logo">
           <div>
@@ -228,40 +228,15 @@
                 <li class="dropdown">
                     <a href="#">Categories</a>
                     <div class="mega-menu">
-                        <div class="mega-column">
-                        <h4>Necklace Set</h4>
-                        <a href="#">Designer Handmade Polki Necklace Set</a>
-                        <a href="#">Designer Mala Set</a>
-                        <a href="#">Low Price Necklace Set</a>
-                        <a href="#">Paint Meena Necklace Set</a>
-                        <a href="#">Polki Necklace Set</a>
-                        </div>
-                        <div class="mega-column">
-                        <h4>Earrings</h4>
-                        <a href="#">Fancy Earrings</a>
-                        <a href="#">Indian Reverse Ad Jhumkas</a>
-                        <a href="#">Mint Meena Earrings</a>
-                        <a href="#">Polki Earrings</a>
-                        <a href="#">Real Kundan Earrings</a>
-                        <a href="#">Real Kundan Studs</a>
-                        <a href="#">Studs</a>
-                        </div>
-                        <div class="mega-column">
-                        <h4>Bangles</h4>
-                        <a href="#">Cz Bangles</a>
-                        <a href="#">Paint Meena Bangles</a>
-                        <a href="#">Polki Bangles</a>
-                        <a href="#">Real Kundan Bangles</a>
-                        </div>
-                        <div class="mega-column">
-                        <h4>Payal</h4>
-                        <a href="#">Kundan Payal</a>
-                        <a href="#">Polki Payal</a>
-                        </div>
-                        <div class="mega-column">
-                        <h4>Mangalsutra</h4>
-                        </div>
-                    </div>
+                      @foreach ($categorys as $category)
+                          <div class="mega-column">
+                              <h2><a href="{{ route('category.show', $category->slug) }}"><strong>{{ $category->title }}</strong></a></h2>
+                              @foreach ($category->children as $child)
+                                  <a href="{{ route('category.show', $child->slug) }}">{{ $child->title }}</a>
+                              @endforeach
+                          </div>
+                      @endforeach
+                  </div>
                 </li>
                 
                 <li><a href="#">Collections</a></li>
@@ -313,35 +288,29 @@
         </div>
 
     </div>
-  <div class="cart-items">
-    <div class="cart-item">
-      <img src="bangles1.jpg" alt="Antique Bangles">
-      <div class="item-details">
-        <h4>Antique Real Kundan Bangles</h4>
-        <p>Rs. 4,350.00</p>
-        <div class="qty-remove">
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
-          <a href="#">Remove</a>
+      <div class="cart-items">
+      @forelse ($cartItems as $item)
+   
+        <div class="cart-item">
+          @php
+              $photos = json_decode($item->product->photo);
+          @endphp
+            <img src="{{ asset($photos[0]) }}" alt="{{ $item->product->title }}">
+            <div class="item-details">
+                <h4>{{ $item->product->title }}</h4>
+                <p>Rs. {{ number_format($item->product->price, 2) }}</p>
+                <div class="qty-remove">
+                  <button onclick="updateCart({{ $item->product->id }}, 'decrease')">-</button>
+                  <span id="qty-{{ $item->product->id }}">{{ $item->quantity }}</span>
+                  <button onclick="updateCart({{ $item->product->id }}, 'increase')">+</button>
+                  <a href="{{ route('cart.remove', $item->product->id) }}">Remove</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-
-    <div class="cart-item">
-      <img src="necklace.jpg" alt="Kundan Necklace">
-      <div class="item-details">
-        <h4>Brass Made Desirable Design Hand Painted...</h4>
-        <p>Rs. 14,715.00</p>
-        <div class="qty-remove">
-          <button>-</button>
-          <span>2</span>
-          <button>+</button>
-          <a href="#">Remove</a>
-        </div>
-      </div>
-    </div>
-  </div>
+      @empty
+    <p>Your cart is empty.</p>
+  @endforelse
+</div>
 
   <div class="cart-footer">
     <div class="icons">
@@ -349,9 +318,13 @@
       <button>🚚</button>
     </div>
 
+    @php
+      $subtotal = collect($cartItems)->sum('amount');
+    @endphp
+
     <div class="subtotal">
       <span>Subtotal</span>
-      <strong>Rs. 33,780.00</strong>
+      <strong>Rs. {{ number_format($subtotal, 2) }}</strong>
     </div>
     <p class="note">Tax included and shipping calculated at checkout</p>
 
@@ -359,12 +332,33 @@
       <input type="checkbox"> I agree with the <a href="#">terms and conditions</a>
     </label>
 
+   
     <div class="cart-actions">
-      <button class="outline">View cart</button>
-      <button class="filled">Check out</button>
+      <button class="outline" ><a href="{{route('checkout')}}">View cart </a></button>
+      <button class="filled" ><a href="{{route('checkout')}}">Check out</a></button>
     </div>
+
   </div>
 </div>
+
+<script>
+function updateCart(productId, action) {
+    fetch("{{ route('cart.updated') }}", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        },
+        body: JSON.stringify({ product_id: productId, action: action })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            location.reload(); // Or update the cart DOM without reloading
+        }
+    });
+}
+</script>
 
 <style>
 
