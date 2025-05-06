@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','E-SHOP || Order Track Page')
+@section('title','Oreder Tracking || My store')
 
 @section('main-content')
     <!-- Breadcrumbs -->
@@ -26,13 +26,13 @@
                 <p>Enter your tracking number here to see your order status.</p>
                 <form class="row justify-content-center tracking_form my-4" action="{{ route('product.track.order') }}" method="post" novalidate="novalidate">
                     @csrf
-                    <div class="col-md-2 form-group">
-                    </div>
-                    <div class="col-md-5 form-group">
-                        <input type="text" class="form-control p-2" style="border-radius: 30px;" name="order_number" placeholder="Enter your order number">
-                    </div>
+                    
                     <div class="col-md-3 form-group">
-                        <button type="submit" class="btn btn-primary w-100" style="background-color: black;border-radius: 30px;">Track Order</button>
+                        <input type="text" class="form-control p-2" style="border: 2px solid #000000;border-radius: 30px;" name="order_number" placeholder="">
+                    </div>
+                    </n>
+                    <div class="col-md-1 form-group">
+                        <button type="submit" class="btn btn-primary w-100" style="background-color: black;border-radius: 30px;">TRACK</button>
                     </div>
                 </form>
             </div>

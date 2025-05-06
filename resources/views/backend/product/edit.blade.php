@@ -50,7 +50,7 @@
         </div>
         @php 
           $sub_cat_info=DB::table('categories')->select('title')->where('id',$product->child_cat_id)->get();
-        // dd($sub_cat_info);
+       
 
         @endphp
         {{-- {{$product->child_cat_id}} --}}
@@ -58,7 +58,7 @@
           <label for="child_cat_id">Sub Category</label>
           <select name="child_cat_id" id="child_cat_id" class="form-control">
               <option value="">--Select any sub category--</option>
-              
+            
           </select>
         </div>
 
@@ -77,14 +77,13 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="size">Size</label>
           <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
               <option value="">--Select any size--</option>
               @foreach($items as $item)              
                 @php 
                 $data=explode(',',$item->size);
-                // dd($data);
                 @endphp
               <option value="S"  @if( in_array( "S",$data ) ) selected @endif>Small</option>
               <option value="M"  @if( in_array( "M",$data ) ) selected @endif>Medium</option>
@@ -92,7 +91,7 @@
               <option value="XL"  @if( in_array( "XL",$data ) ) selected @endif>Extra Large</option>
               @endforeach
           </select>
-        </div>
+        </div> -->
         <div class="form-group">
           <label for="brand_id">Brand</label>
           <select name="brand_id" class="form-control">
@@ -107,11 +106,10 @@
           <label for="condition">Condition</label>
           <select name="condition" class="form-control">
               <option value="default" {{(($product->condition=='default')? 'selected':'')}}>Default</option>
-              <option value="new" {{(($product->condition=='new')? 'selected':'')}}>New</option>
-              <option value="hot" {{(($product->condition=='hot')? 'selected':'')}}>Hot</option>
+              <option value="new" {{(($product->condition=='new')? 'selected':'')}}>New Arrival</option>
+              <option value="gifting" {{(($product->condition=='gifting')? 'selected':'')}}>Gifting</option>
               <option value="best_seller" {{(($product->condition=='best_seller')? 'selected':'')}}>Best Seller</option>
-              <option value="shop_the_look" {{(($product->condition=='shop_the_look')? 'selected':'')}}>SHOP THE LOOK</option>
-              <option value="litclub" {{(($product->condition=='litclub')? 'selected':'')}}>LITCLUB</option>
+              <option value="shop_the_look" {{(($product->condition=='occastions')? 'selected':'')}}>Occastions</option>
           </select>
         </div>
 

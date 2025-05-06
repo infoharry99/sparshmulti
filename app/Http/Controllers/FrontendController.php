@@ -23,7 +23,28 @@ class FrontendController extends Controller
     public function index(Request $request){
         return redirect()->route($request->user()->role);
     }
+
+    public function newarrival(){
+       $newarrival=Product::where('status','active')->where('condition','new')->orderBy('id','DESC')->get();
+        return view('frontend.pages.newarrival')->with('newarrival',$newarrival);
+    }
+    public function bestseller(){
+        $bestseller=Product::where('status','active')->where('condition','bestseller')->orderBy('id','DESC')->get();    
+        return view('frontend.pages.bestseller')->with('bestseller',$bestseller);
+    }
+    public function gifting(){
+        $gifting=Product::where('status','active')->where('condition','gifting')->orderBy('id','DESC')->get();    
+        return view('frontend.pages.gifting')->with('gifting',$gifting);
+    }
+    public function occasional(){
+        $occassional=Product::where('status','active')->where('condition','occassional')->orderBy('id','DESC')->get();    
+        return view('frontend.pages.occassional')->with('occassional',$occassional);
+    }
   
+    public function collection(){
+        $collection=Product::where('status','active')->orderBy('id','DESC')->paginate(4);
+        return view('frontend.pages.collection')->with('collection',$collection);
+    }
 
     public function headerCart()
     {
@@ -450,8 +471,6 @@ class FrontendController extends Controller
         return view('frontend.pages.register');
     }
     public function registerSubmit(Request $request){
-   
-        // return $request->all();
         $this->validate($request,[
             'first_name'=>'string|required|min:2',
             'last_name'=>'string|required|min:2',
@@ -464,9 +483,8 @@ class FrontendController extends Controller
         // Session::put('user',$data['email']);
         if($check){
             request()->session()->flash('success','Successfully registered');
-            return redirect()->route('home');
-        }
-        else{
+            return redirect()->route('login.form');
+        }else{
             request()->session()->flash('error','Please try again!');
             return back();
         }

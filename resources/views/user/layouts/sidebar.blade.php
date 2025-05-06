@@ -19,18 +19,12 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('cart') }}">
-            <i class="fas fa-hammer fa-chart-area"></i>
-            <span>My Cart</span>
-        </a>
-    </li>
-    <li class="nav-item">
         <a class="nav-link" href="{{route('wishlist')}}">
             <i class="fas fa-hammer fa-chart-area"></i>
             <span>My Wishlist</span>
         </a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="{{route('user.order.index')}}">
             <i class="fas fa-hammer fa-chart-area"></i>
             <span>Payment Details</span>
@@ -53,13 +47,13 @@
             <i class="fas fa-hammer fa-chart-area"></i>
             <span>Transaction History</span>
         </a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
         <a class="nav-link" href="{{route('user.order.index')}}">
             <i class="fas fa-hammer fa-chart-area"></i>
             <span> Notifications</span>
         </a>
-    </li>
+    </li> -->
     <li class="nav-item">
         <a class="nav-link" href="{{route('user.order.index')}}">
             <i class="fas fa-hammer fa-chart-area"></i>

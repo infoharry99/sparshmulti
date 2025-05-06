@@ -420,12 +420,13 @@
                             <div class="form-row">
                                 <div class="form-col">
                                     <label>First Name *</label>
-                                    <input type="text" name="first_name" class="form-control" value="{{ old('first_name') }}">
-                                    @error('first_name') <span class="text-danger">{{ $message }}</span> @enderror
+                                    <input type="text" name="first_name" class="form-control" value="{{ auth()->check() ? auth()->user()->first_name : old('first_name') }}">
+                                    @error('first_name') 
+                                    <span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
                                 <div class="form-col">
                                     <label>Last Name *</label>
-                                    <input type="text" name="last_name" class="form-control" value="{{ old('last_name') }}">
+                                    <input type="text" name="last_name" class="form-control" value="{{ auth()->check() ? auth()->user()->last_name : old('last_name') }}">
                                     @error('last_name') <span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
                             </div>
@@ -433,12 +434,12 @@
                             <div class="form-row">
                                 <div class="form-col">
                                     <label>Email *</label>
-                                    <input type="email" name="email" class="form-control" value="{{ old('email') }}">
+                                    <input type="email" name="email" class="form-control" value="{{ auth()->check() ? auth()->user()->email : old('email') }}">
                                     @error('email') <span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
                                 <div class="form-col">
                                     <label>Phone *</label>
-                                    <input type="text" name="phone" class="form-control" value="{{ old('phone') }}">
+                                    <input type="text" name="phone" class="form-control" value="{{ auth()->check() ? auth()->user()->phone : old('phone') }}">
                                     @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
                             </div>
@@ -483,7 +484,7 @@
                             <div class="form-group">
                                 <label>Payment Method</label><br>
                                 <input type="radio" name="payment_method" value="cod" checked> Cash on Delivery<br>
-                                <input type="radio" name="payment_method" value="paypal"> PayPal
+                                <!-- <input type="radio" name="payment_method" value="paypal"> PayPal -->
                             </div>
 
                             <div class="button">

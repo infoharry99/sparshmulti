@@ -52,6 +52,12 @@
     Route::post('/place-order', [CheckoutController::class, 'placeOrder'])->name('checkout.placeOrder');
     Route::post('cart/order', [OrderController::class, 'store'])->name('cart.order');
 
+    Route::get('newarrival', [FrontendController::class, 'newarrival'])->name('newarrival');
+    Route::get('bestseller', [FrontendController::class, 'bestseller'])->name('bestseller');
+    Route::get('gifting', [FrontendController::class, 'gifting'])->name('gifting');
+    Route::get('occasions', [FrontendController::class, 'occasional'])->name('occasional');
+    Route::get('collection', [FrontendController::class, 'collection'])->name('collection');
+
     Auth::routes(['register' => false]);
     // Route::group(['middleware' => ['language']], function (){
             Route::get('user/login', [FrontendController::class, 'login'])->name('login.form');

@@ -1,20 +1,4 @@
 <style>
-.bg-gradient-primary {
-  background-color: white !important;
-  
-}
-span {
-  color: black !important;
-}
-.sidebar-dark .nav-item .nav-link i {
-    color: black !important;
-}
-.sidebar-dark hr .sidebar-divider {
-    border-top: black !important;
-}
-.sidebar-dark .sidebar-heading {
-    color: black !important;
-}
 
 </style>
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -104,7 +88,7 @@ span {
     </li> -->
 
     {{-- Shipping --}}
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#shippingCollapse" aria-expanded="true" aria-controls="shippingCollapse">
           <i class="fas fa-truck"></i>
           <span>Shipping</span>
@@ -116,7 +100,7 @@ span {
             <a class="collapse-item" href="{{route('shipping.create')}}">Add Shipping</a>
           </div>
         </div>
-    </li>
+    </li> -->
 
     <!--Orders -->
     <li class="nav-item">
@@ -125,33 +109,33 @@ span {
             <span>Orders</span>
         </a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="{{route('order.index')}}">
             <i class="fas fa-hammer fa-chart-area"></i>
             <span>Transaction History</span>
         </a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
         <a class="nav-link" href="{{route('order.index')}}">
             <i class="fas fa-hammer fa-chart-area"></i>
             <span>My Payment Details</span>
         </a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
         <a class="nav-link" href="{{route('order.index')}}">
             <i class="fas fa-hammer fa-chart-area"></i>
             <span> Logistics Details</span>
         </a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
         <a class="nav-link" href="{{route('order.index')}}">
             <i class="fas fa-hammer fa-chart-area"></i>
             <span> Shipping Tracking</span>
         </a>
-    </li>
+    </li> -->
    
    
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#termsCollapse" aria-expanded="true" aria-controls="categoryCollapse">
           <i class="fas fa-sitemap"></i>
           <span>Terms And Condition</span>
@@ -163,9 +147,9 @@ span {
             <a class="collapse-item" href="{{route('terms.create')}}">Add Terms And Condition</a>
           </div>
         </div>
-    </li>
+    </li> -->
     
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#aboutCollapse" aria-expanded="true" aria-controls="aboutCollapse">
           <i class="fas fa-sitemap"></i>
           <span>About US</span>
@@ -177,34 +161,34 @@ span {
             <a class="collapse-item" href="{{route('about.create')}}">Add About US</a>
           </div>
         </div>
-    </li>
+    </li> -->
     <!-- Reviews -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="{{route('review.index')}}">
             <i class="fas fa-comments"></i>
             <span>Reviews</span></a>
-    </li>
+    </li> -->
     
 
     <!-- Divider -->
     <hr class="sidebar-divider">
 
     <!-- Heading -->
-    <div class="sidebar-heading">
+    <!-- <div class="sidebar-heading">
       Posts
-    </div>
+    </div> -->
 
     <!-- Posts -->
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#postCollapse" aria-expanded="true" aria-controls="postCollapse">
         <i class="fas fa-fw fa-folder"></i>
-        <span>Posts</span>
+        <span>Blogs</span>
       </a>
       <div id="postCollapse" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Post Options:</h6>
-          <a class="collapse-item" href="{{route('post.index')}}">Posts</a>
-          <a class="collapse-item" href="{{route('post.create')}}">Add Post</a>
+          <h6 class="collapse-header">Blogs Options:</h6>
+          <a class="collapse-item" href="{{route('post.index')}}">Blogs</a>
+          <a class="collapse-item" href="{{route('post.create')}}">Add Blog</a>
         </div>
       </div>
     </li>
@@ -240,12 +224,12 @@ span {
     </li> -->
 
       <!-- Comments -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="{{route('comment.index')}}">
             <i class="fas fa-comments fa-chart-area"></i>
             <span>Comments</span>
         </a>
-      </li>
+      </li> -->
 
 
     <!-- Divider -->

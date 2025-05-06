@@ -47,7 +47,7 @@
     content: "\f0da";
     float: right;
     border: none;
-    font-family: 'FontAwesome';
+    font-family: 'Albert Sans', sans-serif !important;
     }
 
     .dropdown-submenu>.dropdown-menu {

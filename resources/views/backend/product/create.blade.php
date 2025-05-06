@@ -12,13 +12,6 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
-        <div class="form-group">
-          <label for="inputTitle" class="col-form-label">Song Url <span class="text-danger">*</span></label>
-          <input id="inputTitle" type="text" name="url" placeholder="Enter Song Url"  value="{{old('url')}}" class="form-control">
-          @error('url')
-          <span class="text-danger">{{$message}}</span>
-          @enderror
-        </div>
 
         <div class="form-group">
           <label for="summary" class="col-form-label">Summary <span class="text-danger">*</span></label>
@@ -41,7 +34,7 @@
           <input type="checkbox" name='is_featured' id='is_featured' value='1' checked> Yes                        
         </div>
               {{-- {{$categories}} --}}
-<!--  <div class="form-group">
+        <div class="form-group">
           <label for="cat_id">Category <span class="text-danger">*</span></label>
           <select name="cat_id" id="cat_id" class="form-control">
               <option value="">--Select any category--</option>
@@ -55,11 +48,8 @@
           <label for="child_cat_id">Sub Category</label>
           <select name="child_cat_id" id="child_cat_id" class="form-control">
               <option value="">--Select any category--</option>
-              {{-- @foreach($parent_cats as $key=>$parent_cat)
-                  <option value='{{$parent_cat->id}}'>{{$parent_cat->title}}</option>
-              @endforeach --}}
         </select>
-        </div> -->
+        </div>
 
         <div class="form-group">
           <label for="price" class="col-form-label">Price(NRS) <span class="text-danger">*</span></label>
@@ -76,14 +66,14 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="size">Size</label>
             <select name="size[]" class="form-control selectpicker"  multiple data-live-search="true">
                 <option value="">--Select any size--</option>
                 <option value="S">25X16in</option>
                 <option value="M">36X36in</option>
             </select>
-        </div>
+        </div> -->
 
         <!-- <div class="form-group">
           <label for="brand_id">Brand</label>
@@ -101,11 +91,14 @@
           <label for="condition">Condition</label>
           <select name="condition" class="form-control">
               <option value="default">Default</option>
-              <option value="new">New</option>
-              <option value="hot">HOT</option>
+              <option value="new">New Arrival</option>
+              <option value="gifting">Gifting</option>
+              <option value="occastions">Occastions</option>
+
               <option value="best_seller">Best Seller</option>
           </select>
         </div>
+       
 
         <div class="form-group">
           <label for="stock">Quantity <span class="text-danger">*</span></label>

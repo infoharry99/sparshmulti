@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'E-Painting || HOME PAGE',
+    'title' => 'E-COMMERCE || HOME PAGE',
     'why_title' => 'Why Melody Brush',
     'why_description_1' => 'Lorem Ipsum has been the industry\'s standard dummy text...',
     'why_description_2' => 'It has survived not only five centuries...',
@@ -9,7 +9,7 @@ return [
     'previous' => 'Previous',
     'next' => 'Next',
     'feature_collections' => 'Feature Collections',
-    'popular_painting' => 'Popular Painting',
+    'popular_painting' => 'Popular COMMERCE',
     'instagram'=> 'Instagram',
     'facebook'=> 'Facebook',
     'testimonial'=> 'Testimonial',

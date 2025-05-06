@@ -188,7 +188,7 @@ class Helper{
         $user_id=auth()->user()->id;
         $order=Order::find($id);
         if($order){
-            $shipping_price=(float)$order->shipping->price;
+            $shipping_price=(float)$order->shipping->price ?? 0;
             $order_price=self::orderPrice($id,$user_id);
             return number_format((float)($order_price+$shipping_price),2,'.','');
         }else{
