@@ -177,7 +177,192 @@
             margin: 0 10px 10px;
         }
     </style>
+    <style>
+            /* Overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
 
+        /* Modal Content */
+        .modal-content {
+            background: #fff;
+            max-width: 1000px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Close Button */
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Modal Layout */
+        .modal-body {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            gap: 30px;
+        }
+
+        .modal-image img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .modal-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .badge {
+            background: #000;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .alert-text {
+            color: #ff4d4f;
+            font-weight: 500;
+        }
+
+        .price {
+            font-size: 1.75rem;
+            margin: 10px 0;
+        }
+
+        .description {
+            color: #888;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* Quantity */
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .quantity-control button {
+            width: 32px;
+            height: 32px;
+            background: #eee;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .quantity-control input {
+            width: 50px;
+            text-align: center;
+            margin: 0 8px;
+        }
+
+        /* Action Buttons */
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .add-to-cart {
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            flex: 1;
+        }
+        .wishlist, .remove {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        /* Buy Now */
+        .buy-now {
+            background: #e50000;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            font-weight: bold;
+            width: 100%;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        function openModal(button) {
+        const title = button.getAttribute('data-title');
+        const price = button.getAttribute('data-price');
+        const image = button.getAttribute('data-image');
+        const description = button.getAttribute('data-description');
+        const addToCartUrl = button.getAttribute('data-slug');
+        const productDetail = button.getAttribute('data-detail');
+        const wishlistUrl = button.getAttribute('data-wishlist');
+
+        // Show modal
+        document.getElementById('quickViewModal').style.display = 'flex';
+
+        // Populate fields
+
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-price').innerText = `Rs. ${price}`;
+        document.getElementById('modal-image').src = image;
+        document.getElementById('modal-description').innerText = description;
+
+        // Update cart/wishlist buttons
+        document.getElementById('modal-cart-btn').onclick = function() {
+            const qty = document.getElementById('quantity').value;
+            window.location.href = `${addToCartUrl}?qty=${qty}`;
+        };
+        // document.getElementById('modal-detail-btn').onclick = function() {
+        //     const qty = document.getElementById('quantity').value;
+        //     window.location.href = `${addToCartUrl}?qty=${qty}`;
+        // };
+        document.getElementById('').onclick = function() {
+            const qty = document.getElementById('quantity').value;
+            window.location.href = `${addToCartUrl}?qty=${qty}`;
+        };
+
+        document.getElementById('modal-wishlist-btn').onclick = function() {
+            window.location.href = wishlistUrl;
+        };
+
+        document.getElementById('modal-buy-btn').onclick = function() {
+            const qty = document.getElementById('quantity').value;
+            window.location.href = `${addToCartUrl}?qty=${qty}&buy_now=1`;
+        };
+        }
+
+        function closeModal() {
+        document.getElementById('quickViewModal').style.display = 'none';
+        }
+
+        function adjustQty(amount) {
+            const qtyInput = document.getElementById('quantity');
+            let value = parseInt(qtyInput.value) + amount;
+            qtyInput.value = value < 1 ? 1 : value;
+        }
+        function closeModal() {
+            const modal = document.getElementById('quickViewModal');
+            modal.style.display = 'none';
+        }
+    </script>
     <div class="container" style="margin-bottom: 10rem;">
 
         <div class="row">
@@ -297,7 +482,7 @@
                 </div>
             </div>
         @endif
-
+ 
         <div class="grid" id="productGrid" style="grid-template-columns: repeat(4, 1fr);" >
             @foreach($products as $product)
                 <div class="product-card">
@@ -320,10 +505,21 @@
                                     <i class="far fa-heart"></i>
                                 </a>
                             </button>
-                            <button>
+                            <!-- <button>
                                 <i class="far fa-times-circle"></i>
-                            </button>
-                            <button>
+                            </button> -->
+                            <!-- <button>
+                                <i class="far fa-eye"></i>
+                            </button> -->
+                            <button
+                                onclick="openModal(this)"
+                                data-title="{{ $product->title }}"
+                                data-price="{{ number_format($product->price, 2) }}"
+                                data-image="{{ asset($photos[0]) }}"
+                                data-slug="{{ route('add-to-cart', $product->slug) }}"
+                                data-detail="{{ route('product-detail', $product->slug) }}"
+                                data-wishlist="{{ route('add-to-wishlist', $product->slug) }}"
+                            >
                                 <i class="far fa-eye"></i>
                             </button>
                         </div>
@@ -332,12 +528,47 @@
                         <h5 class="product-title">{{ $product->title }}</h5>
                         <p class="product-price">
                             <strong>
-                                Rs. {{ number_format($product->discount, 2) }}
+                                Rs. {{ number_format($product->price, 2) }}
                             </strong>
                         </p>
                     </div>
                 </div>
             @endforeach
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="quickViewModal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-body" style="display: flex; gap: 20px;">
+                <div class="modal-image">
+                    <img id="modal-image" src="" alt="Product Image" style="max-width: 250px;">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title">Product Title</h2>
+                    <div class="badge-row">
+                        <span class="badge">BEST SELLER</span>
+                        <span class="alert-text">⚡ Selling fast! 32 people have this in their carts.</span>
+                    </div>
+                    <p class="price" id="modal-price">Rs. 0.00</p>
+                    <p class="description" id="modal-description">Product description goes here.</p>
+
+                    <label for="quantity">Quantity</label>
+                    <div class="quantity-control">
+                    <button onclick="adjustQty(-1)">−</button>
+                    <input id="quantity" type="number" value="1" min="1">
+                    <button onclick="adjustQty(1)">+</button>
+                    </div>
+
+                    <div class="modal-actions">
+                    <button class="add-to-cart" id="modal-cart-btn">Add to cart</button>
+                    <button class="wishlist" id="modal-wishlist-btn"><i class="far fa-heart"></i></button>
+                    <button class="remove"><i class="far fa-times-circle"></i></button>
+                    </div>
+                    <button class="buy-now" id="modal-buy-btn">BUY IT NOW</button>
+                    <!-- <button class="detail-now" id="modal-detail-btn">View Details</button> -->
+                </div>
+            </div>
         </div>
     </div>
 
@@ -355,4 +586,6 @@
             });
         });
     </script>
+
+ 
 @endsection

@@ -338,59 +338,59 @@
 
     </style>
     <script>
-function openModal(button) {
-  const title = button.getAttribute('data-title');
-  const price = button.getAttribute('data-price');
-  const image = button.getAttribute('data-image');
-  const description = button.getAttribute('data-description');
-  const addToCartUrl = button.getAttribute('data-slug');
-  const productDetail = button.getAttribute('data-detail');
-  const wishlistUrl = button.getAttribute('data-wishlist');
+        function openModal(button) {
+        const title = button.getAttribute('data-title');
+        const price = button.getAttribute('data-price');
+        const image = button.getAttribute('data-image');
+        const description = button.getAttribute('data-description');
+        const addToCartUrl = button.getAttribute('data-slug');
+        const productDetail = button.getAttribute('data-detail');
+        const wishlistUrl = button.getAttribute('data-wishlist');
 
-  // Show modal
-  document.getElementById('quickViewModal').style.display = 'flex';
+        // Show modal
+        document.getElementById('quickViewModal').style.display = 'flex';
 
-  // Populate fields
+        // Populate fields
 
-  document.getElementById('modal-title').innerText = title;
-  document.getElementById('modal-price').innerText = `Rs. ${price}`;
-  document.getElementById('modal-image').src = image;
-  document.getElementById('modal-description').innerText = description;
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-price').innerText = `Rs. ${price}`;
+        document.getElementById('modal-image').src = image;
+        document.getElementById('modal-description').innerText = description;
 
-  // Update cart/wishlist buttons
-  document.getElementById('modal-cart-btn').onclick = function() {
-    const qty = document.getElementById('quantity').value;
-    window.location.href = `${addToCartUrl}?qty=${qty}`;
-  };
-  document.getElementById('modal-detail-btn').onclick = function() {
-    const qty = document.getElementById('quantity').value;
-    window.location.href = `${addToCartUrl}?qty=${qty}`;
-  };
-  document.getElementById('').onclick = function() {
-    const qty = document.getElementById('quantity').value;
-    window.location.href = `${addToCartUrl}?qty=${qty}`;
-  };
+        // Update cart/wishlist buttons
+        document.getElementById('modal-cart-btn').onclick = function() {
+            const qty = document.getElementById('quantity').value;
+            window.location.href = `${addToCartUrl}?qty=${qty}`;
+        };
+        document.getElementById('modal-detail-btn').onclick = function() {
+            const qty = document.getElementById('quantity').value;
+            window.location.href = `${addToCartUrl}?qty=${qty}`;
+        };
+        document.getElementById('').onclick = function() {
+            const qty = document.getElementById('quantity').value;
+            window.location.href = `${addToCartUrl}?qty=${qty}`;
+        };
 
-  document.getElementById('modal-wishlist-btn').onclick = function() {
-    window.location.href = wishlistUrl;
-  };
+        document.getElementById('modal-wishlist-btn').onclick = function() {
+            window.location.href = wishlistUrl;
+        };
 
-  document.getElementById('modal-buy-btn').onclick = function() {
-    const qty = document.getElementById('quantity').value;
-    window.location.href = `${addToCartUrl}?qty=${qty}&buy_now=1`;
-  };
-}
+        document.getElementById('modal-buy-btn').onclick = function() {
+            const qty = document.getElementById('quantity').value;
+            window.location.href = `${addToCartUrl}?qty=${qty}&buy_now=1`;
+        };
+        }
 
-function closeModal() {
-  document.getElementById('quickViewModal').style.display = 'none';
-}
+        function closeModal() {
+        document.getElementById('quickViewModal').style.display = 'none';
+        }
 
-function adjustQty(amount) {
-  const qtyInput = document.getElementById('quantity');
-  let value = parseInt(qtyInput.value) + amount;
-  qtyInput.value = value < 1 ? 1 : value;
-}
-</script>
+        function adjustQty(amount) {
+        const qtyInput = document.getElementById('quantity');
+        let value = parseInt(qtyInput.value) + amount;
+        qtyInput.value = value < 1 ? 1 : value;
+        }
+    </script>
 
 
 @if(count($banners) > 0)
@@ -511,7 +511,7 @@ function adjustQty(amount) {
                                             <button
                                                 onclick="openModal(this)"
                                                 data-title="{{ $product->title }}"
-                                                data-price="{{ number_format($product->discount, 2) }}"
+                                                data-price="{{ number_format($product->price, 2) }}"
                                                 data-image="{{ asset($photos[0]) }}"
                                                 data-slug="{{ route('add-to-cart', $product->slug) }}"
                                                 data-detail="{{ route('product-detail', $product->slug) }}"
@@ -524,7 +524,7 @@ function adjustQty(amount) {
 
                                     <div class="product-details mt-2">
                                     <h5 class="product-title">{{ $product->title }}</h5>
-                                    <p class="product-price"><strong>Rs. {{ number_format($product->discount, 2) }}</strong></p>
+                                    <p class="product-price"><strong>Rs. {{ number_format($product->price, 2) }}</strong></p>
                                     </div>
                                 </div>
                             </div>
@@ -569,39 +569,39 @@ function adjustQty(amount) {
     <!-- Modal -->
     <!-- Modal -->
     <div id="quickViewModal" class="modal-overlay" style="display:none;">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
-    <div class="modal-body" style="display: flex; gap: 20px;">
-      <div class="modal-image">
-        <img id="modal-image" src="" alt="Product Image" style="max-width: 250px;">
-      </div>
-      <div class="modal-details">
-        <h2 id="modal-title">Product Title</h2>
-        <div class="badge-row">
-          <span class="badge">BEST SELLER</span>
-          <span class="alert-text">⚡ Selling fast! 32 people have this in their carts.</span>
-        </div>
-        <p class="price" id="modal-price">Rs. 0.00</p>
-        <p class="description" id="modal-description">Product description goes here.</p>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-body" style="display: flex; gap: 20px;">
+            <div class="modal-image">
+                <img id="modal-image" src="" alt="Product Image" style="max-width: 250px;">
+            </div>
+            <div class="modal-details">
+                <h2 id="modal-title">Product Title</h2>
+                <div class="badge-row">
+                <span class="badge">BEST SELLER</span>
+                <span class="alert-text">⚡ Selling fast! 32 people have this in their carts.</span>
+                </div>
+                <p class="price" id="modal-price">Rs. 0.00</p>
+                <p class="description" id="modal-description">Product description goes here.</p>
 
-        <label for="quantity">Quantity</label>
-        <div class="quantity-control">
-          <button onclick="adjustQty(-1)">−</button>
-          <input id="quantity" type="number" value="1" min="1">
-          <button onclick="adjustQty(1)">+</button>
-        </div>
+                <label for="quantity">Quantity</label>
+                <div class="quantity-control">
+                <button onclick="adjustQty(-1)">−</button>
+                <input id="quantity" type="number" value="1" min="1">
+                <button onclick="adjustQty(1)">+</button>
+                </div>
 
-        <div class="modal-actions">
-          <button class="add-to-cart" id="modal-cart-btn">Add to cart</button>
-          <button class="wishlist" id="modal-wishlist-btn"><i class="far fa-heart"></i></button>
-          <button class="remove"><i class="far fa-times-circle"></i></button>
+                <div class="modal-actions">
+                <button class="add-to-cart" id="modal-cart-btn">Add to cart</button>
+                <button class="wishlist" id="modal-wishlist-btn"><i class="far fa-heart"></i></button>
+                <button class="remove"><i class="far fa-times-circle"></i></button>
+                </div>
+                <button class="buy-now" id="modal-buy-btn">BUY IT NOW</button>
+                <a href="{{route('product-detail', $product->slug)}}" id="modal-detail-btn">view details</a>
+            </div>
+            </div>
         </div>
-        <button class="buy-now" id="modal-buy-btn">BUY IT NOW</button>
-        <a href="{{route('product-detail', $product->slug)}}" id="modal-detail-btn">view details</a>
-      </div>
     </div>
-  </div>
-</div>
 
 
 
