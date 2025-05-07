@@ -76,10 +76,106 @@
 		</div>
 	</footer>  -->
    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* ================
-       Reset & container
-       ================ */
+    /* Mobile Navigation - Base Styles */
+    .mobile-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 0;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      font-size: 11px;
+      position: relative;
+      padding: 0 2px;
+    }
+
+    .nav-icon {
+      font-size: 18px;
+      margin-bottom: 2px;
+    }
+
+    .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-color: #ff0000;
+      color: white;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 9px;
+      font-weight: bold;
+    }
+
+    
+    body {
+      padding-bottom: 55px;
+    }
+    @media screen and (max-width: 767px) {
+      .mobile-nav {
+        padding: 6px 0;
+      }
+      
+      .nav-item {
+        font-size: 10px;
+        padding: 0;
+      }
+      
+      .nav-icon {
+        font-size: 16px;
+        margin-bottom: 1px;
+      }
+      
+      .badge {
+        width: 14px;
+        height: 14px;
+        font-size: 8px;
+        top: -3px;
+        right: -3px;
+      }
+    }
+
+    /* Regular mobile adjustments */
+    @media (max-width: 768px) {
+      
+      .site-footer {
+        padding-bottom: 55px;
+      }
+      .back-to-top {
+        bottom: 65px;
+      }
+    }
+
+    /* Desktop visibility */
+    @media (min-width: 769px) {
+      .mobile-nav {
+        display: none;
+      }
+      
+      body {
+        padding-bottom: 0;
+      }
+    }
+  </style>
+  <style>
+
     
     a {
       color: inherit;
@@ -133,7 +229,10 @@
        ================ */
     footer.site-footer {
       border-top: 1px solid #ddd;
-      padding: 4rem 0 2rem;
+      /* padding: 4rem 0 2rem; */
+      position: sticky;
+      border-top: 1px solid #ddd;
+      padding: 0rem 0 2rem;
     }
     .footer-grid {
       display: grid;
@@ -240,46 +339,45 @@
     /* ================
        Responsive tweaks
        ================ */
-    @media (max-width: 600px) {
+    /* @media (max-width: 600px) {
       .feature-card { padding: 1.5rem .75rem; }
       .footer-col form { flex-direction: column; }
       .footer-col form button { width: 100%; justify-content: center; }
+    } */
+    @media (max-width: 768px) {
+      
+      
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .footer-col {
+        padding-bottom: 1rem;
+      }
+
+      .footer-social {
+        justify-content: flex-start;
+      }
+
+      .footer-col form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .footer-col form input[type="email"],
+      .footer-col form button {
+        width: 100%;
+      }
     }
   </style>
 
-
-  <!-- <section class="features">
-    <div class="container">
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="icons"><i class="fa-solid fa-box"></i></div>
-          <h4>Free Shipping</h4>
-          <p>You will love at great low prices</p>
-        </div>
-        <div class="feature-card">
-          <div class="icons"><i class="fa-solid fa-credit-card"></i></div>
-          <h4>Flexible Payment</h4>
-          <p>Pay with Multiple Credit Cards</p>
-        </div>
-        <div class="feature-card">
-          <div class="icons"><i class="fa-solid fa-arrow-left"></i></div>
-          <h4>14 Day Returns</h4>
-          <p>Within 30 days for an exchange</p>
-        </div>
-        <div class="feature-card">
-          <div class="icons"><i class="fa-solid fa-headphones-simple"></i></div>
-          <h4>Premium Support</h4>
-          <p>Outstanding premium support</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
+  
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer"> 
     <div class="container">
       <div class="footer-grid">
-        <!-- Address -->
         <div class="footer-col">
           <h5>Contact Us</h5>
           <address>
@@ -297,7 +395,6 @@
             <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
           </div>
         </div>
-        <!-- Help -->
         <div class="footer-col">
           <h5>Help</h5>
           <ul>
@@ -305,7 +402,6 @@
             <li><a href="{{route('order.track')}}">Order Tracking</a></li>
           </ul>
         </div>
-        <!-- Useful Links -->
         <div class="footer-col">
           <h5>Useful Links</h5>
           <ul>
@@ -317,7 +413,6 @@
             <li><a href="#">Semi Bridal Set</a></li>
           </ul>
         </div>
-        <!-- Email Signup -->
         <div class="footer-col">
           <h5>Sign Up for Email</h5>
           <p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
@@ -331,9 +426,51 @@
       </div>
     </div>
   </footer>
+
   <a href="#top" class="back-to-top" aria-label="Back to top">
     <i class="fa-solid fa-chevron-up"></i>
   </a>
+
+  <script>
+    // Add this script to ensure the mobile navigation active state works
+    document.addEventListener('DOMContentLoaded', function() {
+      const navItems = document.querySelectorAll('.mobile-nav .nav-item');
+      
+      navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          // Remove active class from all items
+          navItems.forEach(i => i.classList.remove('active'));
+          
+          // Add active class to clicked item
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+    <nav class="mobile-nav">
+      <a href="{{route('home')}}" class="nav-item">
+        <i class="fas fa-th nav-icon"></i>
+        <span>Shop</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-search nav-icon"></i>
+        <span>Search</span>
+      </a>
+      <a href="{{route('checkout')}}" class="nav-item">
+        <i class="far fa-user nav-icon"></i>
+        <span>Account</span>
+      </a>
+      <a href="{{route('wishlist')}}" class="nav-item">
+        <i class="far fa-heart nav-icon"></i>
+        <span>Wishlist</span>
+        <span class="badge">{{Helper::wishlistCount()}}</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-shopping-cart nav-icon"></i>
+        <span>Cart</span>
+        <span class="badge">{{Helper::cartCount()}}</span>
+      </a>
+    </nav>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -374,7 +511,7 @@
   <script>
     $(document).ready(function(){
         $('.share-bar, .share-buttons, .social-share, #social-share-sidebar')
-            .hide(); // Add your exact class/ID here if known
+            .hide(); 
     });
 </script>
 <script>
@@ -396,7 +533,7 @@
     });
 </script>
   
-<script>
+  <script>
       let index = 0;
       const items = document.querySelectorAll('#carouselItems > div');
       const totalItems = items.length;
@@ -448,4 +585,4 @@
         index = (index + 1) % totalNewItems;
         changeSlide();
       });
-    </script>
+  </script>
