@@ -15,6 +15,8 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         // \App\Http\Middleware\TrustHosts::class,
+        \App\Http\Middleware\IdentifyTenant::class,
+        \App\Http\Middleware\TenantMiddleware::class,
         \App\Http\Middleware\TrustProxies::class,
         \App\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
@@ -29,7 +31,10 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middlewareGroups = [
+
+        
         'web' => [
+            \App\Http\Middleware\TenantMiddleware::class,
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
@@ -46,6 +51,7 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+
     ];
 
     protected $routeMiddleware = [
@@ -60,6 +66,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'admin'=> \App\Http\Middleware\Admin::class,
+        'is_superadmin' => \App\Http\Middleware\IsSuperAdmin::class,
         'user'=> \App\Http\Middleware\User::class,
         'language' => \App\Http\Middleware\LanguageSwitcher::class,
     ];

@@ -1,7 +1,9 @@
 @extends('frontend.layouts.master')
 @section('title', __('home.title')) {{-- Translatable title --}}
 @section('main-content')
+
     <style>
+
             /* Overlay */
         .modal-overlay {
             display: none;
@@ -438,7 +440,7 @@
 
             <div class="featured-slider owl-carousel">
                 @php
-                $product_listss = DB::table('products')->where('status', 'active')->orderBy('id', 'DESC')->limit(6)->get();
+                    $product_listss = App\Models\Product::where('status', 'active')->orderBy('id', 'DESC')->limit(6)->get();
                 @endphp
 
                 @foreach($product_listss as $product)
@@ -485,7 +487,7 @@
 
                     <div class="row g-4 mt-4">
                         @php
-                        $product_listss = DB::table('products')->where('status', 'active')->orderBy('id', 'DESC')->limit(4)->get();
+                        $product_listss = App\Models\Product::where('status', 'active')->orderBy('id', 'DESC')->limit(4)->get();
                         @endphp
 
                         @foreach($product_listss as $product)
@@ -597,7 +599,7 @@
                 <button class="remove"><i class="far fa-times-circle"></i></button>
                 </div>
                 <button class="buy-now" id="modal-buy-btn">BUY IT NOW</button>
-                <a href="{{route('product-detail', $product->slug)}}" id="modal-detail-btn">view details</a>
+                <a href="" id="modal-detail-btn">view details</a>
             </div>
             </div>
         </div>
@@ -730,12 +732,17 @@
     <style>
         /* Banner Sliding */
         #Gslider .carousel-inner {
-        /* background: #000000; */
-        color:black;
+            /* background: #000000; */
+            color:black;
         }
 
         #Gslider .carousel-inner{
-        height: 550px;
+            height: 550px;
+        }
+        @media (max-width: 768px) {
+            #Gslider .carousel-inner{
+                height: 250px;
+            }
         }
         #Gslider .carousel-inner img{
             width: 100% !important;
@@ -747,20 +754,20 @@
         }
 
         #Gslider .carousel-inner .carousel-caption h1 {
-        font-size: 50px;
-        font-weight: bold;
-        line-height: 100%;
-        color: #F7941D;
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 100%;
+            color: #F7941D;
         }
 
         #Gslider .carousel-inner .carousel-caption p {
-        font-size: 18px;
-        color: black;
-        margin: 28px 0 28px 0;
+            font-size: 18px;
+            color: black;
+            margin: 28px 0 28px 0;
         }
 
         #Gslider .carousel-indicators {
-        bottom: 70px;
+            bottom: 70px;
         }
     </style>
 @endpush

@@ -44,7 +44,8 @@ class BannerController extends Controller
             'status'=>'required|in:active,inactive',
         ]);
         $data=$request->all();
-
+        $tenant = app('currentTenant');
+        $data['tenant_id'] = $tenant->id;
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
             $fileName = time() . '.' . $file->getClientOriginalExtension();

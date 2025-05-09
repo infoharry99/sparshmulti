@@ -65,10 +65,32 @@ class AdminController extends Controller
             'phone'=>'required|string',
         ]);
         $data=$request->all();
-        // return $data;
-        $settings=Settings::first();
-        // return $settings;
-        $status=$settings->fill($data)->save();
+        $tenant = app('currentTenant');
+        $data['tenant_id'] = $tenant->id;
+
+        if ($request->hasFile('photo')) {
+            $photos = [];
+            foreach ($request->file('photo') as $file) {
+                $fileName = time() . '-' . $file->getClientOriginalName();
+                $file->move(public_path('frontend/logo'), $fileName);
+                $photos[] = 'frontend/logo/' . $fileName;
+            }
+            $data['photo'] = json_encode($photos); 
+        }
+
+        if ($request->hasFile('logo')) {
+            $file = $request->file('logo');
+            $fileName = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('frontend/logo'), $fileName);
+            $data['logo'] = 'frontend/logo/' . $fileName;
+        }
+        $settings = Settings::first();
+
+        if (!$settings) {
+            $settings = new Settings(); // create new instance if none exists
+        }
+
+        $status = $settings->fill($data)->save();
         if($status){
             request()->session()->flash('success','Setting successfully updated');
         }
@@ -96,7 +118,7 @@ class AdminController extends Controller
 
     // Pie chart
     public function userPieChart(Request $request){
-        // dd($request->all());
+        
         $data = User::select(\DB::raw("COUNT(*) as count"), \DB::raw("DAYNAME(created_at) as day_name"), \DB::raw("DAY(created_at) as day"))
         ->where('created_at', '>', Carbon::today()->subDay(6))
         ->groupBy('day_name','day')
@@ -107,7 +129,6 @@ class AdminController extends Controller
      {
        $array[++$key] = [$value->day_name, $value->count];
      }
-    //  return $data;
      return view('backend.index')->with('course', json_encode($array));
     }
 
@@ -116,6 +137,7 @@ class AdminController extends Controller
     //     $activity= Activity::all();
     //     return view('backend.layouts.activity')->with('activities',$activity);
     // }
+
 
     public function storageLink(){
         // check if the storage folder already linked;

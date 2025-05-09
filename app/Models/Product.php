@@ -4,10 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Cart;
+use App\Scopes\TenantScope;
+
 class Product extends Model
 {
-    protected $fillable=['title','slug','summary','description','url','sold_by','country','name_of_manufacture','address_of_manufacture','cat_id','child_cat_id','price','brand_id','discount','status','photo','size','stock','is_featured','condition'];
 
+    protected $fillable=['title','slug','tenant_id','summary','description','url','sold_by','country','name_of_manufacture','address_of_manufacture','cat_id','child_cat_id','price','brand_id','discount','status','photo','size','stock','is_featured','condition'];
+
+    protected static function booted()
+    {
+        static::addGlobalScope(new TenantScope);
+    }
     public function cat_info(){
         return $this->hasOne('App\Models\Category','id','cat_id');
     }

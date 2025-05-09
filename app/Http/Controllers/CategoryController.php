@@ -42,12 +42,14 @@ class CategoryController extends Controller
         $this->validate($request,[
             'title'=>'string|required',
             'summary'=>'string|nullable',
-            'photo'=>'required',
+            // 'photo'=>'required',
             'status'=>'required|in:active,inactive',
             'is_parent'=>'sometimes|in:1',
             'parent_id'=>'nullable|exists:categories,id',
         ]);
         $data= $request->all();
+        $tenant = app('currentTenant');
+        $data['tenant_id'] = $tenant->id;
         if ($request->hasFile('photo')) {
            
             $file = $request->file('photo');
@@ -55,15 +57,11 @@ class CategoryController extends Controller
             $file->move(public_path('frontend/category'), $fileName);
             $data['photo'] = 'frontend/category/' . $fileName;
         }
-        $slug=Str::slug($request->title);
-        $count=Category::where('slug',$slug)->count();
-        if($count>0){
-            $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
-        }
-        $data['slug']=$slug;
-        $data['is_parent']=$request->input('is_parent',0);
+        $slug = Str::slug($request->title).'-'.rand(0,999);
+        $data['slug'] = $slug;
+        $data['is_parent'] = $request->input('is_parent', 0);
 
-        $status=Category::create($data);
+        $status = Category::create($data);
         if($status){
             request()->session()->flash('success','Category successfully added');
         }
@@ -108,7 +106,6 @@ class CategoryController extends Controller
         $this->validate($request,[
             'title'=>'string|required',
             'summary'=>'string|nullable',
-            'photo'=>'required',
             'status'=>'required|in:active,inactive',
             'is_parent'=>'sometimes|in:1',
             'parent_id'=>'nullable|exists:categories,id',

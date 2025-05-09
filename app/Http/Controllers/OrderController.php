@@ -196,11 +196,13 @@ class OrderController extends Controller
         $coupon_value = session('coupon')['value'] ?? 0;
         $total_amount = $sub_total + $shipping_price - $coupon_value;
 
+        $tenant = app('currentTenant');
         // Create Order
         $order = new Order();
         $order_data = $request->all();
+        $order_data['tenant_id'] = $tenant->id;
         $order_data['order_number'] = 'ORD-' . strtoupper(Str::random(10));
-        $order_data['user_id'] = auth()->id(); // Will be null for guests
+        $order_data['user_id'] = auth()->id(); 
         $order_data['sub_total'] = $sub_total;
         $order_data['quantity'] = $quantity;
         $order_data['coupon'] = $coupon_value;

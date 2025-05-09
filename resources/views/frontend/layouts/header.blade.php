@@ -85,7 +85,7 @@
             <div class="logo">
                 <img src="{{asset('images/Sparsh_Logo.webp')}}" alt="Logo" class="logo-img" />
             </div>
-          <div class="header-icons">
+          <div class="header-icons" @media (max-width: 768px) style="display: none;">
               <a href="#">
                 <i class="fas fa-search"></i>
               </a>

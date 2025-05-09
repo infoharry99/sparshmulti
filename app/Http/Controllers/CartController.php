@@ -95,7 +95,9 @@ class CartController extends Controller
                 $already_cart->amount = $already_cart->price * $already_cart->quantity;
                 $already_cart->save();
             } else {
+
                 $cart = new Cart;
+                $cart->tenant_id = app('currentTenant')->id;
                 $cart->user_id = auth()->id();
                 $cart->product_id = $product->id;
                 $cart->price = $price;
@@ -164,6 +166,7 @@ class CartController extends Controller
             
             $cart = new Cart;
             $cart->user_id = auth()->user()->id;
+            $cart->tenant_id = app('currentTenant')->id;
             $cart->product_id = $product->id;
             $cart->price = ($product->price-($product->price*$product->discount)/100);
             $cart->quantity = $request->quant[1];

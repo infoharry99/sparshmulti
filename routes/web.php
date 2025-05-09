@@ -196,6 +196,57 @@
         Route::post('change-password', [AdminController::class, 'changPasswordStore'])->name('change.password');
     });
 
+    Route::group(['prefix' => '/superadmin', 'middleware' => ['auth', 'superadmin']], function () {
+        Route::get('/', [AdminController::class, 'index'])->name('admin');
+        Route::get('/file-manager', function () {
+            return view('backend.layouts.file-manager');
+        })->name('file-manager');
+        // user route
+        Route::resource('users', 'UsersController');
+        // Banner
+        Route::resource('banner', 'BannerController');
+        // Brand
+        Route::resource('brand', 'BrandController');
+        Route::resource('/terms', 'TermsController');
+        Route::resource('/about', 'AboutusController');
+        // Profile
+        Route::get('/profile', [AdminController::class, 'profile'])->name('admin-profile');
+        Route::post('/profile/{id}', [AdminController::class, 'profileUpdate'])->name('profile-update');
+        // Category
+        Route::resource('/category', 'CategoryController');
+        // Product
+        Route::resource('/product', 'ProductController');
+        // Ajax for sub category
+        Route::post('/category/{id}/child', 'CategoryController@getChildByParent');
+        // POST category
+        Route::resource('/post-category', 'PostCategoryController');
+        // Post tag
+        Route::resource('/post-tag', 'PostTagController');
+        // Post
+        Route::resource('/post', 'PostController');
+        // Message
+        Route::resource('/message', 'MessageController');
+        Route::get('/message/five', [MessageController::class, 'messageFive'])->name('messages.five');
+
+        // Order
+        Route::resource('/order', 'OrderController');
+        // Shipping
+        Route::resource('/shipping', 'ShippingController');
+        // Coupon
+        Route::resource('/coupon', 'CouponController');
+        // Settings
+        Route::get('settings', [AdminController::class, 'settings'])->name('settings');
+        Route::post('setting/update', [AdminController::class, 'settingsUpdate'])->name('settings.update');
+
+        // Notification
+        Route::get('/notification/{id}', [NotificationController::class, 'show'])->name('admin.notification');
+        Route::get('/notifications', [NotificationController::class, 'index'])->name('all.notification');
+        Route::delete('/notification/{id}', [NotificationController::class, 'delete'])->name('notification.delete');
+        // Password Change
+        Route::get('change-password', [AdminController::class, 'changePassword'])->name('change.password.form');
+        Route::post('change-password', [AdminController::class, 'changPasswordStore'])->name('change.password');
+    });
+
 
 // User section start
     Route::group(['prefix' => '/user', 'middleware' => ['user']], function () {

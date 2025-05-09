@@ -47,10 +47,11 @@ class UsersController extends Controller
         ]);
         // dd($request->all());
         $data=$request->all();
+        $tenant = app('currentTenant');
+        $data['tenant_id'] = $tenant->id;
         $data['password']=Hash::make($request->password);
-        // dd($data);
+        
         $status=User::create($data);
-        // dd($status);
         if($status){
             request()->session()->flash('success','Successfully added user');
         }

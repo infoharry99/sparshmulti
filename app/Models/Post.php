@@ -3,11 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Scopes\TenantScope;
 
 class Post extends Model
 {
-    protected $fillable=['title','tags','summary','slug','description','photo','quote','post_cat_id','post_tag_id','added_by','status'];
-
+    protected $fillable=['title','tags','tenant_id','summary','slug','description','photo','quote','post_cat_id','post_tag_id','added_by','status'];
+    protected static function booted()
+    {
+        static::addGlobalScope(new TenantScope);
+    }
 
     public function cat_info(){
         return $this->hasOne('App\Models\PostCategory','id','post_cat_id');

@@ -47,6 +47,7 @@ class ProductReviewController extends Controller
         //  return $product_info;
         // return $request->all();
         $data=$request->all();
+        $data['tenant_id']=app('currentTenant')->id;
         $data['product_id']=$product_info->id;
         $data['user_id']=$request->user()->id;
         $data['status']='active';

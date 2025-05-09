@@ -29,6 +29,8 @@ class AboutusController extends Controller
             'summary'=>'string|nullable',
         ]);
         $data= $request->all();
+        $tenant = app('currentTenant');
+        $data['tenant_id'] = $tenant->id;
         $status=About::create($data);
         if($status){
             request()->session()->flash('success','About Us successfully added');

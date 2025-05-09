@@ -174,108 +174,91 @@
       }
     }
   </style>
-  <style>
-
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
     
     a {
       color: inherit;
       text-decoration: none;
     }
+    
     .container {
-      max-width: 90rem;
+      width: 100%;
+      padding: 0 15px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 0 1rem;
     }
-    h4 {
-      margin-top: 10px !important;
-    }
-
-    /* =========================
-       Feature-cards section
-       ========================= */
-    .features {
-      padding: 4rem 0;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-    }
-    .feature-card {
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 2rem 1rem;
-      text-align: center;
-      transition: box-shadow .2s;
-    }
-    .feature-card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .feature-card .icons {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .feature-card h4 {
-      font-size: 1.25rem;
-      margin-bottom: .5rem;
-    }
-    .feature-card p {
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    /* ================
-       Footer
-       ================ */
-    footer.site-footer {
+    
+    /* Footer Styles */
+    .site-footer {
+      background-color: #fff;
       border-top: 1px solid #ddd;
-      /* padding: 4rem 0 2rem; */
-      position: sticky;
-      border-top: 1px solid #ddd;
-      padding: 0rem 0 2rem;
+      padding-top: 20px;
+      padding-bottom: 30px;
     }
+    
+    /* Desktop Footer */
     .footer-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
     }
+    
     .footer-col h5 {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
     }
+    
     .footer-col address,
     .footer-col p,
     .footer-col a {
       display: block;
       color: #555;
-      font-size: 0.95rem;
-      margin-bottom: .5rem;
+      font-size: 14px;
+      margin-bottom: 8px;
     }
+    
     .footer-col ul {
       list-style: none;
     }
+    
     .footer-col ul li {
-      margin-bottom: .5rem;
+      margin-bottom: 8px;
     }
+    
     .footer-col ul li a {
       color: #555;
-      font-size: .95rem;
+      font-size: 14px;
     }
+    
     .footer-col form {
       display: flex;
-      flex-wrap: wrap;
-      gap: .5rem;
+      flex-direction: column;
+      gap: 10px;
     }
+    
     .footer-col form input[type="email"] {
-      flex: 1 1 150px;
-      padding: .75rem;
-      border: 1px solid #ccc;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
       border-radius: 4px;
-      font-size: .95rem;
+      font-size: 14px;
     }
+    
     .footer-col form button {
-      padding: .75rem 1.25rem;
+      padding: 12px 15px;
       background: #000;
       color: #fff;
       border: none;
@@ -283,37 +266,74 @@
       cursor: pointer;
       display: flex;
       align-items: center;
-      white-space: nowrap;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
     }
+    
     .footer-col form button .fa-arrow-right {
-      margin-left: .5rem;
-      font-size: 0.9rem;
+      margin-left: 8px;
     }
+    
     .footer-social {
-      margin-top: 1rem;
+      margin-top: 15px;
       display: flex;
-      gap: .75rem;
+      gap: 12px;
     }
+    
     .footer-social a {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 34px;
-      height: 34px;
-      border: 1px solid #ccc;
+      width: 36px;
+      height: 36px;
+      border: 1px solid #ddd;
       border-radius: 50%;
       color: #555;
-      font-size: 1rem;
-      transition: background .2s, color .2s;
+      font-size: 16px;
+      transition: all 0.2s ease;
     }
+    
     .footer-social a:hover {
       background: #000;
       color: #fff;
+      border-color: #000;
     }
-
-    /* ======================
-       Back-to-top button
-       ====================== */
+    
+    /* Mobile Footer */
+    .footer-section {
+      margin-bottom: 15px;
+      display: none; /* Hidden on desktop */
+    }
+    
+    .footer-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    
+    .footer-content {
+      padding: 10px 0;
+      display: none;
+    }
+    
+    .footer-content.active {
+      display: block;
+    }
+    
+    .toggle-icon {
+      transition: transform 0.3s ease;
+    }
+    
+    .footer-heading.active .toggle-icon {
+      transform: rotate(180deg);
+    }
+    
+    /* Back to top button */
     .back-to-top {
       position: fixed;
       bottom: 20px;
@@ -321,51 +341,43 @@
       background: #fff;
       border: 1px solid #000;
       border-radius: 4px;
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      text-decoration: none;
-      font-size: 1.25rem;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #000;
-      transition: background .2s, color .2s;
+      font-size: 18px;
       z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    
     .back-to-top:hover {
       background: #000;
       color: #fff;
     }
-
-    /* ================
-       Responsive tweaks
-       ================ */
-    /* @media (max-width: 600px) {
-      .feature-card { padding: 1.5rem .75rem; }
-      .footer-col form { flex-direction: column; }
-      .footer-col form button { width: 100%; justify-content: center; }
-    } */
-    @media (max-width: 768px) {
-      
-      
-
+    
+    /* Media queries for responsive design */
+    @media (max-width: 992px) {
       .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: left;
+        grid-template-columns: repeat(2, 1fr);
       }
-
-      .footer-col {
-        padding-bottom: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      /* Hide desktop footer, show mobile footer */
+      .footer-grid {
+        display: none;
       }
-
-      .footer-social {
-        justify-content: flex-start;
+      
+      .footer-section {
+        display: block;
       }
-
+      
       .footer-col form {
         flex-direction: column;
-        align-items: stretch;
       }
-
+      
       .footer-col form input[type="email"],
       .footer-col form button {
         width: 100%;
@@ -375,8 +387,9 @@
 
   
   <!-- Footer -->
-  <footer class="site-footer"> 
+  <footer class="site-footer">
     <div class="container">
+      <!-- Desktop Footer -->
       <div class="footer-grid">
         <div class="footer-col">
           <h5>Contact Us</h5>
@@ -395,13 +408,15 @@
             <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
           </div>
         </div>
+        
         <div class="footer-col">
           <h5>Help</h5>
           <ul>
             <li><a href="#">Search</a></li>
-            <li><a href="{{route('order.track')}}">Order Tracking</a></li>
+            <li><a href="#">Order Tracking</a></li>
           </ul>
         </div>
+        
         <div class="footer-col">
           <h5>Useful Links</h5>
           <ul>
@@ -411,8 +426,14 @@
             <li><a href="#">Earrings And Maang Tikka</a></li>
             <li><a href="#">Payal</a></li>
             <li><a href="#">Semi Bridal Set</a></li>
+            <li><a href="#">Bracelet</a></li>
+            <li><a href="#">Bridal Set</a></li>
+            <li><a href="#">Jhumka And Maang Tikka</a></li>
+            <li><a href="#">Long Rain Haar</a></li>
+            <li><a href="#">Hath Panja</a></li>
           </ul>
         </div>
+        
         <div class="footer-col">
           <h5>Sign Up for Email</h5>
           <p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
@@ -422,6 +443,93 @@
               Subscribe <i class="fa-solid fa-arrow-right"></i>
             </button>
           </form>
+        </div>
+      </div>
+      
+      <!-- Mobile Footer -->
+      <div class="footer-section">
+        <div class="footer-heading" onclick="toggleSection(this)">
+          Contact Us
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="footer-content">
+          <div class="contact-info">
+            <a href="#">
+              1234 Fashion Street, Suite 567,<br>
+              New York, NY
+            </a>
+            <a href="mailto:info@fashionshop.com">info@fashionshop.com</a>
+            <a href="tel:+12125551234"><strong>(212) 555-1234</strong></a>
+            <a href="https://maps.google.com" target="_blank">
+              Get direction <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <div class="footer-heading" onclick="toggleSection(this)">
+          Help
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="footer-content">
+          <ul class="footer-links">
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Order Tracking</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <div class="footer-heading" onclick="toggleSection(this)">
+          Useful Links
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="footer-content">
+          <ul class="footer-links">
+            <li><a href="#">Necklace Set</a></li>
+            <li><a href="#">Bangles</a></li>
+            <li><a href="#">Earrings</a></li>
+            <li><a href="#">Earrings And Maang Tikka</a></li>
+            <li><a href="#">Payal</a></li>
+            <li><a href="#">Semi Bridal Set</a></li>
+            <li><a href="#">Bracelet</a></li>
+            <li><a href="#">Bridal Set</a></li>
+            <li><a href="#">Jhumka And Maang Tikka</a></li>
+            <li><a href="#">Long Rain Haar</a></li>
+            <li><a href="#">Hath Panja</a></li>
+            <li><a href="#">Mathapati</a></li>
+            <li><a href="#">Passa</a></li>
+            <li><a href="#">Maang Tikka</a></li>
+            <li><a href="#">Waist Belt</a></li>
+            <li><a href="#">Dulha Mala</a></li>
+            <li><a href="#">Sheeshful</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <div class="footer-heading" onclick="toggleSection(this)">
+          Sign Up for Email
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="footer-content">
+          <div class="email-form">
+            <p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
+            <form action="#" method="POST">
+              <input type="email" placeholder="Enter email address" required>
+              <button type="submit">
+                Subscribe <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -447,6 +555,43 @@
       });
     });
   </script>
+ <script>
+    function toggleSection(element) {
+      element.classList.toggle('active');
+      const content = element.nextElementSibling;
+      content.classList.toggle('active');
+    }
+    
+    // Open the first section by default on mobile
+    document.addEventListener('DOMContentLoaded', function() {
+      // Only activate on mobile view
+      if (window.innerWidth <= 768) {
+        const firstSection = document.querySelector('.footer-heading');
+        const firstContent = document.querySelector('.footer-content');
+        
+        if(firstSection && firstContent) {
+          firstSection.classList.add('active');
+          firstContent.classList.add('active');
+        }
+      }
+    });
+    
+    // Re-check on window resize
+    window.addEventListener('resize', function() {
+      const sections = document.querySelectorAll('.footer-section');
+      
+      if (window.innerWidth <= 768) {
+        // Show at least the first section on mobile
+        const firstSection = document.querySelector('.footer-heading');
+        const firstContent = document.querySelector('.footer-content');
+        
+        if(firstSection && !firstSection.classList.contains('active')) {
+          firstSection.classList.add('active');
+          firstContent.classList.add('active');
+        }
+      }
+    });
+  </script>
     <nav class="mobile-nav">
       <a href="{{route('home')}}" class="nav-item">
         <i class="fas fa-th nav-icon"></i>
@@ -465,7 +610,7 @@
         <span>Wishlist</span>
         <span class="badge">{{Helper::wishlistCount()}}</span>
       </a>
-      <a href="#" class="nav-item">
+      <a href="{{route('checkout')}}" class="nav-item">
         <i class="fas fa-shopping-cart nav-icon"></i>
         <span>Cart</span>
         <span class="badge">{{Helper::cartCount()}}</span>

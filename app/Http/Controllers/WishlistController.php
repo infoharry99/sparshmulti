@@ -36,6 +36,7 @@ class WishlistController extends Controller
         }else{
             
             $wishlist = new Wishlist;
+            $wishlist->tenant_id = app('currentTenant')->id;
             $wishlist->user_id = auth()->user()->id;
             $wishlist->product_id = $product->id;
             $wishlist->price = ($product->price-($product->price*$product->discount)/100);

@@ -20,7 +20,9 @@
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6 d-none d-lg-block bg-login-image" style="margin-top: 7rem;">
+                <img src="{{asset('frontend/logo/1746714726.webp')}}" alt="login" class="img-fluid">
+              </div>
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">

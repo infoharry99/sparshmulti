@@ -59,6 +59,8 @@ class ProductController extends Controller
         if($count>0){
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
         }
+        $tenant = app('currentTenant');
+        $data['tenant_id'] = $tenant->id;
         $data['slug']=$slug;
         $data['is_featured']=$request->input('is_featured',0);
         $size=$request->input('size');

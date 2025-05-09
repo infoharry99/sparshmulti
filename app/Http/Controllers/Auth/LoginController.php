@@ -31,14 +31,26 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+    
 
-    public function credentials(Request $request){
-        return ['email'=>$request->email,'password'=>$request->password,'status'=>'active','role'=>'admin'];
+/*************  ✨ Windsurf Command ⭐  *************/
+    /**
+     * Get the needed authentication credentials from the request.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return array
+     * 
+     * This method returns an array of credentials including email, 
+     * password, status, and role for authentication purposes. 
+     * The status is set to 'active' and role to 'admin'.
+     */
+     public function credentials(Request $request){
+        return [
+            'email' => $request->email,
+            'password' => $request->password,
+            'status' => 'active',
+            'role' => 'admin',
+        ];
     }
     public function __construct()
     {
@@ -48,7 +60,7 @@ class LoginController extends Controller
     public function redirect($provider)
     {
         // dd($provider);
-     return Socialite::driver($provider)->redirect();
+        return Socialite::driver($provider)->redirect();
     }
  
     public function Callback($provider)
@@ -58,7 +70,7 @@ class LoginController extends Controller
         // dd($users);
         if($users){
             Auth::login($users);
-            return redirect('/')->with('success','You are login from '.$provider);
+            return redirect('/')->with('success','You are logged in from '.$provider);
         }else{
             $user = User::create([
                 'name'          => $userSocial->getName(),

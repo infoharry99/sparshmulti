@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Session;
+use App\Scopes\TenantScope;
+use App\Models\Tenant;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -26,6 +28,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $domain = request()->getHost();
+        $tenant = Tenant::where('domain', $domain)->first();
+    
+        if ($tenant) {
+            TenantScope::setTenant($tenant->id);
+        }
         Schema::defaultStringLength(191);
         App::setLocale(Session::get('locale', config('app.locale')));
         View::composer('*', function ($view) {
